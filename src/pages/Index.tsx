@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import UrgencyBar from "@/components/UrgencyBar";
 import ServicesSection from "@/components/ServicesSection";
@@ -13,6 +14,7 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Header />
       <HeroSection />
       <UrgencyBar />
       <ServicesSection />
