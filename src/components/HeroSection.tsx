@@ -33,7 +33,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a1a4a]/95 via-primary/90 to-primary/75" />
       </div>
 
-      <div className="container relative z-10 py-16 md:py-24 px-4">
+      <div className="container relative z-10 pt-32 md:pt-40 pb-16 md:pb-24 px-4">
         <div className="max-w-2xl">
           
 
