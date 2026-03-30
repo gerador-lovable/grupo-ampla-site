@@ -86,11 +86,11 @@ const HeroSection = () => {
           </div>
 
           {/* Right column - Technician image */}
-          <div className="hidden lg:flex justify-center items-end animate-fade-in animation-delay-300">
+          <div className="hidden lg:flex justify-center items-end self-stretch animate-fade-in animation-delay-300">
             <img
               src={heroTechnician}
               alt="Técnico profissional da Ampla Dedetizadora"
-              className="max-h-[600px] w-auto object-contain drop-shadow-2xl"
+              className="h-full w-auto object-contain object-bottom drop-shadow-2xl"
             />
           </div>
         </div>
