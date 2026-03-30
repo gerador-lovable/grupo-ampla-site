@@ -32,16 +32,31 @@ const Header = () => {
           />
         </a>
 
-        <Button
-          asChild
-          className="bg-[#075E54] hover:bg-[#075E54]/90 text-white font-semibold min-h-[44px] px-5 transition-transform duration-200 hover:scale-105 rounded-lg shadow-md"
-        >
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-            <WhatsAppIcon className="w-5 h-5 mr-2" />
-            <span className="hidden sm:inline">Orçamento Grátis</span>
-            <span className="sm:hidden">WhatsApp</span>
-          </a>
-        </Button>
+        <div className="flex items-center gap-3">
+          <Button
+            asChild
+            className="bg-destructive hover:bg-destructive/90 text-white font-bold min-h-[44px] px-4 transition-transform duration-200 hover:scale-105 rounded-lg shadow-md animate-slow-pulse"
+          >
+            <a href="tel:+5541995121583">
+              <Phone className="w-4 h-4 mr-1.5" />
+              <span className="hidden sm:flex flex-col items-start leading-tight">
+                <span className="text-[10px] font-semibold uppercase tracking-wider opacity-90">Emergência 24h</span>
+                <span className="text-sm font-extrabold">(41) 99512-1583</span>
+              </span>
+              <span className="sm:hidden text-xs font-bold">24h</span>
+            </a>
+          </Button>
+          <Button
+            asChild
+            className="bg-[#075E54] hover:bg-[#075E54]/90 text-white font-semibold min-h-[44px] px-5 transition-transform duration-200 hover:scale-105 rounded-lg shadow-md"
+          >
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              <WhatsAppIcon className="w-5 h-5 mr-2" />
+              <span className="hidden sm:inline">Orçamento Grátis</span>
+              <span className="sm:hidden">WhatsApp</span>
+            </a>
+          </Button>
+        </div>
       </div>
     </header>
   );
