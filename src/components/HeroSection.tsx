@@ -63,22 +63,11 @@ const HeroSection = () => {
             <Button
               asChild
               size="lg"
-              className="bg-[#075E54] hover:bg-[#075E54]/90 text-white text-lg font-bold px-8 py-7 rounded-xl shadow-2xl shadow-[#075E54]/30 min-h-[56px] transition-transform duration-200 hover:scale-105"
+              className="bg-[#075E54] hover:bg-[#075E54]/90 text-white text-lg font-bold px-10 py-7 rounded-xl shadow-2xl shadow-[#075E54]/30 min-h-[56px] transition-transform duration-200 hover:scale-105"
             >
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon className="w-6 h-6 mr-2" />
                 Quero Orçamento Grátis
-              </a>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 py-7 rounded-xl min-h-[56px] transition-transform duration-200 hover:scale-105"
-            >
-              <a href={PHONE_URL}>
-                <Phone className="w-5 h-5 mr-2" />
-                (41) 99512-1583
               </a>
             </Button>
           </div>
