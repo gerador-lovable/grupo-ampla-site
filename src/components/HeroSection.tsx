@@ -2,6 +2,7 @@ import { Clock, Shield, BadgeCheck, CreditCard, Star, Users, Award, Phone } from
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo-ampla.webp";
 
 const WHATSAPP_URL = "https://wa.me/5541995121583?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20dedetiza%C3%A7%C3%A3o.";
 const PHONE_URL = "tel:+5541995121583";
@@ -35,6 +36,8 @@ const HeroSection = () => {
 
       <div className="container relative z-10 py-16 md:py-24 px-4">
         <div className="max-w-2xl">
+          <img src={logo} alt="Grupo Ampla - Dedetizadora" className="h-20 md:h-28 w-auto mb-6 animate-fade-in" />
+
           <div className="inline-block bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6 animate-fade-in">
             ⭐ Referência em Curitiba há 35 anos
           </div>
