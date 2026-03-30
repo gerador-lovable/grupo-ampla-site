@@ -27,7 +27,7 @@ const Header = () => {
           <img
             src={logo}
             alt="Grupo Ampla - Dedetizadora"
-            className={`transition-all duration-300 ${scrolled ? "h-12 md:h-14" : "h-14 md:h-18"}`}
+            className={`transition-all duration-300 ${scrolled ? "h-14 md:h-16" : "h-16 md:h-20"}`}
           />
         </a>
 
