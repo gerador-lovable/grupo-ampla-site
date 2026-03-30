@@ -2,7 +2,7 @@ import { Clock, Shield, BadgeCheck, CreditCard, Star, Users, Award } from "lucid
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import heroBg from "@/assets/hero-bg.jpg";
-import heroTechnician from "@/assets/hero-technician.webp";
+import heroTechnician from "@/assets/desentupidora-hero.webp";
 
 const WHATSAPP_URL = "https://wa.me/5541995121583?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20desentupimento.";
 
