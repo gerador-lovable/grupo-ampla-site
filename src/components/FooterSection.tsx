@@ -1,4 +1,5 @@
 import { Instagram, MapPin, Phone } from "lucide-react";
+import logo from "@/assets/logo-ampla.webp";
 
 const FooterSection = () => {
   return (
@@ -6,7 +7,11 @@ const FooterSection = () => {
       <div className="container px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div>
-            <h3 className="text-xl font-bold mb-3">Ampla Dedetizadora</h3>
+            <img src={logo} alt="Grupo Ampla" className="h-16 w-auto mb-3" />
+            <p className="text-primary-foreground/70 text-sm">
+              Há 35 anos protegendo lares e empresas em Curitiba e Região Metropolitana.
+            </p>
+          </div>
             <p className="text-primary-foreground/70 text-sm">
               Há 35 anos protegendo lares e empresas em Curitiba e Região Metropolitana.
             </p>
