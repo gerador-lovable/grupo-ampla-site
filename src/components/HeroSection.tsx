@@ -30,7 +30,7 @@ const HeroSection = () => {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1a4a]/95 via-primary/90 to-primary/75" />
       </div>
 
       <div className="container relative z-10 py-16 md:py-24 px-4">
