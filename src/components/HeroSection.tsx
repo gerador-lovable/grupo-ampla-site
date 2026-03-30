@@ -2,7 +2,6 @@ import { Clock, Shield, BadgeCheck, CreditCard, Star, Users, Award, Phone } from
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/logo-ampla.webp";
 
 const WHATSAPP_URL = "https://wa.me/5541995121583?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20dedetiza%C3%A7%C3%A3o.";
 const PHONE_URL = "tel:+5541995121583";
