@@ -57,7 +57,7 @@ const DesHeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up animation-delay-400">
               <a
                 href="tel:+5541995121583"
-                className="inline-flex items-center justify-center gap-2 bg-destructive hover:bg-destructive/90 text-destructive-foreground text-lg font-bold px-10 py-5 rounded-xl shadow-2xl min-h-[56px] transition-transform duration-200 hover:scale-105 animate-subtle-pulse"
+                className="inline-flex items-center justify-center gap-2 bg-destructive hover:bg-destructive/90 text-destructive-foreground text-lg font-bold px-10 py-5 rounded-xl shadow-2xl min-h-[56px] transition-transform duration-200 hover:scale-105 animate-pulse"
               >
                 <span className="text-center leading-tight">
                   Emergência? Ligue agora<br />
