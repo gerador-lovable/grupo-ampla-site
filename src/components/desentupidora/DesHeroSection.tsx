@@ -1,4 +1,4 @@
-import { Clock, Shield, BadgeCheck, CreditCard, Star, Users, Award } from "lucide-react";
+import { Clock, Shield, BadgeCheck, CreditCard, Star, Users, Award, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -55,19 +55,27 @@ const DesHeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up animation-delay-400">
-              <a
-                href="tel:+5541995121583"
-                className="inline-flex items-center justify-center gap-2 bg-destructive hover:bg-destructive/90 text-destructive-foreground text-lg font-bold px-10 py-5 rounded-xl shadow-2xl min-h-[56px] transition-transform duration-200 hover:scale-105 animate-pulse"
+              <Button
+                asChild
+                size="lg"
+                className="bg-destructive hover:bg-destructive/90 text-white text-lg font-bold px-10 py-7 rounded-xl shadow-2xl shadow-destructive/40 min-h-[56px] transition-transform duration-200 hover:scale-105 animate-slow-pulse"
               >
-                <span className="text-center leading-tight">
-                  Emergência? Ligue agora<br />
-                  <strong className="text-xl">(41) 99512-1583</strong>
-                </span>
-              </a>
-              <Button asChild size="lg" className="bg-[#075E54] hover:bg-[#075E54]/90 text-white text-lg font-bold px-10 py-7 rounded-xl shadow-2xl shadow-[#075E54]/30 min-h-[56px] transition-transform duration-200 hover:scale-105">
+                <a href="tel:+5541995121583">
+                  <Phone className="w-6 h-6 mr-2" />
+                  <span className="flex flex-col items-start leading-tight">
+                    <span className="text-xs font-semibold uppercase tracking-wider opacity-90">Emergência 24h</span>
+                    <span className="text-lg font-extrabold">(41) 99512-1583</span>
+                  </span>
+                </a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                className="bg-[#075E54] hover:bg-[#075E54]/90 text-white text-lg font-bold px-10 py-7 rounded-xl shadow-2xl shadow-[#075E54]/30 min-h-[56px] transition-transform duration-200 hover:scale-105"
+              >
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                   <WhatsAppIcon className="w-6 h-6 mr-2" />
-                  Quero Orçamento Grátis
+                  Orçamento Grátis
                 </a>
               </Button>
             </div>
