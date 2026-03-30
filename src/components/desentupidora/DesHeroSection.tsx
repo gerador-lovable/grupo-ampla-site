@@ -1,4 +1,4 @@
-import { Clock, Shield, BadgeCheck, CreditCard, Star, Users, Award } from "lucide-react";
+import { Clock, Shield, BadgeCheck, CreditCard, Star, Users, Award, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import heroBg from "@/assets/hero-bg.jpg";
