@@ -12,10 +12,6 @@ const FooterSection = () => {
               Há 35 anos protegendo lares e empresas em Curitiba e Região Metropolitana.
             </p>
           </div>
-            <p className="text-primary-foreground/70 text-sm">
-              Há 35 anos protegendo lares e empresas em Curitiba e Região Metropolitana.
-            </p>
-          </div>
           <div>
             <h4 className="font-bold mb-3">Links Rápidos</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
