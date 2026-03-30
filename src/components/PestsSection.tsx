@@ -9,7 +9,7 @@ const pests = [
   { icon: Rat, name: "Ratos e Roedores", description: "Desratização profissional com técnicas de exclusão e controle integrado de roedores." },
   { icon: TreeDeciduous, name: "Cupins", description: "Descupinização com tratamento de solo e madeira. Proteção contra cupins subterrâneos e de madeira seca." },
   { icon: Bug, name: "Formigas", description: "Controle de formigas doceiras e cortadeiras com gel atrativo e iscas granuladas." },
-  { icon: Antenna, name: "Mosquitos e Pernilongos", description: "Nebulização e termonebulização para controle de mosquitos, incluindo Aedes aegypti." },
+  { icon: Syringe, name: "Mosquitos e Pernilongos", description: "Nebulização e termonebulização para controle de mosquitos, incluindo Aedes aegypti." },
   { icon: Skull, name: "Aranhas e Escorpiões", description: "Tratamento especializado para aracnídeos perigosos com pulverização residual." },
   { icon: Bug, name: "Pulgas e Carrapatos", description: "Desinsetização completa para ambientes com animais de estimação, segura para pets." },
   { icon: Shirt, name: "Traças e Brocas", description: "Proteção de tecidos, papéis e madeira contra traças e brocas com fumigação controlada." },
