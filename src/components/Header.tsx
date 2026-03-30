@@ -33,7 +33,7 @@ const Header = () => {
 
         <Button
           asChild
-          className="bg-[#075E54] hover:bg-[#075E54]/90 text-white font-semibold min-h-[44px] px-5 transition-transform duration-200 hover:scale-105 rounded-lg shadow-md animate-[pulse_3s_ease-in-out_infinite]"
+          className="bg-[#075E54] hover:bg-[#075E54]/90 text-white font-semibold min-h-[44px] px-5 transition-transform duration-200 hover:scale-105 rounded-lg shadow-md animate-[subtlePulse_4s_ease-in-out_infinite]"
         >
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
             <WhatsAppIcon className="w-5 h-5 mr-2" />
