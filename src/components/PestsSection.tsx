@@ -1,4 +1,4 @@
-import { Bug, Rat, TreeDeciduous, Antenna, Spider, Shirt } from "lucide-react";
+import { Bug, Rat, TreeDeciduous, Antenna, Skull, Shirt } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 
