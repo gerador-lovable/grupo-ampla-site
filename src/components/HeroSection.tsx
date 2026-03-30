@@ -65,7 +65,7 @@ const HeroSection = () => {
               <Button
                 asChild
                 size="lg"
-                className="bg-destructive hover:bg-destructive/90 text-white text-lg font-bold px-10 py-7 rounded-xl shadow-2xl shadow-destructive/40 min-h-[56px] transition-transform duration-200 hover:scale-105 animate-pulse"
+                className="bg-destructive hover:bg-destructive/90 text-white text-lg font-bold px-10 py-7 rounded-xl shadow-2xl shadow-destructive/40 min-h-[56px] transition-transform duration-200 hover:scale-105 animate-slow-pulse"
               >
                 <a href="tel:+5541995121583">
                   <Phone className="w-6 h-6 mr-2" />
