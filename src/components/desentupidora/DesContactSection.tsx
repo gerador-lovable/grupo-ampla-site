@@ -1,53 +1,11 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { MapPin, Phone, Clock, CheckCircle2 } from "lucide-react";
+import { MapPin, Phone, Clock } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
-import { useToast } from "@/hooks/use-toast";
+
+const WHATSAPP_URL =
+  "https://wa.me/5541995121583?text=Ol%C3%A1%2C%20preciso%20de%20um%20desentupidor%20urgente.";
 
 const DesContactSection = () => {
-  const { toast } = useToast();
-  const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    propertyType: "",
-    serviceType: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.name.trim() || !form.phone.trim()) {
-      toast({ title: "Preencha os campos obrigatórios", description: "Nome e telefone são obrigatórios.", variant: "destructive" });
-      return;
-    }
-    setSubmitted(true);
-  };
-
-  if (submitted) {
-    return (
-      <section id="contato" className="py-16 md:py-20 bg-secondary">
-        <div className="container px-4">
-          <div className="max-w-lg mx-auto text-center py-12">
-            <CheckCircle2 className="w-16 h-16 text-trust mx-auto mb-4" />
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Obrigado pelo contato!</h2>
-            <p className="text-muted-foreground mb-6">Recebemos sua solicitação e entraremos em contato em breve.</p>
-            <Button asChild className="bg-[#075E54] hover:bg-[#075E54]/90 text-white min-h-[44px] transition-transform duration-200 hover:scale-105">
-              <a href="https://wa.me/5541995121583?text=Ol%C3%A1%2C%20enviei%20o%20formul%C3%A1rio%20de%20desentupimento." target="_blank" rel="noopener noreferrer">
-                <WhatsAppIcon className="w-5 h-5 mr-2" />
-                Falar no WhatsApp
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section id="contato" className="py-16 md:py-20 bg-secondary">
       <div className="container px-4">
@@ -55,57 +13,30 @@ const DesContactSection = () => {
           Solicite Seu Orçamento Grátis
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Preencha o formulário e receba seu orçamento sem compromisso
+          Atendimento 24h direto pelo WhatsApp — resposta imediata
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label className="text-sm font-semibold text-foreground mb-1 block">Nome *</label>
-              <Input placeholder="Seu nome completo" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} maxLength={100} className="min-h-[44px]" />
+          <div className="bg-background rounded-2xl border border-border shadow-sm p-8 flex flex-col items-center justify-center text-center">
+            <div className="w-16 h-16 rounded-full bg-[#25D366] flex items-center justify-center mb-4">
+              <WhatsAppIcon className="w-8 h-8 text-white" />
             </div>
-            <div>
-              <label className="text-sm font-semibold text-foreground mb-1 block">Telefone/WhatsApp *</label>
-              <Input placeholder="(41) 99999-9999" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} maxLength={20} className="min-h-[44px]" />
-            </div>
-            <div>
-              <label className="text-sm font-semibold text-foreground mb-1 block">E-mail (opcional)</label>
-              <Input type="email" placeholder="seu@email.com" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} maxLength={255} className="min-h-[44px]" />
-            </div>
-            <div>
-              <label className="text-sm font-semibold text-foreground mb-1 block">Tipo de Imóvel</label>
-              <Select onValueChange={(v) => setForm({ ...form, propertyType: v })}>
-                <SelectTrigger className="min-h-[44px]"><SelectValue placeholder="Selecione..." /></SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="casa">Casa</SelectItem>
-                  <SelectItem value="apartamento">Apartamento</SelectItem>
-                  <SelectItem value="comercial">Comercial</SelectItem>
-                  <SelectItem value="condominio">Condomínio</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div>
-              <label className="text-sm font-semibold text-foreground mb-1 block">Tipo de Serviço</label>
-              <Select onValueChange={(v) => setForm({ ...form, serviceType: v })}>
-                <SelectTrigger className="min-h-[44px]"><SelectValue placeholder="Selecione..." /></SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="pia">Desentupimento de Pia</SelectItem>
-                  <SelectItem value="vaso">Desentupimento de Vaso</SelectItem>
-                  <SelectItem value="esgoto">Desentupimento de Esgoto</SelectItem>
-                  <SelectItem value="hidrojateamento">Hidrojateamento</SelectItem>
-                  <SelectItem value="fossa">Limpeza de Fossa</SelectItem>
-                  <SelectItem value="gordura">Limpeza de Caixa de Gordura</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div>
-              <label className="text-sm font-semibold text-foreground mb-1 block">Mensagem (opcional)</label>
-              <Textarea placeholder="Descreva o problema..." value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} maxLength={1000} rows={3} />
-            </div>
-            <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg min-h-[52px] transition-transform duration-200 hover:scale-[1.02]">
-              Solicitar Orçamento Grátis
+            <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+              Atendimento 24 horas
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Fale com um desentupidor agora mesmo pelo WhatsApp.
+            </p>
+            <Button
+              asChild
+              className="w-full bg-[#25D366] hover:bg-[#075E54] text-white font-bold text-lg min-h-[56px] transition-transform duration-200 hover:scale-[1.02]"
+            >
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <WhatsAppIcon className="w-5 h-5 mr-2" />
+                Falar no WhatsApp Agora
+              </a>
             </Button>
-          </form>
+          </div>
 
           <div className="space-y-6">
             <div className="flex items-start gap-3">
