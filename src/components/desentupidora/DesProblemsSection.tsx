@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { buildRedirectUrl } from "@/lib/whatsapp";
 
 import piaImg from "@/assets/problems/pia-entupida.jpg";
 import vasoImg from "@/assets/problems/vaso-sanitario.jpg";
@@ -8,7 +10,7 @@ import gorduraImg from "@/assets/problems/caixa-gordura.jpg";
 import esgotoImg from "@/assets/problems/esgoto-entupido.jpg";
 import colunaImg from "@/assets/problems/coluna-coletora.jpg";
 
-const WHATSAPP_URL = "https://wa.me/5541995121583?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20desentupimento.";
+const WHATSAPP_REDIRECT = buildRedirectUrl({ servico: "desentupimento" });
 
 const problems = [
   { image: piaImg, name: "Pia Entupida", description: "Desentupimento de pias de cozinha e banheiro com equipamento profissional." },
@@ -53,10 +55,10 @@ const DesProblemsSection = () => {
 
         <div className="text-center">
           <Button asChild size="lg" className="bg-[#075E54] hover:bg-[#075E54]/90 text-white font-bold text-lg px-10 min-h-[52px] transition-transform duration-200 hover:scale-105">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            <Link to={WHATSAPP_REDIRECT}>
               <WhatsAppIcon className="w-6 h-6 mr-2" />
               Solicitar Orçamento Grátis
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

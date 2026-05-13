@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
@@ -5,8 +6,9 @@ import serviceResidential from "@/assets/service-residential.jpg";
 import serviceCommercial from "@/assets/service-commercial.jpg";
 import serviceCondominium from "@/assets/service-condominium.jpg";
 import servicePreventive from "@/assets/service-preventive.jpg";
+import { buildRedirectUrl } from "@/lib/whatsapp";
 
-const WHATSAPP_URL = "https://wa.me/5541995121583?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20dedetiza%C3%A7%C3%A3o.";
+const WHATSAPP_REDIRECT = buildRedirectUrl({ servico: "dedetizacao" });
 
 const services = [
   {
@@ -59,10 +61,10 @@ const ServicesSection = () => {
                 <h3 className="text-xl font-bold text-foreground">{service.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
                 <Button asChild className="bg-[#075E54] hover:bg-[#075E54]/90 text-white mt-auto min-h-[44px] font-semibold transition-transform duration-200 hover:scale-105">
-                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  <Link to={WHATSAPP_REDIRECT}>
                     <WhatsAppIcon className="w-5 h-5 mr-2" />
                     Solicitar Orçamento
-                  </a>
+                  </Link>
                 </Button>
               </CardContent>
             </Card>

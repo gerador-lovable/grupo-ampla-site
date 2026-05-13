@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
 import { Clock, Shield, BadgeCheck, CreditCard, Star, Users, Award, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import heroBg from "@/assets/hero-bg.jpg";
 import heroTechnician from "@/assets/desentupidora-hero.webp";
+import { buildRedirectUrl } from "@/lib/whatsapp";
 
-const WHATSAPP_URL = "https://wa.me/5541995121583?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20desentupimento.";
+const WHATSAPP_REDIRECT = buildRedirectUrl({ servico: "desentupimento" });
 
 const benefits = [
   { icon: Clock, text: "Atendimento em até 1 hora" },
@@ -73,10 +75,10 @@ const DesHeroSection = () => {
                 size="lg"
                 className="bg-[#075E54] hover:bg-[#075E54]/90 text-white text-lg font-bold px-10 py-7 rounded-xl shadow-2xl shadow-[#075E54]/30 min-h-[56px] transition-transform duration-200 hover:scale-105"
               >
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <Link to={WHATSAPP_REDIRECT}>
                   <WhatsAppIcon className="w-6 h-6 mr-2" />
                   Orçamento Grátis
-                </a>
+                </Link>
               </Button>
             </div>
 

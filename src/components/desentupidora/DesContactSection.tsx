@@ -1,11 +1,31 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Clock } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
-
-const WHATSAPP_URL =
-  "https://wa.me/5541995121583?text=Ol%C3%A1%2C%20preciso%20de%20um%20desentupidor%20urgente.";
+import { buildRedirectUrl } from "@/lib/whatsapp";
 
 const DesContactSection = () => {
+  const navigate = useNavigate();
+  const [nome, setNome] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [mensagem, setMensagem] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    navigate(
+      buildRedirectUrl({
+        servico: "desentupimento",
+        nome: nome.trim(),
+        telefone: telefone.trim(),
+        mensagem: mensagem.trim(),
+      }),
+    );
+  };
+
   return (
     <section id="contato" className="py-16 md:py-20 bg-secondary">
       <div className="container px-4">
@@ -13,30 +33,67 @@ const DesContactSection = () => {
           Solicite Seu Orçamento Grátis
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Atendimento 24h direto pelo WhatsApp — resposta imediata
+          Preencha o formulário e fale com um desentupidor pelo WhatsApp — atendimento 24h
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-          <div className="bg-background rounded-2xl border border-border shadow-sm p-8 flex flex-col items-center justify-center text-center">
-            <div className="w-16 h-16 rounded-full bg-[#25D366] flex items-center justify-center mb-4">
-              <WhatsAppIcon className="w-8 h-8 text-white" />
+          <form
+            onSubmit={handleSubmit}
+            className="bg-background rounded-2xl border border-border shadow-sm p-8 space-y-4"
+          >
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-12 h-12 rounded-full bg-[#25D366] flex items-center justify-center shrink-0">
+                <WhatsAppIcon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-foreground">
+                Atendimento 24 horas
+              </h3>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
-              Atendimento 24 horas
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Fale com um desentupidor agora mesmo pelo WhatsApp.
-            </p>
+
+            <div className="space-y-2">
+              <Label htmlFor="nome">Nome*</Label>
+              <Input
+                id="nome"
+                required
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+                placeholder="Seu nome completo"
+                autoComplete="name"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="telefone">WhatsApp / Telefone*</Label>
+              <Input
+                id="telefone"
+                required
+                type="tel"
+                value={telefone}
+                onChange={(e) => setTelefone(e.target.value)}
+                placeholder="(41) 99999-9999"
+                autoComplete="tel"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="mensagem">Qual o problema?</Label>
+              <Textarea
+                id="mensagem"
+                rows={3}
+                value={mensagem}
+                onChange={(e) => setMensagem(e.target.value)}
+                placeholder="Ex: pia entupida, vaso sanitário, caixa de gordura..."
+              />
+            </div>
+
             <Button
-              asChild
+              type="submit"
               className="w-full bg-[#25D366] hover:bg-[#075E54] text-white font-bold text-lg min-h-[56px] transition-transform duration-200 hover:scale-[1.02]"
             >
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                <WhatsAppIcon className="w-5 h-5 mr-2" />
-                Falar no WhatsApp Agora
-              </a>
+              <WhatsAppIcon className="w-5 h-5 mr-2" />
+              Enviar e Falar no WhatsApp
             </Button>
-          </div>
+          </form>
 
           <div className="space-y-6">
             <div className="flex items-start gap-3">
@@ -45,7 +102,12 @@ const DesContactSection = () => {
               </div>
               <div>
                 <p className="font-bold text-foreground">WhatsApp</p>
-                <a href="https://wa.me/5541995121583" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">(41) 99512-1583</a>
+                <a
+                  href={buildRedirectUrl({ servico: "desentupimento" })}
+                  className="text-primary hover:underline"
+                >
+                  (41) 99512-1583
+                </a>
               </div>
             </div>
             <div className="flex items-start gap-3">

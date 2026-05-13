@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { buildRedirectUrl } from "@/lib/whatsapp";
 
 import baratasImg from "@/assets/pests/baratas.jpg";
 import ratosImg from "@/assets/pests/ratos.jpg";
@@ -10,7 +12,7 @@ import aranhasImg from "@/assets/pests/aranhas.jpg";
 import pulgasImg from "@/assets/pests/pulgas.jpg";
 import tracasImg from "@/assets/pests/tracas.jpg";
 
-const WHATSAPP_URL = "https://wa.me/5541995121583?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20dedetiza%C3%A7%C3%A3o.";
+const WHATSAPP_REDIRECT = buildRedirectUrl({ servico: "dedetizacao" });
 
 const pests = [
   { image: baratasImg, name: "Baratas", description: "Eliminação completa de baratas americanas e germânicas com tratamento residual de longa duração." },
@@ -60,10 +62,10 @@ const PestsSection = () => {
 
         <div className="text-center">
           <Button asChild size="lg" className="bg-[#075E54] hover:bg-[#075E54]/90 text-white font-bold text-lg px-10 min-h-[52px] transition-transform duration-200 hover:scale-105">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            <Link to={WHATSAPP_REDIRECT}>
               <WhatsAppIcon className="w-6 h-6 mr-2" />
               Solicitar Orçamento Grátis
-            </a>
+            </Link>
           </Button>
         </div>
       </div>
