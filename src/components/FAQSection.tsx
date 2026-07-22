@@ -2,32 +2,32 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqs = [
   {
-    q: "Quanto tempo dura o serviço de dedetização?",
-    a: "Depende do tamanho do imóvel, mas em média 1-2 horas para residências. Para empresas e condomínios, o tempo pode variar conforme a área a ser tratada.",
+    q: "Quanto tempo demora a dedetização em casa?",
+    a: "Casa ou apartamento comum: 1h a 2h. Comércio e condomínio: variam com a área. A gente marca hora e cumpre — sem passar do horário combinado.",
   },
   {
-    q: "Preciso sair de casa durante a dedetização?",
-    a: "Recomendamos permanecer fora por 2-4 horas após a aplicação, dependendo do produto utilizado. Nossa equipe orientará sobre os cuidados específicos.",
+    q: "Preciso sair de casa depois da aplicação?",
+    a: "Sim, por 2h a 4h dependendo do produto. Depois disso o ambiente está seguro para crianças e pets. Usamos produto sem cheiro forte para você não precisar dormir fora.",
   },
   {
-    q: "Os produtos são seguros para crianças e animais de estimação?",
-    a: "Sim! Utilizamos produtos certificados pela ANVISA e aplicamos com técnicas que minimizam riscos. Após o período de segurança, o ambiente estará completamente seguro.",
+    q: "É seguro para criança e pet?",
+    a: "Sim. Todos os produtos são registrados na ANVISA e o lote fica anexado ao laudo. Depois do tempo de secagem, o ambiente pode ser usado normalmente.",
   },
   {
-    q: "Qual o prazo de garantia?",
-    a: "Oferecemos 6 meses de garantia para todos os nossos serviços de dedetização. Se houver reincidência, voltamos sem custo adicional.",
+    q: "Se voltar barata, vocês voltam?",
+    a: "Voltamos, sem cobrar. A garantia é de 6 meses, vem por escrito no laudo. Se a praga reaparecer no prazo, você chama e a gente resolve.",
   },
   {
-    q: "Atendem empresas e condomínios?",
-    a: "Sim! Temos equipe especializada para atendimento comercial e condominial, com laudo técnico incluso para conformidade com a vigilância sanitária.",
+    q: "Funciona pra apartamento, restaurante e condomínio?",
+    a: "Sim. Atendemos residência, comércio, restaurante, indústria e condomínio. Emitimos laudo técnico aceito pela vigilância sanitária e por síndicos.",
   },
   {
-    q: "Quais formas de pagamento aceitam?",
-    a: "Aceitamos dinheiro, PIX, cartão de débito e crédito. Parcelamos em até 12x no cartão de crédito.",
+    q: "Como pago?",
+    a: "PIX, dinheiro, débito ou cartão de crédito em até 12x. Sem entrada, sem consulta ao SPC.",
   },
   {
-    q: "Como faço para agendar?",
-    a: "É muito fácil! Clique no botão do WhatsApp ou ligue para (41) 99512-1583. Respondemos rapidamente e agendamos no melhor horário para você.",
+    q: "Como agendo?",
+    a: "Chama no WhatsApp (41) 99512-1583 ou liga. Respondemos em minutos e agendamos para o mesmo dia, se for urgência.",
   },
 ];
 
@@ -36,10 +36,10 @@ const FAQSection = () => {
     <section id="faq" className="py-16 md:py-20 bg-background">
       <div className="container px-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-4">
-          Perguntas Frequentes
+          Dúvidas mais comuns
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Tire suas dúvidas sobre nossos serviços
+          O que a gente mais responde no WhatsApp — resumido aqui.
         </p>
 
         <div className="max-w-2xl mx-auto">
