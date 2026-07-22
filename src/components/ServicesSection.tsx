@@ -38,7 +38,7 @@ const services: ServiceCard[] = [
  {
  image: serviceCondominium,
  title: "Condomínio com queixa de morador",
- description: "Tratamos áreas comuns, garagem e apartamentos no mesmo cronograma. Contrato com síndico, preço fechado por unidade e nota fiscal.",
+ description: "Tratamos áreas comuns, garagem e apartamentos no mesmo cronograma. Contrato com síndico, orçamento por unidade e nota fiscal.",
  href: "/servicos/dedetizacao-condominial",
  },
  {
