@@ -2,32 +2,32 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqs = [
   {
-    q: "Quanto tempo leva para desentupir?",
-    a: "Na maioria dos casos, resolvemos em 30 minutos a 2 horas, dependendo da complexidade do entupimento.",
+    q: "Em quanto tempo vocês desentopem?",
+    a: "Entupimento de pia ou vaso: 30 min a 1h. Coluna e esgoto do prédio: até 2h. Chegamos no seu endereço em 1h após você chamar.",
   },
   {
-    q: "Vocês quebram parede ou piso?",
-    a: "Não! Utilizamos equipamentos modernos como máquinas rotativas e hidrojateamento que desobstruem sem necessidade de quebrar estruturas.",
+    q: "Vão precisar quebrar meu piso?",
+    a: "Não. Usamos máquina rotativa e hidrojato de alta pressão pelo próprio ralo ou caixa de inspeção. Só quebramos se você autorizar, e mesmo assim é raríssimo.",
   },
   {
-    q: "Atendem emergências de madrugada?",
-    a: "Sim! Nosso atendimento é 24 horas, incluindo fins de semana e feriados. Ligue ou mande WhatsApp a qualquer momento.",
+    q: "Atendem de madrugada e no feriado?",
+    a: "Sim, 24 horas — inclusive domingo, feriado e virada de ano. Mesmo preço, mesma equipe.",
   },
   {
-    q: "Qual o prazo de garantia?",
-    a: "Oferecemos 90 dias de garantia para todos os nossos serviços de desentupimento.",
+    q: "Se entupir de novo, vocês voltam?",
+    a: "Voltamos, sem cobrar. Garantia de 90 dias por escrito no comprovante do serviço.",
   },
   {
-    q: "Fazem limpeza de fossa?",
-    a: "Sim! Contamos com caminhão limpa-fossa para esgotamento e limpeza de fossas sépticas com descarte ambientalmente correto.",
+    q: "Limpam fossa também?",
+    a: "Sim. Caminhão limpa-fossa próprio, esgotamento e destinação com licença ambiental. Sem cheiro na sua rua, sem sujar a calçada.",
   },
   {
-    q: "Quais formas de pagamento aceitam?",
-    a: "Aceitamos dinheiro, PIX, cartão de débito e crédito. Parcelamos em até 12x no cartão de crédito.",
+    q: "Como pago em urgência?",
+    a: "PIX na hora, dinheiro, débito ou crédito em até 12x. O técnico já leva a maquininha.",
   },
   {
-    q: "Como faço para agendar?",
-    a: "Clique no botão do WhatsApp ou ligue para (41) 99512-1583. Respondemos rapidamente e podemos enviar uma equipe imediatamente.",
+    q: "Como chamo agora?",
+    a: "Manda WhatsApp para (41) 99512-1583 ou liga. Respondemos em minutos e mandamos a equipe imediatamente.",
   },
 ];
 
@@ -36,10 +36,10 @@ const DesFAQSection = () => {
     <section id="faq" className="py-16 md:py-20 bg-background">
       <div className="container px-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-4">
-          Perguntas Frequentes
+          Perguntas de quem já ligou
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Tire suas dúvidas sobre nossos serviços de desentupimento
+          As dúvidas mais comuns antes de contratar — respondidas direto.
         </p>
 
         <div className="max-w-2xl mx-auto">
