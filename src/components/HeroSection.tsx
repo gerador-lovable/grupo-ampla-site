@@ -22,7 +22,7 @@ const stats = [
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-hero section-py">
       {/* Ambient glow */}
       <div aria-hidden className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-primary-glow/20 blur-[120px]" />
       <div aria-hidden className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-accent/20 blur-[140px]" />
@@ -38,10 +38,10 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="container relative z-10 pt-32 md:pt-40 pb-16 md:pb-0 px-4">
+      <div className="container relative z-10 pt-32 md:pt-40 px-4">
         <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-8 items-center">
           {/* Left column */}
-          <div className="text-primary-foreground pb-10 md:pb-0">
+          <div className="text-primary-foreground">
             <div className="inline-flex items-center gap-2 border border-white/15 bg-white/5 backdrop-blur-sm text-primary-foreground/90 text-xs font-medium tracking-[0.14em] uppercase px-3.5 py-1.5 rounded-full mb-8 animate-fade-in">
               <span className="inline-flex w-1.5 h-1.5 rounded-full bg-accent" />
               Dedetizadora em Curitiba · 35 anos
