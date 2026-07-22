@@ -5,10 +5,12 @@ export interface BlogPost {
  description: string;
  resumo: string;
  publicadoEm: string;
+ atualizadoEm?: string;
  leitura: string;
  categoria: string;
  secoes: { h2: string; paragrafos: string[]; bullets?: string[] }[];
  conclusao: string;
+ faqs?: { q: string; a: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -582,6 +584,394 @@ export const blogPosts: BlogPost[] = [
   ],
   conclusao: "Precisa do certificado da caixa d'água? Fale conosco pelo WhatsApp, orçamento em minutos.",
  },
+  {
+   slug: "esgoto-voltando-pelo-ralo-o-que-fazer",
+   titulo: "Esgoto voltando pelo ralo: o que fazer agora",
+   title: "Esgoto Voltando pelo Ralo: O Que Fazer Agora | Ampla Curitiba",
+   description: "Esgoto retornando pelo ralo do banheiro ou cozinha? Veja causas, primeiros passos seguros e quando chamar desentupidora 24h em Curitiba.",
+   resumo: "Água escura ou mau cheiro subindo pelo ralo é sinal de esgoto obstruído. Veja como agir sem piorar a situação.",
+   publicadoEm: "2026-07-22",
+   atualizadoEm: "2026-07-22",
+   leitura: "5 min",
+   categoria: "Emergência",
+   secoes: [
+    {
+     h2: "Por que o esgoto volta pelo ralo",
+     paragrafos: [
+      "Quando o ralo do box, da pia ou o vaso libera água escura, esponjosa ou com cheiro forte, o problema quase nunca está no ralo em si, está mais adiante na tubulação. A causa mais comum é obstrução no ramal de esgoto do imóvel ou na rede coletiva do prédio.",
+      "Em Curitiba, principalmente em bairros de topografia baixa e em dias de chuva forte, também acontece de a rede pública ficar sobrecarregada e o retorno subir para o imóvel mais baixo do prédio.",
+     ],
+    },
+    {
+     h2: "O que fazer nos primeiros 10 minutos",
+     paragrafos: ["Antes de chamar a desentupidora, três medidas evitam prejuízo maior:"],
+     bullets: [
+      "Feche o registro de água do imóvel para não aumentar o volume de esgoto",
+      "Não jogue produto químico caseiro (soda, ácido), pode danificar tubos de PVC e agravar o entupimento",
+      "Tampe outros ralos com pano molhado para conter o retorno em um único ponto",
+     ],
+    },
+    {
+     h2: "Quando chamar a desentupidora 24h",
+     paragrafos: [
+      "Se o retorno persiste depois de fechar a água, se há vários pontos com refluxo ao mesmo tempo ou se há cheiro de esgoto por toda a casa, a obstrução é séria e exige equipamento profissional (mola motorizada ou hidrojateamento).",
+      "A Ampla atende Curitiba e Região Metropolitana 24 horas, com técnico no endereço em até 2 horas para emergências como essa.",
+     ],
+    },
+   ],
+   faqs: [
+    { q: "Posso usar desentupidor de borracha?", a: "Sim, no ralo da pia ou do banheiro pode ajudar em entupimentos leves. Se a água voltar de novo em minutos, a obstrução está no ramal, precisa de equipamento profissional." },
+    { q: "É perigoso deixar esgoto voltando durante a noite?", a: "Sim. Além do risco de contaminação e mau cheiro, o refluxo pode danificar piso, rodapé e móveis. Vale ligar para uma desentupidora 24h no mesmo dia." },
+   ],
+   conclusao: "Esgoto voltando é emergência, ligue agora pelo WhatsApp e enviamos técnico em minutos.",
+  },
+  {
+   slug: "rato-no-telhado-como-eliminar",
+   titulo: "Rato no telhado: como eliminar sem subir no forro",
+   title: "Rato no Telhado: Como Eliminar Sem Subir no Forro | Ampla",
+   description: "Ouve barulho de rato no telhado ou forro? Veja como identificar a espécie, o método técnico de controle e por que armadilha caseira não resolve.",
+   resumo: "Barulho de arranhado à noite no telhado costuma ser rato de telhado. Veja o método técnico que resolve de verdade.",
+   publicadoEm: "2026-07-22",
+   atualizadoEm: "2026-07-22",
+   leitura: "5 min",
+   categoria: "Roedores",
+   secoes: [
+    {
+     h2: "É rato mesmo? Como confirmar",
+     paragrafos: [
+      "O rato de telhado (Rattus rattus) é o mais comum em forros e beirais em Curitiba. Ele é ágil, sobe em fiação, entra por telha quebrada, cumeeira aberta ou beiral sem tela. Faz ninho em isolamento térmico e come tudo que encontra.",
+     ],
+     bullets: [
+      "Barulho de arranhado ou corrida no forro, principalmente à noite",
+      "Fezes escuras alongadas em cima de gesso, caixa d'água ou telha",
+      "Fios de alta e baixa tensão roídos (risco de curto e incêndio)",
+      "Cheiro forte de urina em cômodo próximo à caixa d'água",
+     ],
+    },
+    {
+     h2: "Por que armadilha caseira não resolve",
+     paragrafos: [
+      "Ratoeira, veneno de mercado e ultrassônico até pegam um ou outro, mas não interrompem a colônia. Sem vedar os acessos e sem porta-iscas técnica em pontos de passagem, o problema volta em semanas.",
+      "Pior: veneno de mercado sem cápsula faz o rato morrer no forro, gerando cheiro forte por semanas e atraindo moscas.",
+     ],
+    },
+    {
+     h2: "Como a Ampla trata rato no telhado",
+     paragrafos: [
+      "Nosso protocolo tem três etapas: inspeção do forro e do perímetro, vedação de pontos de entrada (telha, beiral, cumeeira, saída de exaustor) e instalação de porta-iscas lacrados em pontos de passagem, com iscas de anticoagulante técnico registrado ANVISA que faz o rato buscar água antes de morrer, evitando cadáver no forro.",
+      "Emitimos laudo técnico e certificado válido para vigilância e síndico. Garantia de 6 meses.",
+     ],
+    },
+   ],
+   faqs: [
+    { q: "Preciso liberar acesso ao forro?", a: "Sim, o técnico precisa inspecionar o forro para achar ninho, pontos de entrada e definir onde colocar os porta-iscas." },
+    { q: "Meu pet corre risco?", a: "Não. Trabalhamos com porta-iscas lacrados, cachorro e gato não conseguem acessar o veneno." },
+   ],
+   conclusao: "Barulho de rato no telhado não some sozinho. Solicite orçamento pelo WhatsApp e visita técnica no mesmo dia.",
+  },
+  {
+   slug: "quanto-tempo-dura-uma-dedetizacao",
+   titulo: "Quanto tempo dura uma dedetização?",
+   title: "Quanto Tempo Dura Uma Dedetização? Guia Completo | Ampla",
+   description: "Descubra por quanto tempo dura o efeito de uma dedetização, o que reduz esse prazo e quando repetir para manter o imóvel livre de pragas.",
+   resumo: "Uma dedetização bem feita protege por meses, mas o prazo muda por praga, ambiente e método. Veja o que esperar.",
+   publicadoEm: "2026-07-22",
+   atualizadoEm: "2026-07-22",
+   leitura: "4 min",
+   categoria: "Dedetização",
+   secoes: [
+    {
+     h2: "Prazo médio por tipo de praga",
+     paragrafos: ["O tempo de proteção varia conforme o produto, a praga e o ambiente:"],
+     bullets: [
+      "Baratas (gel + pulverização): 3 a 6 meses",
+      "Formigas: 4 a 6 meses",
+      "Ratos (porta-isca técnica): manutenção contínua, revisão a cada 60 dias",
+      "Cupim de madeira (imunização): 5 anos com produto certificado",
+      "Cupim de solo (barreira química): 5 a 10 anos",
+      "Escorpião: 3 meses (área externa exige reforço trimestral)",
+     ],
+    },
+    {
+     h2: "O que reduz o efeito antes do prazo",
+     paragrafos: ["Alguns fatores fazem a proteção acabar mais rápido:"],
+     bullets: [
+      "Lavagem forte de piso com água e sabão nos primeiros dias (dilui o produto)",
+      "Umidade excessiva e vazamentos que não foram corrigidos",
+      "Vizinhança com infestação ativa (baratas migram)",
+      "Uso de inseticida de mercado logo depois (repele o produto profissional)",
+     ],
+    },
+    {
+     h2: "Plano preventivo: quando faz sentido",
+     paragrafos: [
+      "Para imóveis comerciais, restaurantes, condomínios e casas com histórico de infestação, o plano trimestral é mais barato do que a soma de dedetizações avulsas e mantém a garantia contínua.",
+     ],
+    },
+   ],
+   faqs: [
+    { q: "Preciso repetir mesmo se não vi mais pragas?", a: "Sim, o produto perde efeito gradualmente. Reaplicar dentro do prazo evita nova infestação instalar." },
+    { q: "A garantia da Ampla dura quanto?", a: "6 meses por escrito. Se aparecer a mesma praga no prazo, voltamos sem custo." },
+   ],
+   conclusao: "Quer manter seu imóvel protegido o ano inteiro? Fale conosco no WhatsApp e monte um plano preventivo.",
+  },
+  {
+   slug: "precisa-sair-de-casa-apos-dedetizacao",
+   titulo: "Precisa sair de casa depois da dedetização?",
+   title: "Precisa Sair de Casa Após Dedetização? Prazo Seguro | Ampla",
+   description: "Depois da dedetização é preciso sair de casa? Veja o tempo real de reentrada, o que fazer com pets, crianças e alimentos, e o que a ANVISA exige.",
+   resumo: "A resposta curta: sim, mas por pouco tempo, e o prazo depende do produto e da praga. Veja o guia completo.",
+   publicadoEm: "2026-07-22",
+   atualizadoEm: "2026-07-22",
+   leitura: "4 min",
+   categoria: "Dedetização",
+   secoes: [
+    {
+     h2: "Prazo médio de reentrada",
+     paragrafos: [
+      "Com produtos profissionais registrados na ANVISA aplicados corretamente, o prazo de segurança para reentrada varia entre 2 e 4 horas depois da aplicação. Esse tempo permite que a névoa de produto se assente e que o solvente evapore.",
+      "Para dedetização só com gel (comum em cozinha de apartamento), o prazo é ainda menor: cerca de 30 minutos, já que o produto não é pulverizado no ambiente.",
+     ],
+    },
+    {
+     h2: "Pets, crianças e idosos",
+     paragrafos: [
+      "O prazo é o mesmo, mas recomendamos deixar por até 4 horas para casas com bebê, gato, cachorro pequeno ou pessoa com sensibilidade respiratória. Passado esse tempo, o ambiente é totalmente seguro.",
+     ],
+     bullets: [
+      "Retire ração e água do pet antes da aplicação, reponha ao voltar",
+      "Guarde brinquedo de bebê que fica no chão em armário fechado",
+      "Cubra o aquário e desligue a bomba de ar durante a aplicação",
+     ],
+    },
+    {
+     h2: "Alimentos e utensílios",
+     paragrafos: [
+      "Alimentos em embalagem lacrada, geladeira ou freezer não precisam sair. Alimentos abertos e utensílios em cima da bancada devem ser guardados em armário fechado. Ao voltar, basta passar pano úmido nas superfícies que ficam em contato com comida.",
+     ],
+    },
+   ],
+   faqs: [
+    { q: "Posso voltar antes se o cheiro sumiu?", a: "Não. O cheiro é um marcador, mas o prazo técnico depende do produto. Respeite as 2 a 4 horas indicadas pelo técnico." },
+    { q: "Preciso lavar tudo depois?", a: "Não. Basta pano úmido em bancada e mesa. Não lave o piso nos primeiros 7 dias, isso reduz a eficácia do produto." },
+   ],
+   conclusao: "Quer entender o passo a passo antes de contratar? Fale conosco pelo WhatsApp, tiramos suas dúvidas em minutos.",
+  },
+  {
+   slug: "preco-dedetizacao-apartamento-curitiba",
+   titulo: "Preço de dedetização em apartamento em Curitiba",
+   title: "Preço Dedetização Apartamento em Curitiba 2026 | Ampla",
+   description: "Veja o preço de dedetização em apartamento em Curitiba em 2026: valores por metragem, tipo de praga, o que está incluso e o que evitar.",
+   resumo: "Preços variam de R$ 180 a R$ 450 dependendo do apartamento e da praga. Veja a tabela e evite armadilhas comuns.",
+   publicadoEm: "2026-07-22",
+   atualizadoEm: "2026-07-22",
+   leitura: "5 min",
+   categoria: "Preços",
+   secoes: [
+    {
+     h2: "Tabela de preços por metragem",
+     paragrafos: ["Referência para Curitiba e Região Metropolitana, 2026:"],
+     bullets: [
+      "Apartamento até 60 m²: R$ 180 a R$ 240",
+      "Apartamento 60 a 100 m²: R$ 220 a R$ 320",
+      "Apartamento 100 a 150 m²: R$ 300 a R$ 420",
+      "Apartamento acima de 150 m²: sob orçamento (cotamos pelo WhatsApp em minutos)",
+     ],
+    },
+    {
+     h2: "O que deve estar incluso no valor",
+     paragrafos: ["Preço abaixo da faixa costuma esconder cortes que aparecem depois:"],
+     bullets: [
+      "Vistoria antes da aplicação (não é opcional)",
+      "Produto registrado na ANVISA, com nota fiscal do produto",
+      "Aplicação em cozinha, área de serviço, banheiros e ralos",
+      "Certificado com data, produto usado e assinatura do responsável técnico",
+      "Garantia por escrito de no mínimo 3 meses (Ampla dá 6)",
+     ],
+    },
+    {
+     h2: "Sinal de risco: preço muito baixo",
+     paragrafos: [
+      "Se um orçamento vier muito abaixo da faixa, provavelmente falta uma dessas coisas: registro ANVISA da empresa, produto certificado, técnico responsável ou garantia. O barato aqui sai caro, aplicar produto errado em apartamento pode gerar reclamação de vizinho e até multa de condomínio.",
+     ],
+    },
+   ],
+   faqs: [
+    { q: "O preço muda se tiver mais de uma praga?", a: "Depende. Baratas e formigas juntas cabem no mesmo protocolo. Cupim ou rato exige método próprio e entra como item extra." },
+    { q: "Emitem nota fiscal para reembolso pelo condomínio?", a: "Sim, todos os serviços saem com nota fiscal e certificado nominal, aceitos por síndico e vigilância." },
+   ],
+   conclusao: "Quer o preço exato para o seu apartamento? Nos envie a metragem no WhatsApp e respondemos em minutos.",
+  },
+  {
+   slug: "cupim-apareceu-do-nada-o-que-fazer",
+   titulo: "Cupim apareceu do nada: o que fazer",
+   title: "Cupim Apareceu do Nada em Casa: O Que Fazer | Ampla",
+   description: "Descobriu cupim de repente em móvel, batente ou parede? Veja o passo a passo do que fazer e o que NÃO fazer para não espalhar a infestação.",
+   resumo: "Nuvem de cupins alados ou pó fino em móvel é sinal de infestação já instalada. Veja como agir sem espalhar.",
+   publicadoEm: "2026-07-22",
+   atualizadoEm: "2026-07-22",
+   leitura: "5 min",
+   categoria: "Cupim",
+   secoes: [
+    {
+     h2: "Por que parece que apareceu do nada",
+     paragrafos: [
+      "Cupim raramente aparece de um dia para o outro, a colônia estava lá há meses ou anos, escondida dentro da madeira ou do reboco. O que aparece de repente é a revoada de cupins alados (aleluias) em época de calor com umidade, ou o pó fino de madeira caindo embaixo de rodapé, batente e móvel.",
+     ],
+    },
+    {
+     h2: "O que NÃO fazer",
+     paragrafos: ["Alguns erros comuns espalham a colônia para o resto do imóvel:"],
+     bullets: [
+      "Jogar veneno de mercado direto no furinho (espanta o cupim, cria colônia satélite)",
+      "Passar verniz ou tinta para tampar (mascara, colônia continua comendo por dentro)",
+      "Trocar só o móvel afetado sem tratar o restante",
+      "Aspirar aleluias e ignorar (elas saem de uma colônia que continua ali)",
+     ],
+    },
+    {
+     h2: "O que fazer no mesmo dia",
+     paragrafos: [
+      "Isolar o móvel afetado se possível, guardar amostra do pó ou do cupim para o técnico identificar a espécie, e agendar vistoria. A Ampla faz descupinização com injeção de produto direto no ninho e barreira química, com garantia de 5 anos por escrito.",
+     ],
+    },
+   ],
+   faqs: [
+    { q: "Preciso mudar o móvel do lugar?", a: "Não. O técnico avalia se dá para tratar no local. Mudar antes pode espalhar a colônia." },
+    { q: "Cupim de madeira vira cupim de solo?", a: "São espécies diferentes. Mas ter uma facilita a entrada da outra, o tratamento certo cobre as duas vias." },
+   ],
+   conclusao: "Achou cupim? Não espere piorar. Solicite vistoria pelo WhatsApp e tratamos com garantia de 5 anos.",
+  },
+  {
+   slug: "dedetizacao-em-condominio-e-obrigatoria",
+   titulo: "Dedetização em condomínio é obrigatória?",
+   title: "Dedetização em Condomínio é Obrigatória? Lei e Prazos | Ampla",
+   description: "Síndico é obrigado a fazer dedetização? Veja o que a lei e a vigilância sanitária exigem em Curitiba, prazo, laudo e responsabilidade.",
+   resumo: "Sim, e o prazo é mais curto do que muitos síndicos imaginam. Veja a norma e como se proteger de multa.",
+   publicadoEm: "2026-07-22",
+   atualizadoEm: "2026-07-22",
+   leitura: "5 min",
+   categoria: "Condomínio",
+   secoes: [
+    {
+     h2: "O que a norma diz",
+     paragrafos: [
+      "A RDC 52/2009 da ANVISA regula empresas de dedetização e controle de vetores. Já a legislação municipal de Curitiba, seguindo o Código Sanitário Estadual do Paraná, obriga o síndico a manter o condomínio livre de pragas urbanas, com controle periódico documentado.",
+      "Na prática, o síndico responde civil e criminalmente por surto de rato, barata ou escorpião em área comum causado por falta de controle preventivo.",
+     ],
+    },
+    {
+     h2: "Prazo recomendado",
+     paragrafos: ["A frequência depende do porte e da localização, mas o mercado trabalha com:"],
+     bullets: [
+      "Dedetização geral em áreas comuns: a cada 3 a 6 meses",
+      "Desratização com porta-iscas monitoradas: revisão a cada 60 dias",
+      "Limpeza de caixa d'água: a cada 6 meses (obrigatório em Curitiba)",
+      "Controle de escorpião em condomínios da região sul/leste de Curitiba: reforço trimestral",
+     ],
+    },
+    {
+     h2: "Documentos que o síndico deve guardar",
+     paragrafos: ["Em fiscalização da vigilância, o síndico precisa apresentar:"],
+     bullets: [
+      "Nota fiscal do serviço",
+      "Certificado com data, produto e responsável técnico",
+      "Laudo técnico com mapa de porta-iscas e áreas tratadas",
+      "Alvará da empresa contratada",
+     ],
+    },
+   ],
+   faqs: [
+    { q: "O condomínio precisa avisar os moradores?", a: "Sim, com antecedência mínima de 48 horas, informando data, horário e produto usado, para pessoas com sensibilidade e donos de pet." },
+    { q: "Ampla emite todos esses documentos?", a: "Sim. Todo serviço em condomínio sai com nota, certificado, laudo e alvará em nome do condomínio, prontos para vigilância." },
+   ],
+   conclusao: "É síndico e precisa regularizar? Fale com a Ampla pelo WhatsApp, montamos plano de manutenção com laudo mensal.",
+  },
+  {
+   slug: "quem-pode-emitir-laudo-de-dedetizacao",
+   titulo: "Quem pode emitir laudo de dedetização?",
+   title: "Quem Pode Emitir Laudo de Dedetização? Responsável Técnico | Ampla",
+   description: "Só empresa registrada na ANVISA e com responsável técnico habilitado pode emitir laudo de dedetização válido. Veja o que checar antes de contratar.",
+   resumo: "Laudo sem responsável técnico habilitado não vale para vigilância. Veja quem pode assinar e o que o documento precisa ter.",
+   publicadoEm: "2026-07-22",
+   atualizadoEm: "2026-07-22",
+   leitura: "4 min",
+   categoria: "Documentação",
+   secoes: [
+    {
+     h2: "Quem é o responsável técnico",
+     paragrafos: [
+      "A RDC 52/2009 exige que toda empresa de controle de vetores e pragas urbanas tenha um responsável técnico habilitado, que pode ser: biólogo, engenheiro agrônomo, engenheiro florestal, farmacêutico ou químico, com registro ativo no respectivo conselho de classe (CRBio, CREA, CRF, CRQ).",
+      "Esse profissional é quem assina o laudo técnico. Sem essa assinatura, o documento não tem validade para vigilância sanitária, ONA, ISO ou plano de manutenção condominial.",
+     ],
+    },
+    {
+     h2: "O que o laudo válido precisa ter",
+     paragrafos: ["Um laudo aceito por auditoria e vigilância inclui:"],
+     bullets: [
+      "Razão social, CNPJ e alvará sanitário da empresa",
+      "Nome, formação e número de registro do responsável técnico",
+      "Data, endereço tratado e áreas cobertas",
+      "Produtos usados, número do registro ANVISA e concentração",
+      "Mapa de porta-iscas ou pontos de aplicação (quando aplicável)",
+      "Assinatura física ou digital ICP-Brasil do responsável técnico",
+     ],
+    },
+    {
+     h2: "Como confirmar que a empresa está regular",
+     paragrafos: [
+      "Peça o alvará sanitário (é público) e confirme o registro do responsável técnico no site do conselho de classe. A Ampla envia esses documentos junto do orçamento, sem burocracia.",
+     ],
+    },
+   ],
+   faqs: [
+    { q: "Técnico aplicador pode assinar o laudo?", a: "Não. O aplicador executa, mas quem assina é o responsável técnico habilitado da empresa." },
+    { q: "Laudo digital vale igual ao impresso?", a: "Sim, desde que tenha assinatura digital com certificado ICP-Brasil." },
+   ],
+   conclusao: "Precisa de laudo aceito por vigilância ou auditoria? Fale com a Ampla no WhatsApp, emitimos com responsável técnico registrado.",
+  },
+  {
+   slug: "dedetizadora-com-nota-fiscal-e-certificado",
+   titulo: "Dedetizadora com nota fiscal e certificado: por que exigir",
+   title: "Dedetizadora com Nota Fiscal e Certificado em Curitiba | Ampla",
+   description: "Contratar dedetizadora sem nota fiscal e certificado gera risco de multa, perda de garantia e reembolso negado. Veja como confirmar antes de fechar.",
+   resumo: "Sem nota e certificado, o serviço não vale para vigilância, síndico nem reembolso. Veja o que checar antes.",
+   publicadoEm: "2026-07-22",
+   atualizadoEm: "2026-07-22",
+   leitura: "4 min",
+   categoria: "Documentação",
+   secoes: [
+    {
+     h2: "Por que o documento importa",
+     paragrafos: [
+      "Serviço pago sem nota fiscal é serviço que não existe legalmente. Se aparecer um problema depois, não há como acionar garantia, exigir reparo ou pedir reembolso pelo condomínio ou pelo plano de saúde ocupacional (no caso de comércios).",
+      "Certificado é o documento técnico que comprova o que foi aplicado, quando e por quem. Sem ele, vigilância sanitária pode multar o estabelecimento, e síndico não consegue justificar o gasto na assembleia.",
+     ],
+    },
+    {
+     h2: "Checklist antes de fechar",
+     paragrafos: ["Antes de aceitar o orçamento, confirme por escrito:"],
+     bullets: [
+      "Emite nota fiscal em nome de pessoa física ou jurídica",
+      "Entrega certificado com produto, data e responsável técnico",
+      "Tem alvará sanitário municipal em dia",
+      "Dá garantia por escrito de no mínimo 3 meses (Ampla dá 6)",
+      "Aceita pagamento em Pix, cartão e boleto (não só dinheiro na hora)",
+     ],
+    },
+    {
+     h2: "Como funciona na Ampla",
+     paragrafos: [
+      "Todo serviço da Ampla sai com nota fiscal enviada por e-mail, certificado impresso ou digital com assinatura do responsável técnico e garantia de 6 meses. Sem burocracia, sem cobrar extra por documentação.",
+     ],
+    },
+   ],
+   faqs: [
+    { q: "Dedetização pessoa física precisa de nota?", a: "Sim. A nota vale como comprovação de garantia e para reembolso no condomínio (se for infestação em área comum vinda de vizinho)." },
+    { q: "Certificado tem prazo de validade?", a: "Sim, igual ao prazo da garantia. Serve como comprovante para vigilância e vistoria durante esse período." },
+   ],
+   conclusao: "Contratar dedetizadora séria começa antes do serviço. Fale com a Ampla pelo WhatsApp e receba orçamento com nota e certificado inclusos.",
+  },
 ];
 
 export const findPost = (slug: string) => blogPosts.find((p) => p.slug === slug);

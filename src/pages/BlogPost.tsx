@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 import { findPost, blogPosts } from "@/data/blogPosts";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
@@ -26,10 +27,23 @@ const BlogPost = () => {
     headline: post.titulo,
     description: post.description,
     datePublished: post.publicadoEm,
+    dateModified: post.atualizadoEm ?? post.publicadoEm,
     author: { "@type": "Organization", name: "Ampla Dedetizadora" },
     publisher: { "@type": "Organization", name: "Grupo Ampla" },
     mainEntityOfPage: canonical,
   };
+
+  const faqSchema = post.faqs && post.faqs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: post.faqs.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      }
+    : null;
 
   const outros = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
@@ -44,12 +58,16 @@ const BlogPost = () => {
         <meta property="og:url" content={canonical} />
         <meta property="og:type" content="article" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        {faqSchema && (
+          <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        )}
       </Helmet>
 
       <Header />
 
       <article className="pt-32 md:pt-40 pb-16 bg-background">
         <div className="container px-4 max-w-3xl">
+          <Breadcrumbs items={[{ label: "Blog", to: "/blog" }, { label: post.titulo }]} />
           <Link to="/blog" className="inline-flex items-center gap-2 text-primary font-semibold mb-6 hover:underline">
             <ArrowLeft className="w-4 h-4" /> Voltar ao blog
           </Link>
@@ -76,6 +94,20 @@ const BlogPost = () => {
                 )}
               </div>
             ))}
+
+            {post.faqs && post.faqs.length > 0 && (
+              <div className="mb-10">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Perguntas frequentes</h2>
+                <div className="space-y-5">
+                  {post.faqs.map((f) => (
+                    <div key={f.q}>
+                      <h3 className="font-bold text-foreground text-lg mb-1">{f.q}</h3>
+                      <p className="text-foreground/90 leading-relaxed">{f.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="bg-primary text-primary-foreground rounded-xl p-8 mt-12 text-center">

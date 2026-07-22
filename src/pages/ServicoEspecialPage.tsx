@@ -23,6 +23,8 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 import { findServicoEspecial } from "@/data/servicosEspeciais";
 import type { DepoimentoTag } from "@/data/depoimentos";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import PrecoBlock from "@/components/PrecoBlock";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
@@ -95,6 +97,13 @@ const ServicoEspecialPage = () => {
  <section className="relative pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
  <div className="container px-4">
  <div className="max-w-3xl">
+  <Breadcrumbs
+   items={[
+    { label: "Serviços", to: "/#servicos" },
+    { label: servico.nome },
+   ]}
+   tone="dark"
+  />
  <div className="inline-flex items-center gap-2 bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
  <Icon className="w-4 h-4" /> Ampla · 35 anos em Curitiba
  </div>
@@ -191,6 +200,16 @@ const ServicoEspecialPage = () => {
  </div>
  </div>
  </section>
+
+  <PrecoBlock
+   titulo={`Preço de ${servico.nome.toLowerCase()} em Curitiba`}
+   faixas={[
+    { label: "Residencial padrão", preco: "R$ 180 a R$ 380" },
+    { label: "Comercial até 200 m²", preco: "R$ 350 a R$ 700" },
+    { label: "Condomínio (áreas comuns)", preco: "R$ 450 a R$ 1.200" },
+    { label: "Indústria / porte maior", preco: "sob orçamento" },
+   ]}
+  />
 
   <section className="section-py bg-primary text-primary-foreground">
  <div className="container px-4 max-w-3xl text-center">

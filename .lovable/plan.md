@@ -1,47 +1,91 @@
 
-# Expansão de conteúdo SEO, Ampla, com foco em conversão
+## Diagnóstico da estrutura atual
 
-Fonte: Semrush (base BR). Domínio novo ainda sem histórico, então analisei o nicho. Cada peça terá **CTA direto pra Ampla** (WhatsApp + link pras páginas de serviço/bairro), puxando o tráfego educacional pra conversão local em Curitiba/RMC.
+Revisei `PragaPage`, `BairroPage`, `ServicoEspecialPage`, `BlogPost` e `index.html`. A base é sólida (Helmet per-page, FAQPage/Service/Article schema, canonical correto, H1 único, testimonials segmentados, internal linking entre pragas/bairros/serviços). Faltam 6 pontos que hoje travam o ranqueamento:
 
-## Bloco 1, Blog "como resolver" (9 posts, KD baixo)
+1. Nenhuma página tem **BreadcrumbList schema** nem breadcrumb visível → Google não gera rich snippet de trilha.
+2. `PragaPage` e `ServicoEspecialPage` **não têm bloco de "Preço / Quanto custa"** → perde toda busca BOFU com modificador comercial ("preço", "quanto custa", "valor").
+3. Blog posts têm formato Q&A mas **não emitem FAQPage schema** → perde chance de PAA (People Also Ask).
+4. `Article` schema não tem `dateModified` → Google prefere conteúdo com sinal de frescor.
+5. Nenhuma página gera **`og:image` dinâmico** (só o fallback do hosting).
+6. Páginas de bairro não têm H2 combinando bairro + praga específica (perdem long-tail "dedetização barata + [bairro]", "rato + [bairro]").
 
-Cada post: intro, sintomas, o que dá pra fazer sozinho (honesto), quando não resolve mais e vira caso pra profissional, CTA forte pra Ampla em Curitiba, FAQ curto.
+## Palavras-chave BOFU não óbvias (Semrush BR)
 
-| Post | KW principal | Volume | KD |
-|---|---|---|---|
-| Como acabar com baratas em casa (guia definitivo) | como acabar com baratas | 1.600 (+3.600 var) | 29 |
-| Como matar cupim de madeira: 7 métodos | como matar cupim | 2.400 (+1.600 var) | 16 |
-| Como acabar com ratos em casa e no quintal | como acabar com ratos | 880 (+3.600 var) | 14 |
-| Como acabar com formigas na cozinha e nas plantas | como acabar com formigas | 2.400 (+4.400 var) | 30 |
-| Como espantar pombos do telhado: o que funciona | como espantar pombos | 3.600 (+1.900 var) | 22 |
-| Como acabar com percevejo de cama de vez | percevejo de cama | 22.200 | 23 |
-| Escorpião amarelo: como identificar e o que fazer | escorpião amarelo | 22.200 | 28 |
-| Como desentupir vaso sanitário (e quando chamar) | como desentupir vaso sanitário | 33.100 | 26 |
-| Como limpar caixa d'água passo a passo | limpeza de caixa d'água | 4.400 | 23 |
+Priorizadas por intenção comercial + baixa concorrência real:
 
-## Bloco 2, Serviços verticais B2B (6 páginas)
+**Volume médio, KD baixo (páginas dedicadas):**
+- `dedetizadora perto de mim` — 1.300/mo, KD 12
+- `desentupidora 24 horas` — 1.600/mo, KD 27
+- `orçamento para esgoto vaso sanitário banheiro entupido` — 1.000/mo, competição 0
 
-Novas páginas em `/servicos/*` seguindo o padrão de `ServicoEspecialPage`. Foco em conformidade sanitária, laudo, MIP e ANVISA.
+**Long-tail zero-KD (posts de blog, ganham rápido):**
+- `esgoto voltando pelo ralo` — 40/mo, KD 0
+- `rato no telhado o que fazer` — 70/mo, KD 0
+- `quem pode emitir/assinar laudo de dedetização` — 40/mo, KD 0 (B2B)
+- `preço dedetização apartamento` — 50/mo, KD 0
+- `quanto tempo dura dedetização` — cluster de 4 variações, KD 0
+- `precisa sair de casa depois da dedetização` — intenção altíssima
+- `dedetização condomínio é obrigatória` — B2B síndicos
+- `cupim apareceu do nada` — pânico, converte
+- `dedetizadora aceita pix / com nota fiscal` — fricção de compra
 
-- /servicos/dedetizacao-restaurantes
-- /servicos/dedetizacao-supermercados
-- /servicos/dedetizacao-industrias
-- /servicos/dedetizacao-escolas
-- /servicos/dedetizacao-hospitais-clinicas
-- /servicos/dedetizacao-hoteis
+## O que vamos construir
 
-## Bloco 3, Novos bairros e cidades
+### Bloco 1 — Correções estruturais nas páginas existentes
 
-**Bairros de Curitiba (10)**: Ecoville, Alto da XV, Cristo Rei, Juvevê, Champagnat, Mercês, Rebouças, Cabral, Hauer, Xaxim.
+Aplicar em `PragaPage`, `BairroPage`, `ServicoEspecialPage`, `BlogPost`:
 
-**Cidades RMC (5)**: Contenda, Balsa Nova, Mandirituba, Tijucas do Sul, Agudos do Sul.
+- **Novo componente `Breadcrumbs.tsx`**: renderiza a trilha visível (Home › Categoria › Página) + injeta `BreadcrumbList` schema no Helmet.
+- **Novo componente `PrecoBlock.tsx`**: seção "Quanto custa" com H2 do tipo `Preço da dedetização de [praga] em Curitiba` + tabela de faixas (residencial pequeno/médio/grande, comercial) + CTA. Adicionado em `PragaPage` e `ServicoEspecialPage`.
+- **`BairroPage`**: novo H2 dinâmico `Dedetização barata no [bairro] com nota fiscal` + parágrafo mencionando as 3 pragas mais buscadas + link para cada `/dedetizacao/[praga]`. Captura long-tail "praga + bairro".
+- **`BlogPost`**: emitir `FAQPage` schema quando o post tiver seção de perguntas; adicionar `dateModified` no `Article` schema.
+- **`index.html`**: garantir og:image default apontando para logo (absoluto).
+
+### Bloco 2 — 3 páginas BOFU novas de alto volume
+
+Adicionar rotas em `src/App.tsx` e entradas no sitemap:
+
+1. **`/emergencia-24h`** — página curta, ultra-BOFU, para `desentupidora 24 horas` + `dedetizadora 24h curitiba`. Hero vermelho urgência, tempo médio 2h, telefone gigante, sem seções educacionais.
+2. **`/dedetizadora-perto-de-mim`** — otimizada para "dedetizadora perto de mim curitiba" com LocalBusiness schema reforçado, mapa de área de atendimento (lista de bairros com links) e prova social geolocalizada.
+3. **`/precos`** — hub com tabela comparativa por serviço (dedetização, desentupimento, caixa d'água, controle roedores) e por porte (residencial/comercial/condomínio). Cross-linka para todas as páginas de serviço e captura o cluster "preço/quanto custa/valor".
+
+### Bloco 3 — 9 posts long-tail zero-KD
+
+Novos entries em `src/data/blogPosts.ts` (mesmo template atual, cada um puxa pro WhatsApp/serviço equivalente):
+
+| Slug | Keyword-alvo |
+|---|---|
+| `esgoto-voltando-pelo-ralo-o-que-fazer` | esgoto voltando pelo ralo |
+| `rato-no-telhado-como-eliminar` | rato no telhado o que fazer |
+| `quanto-tempo-dura-uma-dedetizacao` | quanto tempo dura dedetização |
+| `precisa-sair-de-casa-apos-dedetizacao` | precisa sair de casa depois da dedetização |
+| `preco-dedetizacao-apartamento-curitiba` | preço dedetização apartamento |
+| `cupim-apareceu-do-nada-o-que-fazer` | cupim apareceu do nada |
+| `dedetizacao-em-condominio-e-obrigatoria` | dedetização em condomínio é obrigatória |
+| `quem-pode-emitir-laudo-de-dedetizacao` | quem pode emitir laudo de dedetização (B2B) |
+| `dedetizadora-com-nota-fiscal-e-certificado` | dedetizadora com nota fiscal |
+
+### Bloco 4 — Atualização de sitemap, llms.txt e cross-linking
+
+- `public/sitemap.xml`: +12 URLs (3 páginas BOFU + 9 posts) com `priority 0.8` e `changefreq monthly`.
+- `public/llms.txt`: adicionar as novas URLs na seção correta.
+- `OutrosServicosBlock`: incluir link para `/emergencia-24h` e `/precos`.
+- Header: adicionar link "Emergência 24h" em destaque vermelho (mobile e desktop).
 
 ## Detalhes técnicos
 
-- Novas entradas em `src/data/blogPosts.ts`, `src/data/servicosEspeciais.ts`, `src/data/bairros.ts`, `src/data/cidades.ts`. As páginas dinâmicas (`BlogPost.tsx`, `ServicoEspecialPage.tsx`, `BairroPage.tsx`, `CidadePage.tsx`) já existem e renderizam automaticamente.
-- Atualizar `public/sitemap.xml` (append de todas as novas URLs).
-- Atualizar `public/llms.txt` com as novas rotas.
-- Header não itera sobre esses dados, então não polui o menu.
-- Interlinking: cada blog referencia 2, 3 páginas de serviço/bairro no CTA final.
+- Breadcrumbs derivam a trilha do path atual usando `useLocation`; cada segmento vira label humanizado.
+- `PrecoBlock` recebe props `servico` e `faixas: {label, preco}[]`, para reaproveitar em Praga/Serviço/Bairro.
+- FAQPage schema no blog só é injetado se o post tiver `faqs?: {q,a}[]` no data — não quebra posts atuais.
+- `dateModified` cai como `post.atualizadoEm ?? post.publicadoEm` (campo opcional, default = publicação).
+- Todas as novas páginas seguem o padrão `HeroSection` azul + `UrgencyBar` + CTAs `#075E54` + `WhatsAppFloat` + `FooterSection`, sem novas dependências.
+- Nenhuma mudança em Google Ads, tracking ou performance — só conteúdo + schema.
 
-Aprova pra eu subir tudo?
+## Fora deste escopo (fica para depois se você quiser)
+
+- SSR/pré-render (as metas de Helmet já são lidas por Googlebot; social crawlers têm o fallback do hosting).
+- Geração de imagens únicas por post (usaríamos hero genérico por categoria).
+- Google Business Profile e link-building externo.
+
+Depois de implementado, disparo um rescan SEO e você pede reindexação no Search Console para acelerar o pickup dos 12 novos URLs.
