@@ -41,7 +41,7 @@ const HeroSection = () => {
       <div className="container relative z-10 pt-32 md:pt-40 pb-16 md:pb-0 px-4">
         <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-8 items-center">
           {/* Left column */}
-          <div className="text-primary-foreground">
+          <div className="text-primary-foreground pb-10 md:pb-0">
             <div className="inline-flex items-center gap-2 border border-white/15 bg-white/5 backdrop-blur-sm text-primary-foreground/90 text-xs font-medium tracking-[0.14em] uppercase px-3.5 py-1.5 rounded-full mb-8 animate-fade-in">
               <span className="inline-flex w-1.5 h-1.5 rounded-full bg-accent" />
               Dedetizadora em Curitiba · 35 anos
