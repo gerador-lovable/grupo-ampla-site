@@ -759,28 +759,29 @@ export const blogPosts: BlogPost[] = [
   },
   {
    slug: "preco-dedetizacao-apartamento-curitiba",
-   titulo: "Preço de dedetização em apartamento em Curitiba",
-   title: "Preço Dedetização Apartamento em Curitiba 2026 | Ampla",
-   description: "Veja o preço de dedetização em apartamento em Curitiba em 2026: valores por metragem, tipo de praga, o que está incluso e o que evitar.",
-   resumo: "Preços variam de R$ 180 a R$ 450 dependendo do apartamento e da praga. Veja a tabela e evite armadilhas comuns.",
+   titulo: "Dedetização em apartamento em Curitiba: como funciona o orçamento",
+   title: "Dedetização em Apartamento em Curitiba: Como Funciona | Ampla",
+   description: "Como funciona o orçamento de dedetização em apartamento em Curitiba: o que muda por metragem, tipo de praga e o que exigir de qualquer empresa.",
+   resumo: "O valor varia por metragem, praga e método. Veja o que muda o orçamento e o que exigir antes de fechar.",
    publicadoEm: "2026-07-22",
    atualizadoEm: "2026-07-22",
    leitura: "5 min",
-   categoria: "Preços",
+   categoria: "Orçamento",
    secoes: [
     {
-     h2: "Tabela de preços por metragem",
-     paragrafos: ["Referência para Curitiba e Região Metropolitana, 2026:"],
-     bullets: [
-      "Apartamento até 60 m²: R$ 180 a R$ 240",
-      "Apartamento 60 a 100 m²: R$ 220 a R$ 320",
-      "Apartamento 100 a 150 m²: R$ 300 a R$ 420",
-      "Apartamento acima de 150 m²: sob orçamento (cotamos pelo WhatsApp em minutos)",
-     ],
+      h2: "O que muda o orçamento por apartamento",
+      paragrafos: ["Cada apartamento em Curitiba tem uma combinação diferente destes fatores, e é isso que define o orçamento:"],
+      bullets: [
+       "Metragem total do imóvel",
+       "Tipo e quantidade de pragas presentes",
+       "Necessidade de tratar áreas externas (sacada, box, área de serviço)",
+       "Reincidência ou primeira aplicação",
+       "Urgência (mesmo dia ou agendado)",
+      ],
     },
     {
      h2: "O que deve estar incluso no valor",
-     paragrafos: ["Preço abaixo da faixa costuma esconder cortes que aparecem depois:"],
+      paragrafos: ["Orçamento muito abaixo da média costuma esconder cortes que aparecem depois:"],
      bullets: [
       "Vistoria antes da aplicação (não é opcional)",
       "Produto registrado na ANVISA, com nota fiscal do produto",
@@ -790,17 +791,17 @@ export const blogPosts: BlogPost[] = [
      ],
     },
     {
-     h2: "Sinal de risco: preço muito baixo",
+      h2: "Sinal de risco: orçamento muito baixo",
      paragrafos: [
-      "Se um orçamento vier muito abaixo da faixa, provavelmente falta uma dessas coisas: registro ANVISA da empresa, produto certificado, técnico responsável ou garantia. O barato aqui sai caro, aplicar produto errado em apartamento pode gerar reclamação de vizinho e até multa de condomínio.",
+       "Se um orçamento vier muito abaixo do que outras empresas sérias praticam, provavelmente falta uma dessas coisas: registro ANVISA da empresa, produto certificado, técnico responsável ou garantia. O barato aqui sai caro, aplicar produto errado em apartamento pode gerar reclamação de vizinho e até multa de condomínio.",
      ],
     },
    ],
    faqs: [
-    { q: "O preço muda se tiver mais de uma praga?", a: "Depende. Baratas e formigas juntas cabem no mesmo protocolo. Cupim ou rato exige método próprio e entra como item extra." },
+     { q: "O orçamento muda se tiver mais de uma praga?", a: "Depende. Baratas e formigas juntas cabem no mesmo protocolo. Cupim ou rato exige método próprio e entra como item extra." },
     { q: "Emitem nota fiscal para reembolso pelo condomínio?", a: "Sim, todos os serviços saem com nota fiscal e certificado nominal, aceitos por síndico e vigilância." },
    ],
-   conclusao: "Quer o preço exato para o seu apartamento? Nos envie a metragem no WhatsApp e respondemos em minutos.",
+   conclusao: "Quer o orçamento exato para o seu apartamento? Nos envie a metragem no WhatsApp e respondemos em minutos.",
   },
   {
    slug: "cupim-apareceu-do-nada-o-que-fazer",
