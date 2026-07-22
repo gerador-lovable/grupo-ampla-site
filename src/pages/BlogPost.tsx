@@ -75,7 +75,7 @@ const BlogPost = () => {
             <span className="bg-primary/10 text-primary px-2 py-0.5 rounded-full font-semibold">{post.categoria}</span>
             <span className="inline-flex items-center gap-1"><Clock className="w-3 h-3" /> {post.leitura}</span>
           </div>
-          <h1 className="text-3xl md:text-5xl font-extrabold text-foreground leading-tight mb-6">{post.titulo}</h1>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-foreground leading-tight mb-6">{post.titulo}</h1>
           <p className="text-lg text-muted-foreground mb-10 leading-relaxed">{post.resumo}</p>
 
           <div className="prose prose-lg max-w-none">

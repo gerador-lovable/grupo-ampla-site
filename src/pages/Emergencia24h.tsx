@@ -122,7 +122,7 @@ const Emergencia24h = () => {
  <div className="inline-flex items-center gap-2 bg-white/15 text-white font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
  <Zap className="w-4 h-4" /> Plantão 24 horas · 7 dias por semana
  </div>
- <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-[1.1] mb-6">
+ <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-[1.1] mb-6">
  Emergência 24h em Curitiba e Região
  </h1>
  <p className="text-lg text-white/90 mb-8 leading-relaxed">

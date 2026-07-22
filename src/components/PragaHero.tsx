@@ -59,7 +59,7 @@ const PragaHero = ({ praga, whatsapp }: Props) => {
      <div className="inline-block bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
       Ampla · 35 anos em Curitiba
      </div>
-     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary-foreground leading-[1.1] mb-6 drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]">
+     <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-primary-foreground leading-[1.1] mb-6 drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]">
       {praga.h1}
      </h1>
      <p className="text-lg text-primary-foreground/95 mb-8 leading-relaxed max-w-2xl drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]">
