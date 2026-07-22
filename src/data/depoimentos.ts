@@ -35,7 +35,10 @@ export type DepoimentoTag =
   | "desentupimento-vaso-sanitario"
   | "desentupimento-ralo"
   | "hidrojateamento"
-  | "limpeza-fossa";
+  | "limpeza-fossa"
+  | "caixa-dagua"
+  | "roedores"
+  | "pombos";
 
 export interface Depoimento {
   nome: string;
