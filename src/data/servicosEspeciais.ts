@@ -431,6 +431,426 @@ export const servicosEspeciais: ServicoEspecial[] = [
  ],
  cta: "Quero o plano preventivo",
  },
+ {
+  slug: "dedetizacao-restaurantes",
+  nome: "Dedetização para Restaurantes",
+  h1: "Dedetização para Restaurantes em Curitiba: MIP com Laudo Sanitário",
+  title: "Dedetização para Restaurantes em Curitiba | Ampla, Laudo ANVISA",
+  description:
+   "Dedetização para restaurantes em Curitiba com laudo técnico aceito pela vigilância sanitária. MIP, cronograma noturno e conformidade ANVISA. Orçamento grátis.",
+  icone: "building",
+  intro:
+   "Restaurante não pode ter praga, uma barata na cozinha vira post viral e vira interdição. A Ampla executa Manejo Integrado de Pragas em restaurantes de Curitiba com aplicação noturna, laudo técnico e certificado aceito pela vigilância.",
+  contexto:
+   "Atendemos restaurantes, pizzarias, hamburguerias, self-service, cafeterias e cozinhas industriais em Curitiba e RMC. Trabalhamos com Manejo Integrado de Pragas (MIP), cronograma de visitas mensais, produtos ANVISA sem cheiro residual, aplicação fora do horário de operação e emissão de laudo técnico exigido pela vigilância sanitária municipal.",
+  sinais: [
+   "Baratas ou formigas em cozinha, bancada ou área de manipulação",
+   "Ratos ou fezes em estoque, depósito e área externa",
+   "Fiscalização apontou não conformidade no laudo",
+   "Ausência de contrato de dedetização atualizado",
+   "Reclamação de cliente sobre praga ou higiene",
+  ],
+  riscos: [
+   "Interdição pela vigilância sanitária municipal",
+   "Multas de vigilância e prefeitura",
+   "Contaminação de alimentos por E. coli, Salmonella e coliformes",
+   "Post viral em redes sociais e queda de faturamento",
+   "Perda de contrato com iFood, Rappi e delivery",
+  ],
+  metodo: [
+   {
+    titulo: "Vistoria e escopo técnico",
+    texto:
+     "Nosso responsável técnico faz vistoria completa: cozinha, estoque, área de lixo, banheiros e área externa. Mapeamos pontos críticos e definimos plano MIP.",
+   },
+   {
+    titulo: "Aplicação noturna",
+    texto:
+     "Trabalhamos após o fechamento do restaurante para não interromper operação nem exigir liberação do salão no dia seguinte.",
+   },
+   {
+    titulo: "Cronograma MIP mensal",
+    texto:
+     "Visitas programadas com rotação de produto (evita resistência), monitoramento de porta-iscas e checklist digital entregue ao gerente.",
+   },
+   {
+    titulo: "Laudo e certificado",
+    texto:
+     "Emitimos laudo técnico com produtos, lotes, responsável técnico e validade, no padrão exigido pela vigilância sanitária de Curitiba.",
+   },
+  ],
+  garantia:
+   "Contrato mensal com SLA de 24h para chamados extras sem custo. Substituímos o serviço em caso de reprovação em fiscalização.",
+  faqs: [
+   {
+    q: "Vocês atendem restaurante só de noite?",
+    a: "Sim. Trabalhamos após o fechamento para não interferir na operação e liberar a cozinha para o primeiro turno do dia seguinte.",
+   },
+   {
+    q: "O laudo é aceito pela vigilância?",
+    a: "Sim. Emitimos laudo técnico com nossa CTF/IBAMA, produtos ANVISA, responsável técnico e validade, no padrão exigido pela vigilância municipal.",
+   },
+   {
+    q: "Preciso de contrato ou pode ser avulso?",
+    a: "Restaurante precisa de contrato mensal ou trimestral pra manter conformidade sanitária. Também atendemos avulso, mas o desconto e a garantia são maiores no contrato.",
+   },
+   {
+    q: "Vocês fazem para cozinha industrial e delivery-only?",
+    a: "Sim. Atendemos cozinhas industriais, dark kitchens e centrais de produção com mesmo padrão MIP.",
+   },
+  ],
+  cta: "Solicitar cotação para restaurante",
+ },
+ {
+  slug: "dedetizacao-supermercados",
+  nome: "Dedetização para Supermercados",
+  h1: "Dedetização para Supermercados e Mercados em Curitiba",
+  title: "Dedetização para Supermercados em Curitiba | Ampla, MIP",
+  description:
+   "Dedetização para supermercados, mercados e atacadistas em Curitiba. MIP com monitoramento de roedores, laudo e conformidade sanitária. Orçamento grátis.",
+  icone: "building",
+  intro:
+   "Supermercado tem 3 desafios simultâneos: estoque de alimentos (roedor e barata), padaria (formiga e mosca) e área externa (pombos e ratazana). A Ampla resolve os 3 com um programa MIP único e laudo aceito pela vigilância.",
+  contexto:
+   "Atendemos supermercados, mercados de bairro, atacadistas, hortifrutis e padarias em Curitiba e RMC. Programa MIP com porta-iscas mapeados em croqui, monitoramento quinzenal, aplicação segmentada (padaria, açougue, hortifruti, estoque, docas) e laudo técnico para vigilância e auditorias de rede.",
+  sinais: [
+   "Fezes de rato em prateleira, estoque ou área de descarga",
+   "Baratas na área da padaria ou depósito",
+   "Formigas em prateleira de doces e cereais",
+   "Pombos na área externa, doca e telhado",
+   "Reprovação em auditoria de rede ou fornecedor",
+  ],
+  riscos: [
+   "Perda de produtos contaminados (roedor e inseto)",
+   "Multa e interdição pela vigilância sanitária",
+   "Perda de contrato com fornecedores e redes",
+   "Reclamação de cliente e queda de reputação",
+   "Curto-circuito por fios roídos em freezer e câmara fria",
+  ],
+  metodo: [
+   {
+    titulo: "Vistoria e croqui técnico",
+    texto:
+     "Mapeamos toda a loja: docas, estoque, câmaras frias, padaria, açougue, hortifruti e área externa. Elaboramos croqui com posição de cada porta-iscas.",
+   },
+   {
+    titulo: "MIP com monitoramento quinzenal",
+    texto:
+     "Aplicação segmentada por setor, produto rotacionado, monitoramento de porta-iscas a cada 15 dias e checklist digital.",
+   },
+   {
+    titulo: "Controle de aves na área externa",
+    texto:
+     "Instalação de barreiras físicas em beirais, doca e telhado para afastar pombos sem uso de veneno.",
+   },
+   {
+    titulo: "Laudo e auditoria",
+    texto:
+     "Laudo técnico com croqui, produtos, responsável técnico e histórico de leituras, aceito por vigilância, rede e auditoria externa.",
+   },
+  ],
+  garantia:
+   "Contrato mensal com SLA de 24h. Substituímos serviços em caso de reprovação em auditoria ou fiscalização.",
+  faqs: [
+   {
+    q: "Como é o preço para supermercado?",
+    a: "Cobramos por metragem total e número de porta-iscas monitorados. Orçamento formal por escrito antes do início do contrato, sem custo.",
+   },
+   {
+    q: "Vocês atendem rede com várias lojas?",
+    a: "Sim. Padronizamos o programa MIP entre lojas, com laudo consolidado por unidade e responsável técnico único para toda a rede.",
+   },
+   {
+    q: "Preciso fechar a loja para a aplicação?",
+    a: "Não. Aplicamos em horário programado (madrugada ou pré-abertura) sem interromper operação nem exigir liberação.",
+   },
+   {
+    q: "O laudo serve pra auditoria de rede?",
+    a: "Sim. Padrão exigido por auditorias sanitárias e de qualidade de redes nacionais.",
+   },
+  ],
+  cta: "Solicitar cotação para supermercado",
+ },
+ {
+  slug: "dedetizacao-industrias",
+  nome: "Dedetização Industrial",
+  h1: "Dedetização Industrial em Curitiba: MIP com ART e Laudo",
+  title: "Dedetização Industrial em Curitiba | Ampla, MIP com ART",
+  description:
+   "Dedetização industrial em Curitiba com MIP, ART, laudo técnico e conformidade para auditorias ISO, HACCP e FSSC 22000. Atendemos galpões e fábricas.",
+  icone: "building",
+  intro:
+   "Indústria não trata praga como incômodo, trata como não conformidade. A Ampla executa MIP industrial em Curitiba com ART, croqui técnico, monitoramento contínuo e laudo aceito em auditorias ISO, HACCP e FSSC 22000.",
+  contexto:
+   "Atendemos indústrias, galpões logísticos, centros de distribuição, farmacêuticas, alimentícias e metalúrgicas em Curitiba, CIC e RMC. Programa MIP com croqui técnico, porta-iscas mapeados com QR code, monitoramento quinzenal, relatórios digitais e ART do responsável técnico.",
+  sinais: [
+   "Não conformidade em auditoria interna, cliente ou certificação",
+   "Roedores ou insetos na área produtiva ou de armazenagem",
+   "Ausência de programa MIP formal e croqui atualizado",
+   "Vencimento próximo de laudo ou certificação (ISO, HACCP, FSSC)",
+   "Troca de fornecedor de controle de pragas",
+  ],
+  riscos: [
+   "Perda de certificação (ISO 22000, FSSC, HACCP, BPF)",
+   "Recall e devolução de lote contaminado",
+   "Perda de contrato com cliente que exige laudo",
+   "Interdição parcial da vigilância sanitária",
+   "Multas de vigilância e autuações do MAPA",
+  ],
+  metodo: [
+   {
+    titulo: "Vistoria e planta técnica",
+    texto:
+     "Mapeamento completo com planta baixa, definição de perímetro, zoneamento interno/externo e pontos de monitoramento.",
+   },
+   {
+    titulo: "MIP com monitoramento contínuo",
+    texto:
+     "Porta-iscas numerados com QR code, leituras quinzenais, rotação de princípio ativo e relatório digital por visita.",
+   },
+   {
+    titulo: "Aplicação técnica por setor",
+    texto:
+     "Produto específico por área (área produtiva, armazenagem, escritório, área externa) respeitando normas HACCP e BPF.",
+   },
+   {
+    titulo: "ART e laudo para auditoria",
+    texto:
+     "ART do responsável técnico, laudo consolidado, histórico de leituras, tabela de produtos e MSDS disponível para auditoria.",
+   },
+  ],
+  garantia:
+   "Contrato mensal com SLA de 24h para chamados extras. Substituímos serviços em caso de não conformidade em auditoria.",
+  faqs: [
+   {
+    q: "Vocês têm responsável técnico com ART?",
+    a: "Sim. Emitimos ART para o contrato e temos responsável técnico registrado no CRQ, exigido para indústria e certificação.",
+   },
+   {
+    q: "Atendem norma HACCP e FSSC 22000?",
+    a: "Sim. Programa MIP compatível com HACCP, BPF, FSSC 22000 e auditorias de rede internacional.",
+   },
+   {
+    q: "Como funciona o monitoramento?",
+    a: "Porta-iscas com QR code, leitura quinzenal, tendência mensal, relatório digital acessível ao time de qualidade em tempo real.",
+   },
+   {
+    q: "Vocês atendem CIC e Araucária?",
+    a: "Sim. CIC, Araucária, São José dos Pinhais e Campo Largo estão na nossa rota diária, com tempo de resposta em até 24h para chamados extras.",
+   },
+  ],
+  cta: "Solicitar cotação industrial",
+ },
+ {
+  slug: "dedetizacao-escolas",
+  nome: "Dedetização para Escolas e Creches",
+  h1: "Dedetização para Escolas e Creches em Curitiba, Sem Cheiro e Sem Risco",
+  title: "Dedetização para Escolas e Creches em Curitiba | Ampla",
+  description:
+   "Dedetização para escolas e creches em Curitiba com produtos ANVISA sem cheiro, aplicação em feriado e laudo técnico. Seguro para crianças. Orçamento grátis.",
+  icone: "building",
+  intro:
+   "Escola e creche não podem ter cheiro de veneno nem risco para as crianças. A Ampla trabalha com aplicação em feriado ou fim de semana, produtos ANVISA de baixo odor e liberação imediata da área, com laudo técnico exigido pela vigilância.",
+  contexto:
+   "Atendemos escolas particulares, colégios, creches, CMEIs e cursos livres em Curitiba e RMC. Aplicação em recesso ou fim de semana, produtos ANVISA de baixo odor e baixa toxicidade, foco em pontos que crianças não acessam (rodapés, ralos, atrás de móveis) e laudo técnico exigido pela vigilância sanitária.",
+  sinais: [
+   "Baratas em cozinha, refeitório, banheiro ou sala",
+   "Ratos em pátio, depósito ou área de lixo",
+   "Escorpião ou aranha em quintal, jardim ou pátio",
+   "Vencimento próximo do laudo exigido pela vigilância",
+   "Reclamação de pais ou funcionários sobre praga",
+  ],
+  riscos: [
+   "Multa e interdição pela vigilância sanitária escolar",
+   "Reclamação de pais e perda de matrículas",
+   "Contaminação de merenda e utensílios",
+   "Picada de escorpião ou aranha em criança",
+   "Doenças respiratórias por dejetos de pombos",
+  ],
+  metodo: [
+   {
+    titulo: "Cronograma em recesso",
+    texto:
+     "Agendamos aplicações em feriado, fim de semana ou recesso escolar, sem interrupção de aula.",
+   },
+   {
+    titulo: "Produto de baixo odor",
+    texto:
+     "Uso de gel, microcápsulas e produtos ANVISA de baixa toxicidade, com liberação da área em poucas horas.",
+   },
+   {
+    titulo: "Foco em pontos protegidos",
+    texto:
+     "Aplicação em rodapés, ralos, atrás de móveis e áreas técnicas, sem contato com brinquedos, sala de aula ou refeitório.",
+   },
+   {
+    titulo: "Laudo para vigilância",
+    texto:
+     "Laudo técnico com produtos, lotes, áreas e responsável técnico, aceito pela vigilância sanitária escolar.",
+   },
+  ],
+  garantia:
+   "6 meses de garantia por escrito. Retorno sem custo em caso de reincidência entre visitas.",
+  faqs: [
+   {
+    q: "É seguro para crianças e bebês?",
+    a: "Sim. Trabalhamos com produtos ANVISA de baixa toxicidade, aplicados em pontos que crianças não acessam. Área liberada em poucas horas, sem cheiro residual.",
+   },
+   {
+    q: "Vocês aplicam em recesso escolar?",
+    a: "Sim. Nosso cronograma se adapta a feriado, fim de semana ou recesso pra não interromper aula.",
+   },
+   {
+    q: "Emitem laudo pra vigilância?",
+    a: "Sim. Laudo técnico completo aceito pela vigilância sanitária escolar de Curitiba.",
+   },
+   {
+    q: "Atendem CMEI e escola particular?",
+    a: "Sim. Atendemos escolas particulares, colégios, CMEIs, creches e cursos livres.",
+   },
+  ],
+  cta: "Solicitar cotação para escola",
+ },
+ {
+  slug: "dedetizacao-hospitais-clinicas",
+  nome: "Dedetização para Hospitais e Clínicas",
+  h1: "Dedetização para Hospitais e Clínicas em Curitiba: Padrão RDC",
+  title: "Dedetização Hospital e Clínica em Curitiba | Ampla, RDC",
+  description:
+   "Dedetização para hospitais, clínicas e laboratórios em Curitiba. Padrão RDC ANVISA, sem cheiro, laudo técnico e cronograma noturno. Orçamento grátis.",
+  icone: "building",
+  intro:
+   "Hospital e clínica exigem controle de pragas em padrão RDC ANVISA, sem interromper atendimento, sem contaminar áreas críticas e com laudo aceito por acreditação. A Ampla executa MIP hospitalar em Curitiba nessa exigência.",
+  contexto:
+   "Atendemos hospitais, clínicas médicas, odontológicas, veterinárias, laboratórios de análises e centros de diagnóstico em Curitiba e RMC. Programa MIP hospitalar com aplicação noturna, produtos ANVISA compatíveis com RDC, zoneamento de áreas críticas/semicríticas/não críticas e laudo aceito por ONA e acreditação.",
+  sinais: [
+   "Baratas em cozinha, copa, banheiro ou área de resíduo",
+   "Formigas em farmácia, almoxarifado ou centro cirúrgico",
+   "Ratos em depósito, lavanderia ou área externa",
+   "Vencimento próximo do laudo exigido pela vigilância",
+   "Não conformidade em auditoria de acreditação",
+  ],
+  riscos: [
+   "Infecção hospitalar por vetor mecânico",
+   "Perda de acreditação (ONA, JCI) e certificação",
+   "Interdição parcial de área crítica",
+   "Contaminação de material estéril e medicamento",
+   "Multa e autuação pela vigilância sanitária",
+  ],
+  metodo: [
+   {
+    titulo: "Zoneamento hospitalar",
+    texto:
+     "Mapeamento por classificação de área: crítica (centro cirúrgico, UTI), semicrítica (enfermaria) e não crítica (administrativo). Produto e método específicos por zona.",
+   },
+   {
+    titulo: "Aplicação noturna",
+    texto:
+     "Cronograma noturno ou em horário de baixo movimento, sem interromper atendimento, com liberação imediata após aplicação.",
+   },
+   {
+    titulo: "Produtos compatíveis RDC",
+    texto:
+     "Produtos ANVISA compatíveis com RDC, sem odor residual, aprovados para uso hospitalar e área de saúde.",
+   },
+   {
+    titulo: "Laudo para acreditação",
+    texto:
+     "Laudo técnico com croqui, produtos, MSDS, ART, responsável técnico e histórico, aceito por acreditação ONA e JCI.",
+   },
+  ],
+  garantia:
+   "Contrato mensal com SLA de 24h para chamados extras. Substituímos serviços em caso de não conformidade em auditoria.",
+  faqs: [
+   {
+    q: "Vocês atendem UTI e centro cirúrgico?",
+    a: "Sim. Áreas críticas têm protocolo próprio, produto específico e aplicação em horário programado com o time de infecção hospitalar.",
+   },
+   {
+    q: "O laudo serve pra ONA?",
+    a: "Sim. Laudo técnico compatível com acreditação hospitalar ONA e JCI, com MSDS e ART do responsável.",
+   },
+   {
+    q: "Precisa fechar a área para aplicação?",
+    a: "Não. Trabalhamos em horário de baixo movimento e liberamos a área em poucas horas, sem interromper atendimento.",
+   },
+   {
+    q: "Atendem clínica pequena e consultório?",
+    a: "Sim. Atendemos desde consultório odontológico até hospital de médio porte, com o mesmo padrão técnico.",
+   },
+  ],
+  cta: "Solicitar cotação hospital ou clínica",
+ },
+ {
+  slug: "dedetizacao-hoteis",
+  nome: "Dedetização para Hotéis e Pousadas",
+  h1: "Dedetização para Hotéis e Pousadas em Curitiba, Foco em Percevejo",
+  title: "Dedetização para Hotéis em Curitiba | Ampla, Foco em Percevejo",
+  description:
+   "Dedetização para hotéis, pousadas e hostels em Curitiba com foco em percevejo, MIP, aplicação por apartamento e laudo técnico. Orçamento grátis.",
+  icone: "building",
+  intro:
+   "Hotel com percevejo perde reputação da noite pro dia. Uma reclamação no Booking ou TripAdvisor derruba a ocupação por meses. A Ampla trabalha com prevenção MIP + protocolo de choque em caso de suspeita, em Curitiba e RMC.",
+  contexto:
+   "Atendemos hotéis, pousadas, hostels, resorts e apart-hotéis em Curitiba e RMC. Programa MIP com foco em percevejo (2 aplicações com 15 dias de intervalo), inspeção por apartamento, aplicação em áreas comuns (recepção, restaurante, cozinha, spa, área externa) e laudo técnico aceito pela vigilância sanitária.",
+  sinais: [
+   "Hóspede reclamou de picada em fileira ao acordar",
+   "Manchinha preta em costura de colchão ou box",
+   "Baratas no restaurante, cozinha ou bar",
+   "Ratos em depósito, cozinha ou lixeira",
+   "Ausência de contrato de dedetização atualizado",
+  ],
+  riscos: [
+   "Avaliação negativa em Booking, Airbnb e TripAdvisor",
+   "Perda de credenciamento com OTA e agência corporativa",
+   "Interdição de apartamento infestado",
+   "Perda de contrato com empresa e evento corporativo",
+   "Custo alto de indenização a hóspede",
+  ],
+  metodo: [
+   {
+    titulo: "MIP preventivo em áreas comuns",
+    texto:
+     "Aplicação mensal em recepção, restaurante, cozinha, bar, spa, lavanderia e área externa, com monitoramento e laudo.",
+   },
+   {
+    titulo: "Inspeção de apartamento",
+    texto:
+     "Vistoria periódica em costuras de colchão, box, cabeceira e rodapé para detectar percevejo antes que hóspede reclame.",
+   },
+   {
+    titulo: "Protocolo de choque para percevejo",
+    texto:
+     "Se detectado percevejo: bloqueio do apartamento, 2 aplicações com 15 dias de intervalo, tratamento térmico de roupa de cama e liberação com laudo.",
+   },
+   {
+    titulo: "Laudo para vigilância",
+    texto:
+     "Laudo técnico mensal com produtos, apartamentos vistoriados, responsável técnico e validade, aceito pela vigilância sanitária.",
+   },
+  ],
+  garantia:
+   "Contrato mensal com SLA de 12h para caso de percevejo. Retorno sem custo em caso de reincidência dentro do contrato.",
+  faqs: [
+   {
+    q: "Como é o preço para hotel?",
+    a: "Cobramos por número de apartamentos e áreas comuns, com desconto para contrato mensal. Orçamento formal antes de fechar contrato.",
+   },
+   {
+    q: "Vocês têm protocolo específico pra percevejo?",
+    a: "Sim. 2 aplicações com 15 dias de intervalo (pra pegar ovos que eclodem depois), tratamento térmico de tecidos e laudo de liberação por apartamento.",
+   },
+   {
+    q: "Precisa fechar apartamento durante aplicação?",
+    a: "O apartamento fica bloqueado apenas durante a aplicação (2 a 4 horas). Depois é liberado, sem cheiro residual.",
+   },
+   {
+    q: "Atendem hostel e pousada pequena?",
+    a: "Sim. Atendemos desde hostel com dormitório compartilhado até resort, com mesmo padrão técnico e laudo.",
+   },
+  ],
+  cta: "Solicitar cotação para hotel",
+ },
 ];
 
 export const findServicoEspecial = (slug: string) =>
