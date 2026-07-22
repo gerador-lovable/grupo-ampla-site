@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://grupo-ampla-site.lovable.app/sitemap.xml
