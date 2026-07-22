@@ -12,6 +12,8 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 import { findPraga, pragas } from "@/data/pragas";
 import type { DepoimentoTag } from "@/data/depoimentos";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import PrecoBlock from "@/components/PrecoBlock";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
@@ -69,6 +71,13 @@ const PragaPage = () => {
  <section className="relative pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
  <div className="container px-4">
  <div className="max-w-3xl">
+  <Breadcrumbs
+   items={[
+    { label: "Dedetização", to: "/#servicos" },
+    { label: praga.nome },
+   ]}
+   tone="dark"
+  />
  <div className="inline-block bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
  Ampla · 35 anos em Curitiba
  </div>
@@ -172,6 +181,16 @@ const PragaPage = () => {
  </div>
  </div>
  </section>
+
+ <PrecoBlock
+  titulo={`Preço da dedetização de ${praga.nome.toLowerCase()} em Curitiba`}
+  faixas={[
+   { label: "Apartamento até 60 m²", preco: "R$ 180 a R$ 240", detalhe: "Aplicação padrão com garantia de 6 meses" },
+   { label: "Casa ou apto 60 a 150 m²", preco: "R$ 240 a R$ 420", detalhe: "Cobre cozinha, banheiros, área de serviço e ralos" },
+   { label: "Comércio ou salão até 200 m²", preco: "R$ 350 a R$ 700", detalhe: "Com nota fiscal e certificado para vigilância" },
+   { label: "Condomínio ou área maior", preco: "sob orçamento", detalhe: "Envie a metragem no WhatsApp, retornamos em minutos" },
+  ]}
+ />
 
  {/* Garantia */}
  <section className="section-py bg-primary text-primary-foreground">

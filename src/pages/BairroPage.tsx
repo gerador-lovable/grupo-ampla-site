@@ -14,6 +14,8 @@ import { findBairro, bairros } from "@/data/bairros";
 import { pragas } from "@/data/pragas";
 import { servicosDesentupimento } from "@/data/servicosDesentupimento";
 import type { DepoimentoTag } from "@/data/depoimentos";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import PrecoBlock from "@/components/PrecoBlock";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
@@ -84,6 +86,13 @@ const BairroPage = () => {
  <section className="relative pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
  <div className="container px-4">
  <div className="max-w-3xl">
+  <Breadcrumbs
+   items={[
+    { label: bairro.cidade, to: `/atendimento/${bairro.cidadeSlug}` },
+    { label: bairro.nome },
+   ]}
+   tone="dark"
+  />
  <div className="inline-flex items-center gap-2 bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
  <MapPin className="w-4 h-4" /> {bairro.nome} · {bairro.cidade} - PR
  </div>
@@ -119,8 +128,31 @@ const BairroPage = () => {
  <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
  {bairro.contexto}
  </p>
+  <div className="mt-8 bg-muted/50 rounded-xl p-5 border border-border">
+   <h3 className="font-bold text-foreground mb-2">
+    Dedetização barata no {bairro.nome} com nota fiscal e garantia
+   </h3>
+   <p className="text-sm text-muted-foreground leading-relaxed">
+    As pragas mais chamadas no {bairro.nome} são{" "}
+    <Link to="/dedetizacao/baratas" className="text-primary font-semibold hover:underline">baratas</Link>,{" "}
+    <Link to="/dedetizacao/ratos" className="text-primary font-semibold hover:underline">ratos</Link> e{" "}
+    <Link to="/dedetizacao/formigas" className="text-primary font-semibold hover:underline">formigas</Link>.
+    Atendemos com técnico próprio em até 2 horas, produtos ANVISA, nota fiscal e certificado válido para síndico e vigilância.
+   </p>
+  </div>
  </div>
  </section>
+
+  <PrecoBlock
+   titulo={`Preço da dedetização no ${bairro.nome}`}
+   subtitulo={`Faixas médias praticadas no ${bairro.nome} e bairros vizinhos em 2026.`}
+   faixas={[
+    { label: "Apartamento até 60 m²", preco: "R$ 180 a R$ 240" },
+    { label: "Casa ou apto 60 a 150 m²", preco: "R$ 240 a R$ 420" },
+    { label: "Desentupimento residencial", preco: "R$ 150 a R$ 380" },
+    { label: "Comércio ou condomínio", preco: "sob orçamento" },
+   ]}
+  />
 
   <section className="section-py bg-muted/40">
  <div className="container px-4 max-w-5xl">
