@@ -1,10 +1,10 @@
 import { Shield, Wrench, ThumbsUp, Clock } from "lucide-react";
 
 const seals = [
-  { icon: Shield, title: "90 Dias de Garantia", description: "Em todos os serviços" },
-  { icon: Wrench, title: "Sem Quebrar", description: "Técnicas não destrutivas" },
-  { icon: ThumbsUp, title: "Satisfação Garantida", description: "Ou seu dinheiro de volta" },
-  { icon: Clock, title: "Atendimento 24h", description: "Emergências a qualquer hora" },
+  { icon: Shield, title: "90 dias de garantia", description: "Entupiu de novo? Voltamos sem cobrar" },
+  { icon: Wrench, title: "Sem quebrar piso", description: "Máquina rotativa e hidrojato pelo ralo" },
+  { icon: ThumbsUp, title: "Preço fechado antes", description: "Sem surpresa quando terminar" },
+  { icon: Clock, title: "24h — inclusive feriado", description: "Domingo e madrugada, mesmo preço" },
 ];
 
 const DesGuaranteeSection = () => {
@@ -12,7 +12,7 @@ const DesGuaranteeSection = () => {
     <section className="py-12 md:py-16 bg-trust text-trust-foreground">
       <div className="container px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
-          Sua Tranquilidade é Nossa Prioridade
+          Entupiu de novo em 90 dias? A gente volta.
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {seals.map((s) => (
