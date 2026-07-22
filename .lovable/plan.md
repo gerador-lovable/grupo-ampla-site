@@ -1,14 +1,14 @@
 #### Problema
-Ao trocar de página clicando em links internos (menu/rodapé), o navegador preserva a posição de scroll e o usuário cai no meio da nova página, em vez de no topo.
+O título principal da Hero foi dividido em 3 frases, mas em alguns tamanhos de tela uma das frases quebra para uma segunda linha, fazendo o título ocupar 4 ou mais linhas.
 
-#### Causa
-O projeto usa `BrowserRouter` do React Router, que não reseta scroll automaticamente. Além disso, o rodapé usa tags `<a href="/...">` para links internos, causando recarregamentos completos e comportamento de scroll inconsistente.
+#### Diagnóstico
+A Hero atualmente usa três `<span>` em bloco dentro do `h1`, um para cada frase. O texto já está estruturado em 3 linhas, mas sem controle de quebra de linha, palavras longas podem estourar em telas menores.
 
 #### Solução
-1. Criar componente `src/components/ScrollToTop.tsx` que escuta `useLocation` e executa `window.scrollTo(0, 0)` sempre que o `pathname` mudar.
-2. Inserir `<ScrollToTop />` dentro de `<BrowserRouter>` em `src/App.tsx`, antes de `<Routes>`.
-3. Trocar links internos de `<a href="...">` por `<Link to="...">` do react-router-dom em `src/components/FooterSection.tsx`.
-4. Corrigir também o link de voltar para home em `src/pages/NotFound.tsx`.
+1. Verificar o tamanho real de cada frase nos breakpoints mobile, tablet e desktop.
+2. Aplicar `whitespace-nowrap` nos três `<span>` de frase para forçar cada uma a ocupar uma única linha.
+3. Ajustar o tamanho da fonte para garantir que cada frase caiba na largura disponível, sem gerar overflow horizontal. Se necessário, reduzir levemente o tamanho do título em telas pequenas (`sm` e abaixo) usando `text-[clamp(...)]` ou classes responsivas finas.
+4. Manter a legibilidade, o efeito de destaque laranja na última frase e a hierarquia visual.
 
 #### Resultado esperado
-Toda navegação interna (React Router) vai abrir a página no topo, sem recarregamento completo. Links para telefone, WhatsApp e Instagram (externos) continuam como `<a>`.
+O título da Hero sempre ocupará exatamente 3 linhas, independente do dispositivo, sem corte de texto nem overflow.
