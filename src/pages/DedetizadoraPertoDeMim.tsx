@@ -8,7 +8,6 @@ import UrgencyBar from "@/components/UrgencyBar";
 import OutrosServicosBlock from "@/components/OutrosServicosBlock";
 import TestimonialsModule from "@/components/TestimonialsModule";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import PrecoBlock from "@/components/PrecoBlock";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
@@ -166,16 +165,6 @@ const DedetizadoraPertoDeMim = () => {
           </div>
         </div>
       </section>
-
-      <PrecoBlock
-        titulo="Quanto custa chamar a dedetizadora em Curitiba"
-        faixas={[
-          { label: "Apartamento até 60 m²", preco: "R$ 180 a R$ 240" },
-          { label: "Casa ou apto 60 a 150 m²", preco: "R$ 240 a R$ 420" },
-          { label: "Desentupimento residencial", preco: "R$ 150 a R$ 380" },
-          { label: "Comércio ou condomínio", preco: "sob orçamento" },
-        ]}
-      />
 
       <TestimonialsModule
         tags={["dedetizacao", "curitiba"]}
