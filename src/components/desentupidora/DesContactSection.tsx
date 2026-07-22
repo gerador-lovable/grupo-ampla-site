@@ -30,10 +30,10 @@ const DesContactSection = () => {
     <section id="contato" className="py-16 md:py-20 bg-secondary">
       <div className="container px-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-4">
-          Solicite Seu Orçamento Grátis
+          Chame um desentupidor agora
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Preencha o formulário e fale com um desentupidor pelo WhatsApp — atendimento 24h
+          24 horas por dia, inclusive fim de semana e feriado. Orçamento no WhatsApp em minutos.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
@@ -46,7 +46,7 @@ const DesContactSection = () => {
                 <WhatsAppIcon className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-foreground">
-                Atendimento 24 horas
+                Atendemos agora — 24h
               </h3>
             </div>
 
@@ -91,7 +91,7 @@ const DesContactSection = () => {
               className="w-full bg-[#25D366] hover:bg-[#075E54] text-white font-bold text-lg min-h-[56px] transition-transform duration-200 hover:scale-[1.02]"
             >
               <WhatsAppIcon className="w-5 h-5 mr-2" />
-              Enviar e Falar no WhatsApp
+              Chamar no WhatsApp
             </Button>
           </form>
 
