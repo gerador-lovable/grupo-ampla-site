@@ -3,7 +3,20 @@ import { useSearchParams } from "react-router-dom";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildWhatsAppUrl, type Service } from "@/lib/whatsapp";
 
-const REDIRECT_DELAY_MS = 2000;
+const REDIRECT_DELAY_MS = 1500;
+
+// Dispara o evento de conversão do Google Ads quando o usuário clica em qualquer CTA WhatsApp
+const fireWhatsAppConversion = () => {
+  const cfg = (window as unknown as { __ADS_CONVERSIONS__?: { send_id: string; whatsapp_click_label: string } })
+    .__ADS_CONVERSIONS__;
+  const gtagFn = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+  if (!cfg || !gtagFn) return;
+  if (cfg.send_id.includes("XXXX") || cfg.whatsapp_click_label.includes("XXXX")) return;
+  gtagFn("event", "conversion", {
+    send_to: `${cfg.send_id}/${cfg.whatsapp_click_label}`,
+    event_callback: () => {},
+  });
+};
 
 const RedirectWhatsApp = () => {
   const [searchParams] = useSearchParams();
@@ -24,6 +37,7 @@ const RedirectWhatsApp = () => {
   }, [searchParams]);
 
   useEffect(() => {
+    fireWhatsAppConversion();
     const timeout = setTimeout(() => {
       window.location.replace(whatsappUrl);
     }, REDIRECT_DELAY_MS);
