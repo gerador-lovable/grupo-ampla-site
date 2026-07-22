@@ -24,8 +24,8 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-primary-deep/90 backdrop-blur-xl border-b border-white/10 py-2.5"
-          : "bg-transparent py-4"
+          ? "bg-primary-deep/90 backdrop-blur-xl border-b border-white/10 py-2"
+          : "bg-transparent py-3 md:py-4"
       }`}
     >
       <div className="container px-4 flex items-center justify-between gap-4">
@@ -33,14 +33,14 @@ const Header = () => {
           <span
             className={`inline-flex items-center transition-all duration-500 ${
               scrolled
-                ? "bg-[#050f24] px-3 rounded-b-[6px] shadow-lg mt-[-10px] pt-[10px] pb-[14px] mb-[-14px]"
+                ? "bg-[#050f24] px-2 md:px-3 rounded-b-[6px] shadow-lg mt-[-8px] pt-[8px] pb-[10px] mb-[-10px] md:mt-[-10px] md:pt-[10px] md:pb-[14px] md:mb-[-14px]"
                 : ""
             }`}
           >
             <img
               src={logo}
               alt="Grupo Ampla - Dedetizadora"
-              className={`transition-all duration-500 ${scrolled ? "h-12 md:h-14" : "h-16 md:h-[74px]"}`}
+              className={`transition-all duration-500 ${scrolled ? "h-9 md:h-14" : "h-11 md:h-[74px]"}`}
             />
           </span>
         </Link>

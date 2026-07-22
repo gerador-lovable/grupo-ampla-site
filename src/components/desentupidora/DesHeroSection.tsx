@@ -22,7 +22,7 @@ const stats = [
 
 const DesHeroSection = () => {
  return (
- <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-hero">
+ <section className="relative min-h-0 lg:min-h-[92vh] flex items-center overflow-hidden bg-gradient-hero">
  <div aria-hidden className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-primary-glow/20 blur-[120px]" />
  <div aria-hidden className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-accent/20 blur-[140px]" />
  <div
@@ -36,7 +36,7 @@ const DesHeroSection = () => {
  }}
  />
 
- <div className="container relative z-10 pt-32 md:pt-40 pb-[30px] md:pb-[30px] px-4">
+ <div className="container relative z-10 pt-28 sm:pt-32 md:pt-40 pb-[30px] px-4">
  <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-8 items-center">
  <div className="text-primary-foreground">
  <div className="inline-flex items-center gap-2 border border-white/15 bg-white/5 backdrop-blur-sm text-primary-foreground/90 text-xs font-medium tracking-[0.14em] uppercase px-3.5 py-1.5 rounded-full mb-8 animate-fade-in">
@@ -46,16 +46,16 @@ const DesHeroSection = () => {
 
  <h1 className="font-display text-[40px] sm:text-5xl lg:text-[64px] xl:text-[72px] leading-[1.02] tracking-[-0.03em] font-semibold mb-6 animate-fade-up text-balance">
  Pia ou esgoto entupido?
- <span className="block mt-1"><span className="relative inline-block text-accent">Chegamos em 1h
+ <span className="block mt-1"><span className="relative inline-block text-accent">Chegamos em 1h sem quebrar piso
  <span aria-hidden className="absolute left-0 -bottom-1 h-[3px] w-full bg-gradient-accent rounded-full" />
- </span>, sem quebrar piso.</span>
+ </span>.</span>
  </h1>
 
  <p className="text-lg md:text-xl text-primary-foreground/75 max-w-xl mb-9 leading-relaxed animate-fade-up" style={{ animationDelay: "0.15s" }}>
  Hidrojateamento de alta pressão e câmera de inspeção. Atendemos 24 horas, inclusive madrugada, fim de semana e feriado, em Curitiba e região.
  </p>
 
- <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-10 max-w-lg animate-fade-up" style={{ animationDelay: "0.25s" }}>
+ <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mb-10 max-w-lg animate-fade-up" style={{ animationDelay: "0.25s" }}>
  {benefits.map((b) => (
  <div key={b.text} className="flex items-center gap-2.5 text-primary-foreground/85">
  <div className="w-7 h-7 rounded-md bg-white/10 border border-white/10 flex items-center justify-center shrink-0">
@@ -70,7 +70,7 @@ const DesHeroSection = () => {
  <Button
  asChild
  size="lg"
- className="bg-destructive hover:bg-destructive/90 text-destructive-foreground font-semibold px-6 py-7 rounded-xl shadow-elegant min-h-[60px] transition-transform hover:scale-[1.02] animate-slow-pulse"
+ className="bg-destructive hover:bg-destructive/90 text-destructive-foreground font-semibold px-5 sm:px-6 py-5 sm:py-7 rounded-xl shadow-elegant min-h-[52px] sm:min-h-[60px] transition-transform hover:scale-[1.02] animate-slow-pulse"
  >
  <a href="tel:+5541995121583">
  <Phone className="w-5 h-5 mr-2.5" />
@@ -83,7 +83,7 @@ const DesHeroSection = () => {
  <Button
  asChild
  size="lg"
- className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground font-semibold px-8 py-7 rounded-xl shadow-elegant min-h-[60px] text-base transition-transform hover:scale-[1.02]"
+ className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground font-semibold px-6 sm:px-8 py-5 sm:py-7 rounded-xl shadow-elegant min-h-[52px] sm:min-h-[60px] text-base transition-transform hover:scale-[1.02]"
  >
  <Link to={WHATSAPP_REDIRECT}>
  <WhatsAppIcon className="w-5 h-5 mr-2" />
