@@ -1,87 +1,65 @@
 
-# Oportunidades de palavras-chave — Ampla (mercado BR)
+## Oportunidades encontradas (Semrush, base BR)
 
-Baseado em pesquisa Semrush para Curitiba e região. Foquei em palavras com **volume real + baixa dificuldade (KDI < 30)**, que são as vitórias mais rápidas para um site novo/em crescimento.
+Bairros/cidades da RMC têm KDI 0–13 (muito fácil) — ótima janela para ranquear rápido, mesmo com volumes pequenos (soma vale a pena):
 
-## O que já temos
+| Keyword | Volume/mês | KDI |
+|---|---|---|
+| dedetizadora são josé dos pinhais | 110 | 13 |
+| desentupidora são josé dos pinhais | 590 | ~0 |
+| desentupidora pinhais | 480 | ~0 |
+| limpa fossa curitiba | 170 | 10 |
+| limpa fossa são josé dos pinhais | 70 | 0 |
+| desentupidora cic | 70 | 0 |
+| desentupidora batel | 40 | 0 |
+| dedetizadora santa felicidade | 20 | 0 |
+| dedetizadora fazenda rio grande | 20 | 0 |
+| desentupidora 24 horas curitiba | 20 | 0 |
 
-- `/` — Dedetização Curitiba (home)
-- `/desentupidora` — Desentupidora Curitiba
-- `/servicos/dedetizacao-comercial` — MIP para empresas
+Bairros isolados raramente têm volume medido, mas ranqueiam por proximidade + long-tail ("dedetizadora em [bairro]", "dedetização [bairro] preço").
 
-## Recomendação: 4 clusters de páginas novas
+## O que vou construir
 
-### Cluster 1 — Páginas por praga (dedetização) — PRIORIDADE ALTA
+### 1. Páginas de bairros de Curitiba (`/bairros/:bairro`)
+Novo `src/data/bairros.ts` + template `src/pages/BairroPage.tsx`. 12 bairros com maior densidade populacional/comercial:
+Batel, Água Verde, Centro, Boqueirão, Portão, CIC, Cajuru, Santa Felicidade, Bacacheri, Sítio Cercado, Pinheirinho, Uberaba.
 
-Rota sugerida: `/dedetizacao/{praga}`. Alto volume, KDI baixíssimo (6–13). Cada página: sintomas, riscos, método de tratamento, garantia, FAQ, CTA WhatsApp.
+Cada página: H1 local, intro geográfica, serviços disponíveis, bairros vizinhos (interlink), FAQ local, depoimentos filtrados, JSON-LD `LocalBusiness` com `areaServed` do bairro + `FAQPage`.
 
-| Página | Keyword principal | Volume/mês | KDI |
-|---|---|---|---|
-| Dedetização de baratas em Curitiba | dedetização de baratas | 1.000 | 12 |
-| Dedetização de ratos / desratização | dedetização de ratos + desratização | 1.000 + 4.400 | 9–12 |
-| Descupinização em Curitiba | descupinização + dedetização de cupim | 4.400 + 880 | 9–13 |
-| Dedetização de escorpião | dedetização de escorpião | 210 | 6 |
-| Dedetização de pulgas e carrapatos | dedetização de pulgas | 140 | 7 |
-| Dedetização de formigas | dedetização de formigas | 260 | 7 |
-| Dedetização de percevejo | dedetização de percevejo | 40 | 0 |
+### 2. Novas cidades da RMC (`/atendimento/:cidade`)
+Adicionar em `src/data/cidades.ts`: **Fazenda Rio Grande, Piraquara, Quatro Barras, Almirante Tamandaré, Rio Branco do Sul, Bocaiúva do Sul**. Reaproveita template existente.
 
-### Cluster 2 — Páginas por serviço de desentupimento — PRIORIDADE ALTA
+### 3. Página de emergência (`/emergencia-24h`)
+`src/pages/Emergencia24h.tsx` — foco em urgência (esgoto transbordando, fossa cheia, ratos em comércio). Hero vermelho/laranja com CTA WhatsApp + telefone pulsante, "atendimento em até 2h", depoimentos de casos reais de urgência, FAQ de urgência, `EmergencyService` JSON-LD.
 
-Rota sugerida: `/desentupidora/{servico}`. Volume forte e intent altíssimo (CPC R$2–4).
+### 4. Módulo de depoimentos reutilizável
+Extrair depoimentos para `src/data/depoimentos.ts` com tags (`dedetizacao`, `desentupimento`, `emergencia`, `comercial`, cidade/bairro). Componente `<TestimonialsModule filter={...} />` — carrossel filtrado. Injetar em: PragaPage, ServicoDesentupimentoPage, CidadePage, BairroPage, DedetizacaoComercial, Emergencia24h. JSON-LD `Review` agregado onde aplicável.
 
-| Página | Keyword principal | Volume/mês | KDI |
-|---|---|---|---|
-| Desentupimento de esgoto | desentupimento de esgoto | 2.400 | 12 |
-| Desentupimento de pia e cozinha | desentupimento de pia | 1.900 | 25 |
-| Desentupimento de vaso sanitário | desentupimento de vaso sanitário | 590 | 19 |
-| Desentupimento de ralo | desentupimento de ralo | 320 | 15 |
-| Hidrojateamento | hidrojateamento | 2.400 | 18 |
-| Limpa-fossa Curitiba | limpa fossa curitiba | 170 | 10 |
-| Caça vazamento | caça vazamento | 12.100 | 25 |
-| Limpeza de caixa d'água | limpeza de caixa d'água | 4.400 | 31 |
-
-### Cluster 3 — Páginas por bairro/cidade — PRIORIDADE MÉDIA
-
-Rota sugerida: `/desentupidora/{cidade-ou-bairro}` e `/dedetizacao/{cidade}`. KDI 0–18. Padrão de "SEO local" — cada página com endereço/mapa, prova social local, CTA.
-
-Desentupidora (maior demanda):
-- Pinhais (480/mês, KDI 18)
-- São José dos Pinhais (260/mês, KDI 9)
-- Colombo (210/mês, KDI 7)
-- Araucária (210/mês, KDI 8)
-- Boqueirão (170/mês, KDI 7)
-- CIC, Batel, Portão (menor volume, KDI 0 — fáceis)
-
-Dedetização por cidade (Colombo/Pinhais/SJP): volume 20–70/mês, mas KDI 0 e alinhado à sede em Colombo.
-
-### Cluster 4 — Conteúdo informativo / "quanto custa" — PRIORIDADE MÉDIA
-
-Rota sugerida: `/blog/{slug}` ou `/guia/{slug}`. Captura intent de pesquisa (topo de funil) e alimenta autoridade do domínio.
-
-| Página | Keyword | Volume/mês | KDI |
-|---|---|---|---|
-| Quanto custa uma dedetização | quanto custa dedetização | 480 | 7 |
-| Como acabar com baratas em casa | como acabar com baratas | 1.600 | 29 |
-| Como acabar com ratos em casa | como acabar com ratos | 880 | 14 |
-| Como acabar com escorpião | como acabar com escorpião | 1.000 | 16 |
-| O que é controle de pragas urbanas | pragas urbanas / controle de pragas | 590 + 3.600 | 24 |
-
-## Ordem sugerida de execução
-
-1. **Fase 1 — Cluster 1 (pragas)**: 7 páginas. Maior conversão e mais fácil ranquear.
-2. **Fase 2 — Cluster 2 (serviços desentupidora)**: 6–8 páginas. Ticket alto (CPC R$2–4 indica intent comercial forte).
-3. **Fase 3 — Cluster 3 (bairros)**: começar pelos 4 municípios (Pinhais, SJP, Colombo, Araucária) e expandir para bairros de Curitiba.
-4. **Fase 4 — Cluster 4 (blog/guias)**: alimenta autoridade e captura topo de funil.
+### 5. Integração de sistema
+- Rotas em `src/App.tsx`: `/bairros/:bairro`, `/emergencia-24h`.
+- Update `public/sitemap.xml` e `public/llms.txt` com todas as URLs novas (~20).
+- Link para "Emergência 24h" no Header e Footer.
+- Seção "Bairros que atendemos" na CidadePage de Curitiba com links internos.
 
 ## Detalhes técnicos
 
-- Cada página nova entra em `src/pages/`, com rota em `App.tsx`, entrada em `public/sitemap.xml` e link em `public/llms.txt`.
-- Metadata por rota via `react-helmet-async` (já instalado): título único, description, canonical, og:*, JSON-LD `Service` + `FAQPage`.
-- Reutilizar componentes existentes (`Header`, `FooterSection`, `WhatsAppFloat`, `UrgencyBar`, cards).
-- Interlinking: home lista as páginas de praga; página `/desentupidora` lista os serviços; páginas de bairro linkam para os serviços correspondentes.
-- Padrão de conteúdo por página: H1 com keyword, intro (2 parágrafos), seção de sinais/problema, método de tratamento, garantia, FAQ (3–5 perguntas), CTA WhatsApp.
+```text
+src/
+├── data/
+│   ├── bairros.ts          (novo — 12 bairros)
+│   ├── cidades.ts          (+ 6 cidades RMC)
+│   └── depoimentos.ts      (novo — depoimentos taggeados)
+├── pages/
+│   ├── BairroPage.tsx      (novo — template dinâmico)
+│   └── Emergencia24h.tsx   (novo)
+└── components/
+    └── TestimonialsModule.tsx  (novo — reutilizável com filtro)
+```
 
-## O que preciso de você antes de codar
+Cada template segue o padrão já estabelecido (Helmet + JSON-LD + interlink + CTA WhatsApp verde). Sem novas dependências.
 
-- **Escopo da fase 1**: implemento as 7 páginas de praga do Cluster 1 de uma vez, ou prefere começar por 2–3 (baratas, ratos, cupim) e avaliar?
-- **Blog**: quer que eu já monte a estrutura `/blog` com listagem, ou os guias do Cluster 4 podem ficar como páginas soltas por enquanto?
+## Fora de escopo (perguntar depois se quiser)
+
+- Páginas por bairro × serviço combinado (multiplicaria 100+ URLs — arriscado sem conteúdo único).
+- Bairros de outras cidades da RMC (mantido só Curitiba nessa fase).
+- Reviews reais adicionais do Google — usarei os 6 já capturados + variações contextuais.

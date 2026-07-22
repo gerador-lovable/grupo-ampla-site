@@ -5,10 +5,12 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import UrgencyBar from "@/components/UrgencyBar";
+import TestimonialsModule from "@/components/TestimonialsModule";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 import { findServicoDes, servicosDesentupimento } from "@/data/servicosDesentupimento";
+import type { DepoimentoTag } from "@/data/depoimentos";
 
 const BASE_URL = "https://grupo-ampla-site.lovable.app";
 
@@ -188,6 +190,13 @@ const ServicoDesentupimentoPage = () => {
           </div>
         </div>
       </section>
+
+      <TestimonialsModule
+        tags={[servico.slug as DepoimentoTag, "desentupimento"]}
+        titulo={`Clientes atendidos — ${servico.nome}`}
+        subtitulo="Avaliações reais de clientes que contrataram este serviço"
+        bg="muted"
+      />
 
       <section className="py-16 md:py-20 bg-primary text-primary-foreground">
         <div className="container px-4 max-w-3xl text-center">

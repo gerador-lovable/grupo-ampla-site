@@ -9,6 +9,8 @@ import DedetizacaoComercial from "./pages/DedetizacaoComercial.tsx";
 import PragaPage from "./pages/PragaPage.tsx";
 import ServicoDesentupimentoPage from "./pages/ServicoDesentupimentoPage.tsx";
 import CidadePage from "./pages/CidadePage.tsx";
+import BairroPage from "./pages/BairroPage.tsx";
+import Emergencia24h from "./pages/Emergencia24h.tsx";
 import Blog from "./pages/Blog.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
 import RedirectWhatsApp from "./pages/RedirectWhatsApp.tsx";
@@ -29,6 +31,8 @@ const App = () => (
           <Route path="/dedetizacao/:praga" element={<PragaPage />} />
           <Route path="/desentupidora/:servico" element={<ServicoDesentupimentoPage />} />
           <Route path="/atendimento/:cidade" element={<CidadePage />} />
+          <Route path="/bairros/:bairro" element={<BairroPage />} />
+          <Route path="/emergencia-24h" element={<Emergencia24h />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/redirecionando" element={<RedirectWhatsApp />} />

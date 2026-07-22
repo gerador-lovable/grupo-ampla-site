@@ -27,6 +27,28 @@
   <url><loc>https://grupo-ampla-site.lovable.app/atendimento/araucaria</loc><priority>0.7</priority></url>
   <url><loc>https://grupo-ampla-site.lovable.app/atendimento/campo-largo</loc><priority>0.7</priority></url>
 
+  <url><loc>https://grupo-ampla-site.lovable.app/atendimento/fazenda-rio-grande</loc><priority>0.7</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/atendimento/piraquara</loc><priority>0.7</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/atendimento/quatro-barras</loc><priority>0.7</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/atendimento/almirante-tamandare</loc><priority>0.7</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/atendimento/rio-branco-do-sul</loc><priority>0.6</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/atendimento/bocaiuva-do-sul</loc><priority>0.6</priority></url>
+
+  <url><loc>https://grupo-ampla-site.lovable.app/emergencia-24h</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <url><loc>https://grupo-ampla-site.lovable.app/bairros/batel</loc><priority>0.7</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/bairros/agua-verde</loc><priority>0.7</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/bairros/centro</loc><priority>0.7</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/bairros/boqueirao</loc><priority>0.7</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/bairros/portao</loc><priority>0.7</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/bairros/cic</loc><priority>0.7</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/bairros/cajuru</loc><priority>0.7</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/bairros/santa-felicidade</loc><priority>0.7</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/bairros/bacacheri</loc><priority>0.7</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/bairros/sitio-cercado</loc><priority>0.7</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/bairros/pinheirinho</loc><priority>0.7</priority></url>
+  <url><loc>https://grupo-ampla-site.lovable.app/bairros/uberaba</loc><priority>0.7</priority></url>
+
   <url><loc>https://grupo-ampla-site.lovable.app/blog/quanto-custa-dedetizacao-curitiba</loc><priority>0.6</priority></url>
   <url><loc>https://grupo-ampla-site.lovable.app/blog/quanto-custa-desentupimento-curitiba</loc><priority>0.6</priority></url>
   <url><loc>https://grupo-ampla-site.lovable.app/blog/como-eliminar-baratas-de-esgoto</loc><priority>0.6</priority></url>

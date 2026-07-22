@@ -5,12 +5,15 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import UrgencyBar from "@/components/UrgencyBar";
+import TestimonialsModule from "@/components/TestimonialsModule";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 import { findCidade, cidades } from "@/data/cidades";
 import { pragas } from "@/data/pragas";
 import { servicosDesentupimento } from "@/data/servicosDesentupimento";
+import { bairros } from "@/data/bairros";
+import type { DepoimentoTag } from "@/data/depoimentos";
 
 const BASE_URL = "https://grupo-ampla-site.lovable.app";
 
@@ -115,14 +118,34 @@ const CidadePage = () => {
         <div className="container px-4 max-w-4xl">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">Bairros atendidos em {cidade.nome}</h2>
           <div className="flex flex-wrap gap-3 justify-center">
-            {cidade.bairros.map((b) => (
-              <span key={b} className="inline-flex items-center gap-2 bg-background border border-border rounded-full px-4 py-2 text-sm text-foreground">
-                <CheckCircle2 className="w-4 h-4 text-primary" /> {b}
-              </span>
-            ))}
+            {cidade.bairros.map((b) => {
+              const link = cidade.slug === "curitiba"
+                ? bairros.find((x) => x.nome.toLowerCase() === b.toLowerCase())
+                : undefined;
+              return link ? (
+                <Link
+                  key={b}
+                  to={`/bairros/${link.slug}`}
+                  className="inline-flex items-center gap-2 bg-background border border-border rounded-full px-4 py-2 text-sm text-foreground hover:border-primary hover:text-primary transition-colors"
+                >
+                  <CheckCircle2 className="w-4 h-4 text-primary" /> {b}
+                </Link>
+              ) : (
+                <span key={b} className="inline-flex items-center gap-2 bg-background border border-border rounded-full px-4 py-2 text-sm text-foreground">
+                  <CheckCircle2 className="w-4 h-4 text-primary" /> {b}
+                </span>
+              );
+            })}
           </div>
         </div>
       </section>
+
+      <TestimonialsModule
+        tags={[cidade.slug as DepoimentoTag]}
+        titulo={`Clientes atendidos em ${cidade.nome}`}
+        subtitulo="Avaliações reais de clientes da região"
+        bg="background"
+      />
 
       <section className="py-16 md:py-20 bg-background">
         <div className="container px-4 max-w-5xl">
