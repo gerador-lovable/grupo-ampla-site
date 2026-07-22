@@ -32,6 +32,29 @@
 - [São José dos Pinhais](/atendimento/sao-jose-dos-pinhais)
 - [Araucária](/atendimento/araucaria)
 - [Campo Largo](/atendimento/campo-largo)
+- [Fazenda Rio Grande](/atendimento/fazenda-rio-grande)
+- [Piraquara](/atendimento/piraquara)
+- [Quatro Barras](/atendimento/quatro-barras)
+- [Almirante Tamandaré](/atendimento/almirante-tamandare)
+- [Rio Branco do Sul](/atendimento/rio-branco-do-sul)
+- [Bocaiúva do Sul](/atendimento/bocaiuva-do-sul)
+
+## Bairros de Curitiba
+- [Dedetizadora no Batel](/bairros/batel)
+- [Dedetizadora no Água Verde](/bairros/agua-verde)
+- [Dedetizadora no Centro](/bairros/centro)
+- [Dedetizadora no Boqueirão](/bairros/boqueirao)
+- [Dedetizadora no Portão](/bairros/portao)
+- [Desentupidora na CIC](/bairros/cic)
+- [Dedetizadora no Cajuru](/bairros/cajuru)
+- [Dedetizadora em Santa Felicidade](/bairros/santa-felicidade)
+- [Dedetizadora no Bacacheri](/bairros/bacacheri)
+- [Dedetizadora no Sítio Cercado](/bairros/sitio-cercado)
+- [Dedetizadora no Pinheirinho](/bairros/pinheirinho)
+- [Dedetizadora no Uberaba](/bairros/uberaba)
+
+## Emergência 24h
+- [Atendimento emergencial 24h em Curitiba e RMC](/emergencia-24h)
 
 ## Blog
 - [Quanto custa dedetização em Curitiba](/blog/quanto-custa-dedetizacao-curitiba)
