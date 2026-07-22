@@ -16,26 +16,26 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
  {
  slug: "quanto-custa-dedetizacao-curitiba",
- titulo: "Quanto custa uma dedetização em Curitiba em 2026?",
- title: "Quanto Custa Dedetização em Curitiba 2026? Preços e Fatores | Ampla",
+ titulo: "Como funciona o orçamento de dedetização em Curitiba",
+ title: "Orçamento de Dedetização em Curitiba: Como Funciona | Ampla",
  description:
- "Descubra quanto custa uma dedetização em Curitiba em 2026: faixas de preço por m², tipo de praga e fatores que influenciam o orçamento.",
+ "Entenda o que influencia o orçamento de uma dedetização em Curitiba: metragem, tipo de praga, método aplicado e o que exigir de qualquer empresa séria.",
  resumo:
- "Preços de dedetização em Curitiba variam por área, tipo de praga e método. Veja a faixa média e o que influencia o orçamento.",
+ "O orçamento de dedetização depende de vários fatores. Veja o que muda o valor e o que exigir antes de fechar o serviço.",
  publicadoEm: "2026-07-01",
  leitura: "6 min",
- categoria: "Preços",
+ categoria: "Orçamento",
  secoes: [
  {
- h2: "Faixa de preço média em Curitiba",
+ h2: "Como o orçamento é calculado",
  paragrafos: [
- "Uma dedetização residencial padrão em Curitiba (apartamento ou casa até 100 m²) fica em média entre R$ 180 e R$ 450, dependendo do tipo de praga e do método aplicado. Serviços comerciais e industriais são cotados por m² e escopo.",
- "Descupinização e tratamentos com barreira química no solo têm faixa própria, normalmente entre R$ 25 e R$ 60 por m² tratado.",
+ "Toda dedetização é única. Em Curitiba, o valor de cada serviço leva em conta a metragem do imóvel, o tipo de praga, o grau de infestação e o método técnico mais indicado para o caso.",
+ "Por isso, empresas sérias não trabalham com tabela pronta: enviamos o orçamento formal e fechado antes de qualquer aplicação, sem custo e sem obrigação de contratar.",
  ],
  },
  {
  h2: "O que influencia o valor",
- paragrafos: ["Cinco fatores explicam a maior parte da variação de preço:"],
+ paragrafos: ["Cinco fatores explicam a maior parte da variação do orçamento:"],
  bullets: [
  "Área total do imóvel (m²)",
  "Tipo de praga (baratas, cupim, ratos, escorpião etc.)",
@@ -45,40 +45,40 @@ export const blogPosts: BlogPost[] = [
  ],
  },
  {
- h2: "Cuidado com preços muito baixos",
+ h2: "Cuidado com orçamentos muito baixos",
  paragrafos: [
- "Preços muito abaixo da faixa de mercado costumam significar produto vencido, sem registro ANVISA, sem garantia ou aplicação incompleta. Sempre exija: registro da empresa, nota fiscal e garantia por escrito.",
+ "Valores muito abaixo da média costumam significar produto vencido, sem registro ANVISA, sem garantia ou aplicação incompleta. Sempre exija: registro da empresa, nota fiscal e garantia por escrito.",
  ],
  },
  ],
- conclusao: "Peça um orçamento grátis pelo WhatsApp, respondemos em minutos com preço fechado.",
+ conclusao: "Peça um orçamento grátis pelo WhatsApp, respondemos em minutos com valor fechado e sem compromisso.",
  },
  {
  slug: "quanto-custa-desentupimento-curitiba",
- titulo: "Quanto custa um desentupimento em Curitiba?",
- title: "Quanto Custa Desentupimento em Curitiba? Preços 2026 | Ampla",
+ titulo: "Orçamento de desentupimento em Curitiba: como é feito",
+ title: "Orçamento de Desentupimento em Curitiba | Ampla",
  description:
- "Veja quanto custa desentupimento em Curitiba em 2026: pia, vaso, esgoto, hidrojateamento e limpeza de fossa. Faixas de preço e o que influencia.",
+ "Como é feito o orçamento de desentupimento em Curitiba: pia, vaso, esgoto, hidrojateamento e limpeza de fossa. Entenda o que muda o valor.",
  resumo:
- "Desentupimento varia por tipo de ponto e equipamento. Veja faixas médias em Curitiba e o que impacta o orçamento.",
+ "O orçamento de desentupimento varia por ponto e equipamento. Veja o que impacta o valor e o que exigir antes de contratar.",
  publicadoEm: "2026-07-05",
  leitura: "5 min",
- categoria: "Preços",
+ categoria: "Orçamento",
  secoes: [
  {
- h2: "Preço médio por tipo de serviço",
- paragrafos: ["Estas são as faixas mais comuns em Curitiba em 2026:"],
+ h2: "Tipos de serviço mais comuns",
+ paragrafos: ["Cada ponto exige equipamento e tempo diferentes. Estes são os chamados mais frequentes em Curitiba:"],
  bullets: [
- "Desentupimento de pia: R$ 150 a R$ 300",
- "Desentupimento de vaso sanitário: R$ 180 a R$ 380",
- "Desentupimento de esgoto: R$ 250 a R$ 600",
- "Hidrojateamento: R$ 500 a R$ 1.500 (varia por metragem)",
- "Limpeza de fossa: R$ 400 a R$ 900 por caminhão",
+ "Desentupimento de pia (cozinha e banheiro)",
+ "Desentupimento de vaso sanitário",
+ "Desentupimento de esgoto e ramais",
+ "Hidrojateamento de tubulações longas",
+ "Limpeza de fossa por caminhão vácuo",
  ],
  },
  {
- h2: "Fatores que aumentam o preço",
- paragrafos: ["Alguns fatores fazem o valor subir dentro da faixa:"],
+ h2: "Fatores que influenciam o orçamento",
+ paragrafos: ["Alguns pontos fazem o valor variar de um chamado para o outro:"],
  bullets: [
  "Atendimento 24h ou finais de semana",
  "Necessidade de hidrojateamento",
@@ -89,7 +89,7 @@ export const blogPosts: BlogPost[] = [
  {
  h2: "Como evitar surpresas",
  paragrafos: [
- "Peça sempre orçamento antes do início do serviço, com preço fechado. Fuja de empresas que só passam o valor 'no local'.",
+ "Peça sempre orçamento formal antes do início do serviço, com valor fechado. Fuja de empresas que só passam o valor 'no local' ou cobram taxa de visita.",
  ],
  },
  ],
