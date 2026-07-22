@@ -15,9 +15,10 @@ const FooterSection = () => {
           <div>
             <h4 className="font-bold mb-3">Links Rápidos</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li><a href="#servicos" className="hover:text-primary-foreground">Serviços</a></li>
-              <li><a href="#faq" className="hover:text-primary-foreground">Perguntas Frequentes</a></li>
-              <li><a href="#contato" className="hover:text-primary-foreground">Contato</a></li>
+              <li><a href="/emergencia-24h" className="hover:text-primary-foreground font-semibold">Emergência 24h</a></li>
+              <li><a href="/desentupidora" className="hover:text-primary-foreground">Desentupidora</a></li>
+              <li><a href="/servicos/dedetizacao-comercial" className="hover:text-primary-foreground">Dedetização Comercial</a></li>
+              <li><a href="/blog" className="hover:text-primary-foreground">Blog</a></li>
             </ul>
           </div>
           <div>
