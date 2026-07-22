@@ -31,20 +31,20 @@ const FooterSection = () => {
           <div>
             <h4 className="font-display font-semibold text-sm uppercase tracking-[0.14em] text-primary-foreground/90 mb-4">Serviços</h4>
             <ul className="space-y-2.5 text-sm text-primary-foreground/60">
-              <li><a href="/servicos/dedetizacao-comercial" className="hover:text-accent transition-colors">Dedetização Comercial</a></li>
-              <li><a href="/servicos/limpeza-caixa-dagua" className="hover:text-accent transition-colors">Limpeza de Caixa d'Água</a></li>
-              <li><a href="/servicos/controle-roedores" className="hover:text-accent transition-colors">Controle de Roedores</a></li>
-              <li><a href="/servicos/pombos-e-morcegos" className="hover:text-accent transition-colors">Pombos e Morcegos</a></li>
-              <li><a href="/desentupidora" className="hover:text-accent transition-colors">Desentupidora</a></li>
+              <li><Link to="/servicos/dedetizacao-comercial" className="hover:text-accent transition-colors">Dedetização Comercial</Link></li>
+              <li><Link to="/servicos/limpeza-caixa-dagua" className="hover:text-accent transition-colors">Limpeza de Caixa d'Água</Link></li>
+              <li><Link to="/servicos/controle-roedores" className="hover:text-accent transition-colors">Controle de Roedores</Link></li>
+              <li><Link to="/servicos/pombos-e-morcegos" className="hover:text-accent transition-colors">Pombos e Morcegos</Link></li>
+              <li><Link to="/desentupidora" className="hover:text-accent transition-colors">Desentupidora</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-display font-semibold text-sm uppercase tracking-[0.14em] text-primary-foreground/90 mb-4">Institucional</h4>
             <ul className="space-y-2.5 text-sm text-primary-foreground/60">
-              <li><a href="/emergencia-24h" className="text-accent hover:text-accent/80 font-semibold transition-colors">⚡ Emergência 24h</a></li>
-              <li><a href="/curitiba" className="hover:text-accent transition-colors">Atendimento em Curitiba</a></li>
-              <li><a href="/blog" className="hover:text-accent transition-colors">Blog</a></li>
+              <li><Link to="/emergencia-24h" className="text-accent hover:text-accent/80 font-semibold transition-colors">⚡ Emergência 24h</Link></li>
+              <li><Link to="/curitiba" className="hover:text-accent transition-colors">Atendimento em Curitiba</Link></li>
+              <li><Link to="/blog" className="hover:text-accent transition-colors">Blog</Link></li>
             </ul>
           </div>
 
