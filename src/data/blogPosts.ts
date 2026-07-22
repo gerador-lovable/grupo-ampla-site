@@ -5,10 +5,12 @@ export interface BlogPost {
  description: string;
  resumo: string;
  publicadoEm: string;
+ atualizadoEm?: string;
  leitura: string;
  categoria: string;
  secoes: { h2: string; paragrafos: string[]; bullets?: string[] }[];
  conclusao: string;
+ faqs?: { q: string; a: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
