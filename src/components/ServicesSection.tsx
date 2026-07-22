@@ -83,9 +83,15 @@ const ServicesSection = () => {
  </p>
  </div>
 
- <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
- {services.map((service) => (
- <Card key={service.title} className="border border-border bg-surface shadow-card hover:shadow-elegant hover:-translate-y-1 transition-all duration-300 overflow-hidden group rounded-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-5">
+          {services.map((service, i) => {
+            const isLast = i === services.length - 1;
+            const isOrphan = isLast && services.length % 3 === 1;
+            const spanClass = isOrphan
+              ? "lg:col-span-2 lg:col-start-3"
+              : "lg:col-span-2";
+            return (
+            <Card key={service.title} className={`${spanClass} border border-border bg-surface shadow-card hover:shadow-elegant hover:-translate-y-1 transition-all duration-300 overflow-hidden group rounded-2xl`}>
  {service.image ? (
  <div className="h-48 overflow-hidden relative">
  <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-primary-deep/40 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -124,8 +130,8 @@ const ServicesSection = () => {
  </Button>
  </div>
  </CardContent>
- </Card>
- ))}
+            </Card>
+          );})}
  </div>
  </div>
  </section>
