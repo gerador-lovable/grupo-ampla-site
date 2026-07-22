@@ -1,6 +1,5 @@
 import { Instagram, MapPin, Phone, Shield, BadgeCheck, Clock } from "lucide-react";
-import logoAsset from "@/assets/logo-ampla-novo.webp.asset.json";
-const logo = logoAsset.url;
+import logo from "@/assets/logo-ampla.webp";
 
 const FooterSection = () => {
   return (

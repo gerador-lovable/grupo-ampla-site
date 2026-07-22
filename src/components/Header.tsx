@@ -3,8 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
-import logoAsset from "@/assets/logo-ampla-novo.webp.asset.json";
-const logo = logoAsset.url;
+import logo from "@/assets/logo-ampla.webp";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 
 const Header = () => {
