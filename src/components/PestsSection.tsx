@@ -27,37 +27,48 @@ const pests = [
 
 const PestsSection = () => {
   return (
-    <section className="py-16 md:py-20 bg-background">
+    <section className="py-20 md:py-28 bg-background">
       <div className="container px-4">
-        <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-4">
-          Pragas que Controlamos
-        </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Nossa equipe está preparada para combater todos os tipos de pragas urbanas com eficácia comprovada
-        </p>
+        <div className="max-w-2xl mb-14">
+          <span className="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-primary mb-4">
+            Pragas urbanas
+          </span>
+          <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground leading-[1.05] text-balance">
+            Cada praga exige um protocolo diferente<span className="text-accent">.</span>
+          </h2>
+          <p className="text-muted-foreground text-lg mt-5">
+            Do diagnóstico ao tratamento residual — sabemos exatamente o que sua infestação precisa.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 max-w-6xl mx-auto mb-12">
           {pests.map((pest) => {
             const CardInner = (
               <>
-                <div className="w-full h-32 md:h-40 overflow-hidden">
+                <div className="w-full h-36 md:h-44 overflow-hidden relative">
+                  <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-primary-deep/60 via-primary-deep/10 to-transparent z-10" />
                   <img
                     src={pest.image}
                     alt={pest.name}
                     loading="lazy"
                     width={512}
                     height={512}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                  <h3 className="absolute bottom-3 left-3 z-20 font-display font-semibold text-primary-foreground text-sm md:text-base drop-shadow">{pest.name}</h3>
                 </div>
                 <div className="p-4">
-                  <h3 className="font-bold text-foreground text-sm md:text-base mb-2">{pest.name}</h3>
-                  <p className="text-muted-foreground text-xs leading-relaxed hidden md:block">{pest.description}</p>
+                  <p className="text-muted-foreground text-xs leading-relaxed hidden md:block mb-2">{pest.description}</p>
+                  {pest.slug && (
+                    <span className="text-primary text-xs font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                      Ver protocolo →
+                    </span>
+                  )}
                 </div>
               </>
             );
             const cls =
-              "group bg-card rounded-xl overflow-hidden border border-border hover:border-primary/40 hover:shadow-lg transition-all duration-300 text-center block";
+              "group bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/60 hover:shadow-elegant transition-all duration-300 text-left block";
             return pest.slug ? (
               <Link key={pest.name} to={`/dedetizacao/${pest.slug}`} className={cls}>
                 {CardInner}
@@ -71,10 +82,10 @@ const PestsSection = () => {
         </div>
 
         <div className="text-center">
-          <Button asChild size="lg" className="bg-[#075E54] hover:bg-[#075E54]/90 text-white font-bold text-lg px-10 min-h-[52px] transition-transform duration-200 hover:scale-105">
+          <Button asChild size="lg" className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground font-semibold text-base px-10 min-h-[56px] rounded-xl shadow-elegant transition-transform duration-200 hover:scale-[1.03]">
             <Link to={WHATSAPP_REDIRECT}>
               <WhatsAppIcon className="w-6 h-6 mr-2" />
-              Solicitar Orçamento Grátis
+              Identificar minha praga no WhatsApp
             </Link>
           </Button>
         </div>
