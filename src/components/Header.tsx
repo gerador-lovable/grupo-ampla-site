@@ -15,50 +15,49 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-primary/95 backdrop-blur-md shadow-md py-2"
+          ? "bg-primary-deep/90 backdrop-blur-xl border-b border-white/10 py-2.5"
           : "bg-transparent py-4"
       }`}
     >
-      <div className="container px-4 flex items-center justify-between">
-        <a href="#" className="shrink-0">
+      <div className="container px-4 flex items-center justify-between gap-4">
+        <Link to="/" className="shrink-0 flex items-center">
           <img
             src={logo}
             alt="Grupo Ampla - Dedetizadora"
-            className={`transition-all duration-300 ${scrolled ? "h-14 md:h-16" : "h-16 md:h-20"}`}
+            className={`transition-all duration-500 ${scrolled ? "h-12 md:h-14" : "h-16 md:h-[74px]"}`}
           />
-        </a>
+        </Link>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 md:gap-3">
           <Button
             asChild
-            className="bg-destructive hover:bg-destructive/90 text-white font-bold min-h-[44px] px-4 transition-transform duration-200 hover:scale-105 rounded-lg shadow-md animate-slow-pulse"
+            className="bg-destructive hover:bg-destructive/90 text-destructive-foreground font-semibold min-h-[44px] px-3 md:px-4 rounded-xl shadow-elegant animate-slow-pulse transition-transform hover:scale-[1.03]"
           >
             <a href="tel:+5541995121583">
-              <Phone className="w-4 h-4 mr-1.5" />
-              <span className="hidden sm:flex flex-col items-start leading-tight">
-                <span className="text-[10px] font-semibold uppercase tracking-wider opacity-90">Emergência 24h</span>
-                <span className="text-sm font-extrabold">(41) 99512-1583</span>
+              <Phone className="w-4 h-4 md:mr-1.5" />
+              <span className="hidden md:flex flex-col items-start leading-tight">
+                <span className="text-[9px] font-semibold uppercase tracking-[0.14em] opacity-90">Emergência 24h</span>
+                <span className="text-sm font-bold font-display">(41) 99512-1583</span>
               </span>
-              <span className="sm:hidden text-xs font-bold">24h</span>
+              <span className="md:hidden text-xs font-bold ml-1">24h</span>
             </a>
           </Button>
           <Button
             asChild
-            className="bg-[#075E54] hover:bg-[#075E54]/90 text-white font-semibold min-h-[44px] px-5 transition-transform duration-200 hover:scale-105 rounded-lg shadow-md"
+            className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground font-semibold min-h-[44px] px-4 md:px-5 rounded-xl shadow-card transition-transform hover:scale-[1.03]"
           >
             <Link to={whatsappRedirect}>
-              <WhatsAppIcon className="w-5 h-5 mr-2" />
+              <WhatsAppIcon className="w-5 h-5 md:mr-2" />
               <span className="hidden sm:inline">Orçamento Grátis</span>
-              <span className="sm:hidden">WhatsApp</span>
             </Link>
           </Button>
         </div>

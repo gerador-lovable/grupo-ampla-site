@@ -56,15 +56,15 @@ const OutrosServicosBlock = ({
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
           {tiles.map(({ to, nome, desc, Icon }) => (
-            <Link
+          <Link
               key={to}
               to={to}
-              className="group bg-background border border-border rounded-xl p-6 hover:border-primary hover:shadow-lg transition-all flex flex-col gap-3"
+              className="group bg-surface border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-elegant hover:-translate-y-0.5 transition-all flex flex-col gap-3"
             >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Icon className="w-6 h-6 text-primary" />
+              <div className="w-11 h-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                <Icon className="w-5 h-5" />
               </div>
-              <h3 className="font-bold text-foreground text-base leading-snug">
+              <h3 className="font-display font-semibold text-foreground text-base leading-snug">
                 {nome}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed flex-1">

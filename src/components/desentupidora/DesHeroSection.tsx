@@ -1,100 +1,115 @@
 import { Link } from "react-router-dom";
-import { Clock, Shield, BadgeCheck, CreditCard, Star, Users, Award, Phone } from "lucide-react";
+import { Clock, Shield, Wrench, CreditCard, Star, Users, Award, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
-import heroBg from "@/assets/hero-bg.jpg";
 import heroTechnician from "@/assets/desentupidora-hero.webp";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 
 const WHATSAPP_REDIRECT = buildRedirectUrl({ servico: "desentupimento" });
 
 const benefits = [
-  { icon: Clock, text: "Atendimento em até 1 hora" },
+  { icon: Clock, text: "Atendimento em até 1h" },
   { icon: Shield, text: "Garantia de 90 dias" },
-  { icon: BadgeCheck, text: "Equipamentos de última geração" },
-  { icon: CreditCard, text: "Parcelamento em até 12x" },
+  { icon: Wrench, text: "Hidrojateamento profissional" },
+  { icon: CreditCard, text: "Parcelamos em 12x" },
 ];
 
 const stats = [
-  { icon: Users, value: "+10.000", label: "Clientes Atendidos" },
-  { icon: Award, value: "35 Anos", label: "de Experiência" },
-  { icon: Star, value: "4.8/5", label: "Avaliação Média" },
+  { icon: Users, value: "+10 mil", label: "clientes atendidos" },
+  { icon: Award, value: "35", label: "anos de mercado" },
+  { icon: Star, value: "4.8", label: "avaliação Google" },
 ];
 
 const DesHeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      <div className="absolute inset-0">
-        <img src={heroBg} alt="Serviço profissional de desentupimento" className="w-full h-full object-cover" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1a4a]/95 via-primary/90 to-primary/75" />
-      </div>
+    <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-hero">
+      <div aria-hidden className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-primary-glow/20 blur-[120px]" />
+      <div aria-hidden className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-accent/20 blur-[140px]" />
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "linear-gradient(hsl(var(--primary-foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary-foreground)) 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+          maskImage: "radial-gradient(ellipse at 30% 40%, black 40%, transparent 75%)",
+        }}
+      />
 
-      <div className="container relative z-10 pt-32 md:pt-40 pb-16 md:pb-24 px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div>
-            <div className="inline-block bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6 animate-fade-in">
-              ⭐ Referência em Curitiba há 35 anos
+      <div className="container relative z-10 pt-32 md:pt-40 pb-16 md:pb-0 px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-8 items-center">
+          <div className="text-primary-foreground">
+            <div className="inline-flex items-center gap-2 border border-white/15 bg-white/5 backdrop-blur-sm text-primary-foreground/90 text-xs font-medium tracking-[0.14em] uppercase px-3.5 py-1.5 rounded-full mb-8 animate-fade-in">
+              <span className="inline-flex w-1.5 h-1.5 rounded-full bg-accent" />
+              Desentupidora 24h · Curitiba
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-primary-foreground leading-[1.1] mb-6 animate-fade-in-up">
-              Desentupidora Profissional
-              <span className="block text-accent mt-2">em Curitiba e Região</span>
+            <h1 className="font-display text-[40px] sm:text-5xl lg:text-[64px] xl:text-[72px] leading-[1.02] tracking-[-0.03em] font-semibold mb-6 animate-fade-up text-balance">
+              Desentupimos em <span className="relative inline-block text-accent">1 hora
+                <span aria-hidden className="absolute left-0 -bottom-1 h-[3px] w-full bg-gradient-accent rounded-full" />
+              </span>,
+              <span className="block mt-1">sem quebrar nada.</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed animate-fade-in-up animation-delay-200">
-              Há 35 anos resolvendo problemas de entupimento com rapidez e eficiência. Atendimento emergencial 24h. <strong className="text-accent">Orçamento grátis!</strong>
+            <p className="text-lg md:text-xl text-primary-foreground/75 max-w-xl mb-9 leading-relaxed animate-fade-up" style={{ animationDelay: "0.15s" }}>
+              Hidrojateamento de alta pressão, câmera de inspeção e equipes disponíveis 24 horas por dia — inclusive fins de semana e feriados.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 animate-fade-in-up animation-delay-300">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-10 max-w-lg animate-fade-up" style={{ animationDelay: "0.25s" }}>
               {benefits.map((b) => (
-                <div key={b.text} className="flex items-center gap-2.5 text-primary-foreground/90">
-                  <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
-                    <b.icon className="w-4 h-4 text-accent" />
+                <div key={b.text} className="flex items-center gap-2.5 text-primary-foreground/85">
+                  <div className="w-7 h-7 rounded-md bg-white/10 border border-white/10 flex items-center justify-center shrink-0">
+                    <b.icon className="w-3.5 h-3.5 text-accent" />
                   </div>
-                  <span className="text-sm md:text-base">{b.text}</span>
+                  <span className="text-sm">{b.text}</span>
                 </div>
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up animation-delay-400">
+            <div className="flex flex-col sm:flex-row gap-3 mb-12 animate-fade-up" style={{ animationDelay: "0.35s" }}>
               <Button
                 asChild
                 size="lg"
-                className="bg-destructive hover:bg-destructive/90 text-white text-lg font-bold px-10 py-7 rounded-xl shadow-2xl shadow-destructive/40 min-h-[56px] transition-transform duration-200 hover:scale-105 animate-slow-pulse"
+                className="bg-destructive hover:bg-destructive/90 text-destructive-foreground font-semibold px-6 py-7 rounded-xl shadow-elegant min-h-[60px] transition-transform hover:scale-[1.02] animate-slow-pulse"
               >
                 <a href="tel:+5541995121583">
-                  <Phone className="w-6 h-6 mr-2" />
-                  <span className="flex flex-col items-start leading-tight">
-                    <span className="text-xs font-semibold uppercase tracking-wider opacity-90">Emergência 24h</span>
-                    <span className="text-lg font-extrabold">(41) 99512-1583</span>
+                  <Phone className="w-5 h-5 mr-2.5" />
+                  <span className="flex flex-col items-start leading-tight text-left">
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.14em] opacity-90">Emergência 24h</span>
+                    <span className="text-base font-bold font-display">(41) 99512-1583</span>
                   </span>
                 </a>
               </Button>
               <Button
                 asChild
                 size="lg"
-                className="bg-[#075E54] hover:bg-[#075E54]/90 text-white text-lg font-bold px-10 py-7 rounded-xl shadow-2xl shadow-[#075E54]/30 min-h-[56px] transition-transform duration-200 hover:scale-105"
+                className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground font-semibold px-8 py-7 rounded-xl shadow-elegant min-h-[60px] text-base transition-transform hover:scale-[1.02]"
               >
                 <Link to={WHATSAPP_REDIRECT}>
-                  <WhatsAppIcon className="w-6 h-6 mr-2" />
-                  Orçamento Grátis
+                  <WhatsAppIcon className="w-5 h-5 mr-2" />
+                  Orçamento grátis
                 </Link>
               </Button>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 max-w-md animate-fade-in-up animation-delay-500">
+            <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-lg pt-8 border-t border-white/10 animate-fade-up" style={{ animationDelay: "0.45s" }}>
               {stats.map((s) => (
-                <div key={s.label} className="text-center bg-primary-foreground/10 rounded-xl py-4 px-2 backdrop-blur-sm">
-                  <s.icon className="w-5 h-5 text-accent mx-auto mb-1" />
-                  <div className="text-xl md:text-2xl font-bold text-primary-foreground">{s.value}</div>
-                  <div className="text-xs text-primary-foreground/70">{s.label}</div>
+                <div key={s.label}>
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="font-display text-2xl md:text-3xl font-semibold text-primary-foreground tracking-tight">{s.value}</span>
+                    {s.label.includes("Google") && (
+                      <Star className="w-4 h-4 fill-accent text-accent" />
+                    )}
+                  </div>
+                  <div className="text-xs md:text-sm text-primary-foreground/60 mt-0.5">{s.label}</div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="hidden lg:flex justify-center items-end self-stretch animate-fade-in animation-delay-300 -mb-24">
-            <img src={heroTechnician} alt="Técnico profissional da Ampla Desentupidora" className="h-full w-auto object-contain object-bottom drop-shadow-2xl" />
+          <div className="hidden lg:flex justify-center items-end self-stretch relative animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div aria-hidden className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[110%] h-[85%] bg-gradient-to-t from-accent/25 via-primary-glow/10 to-transparent rounded-t-[50%] blur-2xl" />
+            <img src={heroTechnician} alt="Técnico profissional da Ampla Desentupidora" className="relative h-[92vh] w-auto max-h-[820px] object-contain object-bottom drop-shadow-[0_30px_50px_hsl(226_78%_5%/0.5)]" />
           </div>
         </div>
       </div>

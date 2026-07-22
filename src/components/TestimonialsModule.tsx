@@ -83,22 +83,21 @@ const TestimonialsModule = ({
           <CarouselContent>
             {items.map((d) => (
               <CarouselItem key={d.nome + d.servico} className="md:basis-1/2 lg:basis-1/3">
-                <Card className="border-0 shadow-md h-full">
+                <Card className="border border-border bg-surface shadow-card hover:shadow-elegant transition-shadow h-full rounded-2xl">
                   <CardContent className="p-6 flex flex-col h-full">
-                    <Quote className="w-8 h-8 text-primary/20 mb-3" />
-                    <p className="text-foreground text-sm leading-relaxed mb-4 flex-1">
+                    <Quote className="w-9 h-9 text-accent/30 mb-4" strokeWidth={1.5} />
+                    <p className="text-foreground text-[15px] leading-relaxed mb-5 flex-1">
                       "{d.texto}"
                     </p>
-                    <div className="flex gap-0.5 mb-3">
+                    <div className="flex gap-0.5 mb-4">
                       {Array.from({ length: d.estrelas }).map((_, i) => (
                         <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                       ))}
                     </div>
-                    <p className="font-bold text-foreground text-sm">{d.nome}</p>
-                    <p className="text-muted-foreground text-xs">{d.local}</p>
-                    <p className="text-primary text-xs font-semibold mt-1">
-                      {d.servico}
-                    </p>
+                    <div className="pt-4 border-t border-border">
+                      <p className="font-display font-semibold text-foreground text-sm">{d.nome}</p>
+                      <p className="text-muted-foreground text-xs mt-0.5">{d.local} · {d.servico}</p>
+                    </div>
                   </CardContent>
                 </Card>
               </CarouselItem>

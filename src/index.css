@@ -2,46 +2,65 @@
   display: none !important;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 20%;
+    /* Confiança Técnica — Ampla */
+    --background: 220 33% 98%;
+    --foreground: 226 45% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 20%;
+    --card-foreground: 226 45% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 20%;
+    --popover-foreground: 226 45% 12%;
 
+    /* Deep navy #0A1E4F */
+    --primary-deep: 226 78% 17%;
+    /* Primary blue #224BD0 */
     --primary: 226 73% 47%;
     --primary-foreground: 0 0% 100%;
+    --primary-glow: 226 90% 65%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 20%;
+    --secondary: 220 33% 96%;
+    --secondary-foreground: 226 45% 12%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 220 25% 94%;
+    --muted-foreground: 226 15% 42%;
 
+    /* Orange #F57C00 */
     --accent: 27 100% 48%;
     --accent-foreground: 0 0% 100%;
+    --accent-soft: 30 100% 96%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 78% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --trust: 125 52% 33%;
+    --trust: 226 78% 17%;
     --trust-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
+    --whatsapp: 168 87% 20%;
+    --whatsapp-foreground: 0 0% 100%;
+
+    --surface: 0 0% 100%;
+    --surface-muted: 220 33% 97%;
+
+    --border: 226 30% 90%;
+    --input: 226 30% 90%;
     --ring: 226 73% 47%;
 
-    --radius: 0.5rem;
+    --radius: 0.875rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(226 78% 12%) 0%, hsl(226 78% 22%) 45%, hsl(226 73% 47%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(27 100% 48%) 0%, hsl(15 90% 52%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(220 33% 98%) 0%, hsl(220 33% 94%) 100%);
+
+    --shadow-elegant: 0 20px 50px -20px hsl(226 78% 17% / 0.25);
+    --shadow-card: 0 4px 24px -8px hsl(226 78% 17% / 0.12);
+    --shadow-glow: 0 0 60px hsl(226 90% 65% / 0.35);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -61,12 +80,27 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-feature-settings: 'ss01', 'cv11';
+    -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Space Grotesk', 'DM Sans', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    font-weight: 600;
   }
+}
+
+@layer utilities {
+  .font-display { font-family: 'Space Grotesk', 'DM Sans', system-ui, sans-serif; letter-spacing: -0.02em; }
+  .bg-gradient-hero { background-image: var(--gradient-hero); }
+  .bg-gradient-accent { background-image: var(--gradient-accent); }
+  .bg-gradient-surface { background-image: var(--gradient-surface); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .text-balance { text-wrap: balance; }
 }
 
 /* Smooth animations */
@@ -114,8 +148,8 @@
 }
 
 @keyframes slow-pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 hsl(0 84% 60% / 0.4); }
-  50% { opacity: 0.85; box-shadow: 0 0 20px 6px hsl(0 84% 60% / 0.25); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 hsl(var(--destructive) / 0.45); }
+  50% { opacity: 0.9; box-shadow: 0 0 24px 8px hsl(var(--destructive) / 0.25); }
 }
 
 .animate-slow-pulse {
