@@ -8,6 +8,9 @@ import {
   Droplet,
   Rat,
   Bird,
+  Home,
+  Building2,
+  ShieldPlus,
 } from "lucide-react";
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
@@ -27,12 +30,18 @@ const iconMap = {
   droplet: Droplet,
   rat: Rat,
   bird: Bird,
+  home: Home,
+  building: Building2,
+  shield: ShieldPlus,
 };
 
 const tagMap: Record<string, DepoimentoTag[]> = {
   "limpeza-caixa-dagua": ["dedetizacao", "residencial", "condominial"],
   "controle-roedores": ["ratos", "dedetizacao"],
   "pombos-e-morcegos": ["dedetizacao", "comercial"],
+  "dedetizacao-residencial": ["dedetizacao", "residencial"],
+  "dedetizacao-condominial": ["dedetizacao", "condominial"],
+  "dedetizacao-preventiva": ["dedetizacao", "residencial", "comercial"],
 };
 
 const ServicoEspecialPage = () => {
