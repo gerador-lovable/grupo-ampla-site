@@ -1,26 +1,23 @@
-Objetivo: vincular a nova ação de conversão "WhatsApp Lead - Ampla" às campanhas do Google Ads, para que o Google possa otimizar os lances e contabilizar as conversões corretamente.
+## Problema
 
-Situção atual:
-- A ação de conversão "WhatsApp Lead - Ampla" (label `o30sCN7a1NQcEMbX0qcq`, conta `AW-11357432774`) foi criada e está configurada no site.
-- As 5 campanhas Search (C01 a C05) foram criadas no status PAUSADO.
-- Por padrão, novas campanhas do Google Ads não associam automaticamente todas as ações de conversão; é necessário adicionar a ação ao(s) objetivo(s) de conversão da campanha.
+O `ScrollToTop` já existe, mas ao navegar entre páginas o scroll ainda cai no meio. Causas prováveis:
 
-O que será feito:
+1. As páginas são carregadas via `React.lazy` + `Suspense`. O efeito de scroll dispara no instante da troca de rota, mas quando o chunk termina de baixar e o conteúdo é montado, o navegador restaura a posição anterior (scroll restoration automático do browser).
+2. `behavior: "instant"` não é um valor padrão de `window.scrollTo` (o padrão é `"auto"`), então em alguns browsers a chamada é ignorada.
+3. `useEffect` roda após o paint: o usuário chega a ver a página nova já rolada antes do scroll ser corrigido.
 
-1. Verificar campanhas existentes
-   - Listar as 5 campanhas criadas e confirmar seus IDs/nomes.
+## Correção
 
-2. Vincular a ação de conversão "WhatsApp Lead - Ampla" às campanhas
-   - Adicionar a ação de conversão como "Ação de conversão usada" nas campanhas.
-   - Defini-la como ação primária de conversão (principal objetivo) para que o Google otimize em direção a leads.
+Reescrever `src/components/ScrollToTop.tsx`:
 
-3. Campanhas que serão vinculadas
-   - Inicialmente C01, C02 e C03 (que serão ativadas em breve).
-   - Também vincular C04 e C05 para manter consistência quando forem ativadas.
+- Desativar restauração automática do browser: `history.scrollRestoration = "manual"` (uma vez).
+- Trocar `useEffect` por `useLayoutEffect` para rolar antes do paint.
+- Usar `window.scrollTo(0, 0)` (sem options) + também `document.documentElement.scrollTop = 0` e `document.body.scrollTop = 0` para cobrir todos os casos.
+- Reagir a `pathname` e também a `key` do `useLocation` (garante reset mesmo em navegações para a mesma rota).
+- Rodar novamente após o Suspense resolver: um segundo scroll dentro de `requestAnimationFrame` para cobrir o caso em que a página lazy só monta depois.
 
-4. Verificar configuração final
-   - Confirmar que cada campanha selecionada tem "WhatsApp Lead - Ampla" ativa nos objetivos de conversão.
+Nenhuma outra mudança é necessária, os links já usam `<Link>` do React Router e não há âncoras `#`.
 
-Arquivos que serão alterados: nenhum no código do site. A vinculação é feita diretamente na conta do Google Ads via MCP.
+## Arquivos alterados
 
-Pendência de decisão: deseja vincular a conversão às 5 campanhas (recomendado) ou apenas a C01, C02 e C03?
+- `src/components/ScrollToTop.tsx`
