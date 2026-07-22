@@ -15,7 +15,7 @@ const Blog = () => {
  <div className="min-h-screen">
  <Helmet>
  <title>Blog Ampla | Dedetização e Desentupimento em Curitiba</title>
- <meta name="description" content="Guias, preços e dicas sobre dedetização, descupinização e desentupimento em Curitiba e região. Conteúdo do Grupo Ampla." />
+ <meta name="description" content="Guias, orientações e dicas sobre dedetização, descupinização e desentupimento em Curitiba e região. Conteúdo do Grupo Ampla." />
  <link rel="canonical" href={canonical} />
  <meta property="og:title" content="Blog Ampla, Dedetização e Desentupimento" />
  <meta property="og:url" content={canonical} />
