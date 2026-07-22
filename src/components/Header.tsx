@@ -34,14 +34,14 @@ const Header = () => {
           <span
             className={`inline-flex items-center transition-all duration-500 ${
               scrolled
-                ? "bg-[#050f24] px-2 md:px-3 rounded-b-[6px] shadow-lg mt-[-8px] pt-[8px] pb-[10px] mb-[-10px] md:mt-[-10px] md:pt-[10px] md:pb-[14px] md:mb-[-14px]"
+                ? "bg-[#050f24] px-2 md:px-3 rounded-full shadow-lg mt-[-8px] pt-[8px] pb-[10px] mb-[-10px] md:mt-[-10px] md:pt-[10px] md:pb-[14px] md:mb-[-14px]"
                 : ""
             }`}
           >
             <img
               src={logo}
               alt="Grupo Ampla - Dedetizadora"
-              className={`transition-all duration-500 ${scrolled ? "h-9 md:h-14" : "h-11 md:h-[74px]"}`}
+              className={`rounded-full transition-all duration-500 ${scrolled ? "h-9 md:h-14" : "h-11 md:h-[74px]"}`}
             />
           </span>
         </Link>

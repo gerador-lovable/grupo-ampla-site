@@ -1,15 +1,8 @@
-## Objetivo
-Substituir o logotipo atual (`src/assets/logo-ampla.webp`) pela nova imagem enviada via URL do Instagram.
+Ajustar o logo no cabeçalho para ficar com bordas totalmente redondas (circular).
 
-## Passos
-1. Baixar a imagem da URL fornecida para `src/assets/logo-ampla-novo.webp` (convertendo para WebP para manter performance).
-2. Fazer upload como asset CDN via `lovable-assets` (mantém o repo leve, seguindo padrão do projeto).
-3. Atualizar os 2 pontos que importam o logo:
-   - `src/components/Header.tsx`
-   - `src/components/FooterSection.tsx`
-4. Remover o arquivo antigo `src/assets/logo-ampla.webp` se não houver outras referências.
-5. Verificar visualmente no preview (header transparente, header scrolled com fundo azul escuro, e footer).
+- Arquivo: `src/components/Header.tsx`
+- Aplicar `rounded-full` na imagem do logo dentro do `Link` de navegação, garantindo que a foto/logo apareça como um círculo tanto no estado transparente inicial quanto ao rolar a página.
+- Manter os demais comportamentos: tamanho responsivo, aba escura ao scroll e transições.
+- Caso a aba escura (container do logo ao scroll) também deva ficar totalmente arredonda, aplicar `rounded-full` no `<span>` envoltório, ajustando paddings para manter proporção visual.
 
-## Observações
-- Não altero dimensões nem classes CSS, apenas a `src` da imagem.
-- URLs do Instagram expiram, então baixo agora e sirvo pelo nosso CDN.
+Verificação: visualizar no preview e confirmar que o logo é exibido como círculo em ambos os estados (topo e scroll).
