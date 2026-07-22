@@ -15,14 +15,14 @@ import tracasImg from "@/assets/pests/tracas.jpg";
 const WHATSAPP_REDIRECT = buildRedirectUrl({ servico: "dedetizacao" });
 
 const pests = [
-  { image: baratasImg, name: "Baratas", slug: "baratas", description: "Eliminação completa de baratas americanas e germânicas com tratamento residual de longa duração." },
-  { image: ratosImg, name: "Ratos e Roedores", slug: "ratos", description: "Desratização profissional com técnicas de exclusão e controle integrado de roedores." },
-  { image: cupinsImg, name: "Cupins", slug: "cupim", description: "Descupinização com tratamento de solo e madeira. Proteção contra cupins subterrâneos e de madeira seca." },
-  { image: formigasImg, name: "Formigas", slug: "formigas", description: "Controle de formigas doceiras e cortadeiras com gel atrativo e iscas granuladas." },
-  { image: mosquitosImg, name: "Mosquitos e Pernilongos", description: "Nebulização e termonebulização para controle de mosquitos, incluindo Aedes aegypti." },
-  { image: aranhasImg, name: "Aranhas e Escorpiões", slug: "escorpiao", description: "Tratamento especializado para aracnídeos perigosos com pulverização residual." },
-  { image: pulgasImg, name: "Pulgas e Carrapatos", slug: "pulgas-e-carrapatos", description: "Desinsetização completa para ambientes com animais de estimação, segura para pets." },
-  { image: tracasImg, name: "Traças e Brocas", slug: "percevejo", description: "Proteção de tecidos, papéis e madeira contra traças, brocas e percevejos com tratamento controlado." },
+  { image: baratasImg, name: "Baratas", slug: "baratas", description: "Sobem pelo ralo e contaminam o que encontram. Gel + residual eliminam ninho e ovos por até 6 meses." },
+  { image: ratosImg, name: "Ratos e roedores", slug: "ratos", description: "Roem fio, fazem ninho no forro e transmitem leptospirose. Iscas em porta-iscas lacrados e monitoramento mensal." },
+  { image: cupinsImg, name: "Cupim", slug: "cupim", description: "Come móvel, batente e viga por dentro — quando você vê, o estrago já está feito. Injeção e barreira química no solo." },
+  { image: formigasImg, name: "Formigas", slug: "formigas", description: "Uma trilha visível significa colônia grande. Gel de ação retardada mata a rainha e acaba com o formigueiro." },
+  { image: mosquitosImg, name: "Mosquitos e pernilongos", description: "Aedes, muriçoca e borrachudo estragam o sono e trazem doença. Nebulização em quintal, jardim e caixa de passagem." },
+  { image: aranhasImg, name: "Aranha e escorpião", slug: "escorpiao", description: "Escorpião amarelo é grave para criança e idoso. Vedação de ralos e barreira residual em muros e frestas." },
+  { image: pulgasImg, name: "Pulga e carrapato", slug: "pulgas-e-carrapatos", description: "Picam pernas e deixam o pet coçando. Tratamos casa, quintal e canil quebrando o ciclo de ovos e larvas." },
+  { image: tracasImg, name: "Traça e percevejo", slug: "percevejo", description: "Estragam roupa, livro e colchão sem barulho. Tratamento controlado que não mancha tecido nem madeira." },
 ];
 
 const PestsSection = () => {
@@ -31,13 +31,13 @@ const PestsSection = () => {
       <div className="container px-4">
         <div className="max-w-2xl mb-14">
           <span className="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-primary mb-4">
-            Pragas urbanas
+            Qual praga é a sua?
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground leading-[1.05] text-balance">
-            Cada praga exige um protocolo diferente<span className="text-accent">.</span>
+            Matar a que aparece não resolve<span className="text-accent">.</span>
           </h2>
           <p className="text-muted-foreground text-lg mt-5">
-            Do diagnóstico ao tratamento residual — sabemos exatamente o que sua infestação precisa.
+            Cada praga tem ninho, ciclo e produto diferentes. Fazemos o diagnóstico correto para eliminar a colônia inteira — não só o que você vê.
           </p>
         </div>
 
@@ -85,7 +85,7 @@ const PestsSection = () => {
           <Button asChild size="lg" className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground font-semibold text-base px-10 min-h-[56px] rounded-xl shadow-elegant transition-transform duration-200 hover:scale-[1.03]">
             <Link to={WHATSAPP_REDIRECT}>
               <WhatsAppIcon className="w-6 h-6 mr-2" />
-              Identificar minha praga no WhatsApp
+              Mandar foto da praga pelo WhatsApp
             </Link>
           </Button>
         </div>
