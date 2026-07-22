@@ -104,12 +104,13 @@ const DesContactSection = () => {
  </div>
  <div>
  <p className="font-bold text-foreground">WhatsApp</p>
- <a
- href={buildRedirectUrl({ servico: "desentupimento" })}
- className="text-primary hover:underline"
- >
- (41) 99512-1583
- </a>
+                <a
+                  href={buildRedirectUrl({ servico: "desentupimento" })}
+                  onClick={() => trackWhatsAppClick({ servico: "desentupimento" })}
+                  className="text-primary hover:underline"
+                >
+                  (41) 99512-1583
+                </a>
  </div>
  </div>
  <div className="flex items-start gap-3">
