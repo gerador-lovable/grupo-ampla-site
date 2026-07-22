@@ -39,6 +39,7 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    trackWhatsAppClick({ servico: "dedetizacao" });
     navigate(
       buildRedirectUrl({
         servico: "dedetizacao",
