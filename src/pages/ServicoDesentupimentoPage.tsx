@@ -63,7 +63,7 @@ const ServicoDesentupimentoPage = () => {
 
  <Header />
 
- <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
+ <section className="relative pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
  <div className="container px-4">
  <div className="max-w-3xl">
  <div className="inline-block bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
@@ -93,14 +93,14 @@ const ServicoDesentupimentoPage = () => {
 
  <UrgencyBar />
 
- <section className="py-16 md:py-20 bg-background">
+  <section className="section-py bg-background">
  <div className="container px-4 max-w-4xl">
  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Como executamos o serviço</h2>
  <p className="text-muted-foreground text-base md:text-lg leading-relaxed">{servico.contexto}</p>
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-muted/40">
+  <section className="section-py bg-muted/40">
  <div className="container px-4">
  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
  <div className="bg-background rounded-xl p-6 md:p-8 border border-border">
@@ -135,7 +135,7 @@ const ServicoDesentupimentoPage = () => {
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-background">
+  <section className="section-py bg-background">
  <div className="container px-4">
  <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-4">Nosso método</h2>
  <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Protocolo técnico, sem quebra-quebra</p>
@@ -151,7 +151,7 @@ const ServicoDesentupimentoPage = () => {
  </div>
  </section>
 
- <section className="py-12 md:py-16 bg-primary text-primary-foreground">
+ <section className="section-py bg-primary text-primary-foreground">
  <div className="container px-4 max-w-3xl text-center">
  <ShieldCheck className="w-12 h-12 text-accent mx-auto mb-4" />
  <h2 className="text-2xl md:text-3xl font-bold mb-3">Garantia Ampla</h2>
@@ -159,7 +159,7 @@ const ServicoDesentupimentoPage = () => {
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-background">
+ <section className="section-py bg-background">
  <div className="container px-4 max-w-3xl">
  <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-10">Perguntas frequentes</h2>
  <div className="space-y-6">
@@ -173,7 +173,7 @@ const ServicoDesentupimentoPage = () => {
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-muted/40">
+ <section className="section-py bg-muted/40">
  <div className="container px-4">
  <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-10">Outros serviços de desentupimento</h2>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
@@ -198,7 +198,7 @@ const ServicoDesentupimentoPage = () => {
  bg="muted"
  />
 
- <section className="py-16 md:py-20 bg-primary text-primary-foreground">
+ <section className="section-py bg-primary text-primary-foreground">
  <div className="container px-4 max-w-3xl text-center">
  <h2 className="text-2xl md:text-4xl font-bold mb-4">Precisa de {servico.nome.toLowerCase()} agora?</h2>
  <p className="text-primary-foreground/80 mb-8 text-lg">
