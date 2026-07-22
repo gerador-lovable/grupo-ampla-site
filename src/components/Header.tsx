@@ -30,11 +30,19 @@ const Header = () => {
     >
       <div className="container px-4 flex items-center justify-between gap-4">
         <Link to="/" className="shrink-0 flex items-center">
-          <img
-            src={logo}
-            alt="Grupo Ampla - Dedetizadora"
-            className={`transition-all duration-500 ${scrolled ? "h-12 md:h-14" : "h-16 md:h-[74px]"}`}
-          />
+          <span
+            className={`inline-flex items-center transition-all duration-500 ${
+              scrolled
+                ? "bg-[#050f24] px-3 rounded-b-[6px] shadow-lg mt-[-10px] pt-[10px] pb-[14px] mb-[-14px]"
+                : ""
+            }`}
+          >
+            <img
+              src={logo}
+              alt="Grupo Ampla - Dedetizadora"
+              className={`transition-all duration-500 ${scrolled ? "h-12 md:h-14" : "h-16 md:h-[74px]"}`}
+            />
+          </span>
         </Link>
 
         <div className="flex items-center gap-2 md:gap-3">
