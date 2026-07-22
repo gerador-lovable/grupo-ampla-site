@@ -15,4 +15,39 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://grupo-ampla-site.lovable.app/dedetizacao/baratas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grupo-ampla-site.lovable.app/dedetizacao/ratos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grupo-ampla-site.lovable.app/dedetizacao/cupim</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grupo-ampla-site.lovable.app/dedetizacao/escorpiao</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://grupo-ampla-site.lovable.app/dedetizacao/pulgas-e-carrapatos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://grupo-ampla-site.lovable.app/dedetizacao/formigas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://grupo-ampla-site.lovable.app/dedetizacao/percevejo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
