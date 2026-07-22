@@ -48,6 +48,9 @@ const Header = () => {
             <img
               src={logo}
               alt="Grupo Ampla - Dedetizadora"
+              width={160}
+              height={160}
+              decoding="async"
               className={`rounded-full transition-all duration-500 ${
                 scrolled
                   ? "h-[56px] md:h-[92px] translate-y-[10px] md:translate-y-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.35)]"
