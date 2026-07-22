@@ -5,10 +5,12 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import UrgencyBar from "@/components/UrgencyBar";
+import TestimonialsModule from "@/components/TestimonialsModule";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 import { findPraga, pragas } from "@/data/pragas";
+import type { DepoimentoTag } from "@/data/depoimentos";
 
 const BASE_URL = "https://grupo-ampla-site.lovable.app";
 
@@ -197,7 +199,14 @@ const PragaPage = () => {
       </section>
 
       {/* Relacionadas */}
-      <section className="py-16 md:py-20 bg-muted/40">
+      <TestimonialsModule
+        tags={[praga.slug as DepoimentoTag, "dedetizacao"]}
+        titulo={`Clientes atendidos — ${praga.nome}`}
+        subtitulo="Avaliações reais de quem contratou a Ampla para o mesmo problema"
+        bg="muted"
+      />
+
+      <section className="py-16 md:py-20 bg-background">
         <div className="container px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-10">
             Outras pragas que controlamos

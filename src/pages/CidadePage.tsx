@@ -5,12 +5,15 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import UrgencyBar from "@/components/UrgencyBar";
+import TestimonialsModule from "@/components/TestimonialsModule";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 import { findCidade, cidades } from "@/data/cidades";
 import { pragas } from "@/data/pragas";
 import { servicosDesentupimento } from "@/data/servicosDesentupimento";
+import { bairros } from "@/data/bairros";
+import type { DepoimentoTag } from "@/data/depoimentos";
 
 const BASE_URL = "https://grupo-ampla-site.lovable.app";
 
