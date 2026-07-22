@@ -60,7 +60,7 @@ const OutrosServicosBlock = ({
         <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
           {subtitulo}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
           {tiles.map(({ to, nome, desc, Icon }) => (
           <Link
               key={to}
