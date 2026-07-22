@@ -3,6 +3,7 @@ import { Clock, Shield, BadgeCheck, CreditCard, Star, Users, Award, Phone } from
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import heroTechnician from "@/assets/hero-technician.webp";
+import LazyImage from "@/components/LazyImage";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 import AnosBadge from "@/components/AnosBadge";
 
@@ -122,12 +123,10 @@ const HeroSection = () => {
         {/* Foto do técnico colada na borda inferior da hero (desktop) */}
         <div className="hidden lg:block absolute bottom-0 right-4 z-10 w-[calc(40%+50px)] max-w-[570px] h-[94vh] max-h-[860px] -mb-[30px] pointer-events-none animate-fade-in" style={{ animationDelay: "0.2s" }}>
           <div aria-hidden className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[110%] h-[85%] bg-gradient-to-t from-accent/25 via-primary-glow/10 to-transparent rounded-t-[50%] blur-2xl" />
-          <img
+          <LazyImage
+            eager
             src={heroTechnician}
             alt="Técnico profissional da Ampla Dedetizadora"
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
             className="absolute bottom-0 right-0 h-full w-full object-contain object-bottom drop-shadow-[0_30px_50px_hsl(226_78%_5%/0.5)]"
           />
         </div>
