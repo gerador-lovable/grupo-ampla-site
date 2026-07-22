@@ -24,7 +24,9 @@ import { buildRedirectUrl } from "@/lib/whatsapp";
 import { findServicoEspecial } from "@/data/servicosEspeciais";
 import type { DepoimentoTag } from "@/data/depoimentos";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import PrecoBlock from "@/components/PrecoBlock";
+import DesDifferentialsSection from "@/components/desentupidora/DesDifferentialsSection";
+import DesGuaranteeSection from "@/components/desentupidora/DesGuaranteeSection";
+import ContactSection from "@/components/ContactSection";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
@@ -201,15 +203,7 @@ const ServicoEspecialPage = () => {
  </div>
  </section>
 
-  <PrecoBlock
-   titulo={`Preço de ${servico.nome.toLowerCase()} em Curitiba`}
-   faixas={[
-    { label: "Residencial padrão", preco: "R$ 180 a R$ 380" },
-    { label: "Comercial até 200 m²", preco: "R$ 350 a R$ 700" },
-    { label: "Condomínio (áreas comuns)", preco: "R$ 450 a R$ 1.200" },
-    { label: "Indústria / porte maior", preco: "sob orçamento" },
-   ]}
-  />
+  <DesDifferentialsSection />
 
   <section className="section-py bg-primary text-primary-foreground">
  <div className="container px-4 max-w-3xl text-center">
@@ -218,6 +212,8 @@ const ServicoEspecialPage = () => {
  <p className="text-primary-foreground/80 text-lg">{servico.garantia}</p>
  </div>
  </section>
+
+ <DesGuaranteeSection />
 
  <section className="section-py bg-background">
  <div className="container px-4 max-w-3xl">
@@ -243,6 +239,7 @@ const ServicoEspecialPage = () => {
  />
 
  <OutrosServicosBlock bg="background" />
+ <ContactSection />
 
  <section className="section-py bg-primary text-primary-foreground">
  <div className="container px-4 max-w-3xl text-center">
