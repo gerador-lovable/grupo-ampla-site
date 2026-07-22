@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import heroTechnician from "@/assets/hero-technician.webp";
 import { buildRedirectUrl } from "@/lib/whatsapp";
+import AnosBadge from "@/components/AnosBadge";
 
 const WHATSAPP_REDIRECT = buildRedirectUrl({ servico: "dedetizacao" });
 
@@ -23,6 +24,7 @@ const stats = [
 const HeroSection = () => {
   return (
     <section className="relative min-h-0 lg:min-h-[92vh] flex items-center overflow-hidden bg-gradient-hero">
+      <AnosBadge />
       {/* Ambient glow */}
       <div aria-hidden className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-primary-glow/20 blur-[120px]" />
       <div aria-hidden className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-accent/20 blur-[140px]" />

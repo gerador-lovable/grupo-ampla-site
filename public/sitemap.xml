@@ -79,6 +79,11 @@
   <url><loc>https://www.grupoampladedetiza.com.br/servicos/dedetizacao-escolas</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.grupoampladedetiza.com.br/servicos/dedetizacao-hospitais-clinicas</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.grupoampladedetiza.com.br/servicos/dedetizacao-hoteis</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/servicos/sanitizacao</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/servicos/limpeza-de-telhado</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/servicos/limpeza-de-calha</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/servicos/limpeza-de-sotao</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/servicos/laudo-bacteriologico</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <url><loc>https://www.grupoampladedetiza.com.br/blog/quanto-custa-dedetizacao-curitiba</loc><priority>0.6</priority></url>
   <url><loc>https://www.grupoampladedetiza.com.br/blog/quanto-custa-desentupimento-curitiba</loc><priority>0.6</priority></url>

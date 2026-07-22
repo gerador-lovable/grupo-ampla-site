@@ -851,6 +851,206 @@ export const servicosEspeciais: ServicoEspecial[] = [
   ],
   cta: "Solicitar cotação para hotel",
  },
+ {
+  slug: "sanitizacao",
+  nome: "Sanitização de Ambientes",
+  h1: "Sanitização e Desinfecção de Ambientes em Curitiba",
+  title: "Sanitização de Ambientes em Curitiba | ANVISA - Ampla",
+  description:
+   "Sanitização e desinfecção de ambientes em Curitiba e RMC. Elimina até 99,9% de vírus, bactérias e fungos. Produto ANVISA, laudo e nota fiscal.",
+  icone: "shield",
+  intro:
+   "A sanitização elimina vírus, bactérias e fungos de superfícies e ar em residências, empresas, consultórios, escolas e frotas. É diferente da dedetização, foca em microorganismos, não em pragas.",
+  contexto:
+   "A Ampla executa sanitização com nebulização a frio (ULV) e pulverização direcionada, usando saneantes registrados no Ministério da Saúde e na ANVISA. Recomendada após surtos de gripe, viroses ou COVID, em escritórios com muita rotatividade, escolas, veículos de aplicativo e ambientes hospitalares. Emitimos certificado com produto, lote e responsável técnico.",
+  sinais: [
+   "Casos frequentes de gripe ou virose no time",
+   "Retomada de escritório ou escola após período fechado",
+   "Consultório, clínica ou salão de beleza sob fiscalização",
+   "Frota de veículos (Uber, ambulância, transporte escolar)",
+   "Reforma recente com poeira e mofo residuais",
+  ],
+  riscos: [
+   "Transmissão de vírus respiratórios em ambientes fechados",
+   "Proliferação de fungos causadores de alergia",
+   "Contaminação cruzada em consultórios e clínicas",
+   "Multa por descumprimento de protocolo sanitário",
+  ],
+  metodo: [
+   { titulo: "Vistoria e cálculo de dosagem", texto: "Medimos o ambiente e definimos volume de produto e método (nebulização, pulverização ou termonebulização)." },
+   { titulo: "Aplicação ULV", texto: "Nebulização a frio que atinge superfícies, frestas e ar, sem molhar equipamentos eletrônicos." },
+   { titulo: "Tempo de ação e liberação", texto: "Ambiente liberado em 30 a 60 minutos, com boa ventilação. Sem cheiro residual." },
+   { titulo: "Certificado técnico", texto: "Emissão de certificado com data, produto, lote e assinatura do responsável, aceito por vigilância." },
+  ],
+  garantia: "Certificado técnico emitido no ato. Sanitização recomendada trimestralmente para ambientes de alto fluxo.",
+  faqs: [
+   { q: "Sanitização é a mesma coisa que dedetização?", a: "Não. Dedetização elimina pragas (insetos e roedores). Sanitização elimina microorganismos (vírus, bactérias e fungos)." },
+   { q: "Precisa retirar móveis e eletrônicos?", a: "Não. A nebulização ULV é segura para eletrônicos, basta desligar da tomada durante a aplicação." },
+   { q: "Em quanto tempo posso usar o ambiente?", a: "Entre 30 e 60 minutos após a aplicação, com ventilação. Sem cheiro forte." },
+   { q: "Vocês sanitizam veículos?", a: "Sim. Atendemos frota de aplicativo, transporte escolar, ambulâncias e vans com preço por veículo." },
+  ],
+  cta: "Solicitar orçamento de sanitização",
+ },
+ {
+  slug: "limpeza-de-telhado",
+  nome: "Limpeza de Telhado",
+  h1: "Limpeza de Telhado em Curitiba",
+  title: "Limpeza de Telhado em Curitiba | Ampla",
+  description:
+   "Limpeza de telhado em Curitiba e RMC. Remoção de limo, musgo, folhas e sujeira acumulada. Equipe com equipamento de segurança em altura e NR-35.",
+  icone: "home",
+  intro:
+   "Telhados sujos acumulam limo, musgo, folhas e ninhos que entopem calhas, escurecem as telhas e podem gerar infiltrações. A limpeza periódica prolonga a vida útil da cobertura.",
+  contexto:
+   "A Ampla realiza limpeza técnica de telhados em residências, condomínios, indústrias e comércios de Curitiba e RMC. Nossa equipe é treinada em NR-35 (trabalho em altura), utiliza cinto, linha de vida e EPI completo. Removemos limo, musgo, folhas e detritos, e aplicamos solução biocida para evitar retorno da vegetação em telhas cerâmicas, coloniais e fibrocimento.",
+  sinais: [
+   "Telhas escurecidas por limo e musgo",
+   "Calhas transbordando ou entupidas",
+   "Infiltrações no forro após chuva",
+   "Acúmulo de folhas e ninhos de aves",
+   "Preparo para pintura ou impermeabilização",
+  ],
+  riscos: [
+   "Infiltração e apodrecimento do madeiramento",
+   "Curto-circuito por telhas quebradas",
+   "Acidentes por tentativa de limpeza sem equipamento",
+   "Proliferação de pombos e insetos em ninhos abandonados",
+  ],
+  metodo: [
+   { titulo: "Inspeção e plano de segurança", texto: "Avaliamos telhado, definimos pontos de ancoragem e montamos linha de vida." },
+   { titulo: "Remoção mecânica", texto: "Retiramos folhas, galhos, ninhos e detritos com equipamento específico." },
+   { titulo: "Lavagem com biocida", texto: "Aplicamos solução que remove limo e musgo sem danificar telhas ou pintura." },
+   { titulo: "Vistoria final e laudo", texto: "Identificamos telhas trincadas, indicamos reparos e entregamos laudo." },
+  ],
+  garantia: "Tratamento com biocida que retarda o retorno de limo e musgo por até 12 meses.",
+  faqs: [
+   { q: "Atendem casas de qualquer altura?", a: "Sim. Equipe treinada em NR-35 atende de sobrado a prédio, com equipamento próprio." },
+   { q: "A limpeza estraga a pintura da telha?", a: "Não. Usamos produtos específicos para cerâmica e fibrocimento que preservam a pintura original." },
+   { q: "Fazem também limpeza de calha junto?", a: "Sim, é o mais comum. O combo evita entupimento e aumenta a vida útil da cobertura." },
+   { q: "Qual a periodicidade recomendada?", a: "Uma vez por ano é o ideal para Curitiba, região úmida com muita vegetação e formação rápida de limo." },
+  ],
+  cta: "Solicitar orçamento de limpeza de telhado",
+ },
+ {
+  slug: "limpeza-de-calha",
+  nome: "Limpeza de Calha",
+  h1: "Limpeza de Calha em Curitiba",
+  title: "Limpeza de Calha em Curitiba | Ampla",
+  description:
+   "Limpeza de calha em Curitiba e RMC. Remoção de folhas, terra e detritos. Prevenção de infiltrações e alagamentos. Equipe com NR-35 e EPI completo.",
+  icone: "droplet",
+  intro:
+   "Calhas entupidas causam infiltração no forro, transbordamento na parede e podem sobrecarregar a estrutura. Uma limpeza rápida antes das chuvas evita reforma cara depois.",
+  contexto:
+   "A Ampla executa limpeza de calhas, condutores e rufos em residências, condomínios e galpões de Curitiba e RMC. Removemos folhas, terra, galhos e ninhos, desobstruímos condutores verticais e testamos escoamento com água. Trabalho com equipe NR-35, cinto, linha de vida e EPI completo.",
+  sinais: [
+   "Calha transbordando na chuva",
+   "Água descendo pela parede em vez do cano",
+   "Infiltração no forro do último pavimento",
+   "Mato ou plantas nascendo dentro da calha",
+   "Preparo para o período de chuvas de verão",
+  ],
+  riscos: [
+   "Infiltração em forro, madeira e alvenaria",
+   "Desabamento parcial de calha por peso",
+   "Curto em fiação próxima ao beiral",
+   "Foco de Aedes aegypti em água parada",
+  ],
+  metodo: [
+   { titulo: "Ancoragem e acesso", texto: "Instalamos linha de vida e escadas conforme altura e formato do telhado." },
+   { titulo: "Remoção manual", texto: "Retiramos folhas, terra e ninhos com ferramenta específica, sem danificar a calha." },
+   { titulo: "Desobstrução dos condutores", texto: "Liberamos canos verticais com escova, jato e vareta." },
+   { titulo: "Teste de escoamento", texto: "Jogamos água em todos os pontos e conferimos vazão até o esgoto pluvial." },
+  ],
+  garantia: "Serviço com garantia de escoamento imediato. Recomendamos limpeza semestral em imóveis com árvores próximas.",
+  faqs: [
+   { q: "Vocês descem pelo telhado ou usam andaime?", a: "Depende da altura. Casas usamos escada e cinto, prédios usamos linha de vida ou plataforma." },
+   { q: "Consertam calha rachada ou solta?", a: "Não fazemos reforma, mas indicamos o ponto no laudo para o cliente contratar reparo." },
+   { q: "Atendem galpão industrial?", a: "Sim, com plano de trabalho em altura e ART quando necessário." },
+   { q: "Precisa desligar energia?", a: "Só quando calha estiver muito próxima da fiação. A equipe avalia e orienta antes." },
+  ],
+  cta: "Solicitar orçamento de limpeza de calha",
+ },
+ {
+  slug: "limpeza-de-sotao",
+  nome: "Limpeza de Sótão e Forro",
+  h1: "Limpeza de Sótão, Forro e Subsolo em Curitiba",
+  title: "Limpeza de Sótão em Curitiba | Forro e Subsolo - Ampla",
+  description:
+   "Limpeza de sótão, forro e subsolo em Curitiba e RMC. Retirada de sujeira acumulada, fezes de rato e pombo, com desinfecção. Prevenção de doenças.",
+  icone: "home",
+  intro:
+   "Sótãos, forros e subsolos acumulam anos de poeira, fezes de rato, pombo e morcego, ninhos e detritos. Além do cheiro, geram risco real de doenças respiratórias e infestações.",
+  contexto:
+   "A Ampla realiza limpeza completa de sótão, forro e subsolo em Curitiba e RMC. Removemos toda a sujeira acumulada com aspiração industrial, sacos lacrados e EPI apropriado (máscara, macacão e luvas). Depois aplicamos desinfecção com produto registrado para eliminar bactérias, fungos e ácaros. Ideal em compra de imóvel usado, reforma ou quando surgem sinais de infestação.",
+  sinais: [
+   "Barulho de roedor ou pombo no forro",
+   "Cheiro forte de urina ou mofo",
+   "Manchas escuras no teto do último andar",
+   "Compra ou reforma de imóvel antigo",
+   "Alergia respiratória de morador sem causa aparente",
+  ],
+  riscos: [
+   "Hantavirose por contato com fezes de rato",
+   "Criptococose por fezes de pombo",
+   "Ácaros e fungos causando asma e rinite",
+   "Infestação silenciosa que se espalha pela casa",
+  ],
+  metodo: [
+   { titulo: "Vistoria e proteção do ambiente", texto: "Isolamos o vão de acesso, protegemos móveis abaixo e definimos rota de remoção." },
+   { titulo: "Remoção com EPI", texto: "Equipe entra com macacão descartável, máscara PFF2 e luvas. Sujeira sai em sacos lacrados." },
+   { titulo: "Aspiração e limpeza técnica", texto: "Aspiração industrial em todos os cantos, retirada de ninhos e materiais estranhos." },
+   { titulo: "Desinfecção final", texto: "Aplicação de sanitizante que elimina bactérias, fungos e ácaros. Ambiente liberado seguro." },
+  ],
+  garantia: "Trabalho com laudo de conclusão e recomendação de vedação de acessos para evitar novos moradores indesejados.",
+  faqs: [
+   { q: "Vocês fazem só o sótão ou também o forro fechado?", a: "Ambos. Em forros fechados abrimos ponto técnico de acesso com autorização e refechamos ao final." },
+   { q: "Preciso sair de casa durante o serviço?", a: "Não. Isolamos a área. Recomendamos apenas retirar pets e pessoas alérgicas do ambiente próximo." },
+   { q: "Quanto tempo demora?", a: "De 4 a 8 horas em residências. Sótãos grandes ou muito sujos podem levar 1 a 2 dias." },
+   { q: "Fazem vedação de acessos de rato e pombo?", a: "Sim, complementamos com telas e vedação de frestas, para evitar retorno." },
+  ],
+  cta: "Solicitar orçamento de limpeza de sótão",
+ },
+ {
+  slug: "laudo-bacteriologico",
+  nome: "Laudo Bacteriológico da Água",
+  h1: "Laudo Bacteriológico e Análise da Água em Curitiba",
+  title: "Laudo Bacteriológico da Água em Curitiba | Ampla",
+  description:
+   "Análise e laudo bacteriológico de água em Curitiba e RMC. Coleta técnica, laboratório acreditado e relatório completo para vigilância sanitária.",
+  icone: "shield",
+  intro:
+   "O laudo bacteriológico é obrigatório para condomínios, escolas, restaurantes, hospitais e qualquer imóvel que use fonte alternativa de água. Comprova que a água armazenada está própria para consumo.",
+  contexto:
+   "A Ampla executa coleta técnica de água em Curitiba e RMC e encaminha para laboratório acreditado (ISO/IEC 17025). Analisamos coliformes totais, E. coli, contagem de bactérias heterotróficas, cor, turbidez, pH e cloro residual, conforme Portaria MS 888/2021. O laudo é entregue em até 10 dias úteis, aceito por síndico, vigilância sanitária e órgãos de fiscalização.",
+  sinais: [
+   "Condomínio sem laudo semestral atualizado",
+   "Restaurante, padaria ou lanchonete em fiscalização",
+   "Escola, creche ou hospital sob auditoria",
+   "Uso de poço artesiano, cisterna ou fonte alternativa",
+   "Suspeita de contaminação (gosto, cor ou cheiro alterado)",
+  ],
+  riscos: [
+   "Multa por falta de laudo periódico",
+   "Interdição do estabelecimento por vigilância",
+   "Casos de gastroenterite entre moradores ou clientes",
+   "Ação de responsabilidade contra síndico ou responsável técnico",
+  ],
+  metodo: [
+   { titulo: "Agendamento e coleta", texto: "Técnico coleta em pontos representativos do reservatório e da rede, com frascos esterilizados." },
+   { titulo: "Transporte refrigerado", texto: "Amostras vão ao laboratório em caixa térmica dentro do tempo técnico exigido." },
+   { titulo: "Análise laboratorial", texto: "Laboratório acreditado executa os parâmetros microbiológicos e físico-químicos." },
+   { titulo: "Emissão do laudo", texto: "Relatório completo com resultados, referências e assinatura de responsável técnico." },
+  ],
+  garantia: "Laudo emitido por laboratório acreditado, aceito por Vigilância Sanitária, síndicos e órgãos fiscalizadores.",
+  faqs: [
+   { q: "Com que frequência preciso do laudo?", a: "Condomínios: a cada 6 meses. Comércios e serviços de alimentação: conforme exigência da vigilância local (mensal a semestral)." },
+   { q: "O laudo vem junto da limpeza da caixa d'água?", a: "Pode ser contratado junto, é o combo mais comum. A coleta é feita antes e depois da higienização." },
+   { q: "Quanto tempo demora?", a: "Coleta é feita em até 3 dias após agendamento. Laudo fica pronto em 10 dias úteis." },
+   { q: "Vocês analisam água de poço artesiano?", a: "Sim. Coletamos e analisamos água de poço, cisterna, mina e reservatório abastecido por caminhão-pipa." },
+  ],
+  cta: "Solicitar laudo bacteriológico",
+ },
 ];
 
 export const findServicoEspecial = (slug: string) =>
