@@ -15,7 +15,9 @@ import { pragas } from "@/data/pragas";
 import { servicosDesentupimento } from "@/data/servicosDesentupimento";
 import type { DepoimentoTag } from "@/data/depoimentos";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import PrecoBlock from "@/components/PrecoBlock";
+import DesDifferentialsSection from "@/components/desentupidora/DesDifferentialsSection";
+import DesGuaranteeSection from "@/components/desentupidora/DesGuaranteeSection";
+import ContactSection from "@/components/ContactSection";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
@@ -34,7 +36,7 @@ const BairroPage = () => {
  },
  {
  q: `Quanto custa uma dedetização no ${bairro.nome}?`,
- a: `O preço varia conforme o tamanho do imóvel e o tipo de praga. No ${bairro.nome} os valores partem de R$ 180 para imóveis pequenos. Enviamos orçamento sem custo pelo WhatsApp.`,
+ a: `Cada caso é único: o orçamento varia conforme o tamanho do imóvel, o tipo de praga e o grau de infestação. Enviamos o valor exato no ${bairro.nome} pelo WhatsApp em minutos, sem custo e sem obrigação de fechar.`,
  },
  {
  q: `Vocês emitem nota fiscal e certificado no ${bairro.nome}?`,
@@ -143,16 +145,7 @@ const BairroPage = () => {
  </div>
  </section>
 
-  <PrecoBlock
-   titulo={`Preço da dedetização no ${bairro.nome}`}
-   subtitulo={`Faixas médias praticadas no ${bairro.nome} e bairros vizinhos em 2026.`}
-   faixas={[
-    { label: "Apartamento até 60 m²", preco: "R$ 180 a R$ 240" },
-    { label: "Casa ou apto 60 a 150 m²", preco: "R$ 240 a R$ 420" },
-    { label: "Desentupimento residencial", preco: "R$ 150 a R$ 380" },
-    { label: "Comércio ou condomínio", preco: "sob orçamento" },
-   ]}
-  />
+  <DesDifferentialsSection />
 
   <section className="section-py bg-muted/40">
  <div className="container px-4 max-w-5xl">
@@ -192,6 +185,8 @@ const BairroPage = () => {
  subtitulo="Avaliações reais de clientes da região"
  bg="muted"
  />
+
+ <DesGuaranteeSection />
 
   <section className="section-py bg-background">
  <div className="container px-4 max-w-4xl">
@@ -257,6 +252,7 @@ const BairroPage = () => {
  </section>
 
  <OutrosServicosBlock bg="background" />
+ <ContactSection />
  <FooterSection />
  <WhatsAppFloat />
  </div>
