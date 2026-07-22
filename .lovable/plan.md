@@ -1,53 +1,47 @@
-# Roteiros de Reels para Instagram, Ampla Dedetizadora
 
-## Entregável
+# Expansão de conteúdo SEO, Ampla, com foco em conversão
 
-Um único arquivo `.docx` em `/mnt/documents/reels-ampla-instagram.docx` contendo 18 roteiros de Reels, um para cada página que você listou (7 pragas, 7 serviços, 4 posts de blog).
+Fonte: Semrush (base BR). Domínio novo ainda sem histórico, então analisei o nicho. Cada peça terá **CTA direto pra Ampla** (WhatsApp + link pras páginas de serviço/bairro), puxando o tráfego educacional pra conversão local em Curitiba/RMC.
 
-## Estrutura de cada roteiro
+## Bloco 1, Blog "como resolver" (9 posts, KD baixo)
 
-Cada Reel será pensado para 30 a 45 segundos (formato ideal de conversão no Instagram), seguindo esta estrutura fixa:
+Cada post: intro, sintomas, o que dá pra fazer sozinho (honesto), quando não resolve mais e vira caso pra profissional, CTA forte pra Ampla em Curitiba, FAQ curto.
 
-1. **Título do Reel** (nome da página, ex.: "Dedetização de Baratas")
-2. **URL da página** de destino (bio ou link direto)
-3. **Gancho / Hook (0 a 3s)**, uma frase de impacto para segurar o scroll
-4. **Legenda curta na tela** (texto sobreposto, cena a cena)
-5. **Roteiro falado** dividido em cenas:
-   - Cena 1: Problema / dor
-   - Cena 2: Autoridade Ampla (35 anos, ANVISA, garantia 6 meses)
-   - Cena 3: Solução / diferenciais
-   - Cena 4: CTA claro para WhatsApp
-6. **Sugestão de plano de câmera** (ex.: técnico uniformizado, imagem da praga, antes/depois)
-7. **Legenda do post** (com quebras, emojis moderados e 2 a 3 linhas)
-8. **Hashtags** (mix nichado Curitiba, praga específica, e amplas)
-9. **CTA final falado** (sempre reforçando "orçamento no WhatsApp em minutos")
+| Post | KW principal | Volume | KD |
+|---|---|---|---|
+| Como acabar com baratas em casa (guia definitivo) | como acabar com baratas | 1.600 (+3.600 var) | 29 |
+| Como matar cupim de madeira: 7 métodos | como matar cupim | 2.400 (+1.600 var) | 16 |
+| Como acabar com ratos em casa e no quintal | como acabar com ratos | 880 (+3.600 var) | 14 |
+| Como acabar com formigas na cozinha e nas plantas | como acabar com formigas | 2.400 (+4.400 var) | 30 |
+| Como espantar pombos do telhado: o que funciona | como espantar pombos | 3.600 (+1.900 var) | 22 |
+| Como acabar com percevejo de cama de vez | percevejo de cama | 22.200 | 23 |
+| Escorpião amarelo: como identificar e o que fazer | escorpião amarelo | 22.200 | 28 |
+| Como desentupir vaso sanitário (e quando chamar) | como desentupir vaso sanitário | 33.100 | 26 |
+| Como limpar caixa d'água passo a passo | limpeza de caixa d'água | 4.400 | 23 |
 
-## Fonte da copy
+## Bloco 2, Serviços verticais B2B (6 páginas)
 
-Vou puxar títulos, dores, benefícios e diferenciais diretamente dos dados já existentes no site, para manter consistência de discurso com a landing page:
+Novas páginas em `/servicos/*` seguindo o padrão de `ServicoEspecialPage`. Foco em conformidade sanitária, laudo, MIP e ANVISA.
 
-- Pragas: `src/data/pragas.ts` (baratas, ratos, cupim, escorpião, pulgas-e-carrapatos, formigas, percevejo)
-- Serviços: `src/data/servicosEspeciais.ts` (dedetização comercial, limpeza de caixa d'água, controle de roedores, pombos e morcegos, residencial, condominial, preventiva)
-- Blog: `src/data/blogPosts.ts` (quanto custa dedetização, quanto custa desentupimento, baratas de esgoto, como saber se tem cupim)
+- /servicos/dedetizacao-restaurantes
+- /servicos/dedetizacao-supermercados
+- /servicos/dedetizacao-industrias
+- /servicos/dedetizacao-escolas
+- /servicos/dedetizacao-hospitais-clinicas
+- /servicos/dedetizacao-hoteis
 
-## Padrões de marca aplicados em todos os roteiros
+## Bloco 3, Novos bairros e cidades
 
-- Tom: direto, seguro, sem sensacionalismo
-- Sem travessões (—), conforme sua regra do site
-- Selos sempre presentes: 35 anos, ANVISA, garantia de 6 meses, atendimento em até 2h, parcelamento em 12x
-- CTA único: WhatsApp (41) 99512-1583
-- Cada Reel terá um gancho diferente para você não repetir abertura entre vídeos
+**Bairros de Curitiba (10)**: Ecoville, Alto da XV, Cristo Rei, Juvevê, Champagnat, Mercês, Rebouças, Cabral, Hauer, Xaxim.
 
-## Detalhes técnicos do documento
+**Cidades RMC (5)**: Contenda, Balsa Nova, Mandirituba, Tijucas do Sul, Agudos do Sul.
 
-- Formato: `.docx` (Word), gerado com `docx-js`
-- Fonte: Arial (sem serifa, legível)
-- Sumário no topo com links internos para cada roteiro
-- Cada roteiro em página própria (page break entre eles), pronto para imprimir ou usar como colinha na hora de gravar
-- QA visual: converter para PDF/imagem e revisar todas as páginas antes de entregar
+## Detalhes técnicos
 
-## O que NÃO farei nesta etapa
+- Novas entradas em `src/data/blogPosts.ts`, `src/data/servicosEspeciais.ts`, `src/data/bairros.ts`, `src/data/cidades.ts`. As páginas dinâmicas (`BlogPost.tsx`, `ServicoEspecialPage.tsx`, `BairroPage.tsx`, `CidadePage.tsx`) já existem e renderizam automaticamente.
+- Atualizar `public/sitemap.xml` (append de todas as novas URLs).
+- Atualizar `public/llms.txt` com as novas rotas.
+- Header não itera sobre esses dados, então não polui o menu.
+- Interlinking: cada blog referencia 2, 3 páginas de serviço/bairro no CTA final.
 
-- Não editarei nada do site nem das campanhas de Google Ads
-- Não gerarei vídeos, apenas o roteiro escrito
-- Não criarei artes/thumbnails, só texto (posso fazer depois se quiser)
+Aprova pra eu subir tudo?
