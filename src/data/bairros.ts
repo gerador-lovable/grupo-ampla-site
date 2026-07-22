@@ -205,6 +205,166 @@ export const bairros: Bairro[] = [
  vizinhos: ["Cajuru", "Boqueirão", "Alto Boqueirão"],
  tag: "uberaba",
  },
+ {
+  slug: "ecoville",
+  nome: "Ecoville",
+  cidade: "Curitiba",
+  cidadeSlug: "curitiba",
+  h1: "Dedetizadora e Desentupidora no Ecoville, Curitiba",
+  title: "Dedetizadora Ecoville Curitiba | Ampla 35 Anos",
+  description:
+   "Dedetização e desentupimento no Ecoville, Curitiba. Condomínios de alto padrão, produtos ANVISA sem cheiro. Orçamento grátis pelo WhatsApp.",
+  intro:
+   "Atendemos o Ecoville com dedetização de condomínios de alto padrão, controle de pragas em apartamento e desentupimento 24h.",
+  contexto:
+   "O Ecoville concentra condomínios de alto padrão e casas em ruas arborizadas. Fazemos dedetização com produtos sem cheiro (aceitos por síndicos e moradores exigentes), controle de escorpião no jardim e desentupimento com hidrojato.",
+  vizinhos: ["Campo Comprido", "Mossunguê", "Santo Inácio", "Cascatinha"],
+  tag: "ecoville",
+ },
+ {
+  slug: "alto-da-xv",
+  nome: "Alto da XV",
+  cidade: "Curitiba",
+  cidadeSlug: "curitiba",
+  h1: "Dedetizadora e Desentupidora no Alto da XV, Curitiba",
+  title: "Dedetizadora Alto da XV Curitiba | Ampla 24h",
+  description:
+   "Dedetização e desentupimento no Alto da XV, Curitiba. Casas antigas com cupim, escritórios e apartamentos. Orçamento grátis pelo WhatsApp.",
+  intro:
+   "Ampla atende o Alto da XV com controle de pragas, descupinização em casas antigas e desentupimento 24h.",
+  contexto:
+   "O Alto da XV mistura casas antigas (com forte demanda por descupinização) e edifícios comerciais. Trabalhamos com tratamento de cupim, dedetização preventiva em prédios e desentupimento residencial e comercial.",
+  vizinhos: ["Cristo Rei", "Juvevê", "Alto da Glória", "Centro Cívico"],
+  tag: "alto-da-xv",
+ },
+ {
+  slug: "cristo-rei",
+  nome: "Cristo Rei",
+  cidade: "Curitiba",
+  cidadeSlug: "curitiba",
+  h1: "Dedetizadora e Desentupidora no Cristo Rei, Curitiba",
+  title: "Dedetizadora Cristo Rei Curitiba | Ampla 35 Anos",
+  description:
+   "Dedetização e desentupimento no Cristo Rei, Curitiba. Casas, prédios e comércios. Ampla, 35 anos. Orçamento grátis pelo WhatsApp.",
+  intro:
+   "Atendemos o Cristo Rei com dedetização residencial, comercial e desentupimento em regime de urgência.",
+  contexto:
+   "O Cristo Rei tem forte área residencial próxima à UFPR. Fazemos controle de baratas em apartamento estudantil, descupinização em casas antigas e desentupimento de esgoto.",
+  vizinhos: ["Alto da XV", "Jardim Botânico", "Prado Velho", "Rebouças"],
+  tag: "cristo-rei",
+ },
+ {
+  slug: "juveve",
+  nome: "Juvevê",
+  cidade: "Curitiba",
+  cidadeSlug: "curitiba",
+  h1: "Dedetizadora e Desentupidora no Juvevê, Curitiba",
+  title: "Dedetizadora Juvevê Curitiba | Ampla 35 Anos",
+  description:
+   "Dedetização e desentupimento no Juvevê, Curitiba. Prédios residenciais e casas de alto padrão. Orçamento grátis pelo WhatsApp.",
+  intro:
+   "Atendemos o Juvevê com dedetização de prédios residenciais, controle de pragas em casas de alto padrão e desentupimento 24h.",
+  contexto:
+   "O Juvevê é um bairro tradicional com casas e edifícios de alto padrão. Fazemos dedetização preventiva com produtos sem cheiro, tratamento de cupim e desentupimento com hidrojato.",
+  vizinhos: ["Alto da XV", "Cabral", "Hugo Lange", "Ahú"],
+  tag: "juveve",
+ },
+ {
+  slug: "champagnat",
+  nome: "Champagnat",
+  cidade: "Curitiba",
+  cidadeSlug: "curitiba",
+  h1: "Dedetizadora e Desentupidora no Champagnat, Curitiba",
+  title: "Dedetizadora Champagnat Curitiba | Ampla 24h",
+  description:
+   "Dedetização e desentupimento no Champagnat, Curitiba. Condomínios de alto padrão. Produtos ANVISA, seguros para pets. Orçamento pelo WhatsApp.",
+  intro:
+   "Atendemos o Champagnat com dedetização de condomínios, controle de pragas em apartamento e desentupimento emergencial.",
+  contexto:
+   "O Champagnat é uma das regiões nobres de Curitiba, com condomínios verticais e casas em ruas arborizadas. Trabalhamos com produtos sem cheiro, seguros para crianças e pets, com laudo técnico para síndicos.",
+  vizinhos: ["Bigorrilho", "Mercês", "Batel", "Campina do Siqueira"],
+  tag: "champagnat",
+ },
+ {
+  slug: "merces",
+  nome: "Mercês",
+  cidade: "Curitiba",
+  cidadeSlug: "curitiba",
+  h1: "Dedetizadora e Desentupidora nas Mercês, Curitiba",
+  title: "Dedetizadora Mercês Curitiba | Ampla 35 Anos",
+  description:
+   "Dedetização e desentupimento nas Mercês, Curitiba. Casas antigas com cupim e apartamentos. Orçamento grátis pelo WhatsApp.",
+  intro:
+   "Ampla atende as Mercês com dedetização, descupinização em casas antigas e desentupimento 24h.",
+  contexto:
+   "As Mercês concentram casas antigas com forte demanda por descupinização, além de prédios residenciais. Fazemos tratamento de cupim de madeira e subterrâneo, controle de baratas e desentupimento residencial.",
+  vizinhos: ["Champagnat", "Bigorrilho", "São Francisco", "Bom Jesus"],
+  tag: "merces",
+ },
+ {
+  slug: "reboucas",
+  nome: "Rebouças",
+  cidade: "Curitiba",
+  cidadeSlug: "curitiba",
+  h1: "Dedetizadora e Desentupidora no Rebouças, Curitiba",
+  title: "Dedetizadora Rebouças Curitiba | Ampla 24h",
+  description:
+   "Dedetização e desentupimento no Rebouças, Curitiba. Escritórios, comércios e edifícios residenciais. Orçamento grátis pelo WhatsApp.",
+  intro:
+   "Atendemos o Rebouças com dedetização de comércios, prédios residenciais e desentupimento em regime de urgência.",
+  contexto:
+   "O Rebouças tem forte movimento comercial e edifícios residenciais. Executamos MIP para escritórios e comércios, com laudo técnico, e desentupimento com hidrojato em prédios.",
+  vizinhos: ["Centro", "Batel", "Água Verde", "Prado Velho"],
+  tag: "reboucas",
+ },
+ {
+  slug: "cabral",
+  nome: "Cabral",
+  cidade: "Curitiba",
+  cidadeSlug: "curitiba",
+  h1: "Dedetizadora e Desentupidora no Cabral, Curitiba",
+  title: "Dedetizadora Cabral Curitiba | Ampla 35 Anos",
+  description:
+   "Dedetização e desentupimento no Cabral, Curitiba. Condomínios residenciais e casas. Orçamento grátis pelo WhatsApp.",
+  intro:
+   "Atendemos o Cabral com dedetização de condomínios, controle de pragas em casas e desentupimento 24h.",
+  contexto:
+   "O Cabral é um bairro tradicional com condomínios residenciais e casas. Fazemos dedetização preventiva, tratamento de cupim e desentupimento de esgoto residencial.",
+  vizinhos: ["Juvevê", "Bacacheri", "Hugo Lange", "Ahú"],
+  tag: "cabral",
+ },
+ {
+  slug: "hauer",
+  nome: "Hauer",
+  cidade: "Curitiba",
+  cidadeSlug: "curitiba",
+  h1: "Dedetizadora e Desentupidora no Hauer, Curitiba",
+  title: "Dedetizadora Hauer Curitiba | Ampla 24h",
+  description:
+   "Dedetização e desentupimento no Hauer, Curitiba. Casas, comércios e prédios. Ampla, 35 anos. Orçamento grátis pelo WhatsApp.",
+  intro:
+   "Ampla atende o Hauer com controle de pragas, descupinização e desentupimento 24h.",
+  contexto:
+   "O Hauer combina residencial e comercial, com boa demanda por dedetização residencial e desentupimento de esgoto. Trabalhamos com produtos ANVISA e garantia por escrito.",
+  vizinhos: ["Boqueirão", "Prado Velho", "Fanny", "Guabirotuba"],
+  tag: "hauer",
+ },
+ {
+  slug: "xaxim",
+  nome: "Xaxim",
+  cidade: "Curitiba",
+  cidadeSlug: "curitiba",
+  h1: "Dedetizadora e Desentupidora no Xaxim, Curitiba",
+  title: "Dedetizadora Xaxim Curitiba | Ampla 24h",
+  description:
+   "Dedetização e desentupimento no Xaxim, Curitiba. Casas, comércios e condomínios. Orçamento grátis pelo WhatsApp.",
+  intro:
+   "Atendemos o Xaxim com dedetização residencial, comercial e desentupimento em regime de urgência.",
+  contexto:
+   "O Xaxim é um bairro extenso e movimentado no sul de Curitiba. Fazemos controle de baratas, ratos, cupim e desentupimento de esgoto e hidrojateamento em comércios.",
+  vizinhos: ["Boqueirão", "Pinheirinho", "Capão Raso", "Fanny"],
+  tag: "xaxim",
+ },
 ];
 
 export const findBairro = (slug: string) => bairros.find((b) => b.slug === slug);
