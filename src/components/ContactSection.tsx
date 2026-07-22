@@ -3,10 +3,32 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { MapPin, Phone, Clock } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
+
+const PROBLEMAS = [
+  "Baratas em casa/apartamento",
+  "Ratos e roedores",
+  "Cupim em móveis ou estrutura",
+  "Formigas",
+  "Aranhas e escorpiões",
+  "Pulgas e carrapatos",
+  "Mosquitos (dengue)",
+  "Pombos e morcegos",
+  "Limpeza de caixa d'água",
+  "Dedetização comercial (com laudo)",
+  "Dedetização de condomínio",
+  "Plano preventivo trimestral",
+  "Outro / não sei identificar",
+];
 
 const ContactSection = () => {
   const navigate = useNavigate();
@@ -76,14 +98,19 @@ const ContactSection = () => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="mensagem">Como podemos ajudar?</Label>
-              <Textarea
-                id="mensagem"
-                rows={3}
-                value={mensagem}
-                onChange={(e) => setMensagem(e.target.value)}
-                placeholder="Conte qual praga ou serviço você precisa..."
-              />
+              <Label htmlFor="mensagem">Qual o seu problema?</Label>
+              <Select value={mensagem} onValueChange={setMensagem}>
+                <SelectTrigger id="mensagem">
+                  <SelectValue placeholder="Selecione a praga ou serviço" />
+                </SelectTrigger>
+                <SelectContent>
+                  {PROBLEMAS.map((p) => (
+                    <SelectItem key={p} value={p}>
+                      {p}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
 
             <Button
