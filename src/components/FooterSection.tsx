@@ -63,11 +63,11 @@ const FooterSection = () => {
                 </span>
                 <span className="pt-1.5">R. José Beira, 205 · Roça Grande<br />Colombo - PR</span>
               </div>
-              <a href="https://instagram.com/grupo_ampla_01" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 hover:text-accent transition-colors group">
+              <a href="https://www.instagram.com/grupoampladedetizadora/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 hover:text-accent transition-colors group">
                 <span className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-accent/50 transition-colors">
                   <Instagram className="w-4 h-4" />
                 </span>
-                @grupo_ampla_01
+                @grupoampladedetizadora
               </a>
             </div>
           </div>
