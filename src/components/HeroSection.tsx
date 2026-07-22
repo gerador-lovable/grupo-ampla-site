@@ -47,10 +47,10 @@ const HeroSection = () => {
               Dedetizadora em Curitiba · 35 anos
             </div>
 
-            <h1 className="font-display text-[40px] sm:text-5xl lg:text-[64px] xl:text-[72px] leading-[1.02] tracking-[-0.03em] font-semibold mb-6 animate-fade-up text-balance">
-              Barata, rato ou cupim
-              <span className="block mt-1">em casa?</span>
-              <span className="block mt-1">
+            <h1 className="font-display text-[28px] sm:text-[46px] lg:text-[44px] xl:text-[54px] leading-[1.05] tracking-[-0.03em] font-semibold mb-6 animate-fade-up text-balance">
+              <span className="block whitespace-nowrap">Barata, rato ou cupim</span>
+              <span className="block mt-1 whitespace-nowrap">em casa?</span>
+              <span className="block mt-1 whitespace-nowrap">
                 <span className="relative inline-block text-accent">Resolvemos em até 2h
                   <span aria-hidden className="absolute left-0 -bottom-1 h-[3px] w-full bg-gradient-accent rounded-full" />
                 </span>
