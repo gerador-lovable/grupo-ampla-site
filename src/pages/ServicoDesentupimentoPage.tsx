@@ -191,6 +191,13 @@ const ServicoDesentupimentoPage = () => {
         </div>
       </section>
 
+      <TestimonialsModule
+        tags={[servico.slug as DepoimentoTag, "desentupimento"]}
+        titulo={`Clientes atendidos — ${servico.nome}`}
+        subtitulo="Avaliações reais de clientes que contrataram este serviço"
+        bg="muted"
+      />
+
       <section className="py-16 md:py-20 bg-primary text-primary-foreground">
         <div className="container px-4 max-w-3xl text-center">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">Precisa de {servico.nome.toLowerCase()} agora?</h2>
