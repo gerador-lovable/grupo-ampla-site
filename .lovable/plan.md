@@ -1,102 +1,85 @@
-# Elementos da Heloin Dedetizadora que podemos adaptar
+# Hero de pragas com imagem de fundo + Desentupidora replicando a home
 
-Analisei a home da Heloin. Listo abaixo tudo que ajuda em conversão, marcando o que já temos, o que dá pra reforçar e o que é novo. No fim, o plano de implementação.
+## 1. Páginas de pragas: hero com imagem de fundo da praga
 
-## 1. Elementos identificados na Heloin
+**Objetivo:** Cada `/dedetizacao/:praga` mostra uma imagem grande da praga correspondente no hero, aparecendo mais forte na segunda coluna (direita), sem prejudicar a leitura do texto na esquerda.
 
-**Prova social e autoridade**
-- Selo "Celebramos 20 anos" no canto do hero (nós temos 35, subutilizado visualmente)
-- Bloco de estatísticas: % de avaliações positivas, +chamados atendidos, +clientes satisfeitos
-- Carrossel de avaliações do Google com nome, data e nota (147 reviews visíveis)
-- Botão "Escreva sua avaliação" ligado ao place-id do Google
+**Imagens por slug (geradas fotográficas, alta qualidade):**
+| Slug | Imagem |
+|---|---|
+| baratas | barata sobre superfície escura, macro |
+| ratos | rato preto em ambiente urbano sombrio |
+| cupim | close de cupins em madeira apodrecida |
+| escorpiao | escorpião amarelo sobre pedra escura |
+| pulgas-e-carrapatos | carrapato macro sobre pele/pelo escuro |
+| formigas | formigas em trilha sobre superfície escura |
+| percevejo | percevejo de cama macro em tecido escuro |
 
-**Serviços e cobertura**
-- Grid de serviços com ícone circular colorido + descrição curta + link "mais detalhes"
-- Serviços que eles têm e nós não destacamos: Sanitização, Limpeza de Telhado, Limpeza de Calha, Limpeza de Sótão, Laudo Bacteriológico
-- Seção "Área de Atuação" por segmento (Residências, Condomínios, Hotéis, Supermercados, Restaurantes, Hospitais, Empresas, Escolas) com ícone + texto
+Geradas em `src/assets/pragas-hero/<slug>.webp` (1600×1000, tom escuro para bater com o gradient azul do hero).
 
-**Educação e SEO**
-- Faixa "Conheça a biologia das pragas" com carrossel infinito de ícones de pragas linkando para página única
-- Bloco de FAQ extenso (7 perguntas) com CTA de WhatsApp no meio
-- Seção "Notícias" (blog cards) no fim da home
+**Alterações em `src/components/PragaHero.tsx` (novo componente, extrai o `<section>` atual do `PragaPage.tsx`):**
 
-**CTA e contato**
-- Botão "Solicite agora" verde WhatsApp fixo no hero
-- Ícones sociais no header (Facebook, Instagram, WhatsApp, YouTube)
-- Reforço de CTA WhatsApp entre seções pesadas
+- Recebe `praga` como prop e mapeia `slug → imagem` via `import.meta.glob` estático.
+- Estrutura de camadas dentro do `<section>` existente (mantém padding e gradient azul):
+  ```
+  ┌──────────────────────────────────────────────────────┐
+  │ gradient azul (base)                                 │
+  │                                                      │
+  │   [coluna esquerda: texto/CTA]   [imagem da praga]   │
+  │                                  posição: right,     │
+  │                                  50% da largura no md │
+  │                                                      │
+  │ overlay: gradient horizontal                         │
+  │  from-primary via-primary/85 to-primary/20 (right)   │
+  └──────────────────────────────────────────────────────┘
+  ```
+- CSS:
+  - Wrapper da imagem: `absolute inset-y-0 right-0 w-full md:w-[60%] lg:w-[55%]`, `bg-cover bg-center` com `mask-image: linear-gradient(to right, transparent, black 30%)` para fundir com o gradient azul da esquerda.
+  - Overlay: `absolute inset-0 bg-gradient-to-r from-primary via-primary/90 md:via-primary/70 to-primary/10` — garante contraste do texto no mobile (onde a imagem vai atrás de todo o conteúdo) e libera a imagem à direita no desktop.
+  - Conteúdo (`Breadcrumbs`, `<h1>`, CTAs) fica em `relative z-10` dentro de `max-w-3xl` como já está.
+- No mobile: overlay mais forte (`md:via-primary/70` → mobile fica quase sólido), imagem some visualmente atrás do texto mas mantém sensação de "esta é a praga X".
+- Fallback: quando `slug` não tem imagem no map, o hero volta ao design atual (apenas gradient).
 
-## 2. Comparativo com o que já temos
+**`PragaPage.tsx`:** substitui o `<section>` hero pelo `<PragaHero praga={praga} whatsapp={whatsapp} />`. Resto da página não muda.
 
-| Elemento | Ampla hoje | Ação |
-| --- | --- | --- |
-| Hero + CTA WhatsApp | Sim | Manter |
-| Botão flutuante WhatsApp | Sim | Manter |
-| Grid de serviços | Sim | Adicionar 5 serviços novos |
-| Segmentos de atuação (B2B) | Parcial (páginas /servicos/*) | Criar bloco visual na home |
-| Pragas com biologia | Parcial (/dedetizacao/:praga) | Criar faixa carrossel de ícones na home |
-| Estatísticas numéricas | Não | Adicionar |
-| Reviews reais do Google | Depoimentos manuais | Puxar reviews reais |
-| Selo aniversário (35 anos) | Fraco | Reforçar visual |
-| FAQ na home | Não (só em páginas internas) | Adicionar bloco FAQ |
-| Notícias / blog na home | Não | Adicionar 3 cards do blog |
-| YouTube no header | Não | Avaliar (só se tiver canal) |
+## 2. Página Desentupidora: hero idêntico ao da home + blocos da home adaptados
 
-## 3. Plano de implementação
+**Hero (`src/components/desentupidora/DesHeroSection.tsx`):**
+Já é praticamente idêntico ao `HeroSection.tsx`. Ajustes para paridade total:
+- Adicionar `<AnosBadge />` no topo da section.
+- Igualar tipografia do h1 ao da home: `text-[28px] sm:text-[46px] lg:text-[44px] xl:text-[54px]` em três linhas com `whitespace-nowrap`:
+  ```
+  Pia, ralo ou esgoto
+  entupido?
+  Chegamos em 1h.  ← accent + underline
+  ```
+- Padding-bottom da coluna esquerda `pb-10 md:pb-0` (bug da home já corrigido, replicar).
+- Mantém `heroTechnician` de `assets/desentupidora-hero.webp` e o mesmo bloco absoluto/gradient/glow.
 
-Todas as adições ficam na **home** (`src/pages/Index.tsx`) e nas **landing pages de anúncios** (`PragaPage`, `BairroPage`, `ServicoEspecialPage`) para reforçar conversão.
+**Blocos da home replicados na página `/desentupidora`** (`src/pages/Desentupidora.tsx`), adaptados para desentupimento:
+1. `StatsSection` (reutiliza componente existente, mesmos números).
+2. `DesServicesSection` (já existe, mantém).
+3. `DesProblemsSection` (já existe, mantém).
+4. Novo `SegmentosDesSection` (residências, condomínios, restaurantes, indústrias, postos, hospitais) — arquivo `src/components/desentupidora/SegmentosDesSection.tsx`, mesma estrutura visual do `SegmentosSection` da home.
+5. `DesDifferentialsSection` + `DesTestimonialsSection` + `DesGuaranteeSection` (mantém).
+6. `BlogHighlightSection` (reutiliza, já filtra últimos posts).
+7. `DesFAQSection` (mantém) — bloco WhatsApp verde no meio, no mesmo padrão do `FAQHomeSection` da home. Ajuste dentro do próprio `DesFAQSection.tsx`.
+8. `DesContactSection` (mantém).
 
-**Novos componentes**
-1. `StatsSection.tsx`: 4 números (35 anos, +10 mil clientes, 98% satisfação, 24h atendimento) com ícones e contador animado ao entrar na viewport.
-2. `PragasCarouselStrip.tsx`: faixa horizontal com scroll infinito de ícones das pragas (barata, rato, cupim, escorpião, formiga, pombo, aranha, mosquito), cada um linkando para `/dedetizacao/:praga`.
-3. `SegmentosSection.tsx`: grid de 8 segmentos B2B (Residências, Condomínios, Hotéis, Restaurantes, Supermercados, Hospitais, Escolas, Empresas) com ícone Lucide + título + descrição curta + link para a página do serviço correspondente.
-4. `FAQHomeSection.tsx`: 7 perguntas frequentes em accordion (baseadas nas nossas páginas atuais + as da Heloin adaptadas), com CTA WhatsApp no meio, gerando FAQPage schema.
-5. `BlogHighlightSection.tsx`: 3 cards dos posts mais recentes de `blogPosts.ts` com imagem, título, resumo e link.
-6. `AnosBadge.tsx`: selo visual "35 ANOS" estilo fita/medalha para colocar no canto do hero da home (`HeroSection.tsx`).
-
-**Novos serviços a incluir no grid + criar página**
-- `sanitizacao` (Sanitização de ambientes)
-- `limpeza-de-telhado`
-- `limpeza-de-calha`
-- `limpeza-de-sotao`
-- `laudo-bacteriologico` (complementa Limpeza de Caixa d'Água)
-
-Cada um vira entrada em `src/data/servicosEspeciais.ts` (segue o padrão que já existe) e ganha rota via `/servicos/:slug` (já dinâmica). Sitemap e llms.txt atualizados.
-
-**Depoimentos reais do Google**
-Duas opções:
-- (A) Manter estático mas atualizar `TestimonialsSection.tsx` com nomes/textos reais copiados do perfil do Google da Ampla (rápido, sem código novo).
-- (B) Integrar widget de reviews (Trustindex, Elfsight ou Google Places API) para puxar reviews reais dinamicamente (mais completo, precisa de chave / script externo).
-
-Vou seguir com (A) por default, a menos que você prefira (B).
-
-**Ordem da home após as mudanças**
-```text
-Hero (com selo 35 anos)
-UrgencyBar
-StatsSection            NOVO
-ServicesSection         (+5 serviços)
-PragasCarouselStrip     NOVO
-PestsSection
-SegmentosSection        NOVO
-DifferentialsSection
-TestimonialsSection     (atualizado)
-BlogHighlightSection    NOVO
-FAQHomeSection          NOVO
-ContactSection
-FooterSection
+Ordem final na página:
+```
+Header → DesHero → UrgencyBar → StatsSection → DesServices → DesProblems
+→ SegmentosDesSection → DesDifferentials → DesTestimonials → DesGuarantee
+→ BlogHighlightSection → DesFAQSection (com CTA WhatsApp no meio) → DesContactSection → Footer
 ```
 
-**Reaproveitamento nas LPs de anúncio**
-- `PragaPage`, `BairroPage`, `ServicoEspecialPage`: incluir `StatsSection`, `FAQHomeSection` (quando não tiver FAQ próprio) e `BlogHighlightSection` para engrossar o conteúdo e melhorar Ad Quality do Google Ads.
+## 3. Detalhes técnicos
 
-**Atualizações complementares**
-- `public/sitemap.xml` e `public/llms.txt`: adicionar os 5 novos serviços.
-- Schema.org: `FAQPage` para o FAQ da home, `AggregateRating` só se usarmos reviews reais (nunca inventar).
-- Sem alteração no header/footer além de checar link do YouTube (se tiver canal, adicionar; se não, ignorar).
+- Geração de imagens via `imagegen--generate_image` com tom escuro/dramático, dimensões 1600×1000, salvas em `src/assets/pragas-hero/`.
+- Map de slug→imagem em `src/data/pragas-hero-images.ts` para import estático (evita bundler dinâmico).
+- Nenhuma alteração em SEO/sitemap.
+- Sem breaking changes na `interface Praga` (imagem fica fora do data).
 
-## 4. Fora do escopo
-- Widget dinâmico de Google Reviews (a menos que você peça).
-- Adicionar canal do YouTube (a menos que exista).
-- Mexer no design system atual (cores/tipografia).
-
-Confirma este escopo (com opção A de depoimentos) que eu implemento?
+## 4. Arquivos afetados
+- **Criados:** 7 imagens em `src/assets/pragas-hero/`, `src/data/pragas-hero-images.ts`, `src/components/PragaHero.tsx`, `src/components/desentupidora/SegmentosDesSection.tsx`.
+- **Editados:** `src/pages/PragaPage.tsx`, `src/components/desentupidora/DesHeroSection.tsx`, `src/pages/Desentupidora.tsx`, `src/components/desentupidora/DesFAQSection.tsx`.
