@@ -112,16 +112,19 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right column */}
-          <div className="hidden lg:flex justify-center items-end self-stretch relative animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <div aria-hidden className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[110%] h-[85%] bg-gradient-to-t from-accent/25 via-primary-glow/10 to-transparent rounded-t-[50%] blur-2xl" />
-            <img
-              src={heroTechnician}
-              alt="Técnico profissional da Ampla Dedetizadora"
-              className="relative h-[92vh] w-auto max-h-[820px] object-contain object-bottom drop-shadow-[0_30px_50px_hsl(226_78%_5%/0.5)]"
-            />
-          </div>
+          {/* Right column spacer (imagem posicionada absolutamente na section) */}
+          <div className="hidden lg:block" aria-hidden />
         </div>
+      </div>
+
+      {/* Foto do técnico colada na borda inferior da hero (desktop) */}
+      <div className="hidden lg:block absolute bottom-0 right-0 z-10 w-[42%] max-w-[720px] h-full pointer-events-none animate-fade-in" style={{ animationDelay: "0.2s" }}>
+        <div aria-hidden className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[110%] h-[85%] bg-gradient-to-t from-accent/25 via-primary-glow/10 to-transparent rounded-t-[50%] blur-2xl" />
+        <img
+          src={heroTechnician}
+          alt="Técnico profissional da Ampla Dedetizadora"
+          className="absolute bottom-0 right-0 h-full w-full object-contain object-bottom drop-shadow-[0_30px_50px_hsl(226_78%_5%/0.5)]"
+        />
       </div>
     </section>
   );
