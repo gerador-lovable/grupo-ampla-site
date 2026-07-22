@@ -116,7 +116,7 @@ const Emergencia24h = () => {
 
  <Header />
 
- <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 bg-gradient-to-br from-[#7a1010] via-destructive to-accent">
+ <section className="relative pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#7a1010] via-destructive to-accent">
  <div className="container px-4">
  <div className="max-w-3xl">
  <div className="inline-flex items-center gap-2 bg-white/15 text-white font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
