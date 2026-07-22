@@ -9,7 +9,7 @@ const seals = [
 
 const GuaranteeSection = () => {
  return (
- <section className="py-20 md:py-24 relative overflow-hidden bg-gradient-hero text-primary-foreground">
+ <section className="section-py relative overflow-hidden bg-gradient-hero text-primary-foreground">
  <div aria-hidden className="absolute -top-40 right-1/4 w-[500px] h-[500px] rounded-full bg-accent/20 blur-[120px]" />
  <div aria-hidden className="absolute -bottom-40 -left-20 w-[500px] h-[500px] rounded-full bg-primary-glow/20 blur-[120px]" />
 

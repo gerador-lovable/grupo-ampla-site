@@ -63,7 +63,7 @@ const TestimonialsModule = ({
     : null;
 
   return (
-    <section className={`py-16 md:py-20 ${bgClass[bg]}`}>
+    <section className={`section-py ${bgClass[bg]}`}>
       {reviewSchema && (
         <Helmet>
           <script type="application/ld+json">

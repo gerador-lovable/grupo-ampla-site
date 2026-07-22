@@ -49,7 +49,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contato" className="py-16 md:py-20 bg-secondary">
+    <section id="contato" className="section-py bg-secondary">
       <div className="container px-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-4">
           Fale com um técnico agora

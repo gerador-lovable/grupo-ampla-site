@@ -27,7 +27,7 @@ const pests = [
 
 const PestsSection = () => {
  return (
- <section className="py-20 md:py-28 bg-background">
+ <section className="section-py bg-background">
  <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
  <div className="max-w-2xl mb-14">
  <span className="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-primary mb-4">

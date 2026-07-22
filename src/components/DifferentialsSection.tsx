@@ -13,7 +13,7 @@ const differentials = [
 
 const DifferentialsSection = () => {
  return (
- <section className="py-20 md:py-28 bg-background relative overflow-hidden">
+ <section className="section-py bg-background relative overflow-hidden">
  <div aria-hidden className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-primary/5 blur-3xl" />
  <div className="container px-4 relative">
  <div className="max-w-2xl mb-16">

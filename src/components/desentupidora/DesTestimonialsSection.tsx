@@ -49,7 +49,7 @@ const testimonials = [
 
 const DesTestimonialsSection = () => {
   return (
-    <section className="py-16 md:py-20 bg-secondary">
+    <section className="section-py bg-secondary">
       <div className="container px-4">
         <div className="flex items-center justify-center gap-2 mb-4">
           <img
