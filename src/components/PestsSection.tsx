@@ -28,7 +28,7 @@ const pests = [
 const PestsSection = () => {
   return (
     <section className="py-20 md:py-28 bg-background">
-      <div className="container px-4">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-14">
           <span className="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-primary mb-4">
             Qual praga é a sua?
@@ -41,7 +41,7 @@ const PestsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 max-w-6xl mx-auto mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 mb-12">
           {pests.map((pest) => {
             const CardInner = (
               <>
