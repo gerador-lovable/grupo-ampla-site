@@ -10,7 +10,7 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 import { findPost, blogPosts } from "@/data/blogPosts";
 
-const BASE_URL = "https://grupo-ampla-site.lovable.app";
+const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
 const BlogPost = () => {
   const { slug } = useParams();

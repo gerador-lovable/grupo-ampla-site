@@ -111,13 +111,13 @@ const DedetizacaoComercial = () => {
  name="description"
  content="Empresa de dedetização comercial e industrial em Curitiba com Manejo Integrado de Pragas (MIP). Conformidade ANVISA, laudo técnico e contratos para restaurantes, indústrias, hospitais e condomínios."
  />
- <link rel="canonical" href="https://grupo-ampla-site.lovable.app/servicos/dedetizacao-comercial" />
+ <link rel="canonical" href="https://www.grupoampladedetiza.com.br/servicos/dedetizacao-comercial" />
  <meta property="og:title" content="Empresa de Dedetização Comercial em Curitiba | MIP - Ampla" />
  <meta
  property="og:description"
  content="Manejo Integrado de Pragas (MIP) para empresas em Curitiba: conformidade ANVISA, laudo técnico e contratos de manutenção. 35 anos de experiência."
  />
- <meta property="og:url" content="https://grupo-ampla-site.lovable.app/servicos/dedetizacao-comercial" />
+ <meta property="og:url" content="https://www.grupoampladedetiza.com.br/servicos/dedetizacao-comercial" />
  <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
  <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
  </Helmet>

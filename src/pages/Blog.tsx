@@ -7,7 +7,7 @@ import OutrosServicosBlock from "@/components/OutrosServicosBlock";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { blogPosts } from "@/data/blogPosts";
 
-const BASE_URL = "https://grupo-ampla-site.lovable.app";
+const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
 const Blog = () => {
  const canonical = `${BASE_URL}/blog`;

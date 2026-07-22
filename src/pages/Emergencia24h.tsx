@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 
-const BASE_URL = "https://grupo-ampla-site.lovable.app";
+const BASE_URL = "https://www.grupoampladedetiza.com.br";
 const canonical = `${BASE_URL}/emergencia-24h`;
 const whatsapp = buildRedirectUrl({ servico: "desentupimento" });
 

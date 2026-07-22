@@ -38,10 +38,10 @@ const Desentupidora = () => {
       <Helmet>
         <title>Desentupidora Curitiba 24h | Ampla - 35 Anos de Experiência</title>
         <meta name="description" content="Desentupidora em Curitiba e Região Metropolitana. Atendimento 24h, sem quebrar parede, hidrojateamento e limpa-fossa. Orçamento grátis via WhatsApp." />
-        <link rel="canonical" href="https://grupo-ampla-site.lovable.app/desentupidora" />
+        <link rel="canonical" href="https://www.grupoampladedetiza.com.br/desentupidora" />
         <meta property="og:title" content="Desentupidora Curitiba 24h | Ampla - 35 Anos de Experiência" />
         <meta property="og:description" content="Desentupimento 24h em Curitiba: máquinas rotativas, hidrojateamento e limpa-fossa. Sem quebrar parede. Orçamento grátis." />
-        <meta property="og:url" content="https://grupo-ampla-site.lovable.app/desentupidora" />
+        <meta property="og:url" content="https://www.grupoampladedetiza.com.br/desentupidora" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Header />

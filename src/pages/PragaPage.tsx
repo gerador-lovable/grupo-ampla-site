@@ -13,7 +13,7 @@ import { buildRedirectUrl } from "@/lib/whatsapp";
 import { findPraga, pragas } from "@/data/pragas";
 import type { DepoimentoTag } from "@/data/depoimentos";
 
-const BASE_URL = "https://grupo-ampla-site.lovable.app";
+const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
 const PragaPage = () => {
  const { praga: slug } = useParams();

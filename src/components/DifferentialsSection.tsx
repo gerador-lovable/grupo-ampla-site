@@ -34,7 +34,7 @@ const DifferentialsSection = () => {
  key={d.title}
  className="group bg-surface p-7 md:p-8 transition-colors hover:bg-surface-muted relative"
  >
- <span className="absolute top-4 right-5 font-display text-xs font-medium text-muted-foreground/50 tabular-nums">
+                <span className="absolute top-4 right-5 font-display text-xs font-medium text-muted-foreground tabular-nums">
  {String(i + 1).padStart(2, "0")}
  </span>
  <div className="w-11 h-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
