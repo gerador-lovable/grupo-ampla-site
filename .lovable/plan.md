@@ -1,8 +1,14 @@
-Ajustar o logo no cabeçalho para ficar com bordas totalmente redondas (circular).
+#### Problema
+Ao trocar de página clicando em links internos (menu/rodapé), o navegador preserva a posição de scroll e o usuário cai no meio da nova página, em vez de no topo.
 
-- Arquivo: `src/components/Header.tsx`
-- Aplicar `rounded-full` na imagem do logo dentro do `Link` de navegação, garantindo que a foto/logo apareça como um círculo tanto no estado transparente inicial quanto ao rolar a página.
-- Manter os demais comportamentos: tamanho responsivo, aba escura ao scroll e transições.
-- Caso a aba escura (container do logo ao scroll) também deva ficar totalmente arredonda, aplicar `rounded-full` no `<span>` envoltório, ajustando paddings para manter proporção visual.
+#### Causa
+O projeto usa `BrowserRouter` do React Router, que não reseta scroll automaticamente. Além disso, o rodapé usa tags `<a href="/...">` para links internos, causando recarregamentos completos e comportamento de scroll inconsistente.
 
-Verificação: visualizar no preview e confirmar que o logo é exibido como círculo em ambos os estados (topo e scroll).
+#### Solução
+1. Criar componente `src/components/ScrollToTop.tsx` que escuta `useLocation` e executa `window.scrollTo(0, 0)` sempre que o `pathname` mudar.
+2. Inserir `<ScrollToTop />` dentro de `<BrowserRouter>` em `src/App.tsx`, antes de `<Routes>`.
+3. Trocar links internos de `<a href="...">` por `<Link to="...">` do react-router-dom em `src/components/FooterSection.tsx`.
+4. Corrigir também o link de voltar para home em `src/pages/NotFound.tsx`.
+
+#### Resultado esperado
+Toda navegação interna (React Router) vai abrir a página no topo, sem recarregamento completo. Links para telefone, WhatsApp e Instagram (externos) continuam como `<a>`.
