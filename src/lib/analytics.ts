@@ -74,6 +74,7 @@ export const fireGenerateLeadEvent = (params: TrackingParams & { servico?: strin
 };
 
 export const trackWhatsAppClick = (params: TrackingParams & { servico?: string }) => {
+  // Dispara apenas o evento GA4 no clique; a conversão do Google Ads é disparada
+  // na página de redirecionamento, evitando dupla contagem.
   fireGenerateLeadEvent(params);
-  fireGoogleAdsConversion(params);
 };
