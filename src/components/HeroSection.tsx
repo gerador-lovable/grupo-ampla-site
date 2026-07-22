@@ -122,6 +122,9 @@ const HeroSection = () => {
           <img
             src={heroTechnician}
             alt="Técnico profissional da Ampla Dedetizadora"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             className="absolute bottom-0 right-0 h-full w-full object-contain object-bottom drop-shadow-[0_30px_50px_hsl(226_78%_5%/0.5)]"
           />
         </div>
