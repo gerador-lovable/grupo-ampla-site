@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Clock } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 const DesContactSection = () => {
  const navigate = useNavigate();
@@ -14,17 +15,18 @@ const DesContactSection = () => {
  const [telefone, setTelefone] = useState("");
  const [mensagem, setMensagem] = useState("");
 
- const handleSubmit = (e: React.FormEvent) => {
- e.preventDefault();
- navigate(
- buildRedirectUrl({
- servico: "desentupimento",
- nome: nome.trim(),
- telefone: telefone.trim(),
- mensagem: mensagem.trim(),
- }),
- );
- };
+  const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  trackWhatsAppClick({ servico: "desentupimento" });
+  navigate(
+  buildRedirectUrl({
+  servico: "desentupimento",
+  nome: nome.trim(),
+  telefone: telefone.trim(),
+  mensagem: mensagem.trim(),
+  }),
+  );
+  };
 
  return (
  <section id="contato" className="section-py bg-secondary">
@@ -102,12 +104,13 @@ const DesContactSection = () => {
  </div>
  <div>
  <p className="font-bold text-foreground">WhatsApp</p>
- <a
- href={buildRedirectUrl({ servico: "desentupimento" })}
- className="text-primary hover:underline"
- >
- (41) 99512-1583
- </a>
+                <a
+                  href={buildRedirectUrl({ servico: "desentupimento" })}
+                  onClick={() => trackWhatsAppClick({ servico: "desentupimento" })}
+                  className="text-primary hover:underline"
+                >
+                  (41) 99512-1583
+                </a>
  </div>
  </div>
  <div className="flex items-start gap-3">

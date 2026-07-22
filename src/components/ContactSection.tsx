@@ -13,6 +13,7 @@ import {
 import { MapPin, Phone, Clock } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 const PROBLEMAS = [
   "Baratas em casa/apartamento",
@@ -38,6 +39,7 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    trackWhatsAppClick({ servico: "dedetizacao" });
     navigate(
       buildRedirectUrl({
         servico: "dedetizacao",
@@ -131,6 +133,7 @@ const ContactSection = () => {
                 <p className="font-bold text-foreground">WhatsApp</p>
                 <a
                   href={buildRedirectUrl({ servico: "dedetizacao" })}
+                  onClick={() => trackWhatsAppClick({ servico: "dedetizacao" })}
                   className="text-primary hover:underline"
                 >
                   (41) 99512-1583

@@ -1,22 +1,21 @@
 import { useEffect, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
-import { buildWhatsAppUrl, type Service } from "@/lib/whatsapp";
+import { fireGoogleAdsConversion, fireGenerateLeadEvent } from "@/lib/analytics";
+import { buildWhatsAppUrl, type Service, type TrackingParams } from "@/lib/whatsapp";
 
 const REDIRECT_DELAY_MS = 1500;
 
-// Dispara o evento de conversão do Google Ads quando o usuário clica em qualquer CTA WhatsApp
-const fireWhatsAppConversion = () => {
-  const cfg = (window as unknown as { __ADS_CONVERSIONS__?: { send_id: string; whatsapp_click_label: string } })
-    .__ADS_CONVERSIONS__;
-  const gtagFn = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
-  if (!cfg || !gtagFn) return;
-  if (cfg.send_id.includes("XXXX") || cfg.whatsapp_click_label.includes("XXXX")) return;
-  gtagFn("event", "conversion", {
-    send_to: `${cfg.send_id}/${cfg.whatsapp_click_label}`,
-    event_callback: () => {},
-  });
-};
+const TRACKING_KEYS: (keyof TrackingParams)[] = [
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_content",
+  "utm_term",
+  "gclid",
+  "gbraid",
+  "wbraid",
+];
 
 const RedirectWhatsApp = () => {
   const [searchParams] = useSearchParams();
@@ -28,21 +27,45 @@ const RedirectWhatsApp = () => {
         ? servicoParam
         : undefined;
 
+    const tracking: TrackingParams = {};
+    TRACKING_KEYS.forEach((key) => {
+      const value = searchParams.get(key);
+      if (value) tracking[key] = value;
+    });
+
     return buildWhatsAppUrl({
       servico,
       nome: searchParams.get("nome") ?? undefined,
       telefone: searchParams.get("telefone") ?? undefined,
       mensagem: searchParams.get("mensagem") ?? undefined,
+      ...tracking,
     });
   }, [searchParams]);
 
+  const trackingParams = useMemo(() => {
+    const tracking: TrackingParams = {};
+    TRACKING_KEYS.forEach((key) => {
+      const value = searchParams.get(key);
+      if (value) tracking[key] = value;
+    });
+    return tracking;
+  }, [searchParams]);
+
+  const servico = useMemo(() => {
+    const servicoParam = searchParams.get("servico");
+    return servicoParam === "dedetizacao" || servicoParam === "desentupimento"
+      ? servicoParam
+      : "dedetizacao";
+  }, [searchParams]);
+
   useEffect(() => {
-    fireWhatsAppConversion();
+    fireGenerateLeadEvent({ ...trackingParams, servico });
+    fireGoogleAdsConversion(trackingParams);
     const timeout = setTimeout(() => {
       window.location.replace(whatsappUrl);
     }, REDIRECT_DELAY_MS);
     return () => clearTimeout(timeout);
-  }, [whatsappUrl]);
+  }, [whatsappUrl, trackingParams, servico]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80 px-4">

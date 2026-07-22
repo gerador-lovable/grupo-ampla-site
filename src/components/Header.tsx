@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import logo from "@/assets/logo-ampla.webp";
 import { buildRedirectUrl } from "@/lib/whatsapp";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 const Header = () => {
   const location = useLocation();
@@ -19,6 +20,10 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick({ servico });
+  };
 
   return (
     <header
@@ -70,7 +75,7 @@ const Header = () => {
             asChild
             className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground font-semibold min-h-[44px] px-4 md:px-5 rounded-xl shadow-card transition-transform hover:scale-[1.03]"
           >
-            <Link to={whatsappRedirect}>
+            <Link to={whatsappRedirect} onClick={handleWhatsAppClick}>
               <WhatsAppIcon className="w-5 h-5 md:mr-2" />
               <span className="hidden sm:inline">Orçamento Grátis</span>
             </Link>
