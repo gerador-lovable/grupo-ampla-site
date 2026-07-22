@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Droplet, Rat, Bird, Wrench, ArrowRight, Clock, Tag } from "lucide-react";
+import { Droplet, Rat, Bird, Wrench, ArrowRight, Clock } from "lucide-react";
 
 const tiles = [
   {
@@ -7,12 +7,6 @@ const tiles = [
     nome: "Emergência 24h",
     desc: "Técnico no endereço em até 2h, Curitiba e RMC.",
     Icon: Clock,
-  },
-  {
-    to: "/precos",
-    nome: "Tabela de Preços",
-    desc: "Faixas 2026 de dedetização e desentupimento.",
-    Icon: Tag,
   },
   {
     to: "/servicos/limpeza-caixa-dagua",
