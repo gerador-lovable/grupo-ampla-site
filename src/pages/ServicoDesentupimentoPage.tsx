@@ -15,7 +15,6 @@ const BASE_URL = "https://grupo-ampla-site.lovable.app";
 const ServicoDesentupimentoPage = () => {
   const { servico: slug } = useParams();
   const servico = slug ? findServicoDes(slug) : undefined;
-
   if (!servico) return <Navigate to="/404" replace />;
 
   const canonical = `${BASE_URL}/desentupidora/${servico.slug}`;
