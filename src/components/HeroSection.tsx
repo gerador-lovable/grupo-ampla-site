@@ -52,7 +52,7 @@ const HeroSection = () => {
               <span className="block mt-1">
                 <span className="relative inline-block text-accent">Resolvemos em até 2h
                   <span aria-hidden className="absolute left-0 -bottom-1 h-[3px] w-full bg-gradient-accent rounded-full" />
-                </span>.
+                </span>
               </span>
             </h1>
 
