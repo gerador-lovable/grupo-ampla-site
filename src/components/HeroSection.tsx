@@ -44,20 +44,20 @@ const HeroSection = () => {
           <div className="text-primary-foreground">
             <div className="inline-flex items-center gap-2 border border-white/15 bg-white/5 backdrop-blur-sm text-primary-foreground/90 text-xs font-medium tracking-[0.14em] uppercase px-3.5 py-1.5 rounded-full mb-8 animate-fade-in">
               <span className="inline-flex w-1.5 h-1.5 rounded-full bg-accent" />
-              Desde 1989 · Referência em Curitiba
+              Dedetizadora em Curitiba · 35 anos
             </div>
 
             <h1 className="font-display text-[40px] sm:text-5xl lg:text-[64px] xl:text-[72px] leading-[1.02] tracking-[-0.03em] font-semibold mb-6 animate-fade-up text-balance">
-              Dedetização técnica,
+              Barata, rato ou cupim em casa?
               <span className="block mt-1">
-                sem <span className="relative inline-block text-accent">volta das pragas
+                <span className="relative inline-block text-accent">Resolvemos em até 2h
                   <span aria-hidden className="absolute left-0 -bottom-1 h-[3px] w-full bg-gradient-accent rounded-full" />
                 </span>.
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-primary-foreground/75 max-w-xl mb-9 leading-relaxed animate-fade-up" style={{ animationDelay: "0.15s" }}>
-              Protocolo de manejo integrado, produtos aprovados pela ANVISA e laudo técnico incluso. Resposta em até 2 horas em toda a região metropolitana.
+              Técnico ANVISA no seu endereço no mesmo dia. Produto sem cheiro forte, seguro para crianças e pets, com laudo assinado e 6 meses de garantia por escrito.
             </p>
 
             <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-10 max-w-lg animate-fade-up" style={{ animationDelay: "0.25s" }}>
@@ -92,7 +92,7 @@ const HeroSection = () => {
               >
                 <Link to={WHATSAPP_REDIRECT}>
                   <WhatsAppIcon className="w-5 h-5 mr-2" />
-                  Orçamento grátis
+                  Falar com técnico agora
                 </Link>
               </Button>
             </div>
