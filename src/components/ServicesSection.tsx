@@ -27,6 +27,7 @@ const services: ServiceCard[] = [
     image: serviceResidential,
     title: "Praga em casa ou apartamento",
     description: "Eliminamos baratas, formigas, aranhas e mosquitos com produto sem cheiro forte. Você volta pra casa no mesmo dia. Seguro para crianças e pets.",
+    href: "/servicos/dedetizacao-residencial",
   },
   {
     image: serviceCommercial,
@@ -38,11 +39,13 @@ const services: ServiceCard[] = [
     image: serviceCondominium,
     title: "Condomínio com queixa de morador",
     description: "Tratamos áreas comuns, garagem e apartamentos no mesmo cronograma. Contrato com síndico, preço fechado por unidade e nota fiscal.",
+    href: "/servicos/dedetizacao-condominial",
   },
   {
     image: servicePreventive,
     title: "Antes que a praga volte",
     description: "Plano trimestral com visitas programadas. Custa menos que uma dedetização emergencial e mantém o imóvel protegido o ano inteiro.",
+    href: "/servicos/dedetizacao-preventiva",
   },
   {
     image: serviceCaixaAgua,
