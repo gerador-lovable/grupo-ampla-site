@@ -82,11 +82,11 @@ const PestsSection = () => {
  </div>
 
  <div className="text-center">
- <Button asChild size="lg" className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground font-semibold text-base px-10 min-h-[56px] rounded-xl shadow-elegant transition-transform duration-200 hover:scale-[1.03]">
- <Link to={WHATSAPP_REDIRECT}>
- <WhatsAppIcon className="w-6 h-6 mr-2" />
- Mandar foto da praga pelo WhatsApp
- </Link>
+ <Button asChild size="lg" className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground font-semibold text-sm sm:text-base px-4 sm:px-10 min-h-[56px] rounded-xl shadow-elegant transition-transform duration-200 hover:scale-[1.03] whitespace-normal h-auto max-w-full">
+  <Link to={WHATSAPP_REDIRECT} className="text-center">
+  <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6 mr-2 shrink-0" />
+  Mandar foto da praga pelo WhatsApp
+  </Link>
  </Button>
  </div>
  </div>
