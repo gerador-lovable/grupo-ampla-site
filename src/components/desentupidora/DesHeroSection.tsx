@@ -8,119 +8,119 @@ import { buildRedirectUrl } from "@/lib/whatsapp";
 const WHATSAPP_REDIRECT = buildRedirectUrl({ servico: "desentupimento" });
 
 const benefits = [
-  { icon: Clock, text: "Atendimento em até 1h" },
-  { icon: Shield, text: "Garantia de 90 dias" },
-  { icon: Wrench, text: "Hidrojateamento profissional" },
-  { icon: CreditCard, text: "Parcelamos em 12x" },
+ { icon: Clock, text: "Atendimento em até 1h" },
+ { icon: Shield, text: "Garantia de 90 dias" },
+ { icon: Wrench, text: "Hidrojateamento profissional" },
+ { icon: CreditCard, text: "Parcelamos em 12x" },
 ];
 
 const stats = [
-  { icon: Users, value: "+10 mil", label: "clientes atendidos" },
-  { icon: Award, value: "35", label: "anos de mercado" },
-  { icon: Star, value: "4.8", label: "avaliação Google" },
+ { icon: Users, value: "+10 mil", label: "clientes atendidos" },
+ { icon: Award, value: "35", label: "anos de mercado" },
+ { icon: Star, value: "4.8", label: "avaliação Google" },
 ];
 
 const DesHeroSection = () => {
-  return (
-    <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-hero">
-      <div aria-hidden className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-primary-glow/20 blur-[120px]" />
-      <div aria-hidden className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-accent/20 blur-[140px]" />
-      <div
-        aria-hidden
-        className="absolute inset-0 opacity-[0.07]"
-        style={{
-          backgroundImage:
-            "linear-gradient(hsl(var(--primary-foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary-foreground)) 1px, transparent 1px)",
-          backgroundSize: "56px 56px",
-          maskImage: "radial-gradient(ellipse at 30% 40%, black 40%, transparent 75%)",
-        }}
-      />
+ return (
+ <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-hero">
+ <div aria-hidden className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-primary-glow/20 blur-[120px]" />
+ <div aria-hidden className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-accent/20 blur-[140px]" />
+ <div
+ aria-hidden
+ className="absolute inset-0 opacity-[0.07]"
+ style={{
+ backgroundImage:
+ "linear-gradient(hsl(var(--primary-foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary-foreground)) 1px, transparent 1px)",
+ backgroundSize: "56px 56px",
+ maskImage: "radial-gradient(ellipse at 30% 40%, black 40%, transparent 75%)",
+ }}
+ />
 
-      <div className="container relative z-10 pt-32 md:pt-40 pb-16 md:pb-0 px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-8 items-center">
-          <div className="text-primary-foreground">
-            <div className="inline-flex items-center gap-2 border border-white/15 bg-white/5 backdrop-blur-sm text-primary-foreground/90 text-xs font-medium tracking-[0.14em] uppercase px-3.5 py-1.5 rounded-full mb-8 animate-fade-in">
-              <span className="inline-flex w-1.5 h-1.5 rounded-full bg-accent" />
-              Desentupidora 24h · Curitiba
-            </div>
+ <div className="container relative z-10 pt-32 md:pt-40 pb-16 md:pb-0 px-4">
+ <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-8 items-center">
+ <div className="text-primary-foreground">
+ <div className="inline-flex items-center gap-2 border border-white/15 bg-white/5 backdrop-blur-sm text-primary-foreground/90 text-xs font-medium tracking-[0.14em] uppercase px-3.5 py-1.5 rounded-full mb-8 animate-fade-in">
+ <span className="inline-flex w-1.5 h-1.5 rounded-full bg-accent" />
+ Desentupidora 24h · Curitiba
+ </div>
 
-            <h1 className="font-display text-[40px] sm:text-5xl lg:text-[64px] xl:text-[72px] leading-[1.02] tracking-[-0.03em] font-semibold mb-6 animate-fade-up text-balance">
-              Pia ou esgoto entupido?
-              <span className="block mt-1"><span className="relative inline-block text-accent">Chegamos em 1h
-                <span aria-hidden className="absolute left-0 -bottom-1 h-[3px] w-full bg-gradient-accent rounded-full" />
-              </span>, sem quebrar piso.</span>
-            </h1>
+ <h1 className="font-display text-[40px] sm:text-5xl lg:text-[64px] xl:text-[72px] leading-[1.02] tracking-[-0.03em] font-semibold mb-6 animate-fade-up text-balance">
+ Pia ou esgoto entupido?
+ <span className="block mt-1"><span className="relative inline-block text-accent">Chegamos em 1h
+ <span aria-hidden className="absolute left-0 -bottom-1 h-[3px] w-full bg-gradient-accent rounded-full" />
+ </span>, sem quebrar piso.</span>
+ </h1>
 
-            <p className="text-lg md:text-xl text-primary-foreground/75 max-w-xl mb-9 leading-relaxed animate-fade-up" style={{ animationDelay: "0.15s" }}>
-              Hidrojateamento de alta pressão e câmera de inspeção. Atendemos 24 horas — inclusive madrugada, fim de semana e feriado — em Curitiba e região.
-            </p>
+ <p className="text-lg md:text-xl text-primary-foreground/75 max-w-xl mb-9 leading-relaxed animate-fade-up" style={{ animationDelay: "0.15s" }}>
+ Hidrojateamento de alta pressão e câmera de inspeção. Atendemos 24 horas, inclusive madrugada, fim de semana e feriado, em Curitiba e região.
+ </p>
 
-            <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-10 max-w-lg animate-fade-up" style={{ animationDelay: "0.25s" }}>
-              {benefits.map((b) => (
-                <div key={b.text} className="flex items-center gap-2.5 text-primary-foreground/85">
-                  <div className="w-7 h-7 rounded-md bg-white/10 border border-white/10 flex items-center justify-center shrink-0">
-                    <b.icon className="w-3.5 h-3.5 text-accent" />
-                  </div>
-                  <span className="text-sm">{b.text}</span>
-                </div>
-              ))}
-            </div>
+ <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-10 max-w-lg animate-fade-up" style={{ animationDelay: "0.25s" }}>
+ {benefits.map((b) => (
+ <div key={b.text} className="flex items-center gap-2.5 text-primary-foreground/85">
+ <div className="w-7 h-7 rounded-md bg-white/10 border border-white/10 flex items-center justify-center shrink-0">
+ <b.icon className="w-3.5 h-3.5 text-accent" />
+ </div>
+ <span className="text-sm">{b.text}</span>
+ </div>
+ ))}
+ </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 mb-12 animate-fade-up" style={{ animationDelay: "0.35s" }}>
-              <Button
-                asChild
-                size="lg"
-                className="bg-destructive hover:bg-destructive/90 text-destructive-foreground font-semibold px-6 py-7 rounded-xl shadow-elegant min-h-[60px] transition-transform hover:scale-[1.02] animate-slow-pulse"
-              >
-                <a href="tel:+5541995121583">
-                  <Phone className="w-5 h-5 mr-2.5" />
-                  <span className="flex flex-col items-start leading-tight text-left">
-                    <span className="text-[10px] font-semibold uppercase tracking-[0.14em] opacity-90">Emergência 24h</span>
-                    <span className="text-base font-bold font-display">(41) 99512-1583</span>
-                  </span>
-                </a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground font-semibold px-8 py-7 rounded-xl shadow-elegant min-h-[60px] text-base transition-transform hover:scale-[1.02]"
-              >
-                <Link to={WHATSAPP_REDIRECT}>
-                  <WhatsAppIcon className="w-5 h-5 mr-2" />
-                  Chamar agora no WhatsApp
-                </Link>
-              </Button>
-            </div>
+ <div className="flex flex-col sm:flex-row gap-3 mb-12 animate-fade-up" style={{ animationDelay: "0.35s" }}>
+ <Button
+ asChild
+ size="lg"
+ className="bg-destructive hover:bg-destructive/90 text-destructive-foreground font-semibold px-6 py-7 rounded-xl shadow-elegant min-h-[60px] transition-transform hover:scale-[1.02] animate-slow-pulse"
+ >
+ <a href="tel:+5541995121583">
+ <Phone className="w-5 h-5 mr-2.5" />
+ <span className="flex flex-col items-start leading-tight text-left">
+ <span className="text-[10px] font-semibold uppercase tracking-[0.14em] opacity-90">Emergência 24h</span>
+ <span className="text-base font-bold font-display">(41) 99512-1583</span>
+ </span>
+ </a>
+ </Button>
+ <Button
+ asChild
+ size="lg"
+ className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground font-semibold px-8 py-7 rounded-xl shadow-elegant min-h-[60px] text-base transition-transform hover:scale-[1.02]"
+ >
+ <Link to={WHATSAPP_REDIRECT}>
+ <WhatsAppIcon className="w-5 h-5 mr-2" />
+ Chamar agora no WhatsApp
+ </Link>
+ </Button>
+ </div>
 
-            <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-lg pt-8 border-t border-white/10 animate-fade-up" style={{ animationDelay: "0.45s" }}>
-              {stats.map((s) => (
-                <div key={s.label}>
-                  <div className="flex items-baseline gap-1.5">
-                    <span className="font-display text-2xl md:text-3xl font-semibold text-primary-foreground tracking-tight">{s.value}</span>
-                    {s.label.includes("Google") && (
-                      <Star className="w-4 h-4 fill-accent text-accent" />
-                    )}
-                  </div>
-                  <div className="text-xs md:text-sm text-primary-foreground/60 mt-0.5">{s.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+ <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-lg pt-8 border-t border-white/10 animate-fade-up" style={{ animationDelay: "0.45s" }}>
+ {stats.map((s) => (
+ <div key={s.label}>
+ <div className="flex items-baseline gap-1.5">
+ <span className="font-display text-2xl md:text-3xl font-semibold text-primary-foreground tracking-tight">{s.value}</span>
+ {s.label.includes("Google") && (
+ <Star className="w-4 h-4 fill-accent text-accent" />
+ )}
+ </div>
+ <div className="text-xs md:text-sm text-primary-foreground/60 mt-0.5">{s.label}</div>
+ </div>
+ ))}
+ </div>
+ </div>
 
-          <div className="hidden lg:block" aria-hidden />
-        </div>
-      </div>
+ <div className="hidden lg:block" aria-hidden />
+ </div>
+ </div>
 
-      <div className="hidden lg:block absolute bottom-0 right-0 z-10 w-[42%] max-w-[720px] h-full pointer-events-none animate-fade-in" style={{ animationDelay: "0.2s" }}>
-        <div aria-hidden className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[110%] h-[85%] bg-gradient-to-t from-accent/25 via-primary-glow/10 to-transparent rounded-t-[50%] blur-2xl" />
-        <img
-          src={heroTechnician}
-          alt="Técnico profissional da Ampla Desentupidora"
-          className="absolute bottom-0 right-0 h-full w-full object-contain object-bottom drop-shadow-[0_30px_50px_hsl(226_78%_5%/0.5)]"
-        />
-      </div>
-    </section>
-  );
+ <div className="hidden lg:block absolute bottom-0 right-0 z-10 w-[42%] max-w-[720px] h-full pointer-events-none animate-fade-in" style={{ animationDelay: "0.2s" }}>
+ <div aria-hidden className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[110%] h-[85%] bg-gradient-to-t from-accent/25 via-primary-glow/10 to-transparent rounded-t-[50%] blur-2xl" />
+ <img
+ src={heroTechnician}
+ alt="Técnico profissional da Ampla Desentupidora"
+ className="absolute bottom-0 right-0 h-full w-full object-contain object-bottom drop-shadow-[0_30px_50px_hsl(226_78%_5%/0.5)]"
+ />
+ </div>
+ </section>
+ );
 };
 
 export default DesHeroSection;
