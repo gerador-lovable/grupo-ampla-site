@@ -11,6 +11,7 @@ import serviceCaixaAgua from "@/assets/service-caixa-agua.webp";
 import serviceRoedores from "@/assets/service-roedores.webp";
 import servicePombos from "@/assets/service-pombos.webp";
 import { buildRedirectUrl } from "@/lib/whatsapp";
+import LazyImage from "@/components/LazyImage";
 
 const WHATSAPP_REDIRECT = buildRedirectUrl({ servico: "dedetizacao" });
 
@@ -92,14 +93,13 @@ const ServicesSection = () => {
  {service.image ? (
  <div className="h-48 overflow-hidden relative">
  <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-primary-deep/40 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
- <img
- src={service.image}
- alt={service.title}
- className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
- loading="lazy"
- width={800}
- height={600}
- />
+  <LazyImage
+  src={service.image}
+  alt={service.title}
+  width={800}
+  height={600}
+  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+  />
  </div>
  ) : service.Icon ? (
  <div className="h-48 bg-gradient-to-br from-primary/15 via-primary/5 to-transparent flex items-center justify-center relative overflow-hidden">

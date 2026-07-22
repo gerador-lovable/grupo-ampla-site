@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
+import LazyImage from "@/components/LazyImage";
 
 import baratasImg from "@/assets/pests/baratas.webp";
 import ratosImg from "@/assets/pests/ratos.webp";
@@ -47,14 +48,13 @@ const PestsSection = () => {
  <>
  <div className="w-full h-36 md:h-44 overflow-hidden relative">
  <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-primary-deep/60 via-primary-deep/10 to-transparent z-10" />
- <img
- src={pest.image}
- alt={pest.name}
- loading="lazy"
- width={512}
- height={512}
- className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
- />
+  <LazyImage
+  src={pest.image}
+  alt={pest.name}
+  width={512}
+  height={512}
+  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+  />
  <h3 className="absolute bottom-3 left-3 z-20 font-display font-semibold text-primary-foreground text-sm md:text-base drop-shadow">{pest.name}</h3>
  </div>
  <div className="p-4">
