@@ -3,8 +3,8 @@ import { Shield, Wrench, ThumbsUp, Clock } from "lucide-react";
 const seals = [
  { icon: Shield, title: "90 dias de garantia", description: "Entupiu de novo? Voltamos sem cobrar" },
  { icon: Wrench, title: "Sem quebrar piso", description: "Máquina rotativa e hidrojato pelo ralo" },
- { icon: ThumbsUp, title: "Preço fechado antes", description: "Sem surpresa quando terminar" },
- { icon: Clock, title: "24h, inclusive feriado", description: "Domingo e madrugada, mesmo preço" },
+ { icon: ThumbsUp, title: "Orçamento fechado antes", description: "Sem surpresa quando terminar o serviço" },
+ { icon: Clock, title: "24h, inclusive feriado", description: "Domingo e madrugada, sem taxa extra" },
 ];
 
 const DesGuaranteeSection = () => {
