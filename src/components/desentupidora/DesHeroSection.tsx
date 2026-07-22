@@ -46,7 +46,7 @@ const DesHeroSection = () => {
  Desentupidora 24h · Curitiba
  </div>
 
-  <h1 className="font-display text-[28px] sm:text-[46px] lg:text-[44px] xl:text-[54px] leading-[1.05] tracking-[-0.03em] font-semibold mb-6 animate-fade-up text-balance">
+  <h1 className="font-display text-[32px] sm:text-[50px] lg:text-[48px] xl:text-[58px] leading-[1.05] tracking-[-0.03em] font-semibold mb-6 animate-fade-up text-balance">
    <span className="block whitespace-nowrap">Pia, ralo ou esgoto</span>
    <span className="block mt-1 whitespace-nowrap">entupido?</span>
    <span className="block mt-1 whitespace-nowrap">

@@ -69,7 +69,7 @@ const ServicoDesentupimentoPage = () => {
  <div className="inline-block bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
  Ampla · Atendimento 24h em Curitiba
  </div>
- <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary-foreground leading-[1.1] mb-6">
+ <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-primary-foreground leading-[1.1] mb-6">
  {servico.h1}
  </h1>
  <p className="text-lg text-primary-foreground/90 mb-8 leading-relaxed">{servico.intro}</p>
