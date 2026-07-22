@@ -110,7 +110,7 @@ const ServicesSection = () => {
                       <Link to={service.href}>Saiba mais</Link>
                     </Button>
                   )}
-                  <Button asChild className="bg-[#075E54] hover:bg-[#075E54]/90 text-white min-h-[44px] font-semibold transition-transform duration-200 hover:scale-105">
+                  <Button asChild className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground min-h-[44px] font-semibold transition-transform duration-200 hover:scale-105">
                     <Link to={WHATSAPP_REDIRECT}>
                       <WhatsAppIcon className="w-5 h-5 mr-2" />
                       Orçamento
