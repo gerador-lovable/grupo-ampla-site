@@ -81,7 +81,7 @@ const BairroPage = () => {
 
  <Header />
 
- <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
+ <section className="relative pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
  <div className="container px-4">
  <div className="max-w-3xl">
  <div className="inline-flex items-center gap-2 bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
@@ -111,7 +111,7 @@ const BairroPage = () => {
 
  <UrgencyBar />
 
- <section className="py-16 md:py-20 bg-background">
+  <section className="section-py bg-background">
  <div className="container px-4 max-w-4xl">
  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
  Ampla no {bairro.nome}
@@ -122,7 +122,7 @@ const BairroPage = () => {
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-muted/40">
+  <section className="section-py bg-muted/40">
  <div className="container px-4 max-w-5xl">
  <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-10">
  Dedetização no {bairro.nome}
@@ -138,7 +138,7 @@ const BairroPage = () => {
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-background">
+  <section className="section-py bg-background">
  <div className="container px-4 max-w-5xl">
  <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-10">
  Desentupidora no {bairro.nome}
@@ -161,7 +161,7 @@ const BairroPage = () => {
  bg="muted"
  />
 
- <section className="py-16 md:py-20 bg-background">
+  <section className="section-py bg-background">
  <div className="container px-4 max-w-4xl">
  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
  Bairros vizinhos ao {bairro.nome}
@@ -176,7 +176,7 @@ const BairroPage = () => {
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-muted/40">
+ <section className="section-py bg-muted/40">
  <div className="container px-4 max-w-3xl">
  <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-10">
  Perguntas frequentes, {bairro.nome}
@@ -192,7 +192,7 @@ const BairroPage = () => {
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-background">
+ <section className="section-py bg-background">
  <div className="container px-4 max-w-5xl">
  <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-10">
  Outros bairros que atendemos em Curitiba
@@ -208,7 +208,7 @@ const BairroPage = () => {
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-primary text-primary-foreground">
+ <section className="section-py bg-primary text-primary-foreground">
  <div className="container px-4 max-w-3xl text-center">
  <h2 className="text-2xl md:text-4xl font-bold mb-4">
  Precisa de atendimento no {bairro.nome}?
