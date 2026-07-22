@@ -132,7 +132,7 @@ const PragaPage = () => {
  <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
  Protocolo técnico com produtos ANVISA
  </p>
- <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
  {praga.metodo.map((m, i) => (
  <div key={m.titulo} className="bg-muted/40 rounded-xl p-6 border border-border">
  <div className="w-10 h-10 rounded-lg bg-primary text-primary-foreground flex items-center justify-center font-bold mb-4">
