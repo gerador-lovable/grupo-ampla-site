@@ -133,6 +133,7 @@ const ContactSection = () => {
                 <p className="font-bold text-foreground">WhatsApp</p>
                 <a
                   href={buildRedirectUrl({ servico: "dedetizacao" })}
+                  onClick={() => trackWhatsAppClick({ servico: "dedetizacao" })}
                   className="text-primary hover:underline"
                 >
                   (41) 99512-1583
