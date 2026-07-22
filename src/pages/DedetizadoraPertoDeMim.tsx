@@ -13,6 +13,8 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 import { bairros } from "@/data/bairros";
 import { cidades } from "@/data/cidades";
+import HeroBackground from "@/components/HeroBackground";
+import { heroImages } from "@/data/heros-images";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
@@ -66,8 +68,9 @@ const DedetizadoraPertoDeMim = () => {
 
       <Header />
 
-      <section className="relative pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
-        <div className="container px-4">
+      <section className="relative overflow-hidden pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
+        <HeroBackground src={heroImages.pertoDeMim} />
+        <div className="relative z-10 container px-4">
           <div className="max-w-3xl">
             <Breadcrumbs items={[{ label: "Dedetizadora perto de mim" }]} tone="dark" />
             <div className="inline-flex items-center gap-2 bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6">

@@ -29,6 +29,8 @@ import DesGuaranteeSection from "@/components/desentupidora/DesGuaranteeSection"
 import ContactSection from "@/components/ContactSection";
 import StatsSection from "@/components/StatsSection";
 import BlogHighlightSection from "@/components/BlogHighlightSection";
+import HeroBackground from "@/components/HeroBackground";
+import { servicoEspecialHero } from "@/data/heros-images";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
@@ -63,6 +65,7 @@ const ServicoEspecialPage = () => {
  const canonical = `${BASE_URL}/servicos/${servico.slug}`;
  const whatsapp = buildRedirectUrl({ servico: "dedetizacao" });
  const Icon = iconMap[servico.icone];
+ const heroBg = servicoEspecialHero[servico.slug];
 
  const faqSchema = {
  "@context": "https://schema.org",
@@ -103,8 +106,9 @@ const ServicoEspecialPage = () => {
 
  <Header />
 
- <section className="relative pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
- <div className="container px-4">
+ <section className="relative overflow-hidden pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
+ {heroBg && <HeroBackground src={heroBg} />}
+ <div className="relative z-10 container px-4">
  <div className="max-w-3xl">
   <Breadcrumbs
    items={[

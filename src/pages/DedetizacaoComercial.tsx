@@ -9,6 +9,8 @@ import UrgencyBar from "@/components/UrgencyBar";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
+import HeroBackground from "@/components/HeroBackground";
+import { heroImages } from "@/data/heros-images";
 
 const WHATSAPP_REDIRECT = buildRedirectUrl({ servico: "dedetizacao" });
 
@@ -125,8 +127,9 @@ const DedetizacaoComercial = () => {
  <Header />
 
  {/* Hero */}
- <section className="relative pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
- <div className="container px-4">
+ <section className="relative overflow-hidden pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
+ <HeroBackground src={heroImages.comercial} />
+ <div className="relative z-10 container px-4">
  <div className="max-w-3xl">
  <div className="inline-block bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
  Empresa de Dedetização · MIP para empresas

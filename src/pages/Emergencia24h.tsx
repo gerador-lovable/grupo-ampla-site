@@ -8,6 +8,8 @@ import TestimonialsModule from "@/components/TestimonialsModule";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
+import HeroBackground from "@/components/HeroBackground";
+import { heroImages } from "@/data/heros-images";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 const canonical = `${BASE_URL}/emergencia-24h`;
@@ -116,8 +118,9 @@ const Emergencia24h = () => {
 
  <Header />
 
- <section className="relative pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#7a1010] via-destructive to-accent">
- <div className="container px-4">
+ <section className="relative overflow-hidden pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#7a1010] via-destructive to-accent">
+ <HeroBackground src={heroImages.emergencia} tone="red" />
+ <div className="relative z-10 container px-4">
  <div className="max-w-3xl">
  <div className="inline-flex items-center gap-2 bg-white/15 text-white font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
  <Zap className="w-4 h-4" /> Plantão 24 horas · 7 dias por semana

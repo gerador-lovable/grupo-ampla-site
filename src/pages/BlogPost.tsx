@@ -10,6 +10,8 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 import { findPost, blogPosts } from "@/data/blogPosts";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import HeroBackground from "@/components/HeroBackground";
+import { heroImages } from "@/data/heros-images";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
@@ -65,19 +67,24 @@ const BlogPost = () => {
 
       <Header />
 
-      <article className="pt-32 md:pt-40 pb-16 bg-background">
+      <section className="relative overflow-hidden pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
+        <HeroBackground src={heroImages.blog} />
+        <div className="relative z-10 container px-4 max-w-3xl">
+          <Breadcrumbs items={[{ label: "Blog", to: "/blog" }, { label: post.titulo }]} tone="dark" />
+          <div className="flex items-center gap-3 text-xs text-primary-foreground/80 mb-4 mt-2">
+            <span className="bg-accent/20 text-accent px-2 py-0.5 rounded-full font-semibold">{post.categoria}</span>
+            <span className="inline-flex items-center gap-1"><Clock className="w-3 h-3" /> {post.leitura}</span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-primary-foreground leading-[1.1] mb-6 drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]">{post.titulo}</h1>
+          <p className="text-lg text-primary-foreground/90 leading-relaxed max-w-2xl drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]">{post.resumo}</p>
+        </div>
+      </section>
+
+      <article className="pt-16 pb-16 bg-background">
         <div className="container px-4 max-w-3xl">
-          <Breadcrumbs items={[{ label: "Blog", to: "/blog" }, { label: post.titulo }]} />
           <Link to="/blog" className="inline-flex items-center gap-2 text-primary font-semibold mb-6 hover:underline">
             <ArrowLeft className="w-4 h-4" /> Voltar ao blog
           </Link>
-          <div className="flex items-center gap-3 text-xs text-muted-foreground mb-4">
-            <span className="bg-primary/10 text-primary px-2 py-0.5 rounded-full font-semibold">{post.categoria}</span>
-            <span className="inline-flex items-center gap-1"><Clock className="w-3 h-3" /> {post.leitura}</span>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-foreground leading-tight mb-6">{post.titulo}</h1>
-          <p className="text-lg text-muted-foreground mb-10 leading-relaxed">{post.resumo}</p>
-
           <div className="prose prose-lg max-w-none">
             {post.secoes.map((s) => (
               <div key={s.h2} className="mb-10">

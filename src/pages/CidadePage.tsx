@@ -15,6 +15,8 @@ import { pragas } from "@/data/pragas";
 import { servicosDesentupimento } from "@/data/servicosDesentupimento";
 import { bairros } from "@/data/bairros";
 import type { DepoimentoTag } from "@/data/depoimentos";
+import HeroBackground from "@/components/HeroBackground";
+import { heroImages } from "@/data/heros-images";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
@@ -52,8 +54,9 @@ const CidadePage = () => {
 
  <Header />
 
- <section className="relative pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
- <div className="container px-4">
+ <section className="relative overflow-hidden pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
+ <HeroBackground src={heroImages.cidade} />
+ <div className="relative z-10 container px-4">
  <div className="max-w-3xl">
  <div className="inline-flex items-center gap-2 bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
  <MapPin className="w-4 h-4" /> Atendimento em {cidade.nome} - {cidade.regiao}
