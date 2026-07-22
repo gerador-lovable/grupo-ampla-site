@@ -83,13 +83,10 @@ const ServicesSection = () => {
  </p>
  </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5">
           {services.map((service, i) => {
-            const isLast = i === services.length - 1;
-            const isOrphan = isLast && services.length % 3 === 1;
-            const spanClass = isOrphan
-              ? "lg:col-span-2 lg:col-start-3"
-              : "lg:col-span-2";
+            // 7 cards: primeira linha 4 cards (span 3), segunda linha 3 cards (span 4)
+            const spanClass = i < 4 ? "lg:col-span-3" : "lg:col-span-4";
             return (
             <Card key={service.title} className={`${spanClass} border border-border bg-surface shadow-card hover:shadow-elegant hover:-translate-y-1 transition-all duration-300 overflow-hidden group rounded-2xl`}>
  {service.image ? (
