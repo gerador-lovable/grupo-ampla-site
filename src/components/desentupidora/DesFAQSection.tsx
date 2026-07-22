@@ -11,7 +11,7 @@ const faqs = [
  },
  {
  q: "Atendem de madrugada e no feriado?",
- a: "Sim, 24 horas, inclusive domingo, feriado e virada de ano. Mesmo preço, mesma equipe.",
+ a: "Sim, 24 horas, inclusive domingo, feriado e virada de ano. Sem taxa extra, mesma equipe.",
  },
  {
  q: "Se entupir de novo, vocês voltam?",

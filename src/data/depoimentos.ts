@@ -87,7 +87,7 @@ export const depoimentos: Depoimento[] = [
  servico: "Desentupimento de Esgoto",
  estrelas: 5,
  texto:
- "Esgoto entupido em pleno domingo. Ligamos e em menos de 2 horas estavam aqui com o hidrojato. Preço justo e serviço impecável. Salvaram nosso final de semana.",
+ "Esgoto entupido em pleno domingo. Ligamos e em menos de 2 horas estavam aqui com o hidrojato. Atendimento impecável, salvaram nosso final de semana.",
  data: "2025-11-30",
  tags: [
  "desentupimento",

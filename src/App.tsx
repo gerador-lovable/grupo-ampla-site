@@ -16,7 +16,6 @@ const CidadePage = lazy(() => import("./pages/CidadePage.tsx"));
 const BairroPage = lazy(() => import("./pages/BairroPage.tsx"));
 const Emergencia24h = lazy(() => import("./pages/Emergencia24h.tsx"));
 const DedetizadoraPertoDeMim = lazy(() => import("./pages/DedetizadoraPertoDeMim.tsx"));
-const Precos = lazy(() => import("./pages/Precos.tsx"));
 const Blog = lazy(() => import("./pages/Blog.tsx"));
 const BlogPost = lazy(() => import("./pages/BlogPost.tsx"));
 const RedirectWhatsApp = lazy(() => import("./pages/RedirectWhatsApp.tsx"));
@@ -49,7 +48,6 @@ const App = () => (
           <Route path="/bairros/:bairro" element={<BairroPage />} />
           <Route path="/emergencia-24h" element={<Emergencia24h />} />
           <Route path="/dedetizadora-perto-de-mim" element={<DedetizadoraPertoDeMim />} />
-          <Route path="/precos" element={<Precos />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/redirecionando" element={<RedirectWhatsApp />} />

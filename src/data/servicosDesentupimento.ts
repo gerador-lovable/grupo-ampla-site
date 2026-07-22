@@ -42,7 +42,7 @@ export const servicosDesentupimento: ServicoDes[] = [
  "Atendimento em até 2h em Curitiba",
  "Equipamento próprio, sem terceirização",
  "Sem quebra-quebra: preservamos piso e parede",
- "Preço fechado antes de iniciar o serviço",
+ "Orçamento fechado antes de iniciar o serviço",
  ],
  garantia: "Garantia de 90 dias no serviço de desobstrução. Se voltar a entupir no mesmo ponto, retornamos sem custo.",
  faqs: [
@@ -77,7 +77,7 @@ export const servicosDesentupimento: ServicoDes[] = [
  diferenciais: [
  "Atendimento no mesmo dia",
  "Sem retirar bancada ou gabinete",
- "Preço fechado antes do serviço",
+ "Orçamento fechado antes do serviço",
  "Garantia de 90 dias",
  ],
  garantia: "90 dias de garantia. Se voltar a entupir no mesmo ponto, retornamos sem custo adicional.",
@@ -147,7 +147,7 @@ export const servicosDesentupimento: ServicoDes[] = [
  diferenciais: [
  "Atendimento no mesmo dia",
  "Equipamento próprio",
- "Preço fechado antes do serviço",
+ "Orçamento fechado antes do serviço",
  "Garantia de 90 dias",
  ],
  garantia: "90 dias de garantia no ponto tratado.",

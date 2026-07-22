@@ -6,7 +6,7 @@ const testimonials = [
     location: "Água Verde, Curitiba",
     service: "Dedetização Residencial",
     stars: 5,
-    text: "A Ampla resolveu nosso problema de baratas em 24 horas. Profissionais pontuais, educados e o preço foi justo. Recomendo demais!",
+    text: "A Ampla resolveu nosso problema de baratas em 24 horas. Profissionais pontuais, educados e o atendimento foi impecável. Recomendo demais!",
   },
   {
     name: "Carlos Oliveira",
@@ -20,7 +20,7 @@ const testimonials = [
     location: "Bacacheri, Curitiba",
     service: "Dedetização Condominial",
     stars: 5,
-    text: "Atenderam todo o nosso condomínio com preço especial. A equipe foi muito profissional. Estamos livres das pragas há meses.",
+    text: "Atenderam todo o nosso condomínio com condições especiais. A equipe foi muito profissional. Estamos livres das pragas há meses.",
   },
 ];
 

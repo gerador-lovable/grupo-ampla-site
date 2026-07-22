@@ -299,12 +299,12 @@ export const servicosEspeciais: ServicoEspecial[] = [
  h1: "Dedetização de Condomínio em Curitiba, Contrato com Síndico",
  title: "Dedetização de Condomínio em Curitiba | Ampla, Contrato e Laudo",
  description:
- "Dedetização condominial em Curitiba: áreas comuns, garagem, lixeiras e apartamentos no mesmo cronograma. Contrato com síndico, preço por unidade, laudo e nota fiscal.",
+  "Dedetização condominial em Curitiba: áreas comuns, garagem, lixeiras e apartamentos no mesmo cronograma. Contrato com síndico, orçamento por unidade, laudo e nota fiscal.",
  icone: "building",
  intro:
  "Morador reclamando de barata na garagem, rato na lixeira, formiga no hall? A Ampla atende condomínios em Curitiba com cronograma único para áreas comuns e apartamentos, contrato mensal ou avulso e laudo técnico entregue ao síndico.",
  contexto:
- "Trabalhamos com síndicos e administradoras de Curitiba e RMC no controle integrado de pragas em condomínios residenciais e comerciais. Cobrimos garagem, lixeiras, shafts, hall, salão de festas, playground, jardins e, quando contratado, apartamentos individuais no mesmo dia, com preço fechado por unidade e emissão de nota fiscal e laudo técnico assinado por responsável.",
+  "Trabalhamos com síndicos e administradoras de Curitiba e RMC no controle integrado de pragas em condomínios residenciais e comerciais. Cobrimos garagem, lixeiras, shafts, hall, salão de festas, playground, jardins e, quando contratado, apartamentos individuais no mesmo dia, com orçamento fechado por unidade e emissão de nota fiscal e laudo técnico assinado por responsável.",
  sinais: [
  "Reclamação recorrente de moradores sobre baratas ou ratos",
  "Presença de pombos, morcegos ou insetos na área comum",
@@ -322,7 +322,7 @@ export const servicosEspeciais: ServicoEspecial[] = [
  {
  titulo: "Reunião técnica com o síndico",
  texto:
- "Levantamos plantas, histórico e pontos críticos. Apresentamos escopo, cronograma e preço por unidade, sem custo.",
+  "Levantamos plantas, histórico e pontos críticos. Apresentamos escopo, cronograma e orçamento por unidade, sem custo.",
  },
  {
  titulo: "Aplicação em áreas comuns",
@@ -344,8 +344,8 @@ export const servicosEspeciais: ServicoEspecial[] = [
  "6 meses de garantia para as áreas tratadas e retorno sem custo em caso de reincidência. Contratos de manutenção têm SLA de atendimento em até 24h para chamados extras.",
  faqs: [
  {
- q: "Como funciona o preço para condomínio?",
- a: "Áreas comuns têm preço fechado pela metragem. Apartamentos têm valor por unidade (com desconto para quem adere no mesmo dia). O síndico aprova em orçamento formal antes de qualquer serviço.",
+ q: "Como funciona o orçamento para condomínio?",
+ a: "Áreas comuns têm orçamento fechado pela metragem. Apartamentos têm valor por unidade (com desconto para quem adere no mesmo dia). O síndico aprova em orçamento formal antes de qualquer serviço.",
  },
  {
  q: "Vocês emitem laudo para a vigilância sanitária?",
@@ -357,7 +357,7 @@ export const servicosEspeciais: ServicoEspecial[] = [
  },
  {
  q: "Fazem contrato mensal ou só serviço avulso?",
- a: "Ambos. A maioria dos condomínios opta por contrato trimestral com preço reduzido, mas atendemos também emergências pontuais.",
+ a: "Ambos. A maioria dos condomínios opta por contrato trimestral com condições reduzidas, mas atendemos também emergências pontuais.",
  },
  ],
  cta: "Falar com técnico para o condomínio",
@@ -553,7 +553,7 @@ export const servicosEspeciais: ServicoEspecial[] = [
    "Contrato mensal com SLA de 24h. Substituímos serviços em caso de reprovação em auditoria ou fiscalização.",
   faqs: [
    {
-    q: "Como é o preço para supermercado?",
+     q: "Como funciona o orçamento para supermercado?",
     a: "Cobramos por metragem total e número de porta-iscas monitorados. Orçamento formal por escrito antes do início do contrato, sem custo.",
    },
    {
@@ -833,7 +833,7 @@ export const servicosEspeciais: ServicoEspecial[] = [
    "Contrato mensal com SLA de 12h para caso de percevejo. Retorno sem custo em caso de reincidência dentro do contrato.",
   faqs: [
    {
-    q: "Como é o preço para hotel?",
+     q: "Como funciona o orçamento para hotel?",
     a: "Cobramos por número de apartamentos e áreas comuns, com desconto para contrato mensal. Orçamento formal antes de fechar contrato.",
    },
    {

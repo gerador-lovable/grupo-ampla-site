@@ -6,8 +6,8 @@ const differentials = [
  { icon: Shield, title: "Entupiu de novo? Voltamos", description: "90 dias de garantia por escrito, sem cobrar retorno." },
  { icon: Wrench, title: "Sem quebrar piso", description: "Máquina rotativa e hidrojato pelo próprio ralo." },
  { icon: CreditCard, title: "Paga em 12x", description: "PIX, dinheiro, débito ou crédito na hora." },
- { icon: FileText, title: "Preço antes do serviço", description: "Orçamento fechado no WhatsApp, sem surpresa na conta." },
- { icon: Clock, title: "24h, incluindo feriado", description: "Madrugada e domingo pelo mesmo preço." },
+ { icon: FileText, title: "Orçamento antes do serviço", description: "Valor fechado no WhatsApp, sem surpresa na conta." },
+ { icon: Clock, title: "24h, incluindo feriado", description: "Madrugada e domingo sem taxa extra." },
  { icon: HardHat, title: "Uniformizado e identificado", description: "Técnico com crachá, EPI e caminhão da empresa." },
 ];
 

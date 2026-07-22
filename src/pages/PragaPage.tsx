@@ -13,7 +13,9 @@ import { buildRedirectUrl } from "@/lib/whatsapp";
 import { findPraga, pragas } from "@/data/pragas";
 import type { DepoimentoTag } from "@/data/depoimentos";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import PrecoBlock from "@/components/PrecoBlock";
+import DesDifferentialsSection from "@/components/desentupidora/DesDifferentialsSection";
+import DesGuaranteeSection from "@/components/desentupidora/DesGuaranteeSection";
+import ContactSection from "@/components/ContactSection";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
@@ -182,15 +184,7 @@ const PragaPage = () => {
  </div>
  </section>
 
- <PrecoBlock
-  titulo={`Preço da dedetização de ${praga.nome.toLowerCase()} em Curitiba`}
-  faixas={[
-   { label: "Apartamento até 60 m²", preco: "R$ 180 a R$ 240", detalhe: "Aplicação padrão com garantia de 6 meses" },
-   { label: "Casa ou apto 60 a 150 m²", preco: "R$ 240 a R$ 420", detalhe: "Cobre cozinha, banheiros, área de serviço e ralos" },
-   { label: "Comércio ou salão até 200 m²", preco: "R$ 350 a R$ 700", detalhe: "Com nota fiscal e certificado para vigilância" },
-   { label: "Condomínio ou área maior", preco: "sob orçamento", detalhe: "Envie a metragem no WhatsApp, retornamos em minutos" },
-  ]}
- />
+ <DesDifferentialsSection />
 
  {/* Garantia */}
  <section className="section-py bg-primary text-primary-foreground">
@@ -200,6 +194,8 @@ const PragaPage = () => {
  <p className="text-primary-foreground/90 text-lg">{praga.garantia}</p>
  </div>
  </section>
+
+ <DesGuaranteeSection />
 
  {/* FAQ */}
   <section className="section-py bg-background">
@@ -269,6 +265,7 @@ const PragaPage = () => {
  </section>
 
  <OutrosServicosBlock bg="background" />
+ <ContactSection />
  <FooterSection />
  <WhatsAppFloat />
  </div>
