@@ -1,6 +1,8 @@
 interface Props {
   src: string;
   alt?: string;
+  /** "blue" (padrão) usa overlay azul-marinho; "red" usa overlay vinho para emergência. */
+  tone?: "blue" | "red";
 }
 
 /**
@@ -11,7 +13,8 @@ interface Props {
  * Deve ser colocado como primeiro filho de uma <section> com
  * `relative overflow-hidden` e o conteúdo dentro precisa ter `relative z-10`.
  */
-const HeroBackground = ({ src, alt = "" }: Props) => {
+const HeroBackground = ({ src, alt = "", tone = "blue" }: Props) => {
+  const overlayColor = tone === "red" ? "#4a0a0a" : "#0a1a4a";
   return (
     <>
       <div
@@ -33,11 +36,15 @@ const HeroBackground = ({ src, alt = "" }: Props) => {
       />
       <div
         aria-hidden
-        className="absolute inset-0 pointer-events-none bg-gradient-to-r from-[#0a1a4a] via-[#0a1a4a]/90 md:via-[#0a1a4a]/70 to-transparent"
+        className="absolute inset-0 pointer-events-none bg-gradient-to-r to-transparent"
+        style={{
+          backgroundImage: `linear-gradient(to right, ${overlayColor}, ${overlayColor}E6 40%, transparent)`,
+        }}
       />
       <div
         aria-hidden
-        className="md:hidden absolute inset-0 pointer-events-none bg-[#0a1a4a]/70"
+        className="md:hidden absolute inset-0 pointer-events-none"
+        style={{ backgroundColor: `${overlayColor}B3` }}
       />
     </>
   );
