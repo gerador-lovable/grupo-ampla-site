@@ -145,7 +145,7 @@ const Emergencia24h = () => {
  </div>
  </section>
 
- <section className="bg-primary text-primary-foreground py-4">
+ <section className="bg-primary text-primary-foreground section-py">
  <div className="container px-4 flex flex-wrap items-center justify-center gap-6 text-sm md:text-base font-semibold">
  <span className="inline-flex items-center gap-2"><Clock className="w-5 h-5 text-accent" /> Resposta em 2h</span>
  <span className="inline-flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-accent" /> Garantia por escrito</span>
@@ -153,7 +153,7 @@ const Emergencia24h = () => {
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-background">
+  <section className="section-py bg-background">
  <div className="container px-4">
  <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-4">
  Quando ligar para a emergência
@@ -182,7 +182,7 @@ const Emergencia24h = () => {
  bg="muted"
  />
 
- <section className="py-16 md:py-20 bg-background">
+ <section className="section-py bg-background">
  <div className="container px-4 max-w-3xl">
  <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-10">
  Perguntas frequentes sobre emergência
@@ -198,7 +198,7 @@ const Emergencia24h = () => {
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-destructive text-white">
+ <section className="section-py bg-destructive text-white">
  <div className="container px-4 max-w-3xl text-center">
  <h2 className="text-2xl md:text-4xl font-bold mb-4">Precisa de ajuda agora?</h2>
  <p className="text-white/90 mb-8 text-lg">
