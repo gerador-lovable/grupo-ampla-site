@@ -131,7 +131,7 @@ const DedetizacaoComercial = () => {
  <div className="inline-block bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
  Empresa de Dedetização · MIP para empresas
  </div>
- <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary-foreground leading-[1.1] mb-6">
+ <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-primary-foreground leading-[1.1] mb-6">
  Dedetização Comercial em Curitiba com Manejo Integrado de Pragas (MIP)
  </h1>
  <p className="text-lg text-primary-foreground/90 mb-8 leading-relaxed">
