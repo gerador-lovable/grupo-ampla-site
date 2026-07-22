@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://grupo-ampla-site.lovable.app/sitemap.xml
+Sitemap: https://www.grupoampladedetiza.com.br/sitemap.xml
