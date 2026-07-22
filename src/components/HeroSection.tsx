@@ -97,7 +97,7 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-lg pt-8 border-t border-white/10 animate-fade-up" style={{ animationDelay: "0.45s" }}>
+            <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-lg pt-8 mb-8 border-t border-white/10 animate-fade-up" style={{ animationDelay: "0.45s" }}>
               {stats.map((s) => (
                 <div key={s.label}>
                   <div className="flex items-baseline gap-1.5">
