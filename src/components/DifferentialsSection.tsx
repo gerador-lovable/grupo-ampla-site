@@ -1,14 +1,14 @@
 import { Award, Zap, Shield, BadgeCheck, CreditCard, FileText, Leaf, HardHat } from "lucide-react";
 
 const differentials = [
-  { icon: Award, title: "35 anos de experiência", description: "Tradição e know-how técnico acumulado desde 1989." },
-  { icon: Zap, title: "Atendimento rápido", description: "Chegamos em até 2h em toda Curitiba e região." },
-  { icon: Shield, title: "Garantia real", description: "6 meses de garantia formal em todos os serviços." },
-  { icon: BadgeCheck, title: "Produtos certificados", description: "Aprovados pela ANVISA, seguros para família e pets." },
-  { icon: CreditCard, title: "Parcelamento em 12x", description: "No cartão de crédito, sem burocracia." },
-  { icon: FileText, title: "Laudo técnico", description: "Documentação completa para vigilância e síndicos." },
-  { icon: Leaf, title: "Eco-friendly", description: "Biodegradáveis sempre que a operação permite." },
-  { icon: HardHat, title: "Equipe especializada", description: "Técnicos treinados, uniformizados e certificados." },
+  { icon: Award, title: "35 anos na mesma família", description: "Fundada em 1989 em Curitiba. Você fala com o técnico, não com um call center." },
+  { icon: Zap, title: "Técnico no seu endereço em 2h", description: "Base própria em Colombo cobre Curitiba e RMC no mesmo dia útil." },
+  { icon: Shield, title: "Voltou praga? Voltamos sem cobrar", description: "6 meses de garantia por escrito no laudo. Sem letra miúda." },
+  { icon: BadgeCheck, title: "Produto sem cheiro forte", description: "Registrado na ANVISA. Você volta pra casa no mesmo dia — criança e pet inclusos." },
+  { icon: CreditCard, title: "Parcela em 12x no cartão", description: "PIX, débito, crédito e dinheiro. Sem entrada, sem burocracia." },
+  { icon: FileText, title: "Laudo assinado no ato", description: "Documento aceito por vigilância sanitária, síndico e auditoria." },
+  { icon: Leaf, title: "Menos veneno onde dá", description: "Usamos gel e isca em vez de spray sempre que o alvo permite." },
+  { icon: HardHat, title: "Técnico uniformizado e treinado", description: "Mesma equipe da última visita. Chega quando marcou, sai só quando terminou." },
 ];
 
 const DifferentialsSection = () => {
@@ -18,13 +18,13 @@ const DifferentialsSection = () => {
       <div className="container px-4 relative">
         <div className="max-w-2xl mb-16">
           <span className="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-primary mb-4">
-            Por que a Ampla
+            Por que Ampla
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground leading-[1.05] text-balance">
-            Padrão técnico que faz diferença<span className="text-accent">.</span>
+            Não é o mais barato. É o que resolve<span className="text-accent">.</span>
           </h2>
           <p className="text-muted-foreground text-lg mt-5 max-w-xl">
-            Cada visita segue protocolo escrito, produto rastreado e laudo assinado. Nada de improviso.
+            Cada visita tem protocolo escrito, produto rastreado e laudo assinado. Se voltar praga em 6 meses, voltamos sem cobrar.
           </p>
         </div>
 
