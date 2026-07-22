@@ -23,6 +23,11 @@
 - [Dedetização para Escolas e Creches](/servicos/dedetizacao-escolas): Aplicação em recesso, produto sem cheiro, seguro para crianças.
 - [Dedetização para Hospitais e Clínicas](/servicos/dedetizacao-hospitais-clinicas): Padrão RDC ANVISA, aceito por acreditação ONA.
 - [Dedetização para Hotéis e Pousadas](/servicos/dedetizacao-hoteis): Protocolo específico para percevejo com laudo por apartamento.
+- [Sanitização de Ambientes](/servicos/sanitizacao): Nebulização ULV contra vírus, bactérias e fungos com certificado técnico.
+- [Limpeza de Telhado](/servicos/limpeza-de-telhado): Remoção de limo, musgo e detritos com equipe NR-35.
+- [Limpeza de Calha](/servicos/limpeza-de-calha): Desobstrução de calhas e condutores, prevenção de infiltrações.
+- [Limpeza de Sótão e Forro](/servicos/limpeza-de-sotao): Remoção de sujeira acumulada, fezes de rato e pombo, com desinfecção.
+- [Laudo Bacteriológico da Água](/servicos/laudo-bacteriologico): Coleta técnica e análise em laboratório acreditado.
 
 ## Pragas atendidas
 - [Dedetização de baratas](/dedetizacao/baratas)

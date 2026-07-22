@@ -116,6 +116,7 @@ const PragaPage = () => {
  </section>
 
  <UrgencyBar />
+      <StatsSection />
 
  {/* Contexto */}
   <section className="section-py bg-background">
@@ -267,6 +268,7 @@ const PragaPage = () => {
  </section>
 
  <OutrosServicosBlock bg="background" />
+      <BlogHighlightSection />
  <ContactSection />
  <FooterSection />
  <WhatsAppFloat />

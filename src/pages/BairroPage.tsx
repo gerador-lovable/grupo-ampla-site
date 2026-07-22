@@ -255,6 +255,7 @@ const BairroPage = () => {
  </section>
 
  <OutrosServicosBlock bg="background" />
+      <BlogHighlightSection />
  <ContactSection />
  <FooterSection />
  <WhatsAppFloat />
