@@ -28,6 +28,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Suspense fallback={<div className="min-h-screen bg-background" />}>
         <Routes>
           <Route path="/" element={<Index />} />

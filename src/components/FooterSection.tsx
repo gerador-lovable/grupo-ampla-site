@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Instagram, MapPin, Phone, Shield, BadgeCheck, Clock } from "lucide-react";
 import logo from "@/assets/logo-ampla.webp";
 
