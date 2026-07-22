@@ -12,7 +12,7 @@ import { buildRedirectUrl } from "@/lib/whatsapp";
 import { findServicoDes, servicosDesentupimento } from "@/data/servicosDesentupimento";
 import type { DepoimentoTag } from "@/data/depoimentos";
 
-const BASE_URL = "https://grupo-ampla-site.lovable.app";
+const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
 const ServicoDesentupimentoPage = () => {
  const { servico: slug } = useParams();

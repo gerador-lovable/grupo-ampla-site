@@ -24,7 +24,7 @@ import { buildRedirectUrl } from "@/lib/whatsapp";
 import { findServicoEspecial } from "@/data/servicosEspeciais";
 import type { DepoimentoTag } from "@/data/depoimentos";
 
-const BASE_URL = "https://grupo-ampla-site.lovable.app";
+const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
 const iconMap = {
  droplet: Droplet,

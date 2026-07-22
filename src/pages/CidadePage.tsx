@@ -16,7 +16,7 @@ import { servicosDesentupimento } from "@/data/servicosDesentupimento";
 import { bairros } from "@/data/bairros";
 import type { DepoimentoTag } from "@/data/depoimentos";
 
-const BASE_URL = "https://grupo-ampla-site.lovable.app";
+const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
 const CidadePage = () => {
  const { cidade: slug } = useParams();

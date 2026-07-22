@@ -39,10 +39,10 @@ const Index = () => {
       <Helmet>
         <title>Dedetização Curitiba | Ampla - 35 Anos de Experiência</title>
         <meta name="description" content="Dedetização profissional em Curitiba e Colombo. Atendimento 24h, garantia de 6 meses. Orçamento grátis via WhatsApp. Há 35 anos protegendo lares." />
-        <link rel="canonical" href="https://grupo-ampla-site.lovable.app/" />
+        <link rel="canonical" href="https://www.grupoampladedetiza.com.br/" />
         <meta property="og:title" content="Dedetização Curitiba | Ampla - 35 Anos de Experiência" />
         <meta property="og:description" content="Dedetização profissional em Curitiba e Colombo. Atendimento 24h, garantia de 6 meses. Há 35 anos protegendo lares." />
-        <meta property="og:url" content="https://grupo-ampla-site.lovable.app/" />
+        <meta property="og:url" content="https://www.grupoampladedetiza.com.br/" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Header />
