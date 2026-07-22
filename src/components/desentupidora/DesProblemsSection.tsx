@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 
-import piaImg from "@/assets/problems/pia-entupida.jpg";
-import vasoImg from "@/assets/problems/vaso-sanitario.jpg";
-import raloImg from "@/assets/problems/ralo-entupido.jpg";
-import gorduraImg from "@/assets/problems/caixa-gordura.jpg";
-import esgotoImg from "@/assets/problems/esgoto-entupido.jpg";
-import colunaImg from "@/assets/problems/coluna-coletora.jpg";
+import piaImg from "@/assets/problems/pia-entupida.webp";
+import vasoImg from "@/assets/problems/vaso-sanitario.webp";
+import raloImg from "@/assets/problems/ralo-entupido.webp";
+import gorduraImg from "@/assets/problems/caixa-gordura.webp";
+import esgotoImg from "@/assets/problems/esgoto-entupido.webp";
+import colunaImg from "@/assets/problems/coluna-coletora.webp";
 
 const WHATSAPP_REDIRECT = buildRedirectUrl({ servico: "desentupimento" });
 

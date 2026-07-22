@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 
-import baratasImg from "@/assets/pests/baratas.jpg";
-import ratosImg from "@/assets/pests/ratos.jpg";
-import cupinsImg from "@/assets/pests/cupins.jpg";
-import formigasImg from "@/assets/pests/formigas.jpg";
-import mosquitosImg from "@/assets/pests/mosquitos.jpg";
-import aranhasImg from "@/assets/pests/aranhas.jpg";
-import pulgasImg from "@/assets/pests/pulgas.jpg";
-import tracasImg from "@/assets/pests/tracas.jpg";
+import baratasImg from "@/assets/pests/baratas.webp";
+import ratosImg from "@/assets/pests/ratos.webp";
+import cupinsImg from "@/assets/pests/cupins.webp";
+import formigasImg from "@/assets/pests/formigas.webp";
+import mosquitosImg from "@/assets/pests/mosquitos.webp";
+import aranhasImg from "@/assets/pests/aranhas.webp";
+import pulgasImg from "@/assets/pests/pulgas.webp";
+import tracasImg from "@/assets/pests/tracas.webp";
 
 const WHATSAPP_REDIRECT = buildRedirectUrl({ servico: "dedetizacao" });
 
