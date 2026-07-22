@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Building2, ClipboardCheck, ShieldCheck, FlaskConical, FileText, Repeat, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
+import OutrosServicosBlock from "@/components/OutrosServicosBlock";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import UrgencyBar from "@/components/UrgencyBar";
 import { Button } from "@/components/ui/button";
@@ -295,6 +296,7 @@ const DedetizacaoComercial = () => {
         </div>
       </section>
 
+      <OutrosServicosBlock bg="background" />
       <FooterSection />
       <WhatsAppFloat />
     </div>
