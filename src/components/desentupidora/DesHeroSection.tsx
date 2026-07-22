@@ -110,7 +110,7 @@ const DesHeroSection = () => {
  <div className="hidden lg:block" aria-hidden />
  </div>
 
-        <div className="hidden lg:block absolute bottom-0 right-4 z-10 w-[40%] max-w-[520px] h-[80vh] max-h-[720px] pointer-events-none animate-fade-in" style={{ animationDelay: "0.2s" }}>
+        <div className="hidden lg:block absolute bottom-0 right-4 z-10 w-[40%] max-w-[520px] h-[80vh] max-h-[720px] -mb-[30px] pointer-events-none animate-fade-in" style={{ animationDelay: "0.2s" }}>
           <div aria-hidden className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[110%] h-[85%] bg-gradient-to-t from-accent/25 via-primary-glow/10 to-transparent rounded-t-[50%] blur-2xl" />
           <img
             src={heroTechnician}
