@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Desentupidora from "./pages/Desentupidora.tsx";
 import DedetizacaoComercial from "./pages/DedetizacaoComercial.tsx";
+import ServicoEspecialPage from "./pages/ServicoEspecialPage.tsx";
 import PragaPage from "./pages/PragaPage.tsx";
 import ServicoDesentupimentoPage from "./pages/ServicoDesentupimentoPage.tsx";
 import CidadePage from "./pages/CidadePage.tsx";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/desentupidora" element={<Desentupidora />} />
           <Route path="/servicos/dedetizacao-comercial" element={<DedetizacaoComercial />} />
+          <Route path="/servicos/:slug" element={<ServicoEspecialPage />} />
           <Route path="/dedetizacao/:praga" element={<PragaPage />} />
           <Route path="/desentupidora/:servico" element={<ServicoDesentupimentoPage />} />
           <Route path="/atendimento/:cidade" element={<CidadePage />} />
