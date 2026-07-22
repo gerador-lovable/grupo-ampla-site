@@ -125,7 +125,7 @@ const DedetizacaoComercial = () => {
  <Header />
 
  {/* Hero */}
- <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
+ <section className="relative pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
  <div className="container px-4">
  <div className="max-w-3xl">
  <div className="inline-block bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
@@ -168,7 +168,7 @@ const DedetizacaoComercial = () => {
  <UrgencyBar />
 
  {/* What is MIP */}
- <section className="py-16 md:py-20 bg-background">
+  <section className="section-py bg-background">
  <div className="container px-4 max-w-4xl">
  <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-6">
  O que é Manejo Integrado de Pragas (MIP)?
@@ -189,7 +189,7 @@ const DedetizacaoComercial = () => {
  </section>
 
  {/* MIP Steps */}
- <section className="py-16 md:py-20 bg-muted/40">
+  <section className="section-py bg-muted/40">
  <div className="container px-4">
  <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-4">
  Como funciona nosso protocolo MIP
@@ -212,7 +212,7 @@ const DedetizacaoComercial = () => {
  </section>
 
  {/* Compliance */}
- <section className="py-16 md:py-20 bg-background">
+  <section className="section-py bg-background">
  <div className="container px-4 max-w-4xl">
  <div className="flex items-center gap-3 mb-6">
  <ShieldCheck className="w-8 h-8 text-primary" />
@@ -236,7 +236,7 @@ const DedetizacaoComercial = () => {
  </section>
 
  {/* Segments */}
- <section className="py-16 md:py-20 bg-muted/40">
+ <section className="section-py bg-muted/40">
  <div className="container px-4 max-w-5xl">
  <div className="flex items-center gap-3 mb-6 justify-center">
  <Building2 className="w-8 h-8 text-primary" />
@@ -258,7 +258,7 @@ const DedetizacaoComercial = () => {
  </section>
 
  {/* FAQ */}
- <section className="py-16 md:py-20 bg-background">
+ <section className="section-py bg-background">
  <div className="container px-4 max-w-3xl">
  <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-10">
  Perguntas frequentes sobre dedetização comercial
@@ -275,7 +275,7 @@ const DedetizacaoComercial = () => {
  </section>
 
  {/* CTA */}
- <section className="py-16 md:py-20 bg-primary text-primary-foreground">
+ <section className="section-py bg-primary text-primary-foreground">
  <div className="container px-4 max-w-3xl text-center">
  <h2 className="text-2xl md:text-4xl font-bold mb-4">
  Solicite uma proposta de MIP para sua empresa

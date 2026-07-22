@@ -38,7 +38,7 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="container relative z-10 pt-32 md:pt-40 pb-16 md:pb-0 px-4">
+      <div className="container relative z-10 pt-32 md:pt-40 pb-[30px] md:pb-[30px] px-4">
         <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-8 items-center">
           {/* Left column */}
           <div className="text-primary-foreground pb-10 md:pb-0">

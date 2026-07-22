@@ -90,7 +90,7 @@ const BlogPost = () => {
       </article>
 
       {outros.length > 0 && (
-        <section className="py-16 bg-muted/40">
+        <section className="section-py bg-muted/40">
           <div className="container px-4 max-w-5xl">
             <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-10">Continue lendo</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

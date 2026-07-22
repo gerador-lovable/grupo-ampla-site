@@ -13,7 +13,7 @@ const differentials = [
 
 const DesDifferentialsSection = () => {
  return (
- <section className="py-16 md:py-20 bg-background">
+ <section className="section-py bg-background">
  <div className="container px-4">
  <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-4">
  Por que chamar a Ampla

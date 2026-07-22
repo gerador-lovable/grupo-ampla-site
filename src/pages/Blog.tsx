@@ -23,7 +23,7 @@ const Blog = () => {
 
  <Header />
 
- <section className="pt-32 md:pt-40 pb-12 bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
+ <section className="pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
  <div className="container px-4 max-w-4xl">
  <h1 className="text-3xl md:text-5xl font-extrabold text-primary-foreground mb-4">Blog Ampla</h1>
  <p className="text-lg text-primary-foreground/90">
@@ -32,7 +32,7 @@ const Blog = () => {
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-background">
+ <section className="section-py bg-background">
  <div className="container px-4 max-w-5xl">
  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
  {blogPosts.map((p) => (

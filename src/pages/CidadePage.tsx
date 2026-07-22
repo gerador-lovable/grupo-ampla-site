@@ -52,7 +52,7 @@ const CidadePage = () => {
 
  <Header />
 
- <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
+ <section className="relative pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
  <div className="container px-4">
  <div className="max-w-3xl">
  <div className="inline-flex items-center gap-2 bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
@@ -80,14 +80,14 @@ const CidadePage = () => {
 
  <UrgencyBar />
 
- <section className="py-16 md:py-20 bg-background">
+  <section className="section-py bg-background">
  <div className="container px-4 max-w-4xl">
  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Ampla em {cidade.nome}</h2>
  <p className="text-muted-foreground text-base md:text-lg leading-relaxed">{cidade.contexto}</p>
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-muted/40">
+  <section className="section-py bg-muted/40">
  <div className="container px-4 max-w-5xl">
  <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-10">Dedetização em {cidade.nome}</h2>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -101,7 +101,7 @@ const CidadePage = () => {
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-background">
+  <section className="section-py bg-background">
  <div className="container px-4 max-w-5xl">
  <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-10">Desentupidora em {cidade.nome}</h2>
  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -115,7 +115,7 @@ const CidadePage = () => {
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-muted/40">
+ <section className="section-py bg-muted/40">
  <div className="container px-4 max-w-4xl">
  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">Bairros atendidos em {cidade.nome}</h2>
  <div className="flex flex-wrap gap-3 justify-center">
@@ -148,7 +148,7 @@ const CidadePage = () => {
  bg="background"
  />
 
- <section className="py-16 md:py-20 bg-background">
+ <section className="section-py bg-background">
  <div className="container px-4 max-w-5xl">
  <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-10">Outras cidades atendidas</h2>
  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -162,7 +162,7 @@ const CidadePage = () => {
  </div>
  </section>
 
- <section className="py-16 md:py-20 bg-primary text-primary-foreground">
+ <section className="section-py bg-primary text-primary-foreground">
  <div className="container px-4 max-w-3xl text-center">
  <h2 className="text-2xl md:text-4xl font-bold mb-4">Precisa de atendimento em {cidade.nome}?</h2>
  <p className="text-primary-foreground/80 mb-8 text-lg">Fale agora pelo WhatsApp e receba orçamento em minutos.</p>

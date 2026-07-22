@@ -69,7 +69,7 @@ const services: ServiceCard[] = [
 
 const ServicesSection = () => {
  return (
- <section id="servicos" className="py-20 md:py-28 bg-surface-muted">
+ <section id="servicos" className="section-py bg-surface-muted">
  <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
  <div className="max-w-2xl mb-14">
  <span className="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-primary mb-4">

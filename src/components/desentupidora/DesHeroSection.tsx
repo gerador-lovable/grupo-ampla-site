@@ -36,7 +36,7 @@ const DesHeroSection = () => {
  }}
  />
 
- <div className="container relative z-10 pt-32 md:pt-40 pb-16 md:pb-0 px-4">
+ <div className="container relative z-10 pt-32 md:pt-40 pb-[30px] md:pb-[30px] px-4">
  <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-8 items-center">
  <div className="text-primary-foreground">
  <div className="inline-flex items-center gap-2 border border-white/15 bg-white/5 backdrop-blur-sm text-primary-foreground/90 text-xs font-medium tracking-[0.14em] uppercase px-3.5 py-1.5 rounded-full mb-8 animate-fade-in">

@@ -46,7 +46,7 @@ const OutrosServicosBlock = ({
   bg = "background",
 }: Props) => {
   return (
-    <section className={`py-16 md:py-20 ${bgClass[bg]}`}>
+    <section className={`section-py ${bgClass[bg]}`}>
       <div className="container px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-3">
           {titulo}

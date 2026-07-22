@@ -9,7 +9,7 @@ const seals = [
 
 const DesGuaranteeSection = () => {
  return (
- <section className="py-12 md:py-16 bg-trust text-trust-foreground">
+ <section className="section-py bg-trust text-trust-foreground">
  <div className="container px-4">
  <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
  Entupiu de novo em 90 dias? A gente volta.
