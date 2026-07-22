@@ -15,17 +15,18 @@ const DesContactSection = () => {
  const [telefone, setTelefone] = useState("");
  const [mensagem, setMensagem] = useState("");
 
- const handleSubmit = (e: React.FormEvent) => {
- e.preventDefault();
- navigate(
- buildRedirectUrl({
- servico: "desentupimento",
- nome: nome.trim(),
- telefone: telefone.trim(),
- mensagem: mensagem.trim(),
- }),
- );
- };
+  const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  trackWhatsAppClick({ servico: "desentupimento" });
+  navigate(
+  buildRedirectUrl({
+  servico: "desentupimento",
+  nome: nome.trim(),
+  telefone: telefone.trim(),
+  mensagem: mensagem.trim(),
+  }),
+  );
+  };
 
  return (
  <section id="contato" className="section-py bg-secondary">
