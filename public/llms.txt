@@ -2,18 +2,39 @@
 
 > Empresa de dedetização e desentupidora em Curitiba e Região Metropolitana com 35 anos de experiência. Atendimento 24h, garantia e produtos certificados pela ANVISA.
 
-## Pages
-
-- [Dedetização em Curitiba](/): Serviços de dedetização residencial, comercial e condominial em Curitiba e região.
-- [Desentupidora em Curitiba](/desentupidora): Serviços de desentupimento 24h, limpeza de fossa e hidrojateamento.
-- [Dedetização Comercial e MIP](/servicos/dedetizacao-comercial): Guia de Manejo Integrado de Pragas para empresas em Curitiba, com conformidade ANVISA.
+## Páginas principais
+- [Dedetização em Curitiba](/): Home com serviços de dedetização residencial, comercial e condominial.
+- [Desentupidora em Curitiba](/desentupidora): Desentupimento 24h, limpeza de fossa e hidrojateamento.
+- [Dedetização Comercial e MIP](/servicos/dedetizacao-comercial): Manejo Integrado de Pragas para empresas com conformidade ANVISA.
+- [Blog Ampla](/blog): Guias sobre preços, prevenção e controle de pragas.
 
 ## Pragas atendidas
+- [Dedetização de baratas](/dedetizacao/baratas)
+- [Desratização e dedetização de ratos](/dedetizacao/ratos)
+- [Descupinização](/dedetizacao/cupim)
+- [Controle de escorpião](/dedetizacao/escorpiao)
+- [Dedetização de pulgas e carrapatos](/dedetizacao/pulgas-e-carrapatos)
+- [Dedetização de formigas](/dedetizacao/formigas)
+- [Dedetização de percevejo](/dedetizacao/percevejo)
 
-- [Dedetização de baratas](/dedetizacao/baratas): Baratas de esgoto e alemãs em Curitiba, com gel e pulverização.
-- [Desratização e dedetização de ratos](/dedetizacao/ratos): Iscas em porta-iscas seguros, laudo técnico e monitoramento.
-- [Descupinização](/dedetizacao/cupim): Cupim de madeira seca e cupim subterrâneo, com barreira química no solo.
-- [Controle de escorpião](/dedetizacao/escorpiao): Controle de escorpião amarelo com tratamento integrado em áreas críticas.
-- [Dedetização de pulgas e carrapatos](/dedetizacao/pulgas-e-carrapatos): Tratamento de casa, quintal e canil.
-- [Dedetização de formigas](/dedetizacao/formigas): Gel de ação retardada que elimina a colônia inteira.
-- [Dedetização de percevejo de cama](/dedetizacao/percevejo): Protocolo para residências, hotéis e pousadas.
+## Serviços de desentupimento
+- [Desentupimento de esgoto](/desentupidora/desentupimento-esgoto)
+- [Desentupimento de pia](/desentupidora/desentupimento-pia)
+- [Desentupimento de vaso sanitário](/desentupidora/desentupimento-vaso-sanitario)
+- [Desentupimento de ralo](/desentupidora/desentupimento-ralo)
+- [Hidrojateamento](/desentupidora/hidrojateamento)
+- [Limpeza de fossa](/desentupidora/limpeza-fossa)
+
+## Cidades atendidas
+- [Curitiba](/atendimento/curitiba)
+- [Pinhais](/atendimento/pinhais)
+- [Colombo](/atendimento/colombo)
+- [São José dos Pinhais](/atendimento/sao-jose-dos-pinhais)
+- [Araucária](/atendimento/araucaria)
+- [Campo Largo](/atendimento/campo-largo)
+
+## Blog
+- [Quanto custa dedetização em Curitiba](/blog/quanto-custa-dedetizacao-curitiba)
+- [Quanto custa desentupimento em Curitiba](/blog/quanto-custa-desentupimento-curitiba)
+- [Como eliminar baratas de esgoto](/blog/como-eliminar-baratas-de-esgoto)
+- [Como saber se sua casa tem cupim](/blog/como-saber-se-tem-cupim)
