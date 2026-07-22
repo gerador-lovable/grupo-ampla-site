@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import LazyImage from "@/components/LazyImage";
 
 const testimonials = [
   {
@@ -52,11 +53,10 @@ const DesTestimonialsSection = () => {
     <section className="section-py bg-secondary">
       <div className="container px-4">
         <div className="flex items-center justify-center gap-2 mb-4">
-          <img
+          <LazyImage
             src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
             alt="Google"
             className="h-6"
-            loading="lazy"
           />
           <span className="text-foreground font-semibold text-lg">Avaliações</span>
         </div>
@@ -97,11 +97,10 @@ const DesTestimonialsSection = () => {
                         ))}
                       </div>
                       <div className="flex items-center gap-3">
-                        <img
+                        <LazyImage
                           src={t.photo}
                           alt={t.name}
                           className="w-10 h-10 rounded-full object-cover"
-                          loading="lazy"
                           referrerPolicy="no-referrer"
                         />
                         <div>

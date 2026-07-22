@@ -1,85 +1,36 @@
-# Hero de pragas com imagem de fundo + Desentupidora replicando a home
+## Objetivo
+Aplicar lazy loading e fade-in suave em todas as imagens do site, exceto o logo do Header e Footer.
 
-## 1. Páginas de pragas: hero com imagem de fundo da praga
+## Abordagem
 
-**Objetivo:** Cada `/dedetizacao/:praga` mostra uma imagem grande da praga correspondente no hero, aparecendo mais forte na segunda coluna (direita), sem prejudicar a leitura do texto na esquerda.
+### 1. Componente reutilizável `LazyImage`
+Criar `src/components/LazyImage.tsx`:
+- Wrapper em `<img>` nativo com `loading="lazy"` e `decoding="async"`.
+- Prop `eager` para casos onde precisamos `loading="eager"` + `fetchpriority="high"` (LCP das heros principais).
+- Fade-in via `onLoad`: começa com `opacity-0`, ao carregar aplica `opacity-100` com `transition-opacity duration-500 ease-out`. Se `complete` já for true no mount (cache), inicia visível.
+- Suporta todas as props padrão de `<img>` (className, sizes, width, height, etc.).
 
-**Imagens por slug (geradas fotográficas, alta qualidade):**
-| Slug | Imagem |
-|---|---|
-| baratas | barata sobre superfície escura, macro |
-| ratos | rato preto em ambiente urbano sombrio |
-| cupim | close de cupins em madeira apodrecida |
-| escorpiao | escorpião amarelo sobre pedra escura |
-| pulgas-e-carrapatos | carrapato macro sobre pele/pelo escuro |
-| formigas | formigas em trilha sobre superfície escura |
-| percevejo | percevejo de cama macro em tecido escuro |
+### 2. Fundos de hero (`HeroBackground`, `PragaHero`)
+Hoje os fundos usam `background-image` em `div`, que não aceita `loading="lazy"`. Ajuste:
+- Substituir a `div` de fundo por um `<img>` absoluto (`absolute inset-0 w-full h-full object-cover object-right`) usando `LazyImage` com `eager` (é elemento de hero, above the fold).
+- Manter a máscara em gradiente aplicando `maskImage`/`WebkitMaskImage` no próprio `<img>`.
+- Overlays de cor continuam como `div`.
 
-Geradas em `src/assets/pragas-hero/<slug>.webp` (1600×1000, tom escuro para bater com o gradient azul do hero).
+### 3. Substituição site-wide
+Trocar `<img>` por `<LazyImage>` em:
+- `HeroSection`, `DesHeroSection` (foto do técnico), com `eager` (LCP).
+- Cards e blocos: `PestsSection`, `PragasCarouselStrip`, `SegmentosSection`, `SegmentosDesSection`, `ServicesSection`, `TestimonialsSection`/`TestimonialsModule`, `BlogHighlightSection`, `Blog.tsx`, `BlogPost.tsx`, `DifferentialsSection`, `AnosBadge` (se usar img), páginas `PragaPage`, `BairroPage`, `CidadePage`, `ServicoEspecialPage`, `ServicoDesentupimentoPage`, `DedetizacaoComercial`, `DedetizadoraPertoDeMim`, `Emergencia24h`.
+- Todas com lazy por padrão; fade-in em todas.
 
-**Alterações em `src/components/PragaHero.tsx` (novo componente, extrai o `<section>` atual do `PragaPage.tsx`):**
+### 4. Exceções
+- `Header.tsx` e `FooterSection.tsx` mantêm `<img>` do logo como está (sem lazy, sem fade), para não piscar em nenhuma navegação.
 
-- Recebe `praga` como prop e mapeia `slug → imagem` via `import.meta.glob` estático.
-- Estrutura de camadas dentro do `<section>` existente (mantém padding e gradient azul):
-  ```
-  ┌──────────────────────────────────────────────────────┐
-  │ gradient azul (base)                                 │
-  │                                                      │
-  │   [coluna esquerda: texto/CTA]   [imagem da praga]   │
-  │                                  posição: right,     │
-  │                                  50% da largura no md │
-  │                                                      │
-  │ overlay: gradient horizontal                         │
-  │  from-primary via-primary/85 to-primary/20 (right)   │
-  └──────────────────────────────────────────────────────┘
-  ```
-- CSS:
-  - Wrapper da imagem: `absolute inset-y-0 right-0 w-full md:w-[60%] lg:w-[55%]`, `bg-cover bg-center` com `mask-image: linear-gradient(to right, transparent, black 30%)` para fundir com o gradient azul da esquerda.
-  - Overlay: `absolute inset-0 bg-gradient-to-r from-primary via-primary/90 md:via-primary/70 to-primary/10` — garante contraste do texto no mobile (onde a imagem vai atrás de todo o conteúdo) e libera a imagem à direita no desktop.
-  - Conteúdo (`Breadcrumbs`, `<h1>`, CTAs) fica em `relative z-10` dentro de `max-w-3xl` como já está.
-- No mobile: overlay mais forte (`md:via-primary/70` → mobile fica quase sólido), imagem some visualmente atrás do texto mas mantém sensação de "esta é a praga X".
-- Fallback: quando `slug` não tem imagem no map, o hero volta ao design atual (apenas gradient).
+### 5. Otimização adicional
+- Adicionar `decoding="async"` em todas.
+- Adicionar `width` e `height` (ou aspect-ratio via className) onde faltar, para evitar CLS durante o fade.
+- Nas heros com `eager`, manter/garantir o `<link rel="preload">` já existente no `index.html` quando aplicável.
 
-**`PragaPage.tsx`:** substitui o `<section>` hero pelo `<PragaHero praga={praga} whatsapp={whatsapp} />`. Resto da página não muda.
-
-## 2. Página Desentupidora: hero idêntico ao da home + blocos da home adaptados
-
-**Hero (`src/components/desentupidora/DesHeroSection.tsx`):**
-Já é praticamente idêntico ao `HeroSection.tsx`. Ajustes para paridade total:
-- Adicionar `<AnosBadge />` no topo da section.
-- Igualar tipografia do h1 ao da home: `text-[28px] sm:text-[46px] lg:text-[44px] xl:text-[54px]` em três linhas com `whitespace-nowrap`:
-  ```
-  Pia, ralo ou esgoto
-  entupido?
-  Chegamos em 1h.  ← accent + underline
-  ```
-- Padding-bottom da coluna esquerda `pb-10 md:pb-0` (bug da home já corrigido, replicar).
-- Mantém `heroTechnician` de `assets/desentupidora-hero.webp` e o mesmo bloco absoluto/gradient/glow.
-
-**Blocos da home replicados na página `/desentupidora`** (`src/pages/Desentupidora.tsx`), adaptados para desentupimento:
-1. `StatsSection` (reutiliza componente existente, mesmos números).
-2. `DesServicesSection` (já existe, mantém).
-3. `DesProblemsSection` (já existe, mantém).
-4. Novo `SegmentosDesSection` (residências, condomínios, restaurantes, indústrias, postos, hospitais) — arquivo `src/components/desentupidora/SegmentosDesSection.tsx`, mesma estrutura visual do `SegmentosSection` da home.
-5. `DesDifferentialsSection` + `DesTestimonialsSection` + `DesGuaranteeSection` (mantém).
-6. `BlogHighlightSection` (reutiliza, já filtra últimos posts).
-7. `DesFAQSection` (mantém) — bloco WhatsApp verde no meio, no mesmo padrão do `FAQHomeSection` da home. Ajuste dentro do próprio `DesFAQSection.tsx`.
-8. `DesContactSection` (mantém).
-
-Ordem final na página:
-```
-Header → DesHero → UrgencyBar → StatsSection → DesServices → DesProblems
-→ SegmentosDesSection → DesDifferentials → DesTestimonials → DesGuarantee
-→ BlogHighlightSection → DesFAQSection (com CTA WhatsApp no meio) → DesContactSection → Footer
-```
-
-## 3. Detalhes técnicos
-
-- Geração de imagens via `imagegen--generate_image` com tom escuro/dramático, dimensões 1600×1000, salvas em `src/assets/pragas-hero/`.
-- Map de slug→imagem em `src/data/pragas-hero-images.ts` para import estático (evita bundler dinâmico).
-- Nenhuma alteração em SEO/sitemap.
-- Sem breaking changes na `interface Praga` (imagem fica fora do data).
-
-## 4. Arquivos afetados
-- **Criados:** 7 imagens em `src/assets/pragas-hero/`, `src/data/pragas-hero-images.ts`, `src/components/PragaHero.tsx`, `src/components/desentupidora/SegmentosDesSection.tsx`.
-- **Editados:** `src/pages/PragaPage.tsx`, `src/components/desentupidora/DesHeroSection.tsx`, `src/pages/Desentupidora.tsx`, `src/components/desentupidora/DesFAQSection.tsx`.
+## Fora de escopo
+- Não alterar formatos (já são WebP).
+- Não mexer no logo.
+- Sem mudanças de layout, cores ou conteúdo.

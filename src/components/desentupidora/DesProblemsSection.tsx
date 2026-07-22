@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
+import LazyImage from "@/components/LazyImage";
 
 import piaImg from "@/assets/problems/pia-entupida.webp";
 import vasoImg from "@/assets/problems/vaso-sanitario.webp";
@@ -36,14 +37,13 @@ const DesProblemsSection = () => {
  {problems.map((p) => (
  <div key={p.name} className="group bg-card rounded-xl overflow-hidden border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 text-center">
  <div className="w-full h-32 md:h-40 overflow-hidden">
- <img
- src={p.image}
- alt={p.name}
- loading="lazy"
- width={512}
- height={512}
- className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
- />
+  <LazyImage
+  src={p.image}
+  alt={p.name}
+  width={512}
+  height={512}
+  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+  />
  </div>
  <div className="p-4">
  <h3 className="font-bold text-foreground text-sm md:text-base mb-2">{p.name}</h3>

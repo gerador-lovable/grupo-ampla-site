@@ -21,7 +21,7 @@ const HeroBackground = ({ src, alt = "", tone = "blue" }: Props) => {
         aria-hidden={alt ? undefined : true}
         role={alt ? "img" : undefined}
         aria-label={alt || undefined}
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none animate-fade-in"
         style={{
           backgroundImage: `url(${src})`,
           backgroundSize: "cover",

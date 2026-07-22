@@ -21,7 +21,7 @@ const PragaHero = ({ praga, whatsapp }: Props) => {
     <>
      <div
       aria-hidden
-      className="absolute inset-0 pointer-events-none"
+      className="absolute inset-0 pointer-events-none animate-fade-in"
       style={{
        backgroundImage: `url(${bg})`,
        backgroundSize: "cover",
