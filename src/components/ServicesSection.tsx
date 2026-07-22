@@ -64,7 +64,7 @@ const services: ServiceCard[] = [
 const ServicesSection = () => {
   return (
     <section id="servicos" className="py-20 md:py-28 bg-surface-muted">
-      <div className="container px-4">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-14">
           <span className="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-primary mb-4">
             O que resolvemos
@@ -77,7 +77,7 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service) => (
             <Card key={service.title} className="border border-border bg-surface shadow-card hover:shadow-elegant hover:-translate-y-1 transition-all duration-300 overflow-hidden group rounded-2xl">
               {service.image ? (
