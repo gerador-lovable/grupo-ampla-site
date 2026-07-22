@@ -1,66 +1,61 @@
-## Objetivo
+# Redesign do Site — Confiança Técnica
 
-Garantir que em todas as páginas do site da Dedetizadora apareçam de forma consistente 4 serviços/blocos adicionais:
+Repensar o sistema visual de todo o site (Dedetizadora + Desentupidora + páginas dinâmicas de pragas, serviços, cidades, bairros, blog) sob uma direção unificada, moderna e institucional.
 
-1. Limpeza e higienização de caixa d'água
-2. Controle de roedores (ratos, camundongos, ratazanas)
-3. Manejo e afastamento de pombos e morcegos
-4. Chamada cruzada para Desentupimento (Grupo Ampla Desentupidora)
+## Direção visual
 
-## O que será feito
+- **Paleta**: Azul profundo `#0A1E4F` (base institucional), Azul primário `#224BD0` (ações/links), Laranja `#F57C00` (destaques e urgência), Off-white `#F5F7FB` (superfícies), com neutros de suporte em cinza-azulado. Verde `#075E54` permanece exclusivo para CTAs de WhatsApp.
+- **Tipografia**: Space Grotesk para títulos (peso técnico, geométrico), DM Sans para corpo. Escala tipográfica ampliada — H1 até 72px desktop / 40px mobile.
+- **Layout**: Hero + Grid como sistema mestre — hero cheio de personalidade seguido de grid modular de serviços/prova/diferenciais.
+- **Densidade**: Mais respiração, seções com padding vertical generoso (96–120px desktop). Cards com bordas sutis 1px em azul-10%, sombras suaves em azul, não cinza.
+- **Motion**: Micro-animações discretas em scroll (fade-up), hover states com elevação sutil, urgência 24h com pulso já existente mantido.
 
-### 1. Ampliar o catálogo de serviços
-- Atualizar `src/components/ServicesSection.tsx` incluindo os 3 novos cards:
-  - Limpeza de Caixa d'Água (ícone gota/tanque)
-  - Controle de Roedores (ícone rato)
-  - Manejo de Pombos e Morcegos (ícone pássaro)
-- Manter os serviços atuais (residencial, comercial, cupim, etc.) e reorganizar em grid responsivo (3x3 ou 4 colunas).
-- Cada card com link interno para a página de detalhe correspondente.
+## Sistema de design (tokens)
 
-### 2. Criar 3 novas páginas dedicadas
-Aproveitando o template dinâmico existente `PragaPage` (ou criando um novo `ServicoEspecialPage` se o modelo de "praga" não couber), criar:
-- `/servicos/limpeza-caixa-dagua`
-- `/servicos/controle-roedores`
-- `/servicos/pombos-e-morcegos`
+Atualizar `src/index.css` e `tailwind.config.ts`:
 
-Cada página contém:
-- H1 e meta específicos com foco em Curitiba/RMC
-- Descrição do serviço, quando contratar, método/processo
-- Frequência recomendada / normas (ex: Portaria 2914 para caixa d'água, ANVISA para roedores)
-- FAQ + JSON-LD (Service + FAQPage)
-- Módulo `TestimonialsModule` (com tag apropriada)
-- CTA WhatsApp
+- Substituir/refinar tokens HSL: `--background`, `--foreground`, `--primary` (azul 224BD0), `--primary-deep` (0A1E4F), `--accent` (F57C00), `--surface`, `--surface-muted`, `--border-subtle`, `--whatsapp` (075E54).
+- Novos tokens: `--gradient-hero` (0A1E4F → 224BD0), `--gradient-accent` (F57C00 → E85D3A), `--shadow-elegant`, `--shadow-card`, `--radius` (14px padrão).
+- Fontes carregadas via `<link>` Google Fonts em `index.html`; famílias registradas no Tailwind (`font-display`, `font-sans`).
+- Auditar componentes para remover classes hardcoded (`text-white`, `bg-blue-*`, `bg-[#...]`) e substituir por tokens semânticos.
 
-Registrar rotas em `src/App.tsx` e adicionar no `sitemap.xml` e `llms.txt`.
+## Componentes que serão reformulados
 
-### 3. Bloco "Também oferecemos" em todas as páginas da Dedetizadora
-Criar componente `OutrosServicosBlock.tsx` (compacto, 4 tiles) exibindo:
-Caixa d'Água • Roedores • Pombos/Morcegos • Desentupimento (link para `/desentupidora`)
+Reestilização (sem mudança de contrato/props, sem tocar em lógica de negócio):
 
-Injetar antes do rodapé em:
-- `src/pages/Index.tsx` (home dedetizadora)
-- `src/pages/DedetizacaoComercial.tsx`
-- `src/pages/PragaPage.tsx`
-- `src/pages/CidadePage.tsx`
-- `src/pages/BairroPage.tsx`
-- `src/pages/Blog.tsx` e `BlogPost.tsx`
+- `Header.tsx` — nav mais leve, logo com espaço, transição de fundo com blur ao rolar, CTA emergência com nova identidade.
+- `HeroSection.tsx` e `DesHeroSection` (dentro de `Desentupidora.tsx`) — grid 2 colunas, headline com destaque tipográfico no diferencial (35 anos / 2h), badges de confiança (ANVISA, CRQ, garantia), imagem do técnico com máscara/glow azul sutil, CTA emergência + WhatsApp lado a lado.
+- `UrgencyBar.tsx` — barra fina superior com contraste refinado.
+- `ServicesSection.tsx` — grid de cards uniforme com ícone em círculo azul-10%, título Space Grotesk, "Saiba mais" com seta animada.
+- `PestsSection.tsx` — grid visual das pragas com hover state e link para páginas dinâmicas.
+- `DifferentialsSection.tsx` — layout em 4 blocos com números grandes (01, 02...) tipografados.
+- `TestimonialsSection.tsx` / `DesTestimonialsSection.tsx` / `TestimonialsModule.tsx` — carrossel com card mais editorial, aspas grandes em laranja, foto circular, estrelas amarelo-ouro.
+- `GuaranteeSection.tsx` — banner com gradiente azul e selo de garantia visual.
+- `FAQSection.tsx` — accordions com fundo branco, borda sutil, tipografia hierarquizada.
+- `ContactSection.tsx` / `DesContactSection.tsx` — card WhatsApp com background verde 075E54, mapa integrado ao lado.
+- `FooterSection.tsx` — 4 colunas, logo + descrição + links + contato, footer bottom com selos.
+- `WhatsAppFloat.tsx` — mantido, refinamento visual do pulso.
+- `OutrosServicosBlock.tsx` — 4 tiles com nova estética.
+- Templates dinâmicos (`PragaPage`, `ServicoEspecialPage`, `ServicoDesentupimentoPage`, `CidadePage`, `BairroPage`, `DedetizacaoComercial`, `Emergencia24h`, `Blog`, `BlogPost`) — herdam o novo sistema automaticamente via tokens e componentes compartilhados; ajustes de layout dos heros específicos e breadcrumbs.
 
-O tile "Desentupimento" leva para a home da Desentupidora, cumprindo o cross-sell entre as duas verticais.
+## Fora de escopo
 
-### 4. Navegação e Footer
-- Atualizar `src/components/FooterSection.tsx` com links para as 3 novas páginas.
-- Atualizar o menu do Header (se houver dropdown de Serviços) para incluir os novos itens.
+- Nenhuma mudança de conteúdo, copy, SEO, rotas, dados (`src/data/*`), schema JSON-LD ou lógica.
+- Formulários continuam removidos, CTAs continuam para WhatsApp.
+- Imagens existentes reaproveitadas; nenhuma imagem nova gerada nesta rodada.
 
-### 5. Dados/depoimentos
-- Adicionar em `src/data/depoimentos.ts` tags novas: `caixa-dagua`, `roedores`, `pombos`, para o TestimonialsModule filtrar.
+## Ordem de execução
 
-## Detalhes técnicos
+1. Tokens: `index.css` + `tailwind.config.ts` + fontes no `index.html`.
+2. Primitivos visuais compartilhados (botões, cards, badges via variantes shadcn).
+3. Header + Footer + WhatsAppFloat (aparecem em tudo).
+4. Home Dedetizadora: Hero → Urgency → Services → Pests → Differentials → Testimonials → Guarantee → FAQ → Contact.
+5. Desentupidora (mesmo fluxo).
+6. Templates dinâmicos e páginas secundárias.
+7. Varredura final: remover cores hardcoded remanescentes, verificar contraste, typecheck.
 
-- Reaproveitar padrão de SEO (react-helmet-async, canonical, JSON-LD) já usado nas outras páginas.
-- Sem mudanças de backend; tudo estático/roteado no cliente.
-- Typecheck ao final.
+## Validação
 
-## Fora do escopo
-
-- Não alterar as páginas da Desentupidora (apenas receber tráfego cruzado).
-- Não criar novos posts de blog agora (posso fazer numa próxima leva se quiser).
+- `tsgo` typecheck limpo.
+- Screenshot via Playwright em desktop (1280) e mobile (390) das rotas-chave: `/`, `/desentupidora`, `/dedetizacao/baratas`, `/servicos/limpeza-caixa-dagua`, `/curitiba`, `/emergencia-24h`, `/blog`.
+- Checar que nenhuma classe `text-white`, `bg-black`, `bg-[#...]` sobrou nos componentes.
