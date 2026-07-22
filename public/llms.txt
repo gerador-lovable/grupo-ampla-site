@@ -7,7 +7,6 @@
 - [Desentupidora em Curitiba](/desentupidora): Desentupimento 24h, limpeza de fossa e hidrojateamento.
 - [Dedetizadora perto de mim](/dedetizadora-perto-de-mim): Hub geolocalizado com bairros e cidades atendidas.
 - [Emergência 24h](/emergencia-24h): Página BOFU para atendimento urgente em Curitiba.
-- [Tabela de preços](/precos): Faixas de preço 2026 por serviço e porte.
 - [Dedetização Comercial e MIP](/servicos/dedetizacao-comercial): Manejo Integrado de Pragas para empresas com conformidade ANVISA.
 - [Limpeza de Caixa d'Água](/servicos/limpeza-caixa-dagua): Higienização técnica com certificado válido por 6 meses.
 - [Controle de Roedores](/servicos/controle-roedores): Desratização com porta-iscas lacrados e laudo técnico.
@@ -15,7 +14,7 @@
 - [Dedetização Residencial](/servicos/dedetizacao-residencial): Casa e apartamento, produto sem cheiro, seguro para pets.
 - [Dedetização Condominial](/servicos/dedetizacao-condominial): Áreas comuns, garagem e apartamentos com contrato e laudo.
 - [Dedetização Preventiva](/servicos/dedetizacao-preventiva): Plano trimestral com visitas programadas e atendimentos extras sem custo.
-- [Blog Ampla](/blog): Guias sobre preços, prevenção e controle de pragas.
+- [Blog Ampla](/blog): Guias sobre prevenção, controle de pragas e boas práticas.
 
 ## Serviços verticais B2B
 - [Dedetização para Restaurantes](/servicos/dedetizacao-restaurantes): MIP, aplicação noturna e laudo aceito pela vigilância.
