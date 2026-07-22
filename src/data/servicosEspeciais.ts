@@ -9,7 +9,7 @@ export interface ServicoEspecial {
   h1: string;
   title: string;
   description: string;
-  icone: "droplet" | "rat" | "bird";
+  icone: "droplet" | "rat" | "bird" | "home" | "building" | "shield";
   intro: string;
   contexto: string;
   sinais: string[];
