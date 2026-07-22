@@ -18,6 +18,7 @@ import DesGuaranteeSection from "@/components/desentupidora/DesGuaranteeSection"
 import ContactSection from "@/components/ContactSection";
 import StatsSection from "@/components/StatsSection";
 import BlogHighlightSection from "@/components/BlogHighlightSection";
+import PragaHero from "@/components/PragaHero";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
@@ -71,49 +72,7 @@ const PragaPage = () => {
 
  <Header />
 
- {/* Hero */}
- <section className="relative pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
- <div className="container px-4">
- <div className="max-w-3xl">
-  <Breadcrumbs
-   items={[
-    { label: "Dedetização", to: "/#servicos" },
-    { label: praga.nome },
-   ]}
-   tone="dark"
-  />
- <div className="inline-block bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
- Ampla · 35 anos em Curitiba
- </div>
- <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary-foreground leading-[1.1] mb-6">
- {praga.h1}
- </h1>
- <p className="text-lg text-primary-foreground/90 mb-8 leading-relaxed">{praga.intro}</p>
- <div className="flex flex-col sm:flex-row gap-4">
- <Button
- asChild
- size="lg"
- className="bg-[#075E54] hover:bg-[#075E54]/90 text-white text-lg font-bold px-8 py-6 rounded-xl min-h-[56px]"
- >
- <Link to={whatsapp}>
- <WhatsAppIcon className="w-6 h-6 mr-2" />
- Orçamento Grátis no WhatsApp
- </Link>
- </Button>
- <Button
- asChild
- size="lg"
- className="bg-destructive hover:bg-destructive/90 text-white text-lg font-bold px-8 py-6 rounded-xl min-h-[56px]"
- >
- <a href="tel:+5541995121583">
- <Phone className="w-6 h-6 mr-2" />
- (41) 99512-1583
- </a>
- </Button>
- </div>
- </div>
- </div>
- </section>
+  <PragaHero praga={praga} whatsapp={whatsapp} />
 
  <UrgencyBar />
       <StatsSection />

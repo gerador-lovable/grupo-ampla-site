@@ -2,11 +2,14 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import DesHeroSection from "@/components/desentupidora/DesHeroSection";
 import UrgencyBar from "@/components/UrgencyBar";
+import StatsSection from "@/components/StatsSection";
 import DesServicesSection from "@/components/desentupidora/DesServicesSection";
 import DesProblemsSection from "@/components/desentupidora/DesProblemsSection";
+import SegmentosDesSection from "@/components/desentupidora/SegmentosDesSection";
 import DesDifferentialsSection from "@/components/desentupidora/DesDifferentialsSection";
 import DesTestimonialsSection from "@/components/desentupidora/DesTestimonialsSection";
 import DesGuaranteeSection from "@/components/desentupidora/DesGuaranteeSection";
+import BlogHighlightSection from "@/components/BlogHighlightSection";
 import DesFAQSection from "@/components/desentupidora/DesFAQSection";
 import DesContactSection from "@/components/desentupidora/DesContactSection";
 import FooterSection from "@/components/FooterSection";
@@ -47,11 +50,14 @@ const Desentupidora = () => {
       <Header />
       <DesHeroSection />
       <UrgencyBar />
+      <StatsSection />
       <DesServicesSection />
       <DesProblemsSection />
+      <SegmentosDesSection />
       <DesDifferentialsSection />
       <DesTestimonialsSection />
       <DesGuaranteeSection />
+      <BlogHighlightSection />
       <DesFAQSection />
       <DesContactSection />
       <FooterSection />
