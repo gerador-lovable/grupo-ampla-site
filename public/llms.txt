@@ -14,6 +14,14 @@
 - [Dedetização Preventiva](/servicos/dedetizacao-preventiva): Plano trimestral com visitas programadas e atendimentos extras sem custo.
 - [Blog Ampla](/blog): Guias sobre preços, prevenção e controle de pragas.
 
+## Serviços verticais B2B
+- [Dedetização para Restaurantes](/servicos/dedetizacao-restaurantes): MIP, aplicação noturna e laudo aceito pela vigilância.
+- [Dedetização para Supermercados](/servicos/dedetizacao-supermercados): Programa MIP com monitoramento e controle de aves.
+- [Dedetização Industrial](/servicos/dedetizacao-industrias): MIP com ART, laudo para ISO, HACCP e FSSC 22000.
+- [Dedetização para Escolas e Creches](/servicos/dedetizacao-escolas): Aplicação em recesso, produto sem cheiro, seguro para crianças.
+- [Dedetização para Hospitais e Clínicas](/servicos/dedetizacao-hospitais-clinicas): Padrão RDC ANVISA, aceito por acreditação ONA.
+- [Dedetização para Hotéis e Pousadas](/servicos/dedetizacao-hoteis): Protocolo específico para percevejo com laudo por apartamento.
+
 ## Pragas atendidas
 - [Dedetização de baratas](/dedetizacao/baratas)
 - [Desratização e dedetização de ratos](/dedetizacao/ratos)
@@ -44,6 +52,11 @@
 - [Almirante Tamandaré](/atendimento/almirante-tamandare)
 - [Rio Branco do Sul](/atendimento/rio-branco-do-sul)
 - [Bocaiúva do Sul](/atendimento/bocaiuva-do-sul)
+- [Contenda](/atendimento/contenda)
+- [Balsa Nova](/atendimento/balsa-nova)
+- [Mandirituba](/atendimento/mandirituba)
+- [Tijucas do Sul](/atendimento/tijucas-do-sul)
+- [Agudos do Sul](/atendimento/agudos-do-sul)
 
 ## Bairros de Curitiba
 - [Dedetizadora no Batel](/bairros/batel)
@@ -58,6 +71,16 @@
 - [Dedetizadora no Sítio Cercado](/bairros/sitio-cercado)
 - [Dedetizadora no Pinheirinho](/bairros/pinheirinho)
 - [Dedetizadora no Uberaba](/bairros/uberaba)
+- [Dedetizadora no Ecoville](/bairros/ecoville)
+- [Dedetizadora no Alto da XV](/bairros/alto-da-xv)
+- [Dedetizadora no Cristo Rei](/bairros/cristo-rei)
+- [Dedetizadora no Juvevê](/bairros/juveve)
+- [Dedetizadora no Champagnat](/bairros/champagnat)
+- [Dedetizadora nas Mercês](/bairros/merces)
+- [Dedetizadora no Rebouças](/bairros/reboucas)
+- [Dedetizadora no Cabral](/bairros/cabral)
+- [Dedetizadora no Hauer](/bairros/hauer)
+- [Dedetizadora no Xaxim](/bairros/xaxim)
 
 ## Emergência 24h
 - [Atendimento emergencial 24h em Curitiba e RMC](/emergencia-24h)
@@ -67,3 +90,12 @@
 - [Quanto custa desentupimento em Curitiba](/blog/quanto-custa-desentupimento-curitiba)
 - [Como eliminar baratas de esgoto](/blog/como-eliminar-baratas-de-esgoto)
 - [Como saber se sua casa tem cupim](/blog/como-saber-se-tem-cupim)
+- [Como acabar com baratas em casa](/blog/como-acabar-com-baratas-em-casa)
+- [Como matar cupim de madeira](/blog/como-matar-cupim-de-madeira)
+- [Como acabar com ratos em casa](/blog/como-acabar-com-ratos-em-casa)
+- [Como acabar com formigas](/blog/como-acabar-com-formigas)
+- [Como espantar pombos do telhado](/blog/como-espantar-pombos-do-telhado)
+- [Como acabar com percevejo de cama](/blog/como-acabar-com-percevejo-de-cama)
+- [Escorpião amarelo, como identificar](/blog/escorpiao-amarelo-como-identificar)
+- [Como desentupir vaso sanitário](/blog/como-desentupir-vaso-sanitario)
+- [Como limpar caixa d'água](/blog/como-limpar-caixa-dagua)
