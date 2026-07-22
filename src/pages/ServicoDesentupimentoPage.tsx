@@ -11,6 +11,8 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 import { findServicoDes, servicosDesentupimento } from "@/data/servicosDesentupimento";
 import type { DepoimentoTag } from "@/data/depoimentos";
+import HeroBackground from "@/components/HeroBackground";
+import { servicoDesentupimentoHero } from "@/data/heros-images";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
@@ -21,6 +23,7 @@ const ServicoDesentupimentoPage = () => {
 
  const canonical = `${BASE_URL}/desentupidora/${servico.slug}`;
  const whatsapp = buildRedirectUrl({ servico: "desentupimento" });
+ const heroBg = servicoDesentupimentoHero[servico.slug];
 
  const faqSchema = {
  "@context": "https://schema.org",
@@ -63,8 +66,9 @@ const ServicoDesentupimentoPage = () => {
 
  <Header />
 
- <section className="relative pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
- <div className="container px-4">
+ <section className="relative overflow-hidden pt-32 md:pt-40 pb-[30px] md:pb-[30px] bg-gradient-to-br from-[#0a1a4a] via-primary to-primary/80">
+ {heroBg && <HeroBackground src={heroBg} />}
+ <div className="relative z-10 container px-4">
  <div className="max-w-3xl">
  <div className="inline-block bg-accent/20 text-accent font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
  Ampla · Atendimento 24h em Curitiba
