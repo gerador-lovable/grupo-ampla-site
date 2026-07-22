@@ -530,7 +530,7 @@ export const blogPosts: BlogPost[] = [
    {
     h2: "Quando chamar a Ampla",
     paragrafos: [
-     "Se você tentou desentupidor 2 vezes e não resolveu, se a água sobe até o limite ou se outros pontos do banheiro estão comprometidos: chame. A Ampla atende Curitiba e RMC 24h com equipamento profissional, sem quebrar piso, com preço fechado antes do serviço.",
+     "Se você tentou desentupidor 2 vezes e não resolveu, se a água sobe até o limite ou se outros pontos do banheiro estão comprometidos: chame. A Ampla atende Curitiba e RMC 24h com equipamento profissional, sem quebrar piso, com orçamento fechado antes do serviço.",
     ],
    },
   ],
