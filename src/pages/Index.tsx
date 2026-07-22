@@ -11,6 +11,7 @@ import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import OutrosServicosBlock from "@/components/OutrosServicosBlock";
 
 const faqs = [
   { q: "Quanto tempo dura o serviço de dedetização?", a: "Depende do tamanho do imóvel, mas em média 1-2 horas para residências. Para empresas e condomínios, o tempo pode variar conforme a área a ser tratada." },
@@ -53,6 +54,7 @@ const Index = () => {
       <DesTestimonialsSection />
       <DesGuaranteeSection />
       <FAQSection />
+      <OutrosServicosBlock bg="background" />
       <ContactSection />
       <FooterSection />
       <WhatsAppFloat />

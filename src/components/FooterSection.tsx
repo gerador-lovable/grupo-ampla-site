@@ -18,6 +18,9 @@ const FooterSection = () => {
               <li><a href="/emergencia-24h" className="hover:text-primary-foreground font-semibold">Emergência 24h</a></li>
               <li><a href="/desentupidora" className="hover:text-primary-foreground">Desentupidora</a></li>
               <li><a href="/servicos/dedetizacao-comercial" className="hover:text-primary-foreground">Dedetização Comercial</a></li>
+              <li><a href="/servicos/limpeza-caixa-dagua" className="hover:text-primary-foreground">Limpeza de Caixa d'Água</a></li>
+              <li><a href="/servicos/controle-roedores" className="hover:text-primary-foreground">Controle de Roedores</a></li>
+              <li><a href="/servicos/pombos-e-morcegos" className="hover:text-primary-foreground">Pombos e Morcegos</a></li>
               <li><a href="/blog" className="hover:text-primary-foreground">Blog</a></li>
             </ul>
           </div>

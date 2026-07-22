@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
+import OutrosServicosBlock from "@/components/OutrosServicosBlock";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
@@ -104,6 +105,7 @@ const BlogPost = () => {
         </section>
       )}
 
+      <OutrosServicosBlock bg="background" />
       <FooterSection />
       <WhatsAppFloat />
     </div>

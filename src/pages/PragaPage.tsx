@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { AlertTriangle, CheckCircle2, ShieldCheck, Phone, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
+import OutrosServicosBlock from "@/components/OutrosServicosBlock";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import UrgencyBar from "@/components/UrgencyBar";
 import TestimonialsModule from "@/components/TestimonialsModule";
@@ -248,6 +249,7 @@ const PragaPage = () => {
         </div>
       </section>
 
+      <OutrosServicosBlock bg="background" />
       <FooterSection />
       <WhatsAppFloat />
     </div>

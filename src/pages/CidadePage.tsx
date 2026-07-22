@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { CheckCircle2, MapPin, Phone, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
+import OutrosServicosBlock from "@/components/OutrosServicosBlock";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import UrgencyBar from "@/components/UrgencyBar";
 import TestimonialsModule from "@/components/TestimonialsModule";
@@ -173,6 +174,7 @@ const CidadePage = () => {
         </div>
       </section>
 
+      <OutrosServicosBlock bg="background" />
       <FooterSection />
       <WhatsAppFloat />
     </div>
