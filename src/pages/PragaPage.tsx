@@ -16,6 +16,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import DesDifferentialsSection from "@/components/desentupidora/DesDifferentialsSection";
 import DesGuaranteeSection from "@/components/desentupidora/DesGuaranteeSection";
 import ContactSection from "@/components/ContactSection";
+import StatsSection from "@/components/StatsSection";
+import BlogHighlightSection from "@/components/BlogHighlightSection";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 

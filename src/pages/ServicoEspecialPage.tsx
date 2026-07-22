@@ -27,6 +27,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import DesDifferentialsSection from "@/components/desentupidora/DesDifferentialsSection";
 import DesGuaranteeSection from "@/components/desentupidora/DesGuaranteeSection";
 import ContactSection from "@/components/ContactSection";
+import StatsSection from "@/components/StatsSection";
+import BlogHighlightSection from "@/components/BlogHighlightSection";
 
 const BASE_URL = "https://www.grupoampladedetiza.com.br";
 
@@ -46,6 +48,11 @@ const tagMap: Record<string, DepoimentoTag[]> = {
  "dedetizacao-residencial": ["dedetizacao", "residencial"],
  "dedetizacao-condominial": ["dedetizacao", "condominial"],
  "dedetizacao-preventiva": ["dedetizacao", "residencial", "comercial"],
+ sanitizacao: ["dedetizacao", "comercial"],
+ "limpeza-de-telhado": ["dedetizacao", "residencial"],
+ "limpeza-de-calha": ["dedetizacao", "residencial"],
+ "limpeza-de-sotao": ["dedetizacao", "residencial"],
+ "laudo-bacteriologico": ["dedetizacao", "condominial", "comercial"],
 };
 
 const ServicoEspecialPage = () => {
@@ -133,6 +140,7 @@ const ServicoEspecialPage = () => {
  </section>
 
  <UrgencyBar />
+  <StatsSection />
 
   <section className="section-py bg-background">
  <div className="container px-4 max-w-4xl">
@@ -239,6 +247,7 @@ const ServicoEspecialPage = () => {
  />
 
  <OutrosServicosBlock bg="background" />
+  <BlogHighlightSection />
  <ContactSection />
 
  <section className="section-py bg-primary text-primary-foreground">
