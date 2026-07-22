@@ -54,9 +54,41 @@
   <url><loc>https://www.grupoampladedetiza.com.br/bairros/sitio-cercado</loc><priority>0.7</priority></url>
   <url><loc>https://www.grupoampladedetiza.com.br/bairros/pinheirinho</loc><priority>0.7</priority></url>
   <url><loc>https://www.grupoampladedetiza.com.br/bairros/uberaba</loc><priority>0.7</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/bairros/ecoville</loc><priority>0.7</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/bairros/alto-da-xv</loc><priority>0.7</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/bairros/cristo-rei</loc><priority>0.7</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/bairros/juveve</loc><priority>0.7</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/bairros/champagnat</loc><priority>0.7</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/bairros/merces</loc><priority>0.7</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/bairros/reboucas</loc><priority>0.7</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/bairros/cabral</loc><priority>0.7</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/bairros/hauer</loc><priority>0.7</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/bairros/xaxim</loc><priority>0.7</priority></url>
+
+  <url><loc>https://www.grupoampladedetiza.com.br/atendimento/contenda</loc><priority>0.6</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/atendimento/balsa-nova</loc><priority>0.6</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/atendimento/mandirituba</loc><priority>0.6</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/atendimento/tijucas-do-sul</loc><priority>0.6</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/atendimento/agudos-do-sul</loc><priority>0.6</priority></url>
+
+  <url><loc>https://www.grupoampladedetiza.com.br/servicos/dedetizacao-restaurantes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/servicos/dedetizacao-supermercados</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/servicos/dedetizacao-industrias</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/servicos/dedetizacao-escolas</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/servicos/dedetizacao-hospitais-clinicas</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/servicos/dedetizacao-hoteis</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <url><loc>https://www.grupoampladedetiza.com.br/blog/quanto-custa-dedetizacao-curitiba</loc><priority>0.6</priority></url>
   <url><loc>https://www.grupoampladedetiza.com.br/blog/quanto-custa-desentupimento-curitiba</loc><priority>0.6</priority></url>
   <url><loc>https://www.grupoampladedetiza.com.br/blog/como-eliminar-baratas-de-esgoto</loc><priority>0.6</priority></url>
   <url><loc>https://www.grupoampladedetiza.com.br/blog/como-saber-se-tem-cupim</loc><priority>0.6</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/blog/como-acabar-com-baratas-em-casa</loc><priority>0.6</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/blog/como-matar-cupim-de-madeira</loc><priority>0.6</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/blog/como-acabar-com-ratos-em-casa</loc><priority>0.6</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/blog/como-acabar-com-formigas</loc><priority>0.6</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/blog/como-espantar-pombos-do-telhado</loc><priority>0.6</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/blog/como-acabar-com-percevejo-de-cama</loc><priority>0.6</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/blog/escorpiao-amarelo-como-identificar</loc><priority>0.6</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/blog/como-desentupir-vaso-sanitario</loc><priority>0.6</priority></url>
+  <url><loc>https://www.grupoampladedetiza.com.br/blog/como-limpar-caixa-dagua</loc><priority>0.6</priority></url>
 </urlset>

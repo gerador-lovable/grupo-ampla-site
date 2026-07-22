@@ -182,6 +182,76 @@ export const cidades: Cidade[] = [
  "Bocaiúva do Sul faz parte da nossa rota de atendimento na RMC. Fazemos dedetização residencial, comercial e desentupimento sob agendamento.",
  bairros: ["Centro", "Alto do Amparo", "Vila Nova", "Capivari"],
  },
+ {
+  slug: "contenda",
+  nome: "Contenda",
+  regiao: "PR",
+  h1: "Dedetizadora e Desentupidora em Contenda",
+  title: "Dedetizadora Contenda | Ampla",
+  description:
+   "Dedetização e desentupimento em Contenda. Ampla, 35 anos. Orçamento grátis pelo WhatsApp.",
+  intro:
+   "Atendemos Contenda com controle de pragas, descupinização e limpeza de fossa sob agendamento.",
+  contexto:
+   "Contenda integra nossa área de atendimento na Região Metropolitana de Curitiba. Trabalhamos com dedetização residencial, comercial e desentupimento com equipe própria e produtos certificados pela ANVISA.",
+  bairros: ["Centro", "Catanduvas", "Areia Branca", "Campina dos Pintos"],
+ },
+ {
+  slug: "balsa-nova",
+  nome: "Balsa Nova",
+  regiao: "PR",
+  h1: "Dedetizadora e Desentupidora em Balsa Nova",
+  title: "Dedetizadora Balsa Nova | Ampla",
+  description:
+   "Dedetização e desentupimento em Balsa Nova. Ampla, 35 anos, atendimento sob agendamento. Orçamento pelo WhatsApp.",
+  intro:
+   "Atendemos Balsa Nova com controle de pragas, descupinização, desratização e limpeza de fossa.",
+  contexto:
+   "Balsa Nova faz parte da nossa rota de atendimento na RMC. Fazemos dedetização, descupinização e desentupimento com equipe própria, laudo técnico e nota fiscal.",
+  bairros: ["Centro", "São Luiz do Purunã", "Bugre", "Rodeio Grande"],
+ },
+ {
+  slug: "mandirituba",
+  nome: "Mandirituba",
+  regiao: "PR",
+  h1: "Dedetizadora e Desentupidora em Mandirituba",
+  title: "Dedetizadora Mandirituba | Ampla",
+  description:
+   "Dedetização e desentupimento em Mandirituba. Ampla, 35 anos. Orçamento grátis pelo WhatsApp.",
+  intro:
+   "Atendemos Mandirituba com controle de pragas, descupinização e limpeza de fossa sob agendamento.",
+  contexto:
+   "Mandirituba integra nossa rota de atendimento na Região Metropolitana. Trabalhamos com dedetização residencial, comercial e desentupimento com equipe própria e produtos ANVISA.",
+  bairros: ["Centro", "Areia Branca", "Quississana", "Rio Pequeno"],
+ },
+ {
+  slug: "tijucas-do-sul",
+  nome: "Tijucas do Sul",
+  regiao: "PR",
+  h1: "Dedetizadora e Desentupidora em Tijucas do Sul",
+  title: "Dedetizadora Tijucas do Sul | Ampla",
+  description:
+   "Dedetização e desentupimento em Tijucas do Sul. Ampla, 35 anos, atendimento sob agendamento. Orçamento pelo WhatsApp.",
+  intro:
+   "Atendemos Tijucas do Sul com controle de pragas, descupinização e limpeza de fossa.",
+  contexto:
+   "Tijucas do Sul faz parte da nossa área de atendimento na RMC. Fazemos dedetização residencial, comercial, controle de escorpião e desentupimento sob agendamento, com laudo técnico e nota fiscal.",
+  bairros: ["Centro", "Postinho", "Vossoroca", "Rio da Várzea"],
+ },
+ {
+  slug: "agudos-do-sul",
+  nome: "Agudos do Sul",
+  regiao: "PR",
+  h1: "Dedetizadora e Desentupidora em Agudos do Sul",
+  title: "Dedetizadora Agudos do Sul | Ampla",
+  description:
+   "Dedetização e desentupimento em Agudos do Sul. Ampla, 35 anos. Orçamento grátis pelo WhatsApp.",
+  intro:
+   "Atendemos Agudos do Sul com controle de pragas, descupinização e limpeza de fossa sob agendamento.",
+  contexto:
+   "Agudos do Sul integra nossa rota de atendimento na Região Metropolitana. Trabalhamos com dedetização residencial e comercial com produtos ANVISA, equipe própria e nota fiscal.",
+  bairros: ["Centro", "Turvo", "Poço Grande", "Serra do Facão"],
+ },
 ];
 
 export const findCidade = (slug: string) => cidades.find((c) => c.slug === slug);
