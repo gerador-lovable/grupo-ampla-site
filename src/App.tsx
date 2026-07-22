@@ -7,6 +7,10 @@ import Index from "./pages/Index.tsx";
 import Desentupidora from "./pages/Desentupidora.tsx";
 import DedetizacaoComercial from "./pages/DedetizacaoComercial.tsx";
 import PragaPage from "./pages/PragaPage.tsx";
+import ServicoDesentupimentoPage from "./pages/ServicoDesentupimentoPage.tsx";
+import CidadePage from "./pages/CidadePage.tsx";
+import Blog from "./pages/Blog.tsx";
+import BlogPost from "./pages/BlogPost.tsx";
 import RedirectWhatsApp from "./pages/RedirectWhatsApp.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -23,6 +27,10 @@ const App = () => (
           <Route path="/desentupidora" element={<Desentupidora />} />
           <Route path="/servicos/dedetizacao-comercial" element={<DedetizacaoComercial />} />
           <Route path="/dedetizacao/:praga" element={<PragaPage />} />
+          <Route path="/desentupidora/:servico" element={<ServicoDesentupimentoPage />} />
+          <Route path="/atendimento/:cidade" element={<CidadePage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/redirecionando" element={<RedirectWhatsApp />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
