@@ -1,12 +1,17 @@
 import { Link, useLocation } from "react-router-dom";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { buildRedirectUrl } from "@/lib/whatsapp";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 const WhatsAppFloat = () => {
   const location = useLocation();
   const servico = location.pathname.startsWith("/desentupidora")
     ? "desentupimento"
     : "dedetizacao";
+
+  const handleClick = () => {
+    trackWhatsAppClick({ servico });
+  };
 
   return (
     <div className="fixed bottom-[30px] right-[30px] z-[9999] flex items-center">
@@ -16,6 +21,7 @@ const WhatsAppFloat = () => {
       {/* Button */}
       <Link
         to={buildRedirectUrl({ servico })}
+        onClick={handleClick}
         className="relative z-10 w-[60px] h-[60px] rounded-full bg-[#25D366] hover:bg-[#075E54] shadow-[2px_2px_20px_8px_rgba(0,0,0,0.2)] flex items-center justify-center transition-all duration-200"
         aria-label="Fale conosco pelo WhatsApp"
       >
