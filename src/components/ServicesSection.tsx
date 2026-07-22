@@ -7,6 +7,9 @@ import serviceResidential from "@/assets/service-residential.jpg";
 import serviceCommercial from "@/assets/service-commercial.jpg";
 import serviceCondominium from "@/assets/service-condominium.jpg";
 import servicePreventive from "@/assets/service-preventive.jpg";
+import serviceCaixaAgua from "@/assets/service-caixa-agua.jpg";
+import serviceRoedores from "@/assets/service-roedores.jpg";
+import servicePombos from "@/assets/service-pombos.jpg";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 
 const WHATSAPP_REDIRECT = buildRedirectUrl({ servico: "dedetizacao" });
@@ -42,19 +45,19 @@ const services: ServiceCard[] = [
     description: "Plano trimestral com visitas programadas. Custa menos que uma dedetização emergencial e mantém o imóvel protegido o ano inteiro.",
   },
   {
-    Icon: Droplet,
+    image: serviceCaixaAgua,
     title: "Caixa d'água limpa em 2h",
     description: "Higienização com hipoclorito e certificado válido por 6 meses. Aceito pela vigilância sanitária e por síndicos, sem interromper o abastecimento.",
     href: "/servicos/limpeza-caixa-dagua",
   },
   {
-    Icon: Rat,
+    image: serviceRoedores,
     title: "Rato no forro ou na cozinha",
     description: "Porta-iscas lacrados, laudo técnico e monitoramento mensal. Padrão exigido por auditoria sanitária de restaurante, condomínio e indústria.",
     href: "/servicos/controle-roedores",
   },
   {
-    Icon: Bird,
+    image: servicePombos,
     title: "Pombo sujando a fachada",
     description: "Afastamento humanitário com espículas, telas e barreiras físicas. Limpeza e descontaminação das fezes acumuladas com EPI completo.",
     href: "/servicos/pombos-e-morcegos",
