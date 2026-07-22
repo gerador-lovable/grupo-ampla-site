@@ -30,10 +30,10 @@ const ContactSection = () => {
     <section id="contato" className="py-16 md:py-20 bg-secondary">
       <div className="container px-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-4">
-          Solicite Seu Orçamento Grátis
+          Fale com um técnico agora
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Preencha o formulário e fale conosco direto pelo WhatsApp
+          Resposta no WhatsApp em minutos. Orçamento na hora, sem visita obrigatória.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
@@ -46,7 +46,7 @@ const ContactSection = () => {
                 <WhatsAppIcon className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-foreground">
-                Fale conosco agora
+                Manda no WhatsApp
               </h3>
             </div>
 
@@ -91,7 +91,7 @@ const ContactSection = () => {
               className="w-full bg-[#25D366] hover:bg-[#075E54] text-white font-bold text-lg min-h-[56px] transition-transform duration-200 hover:scale-[1.02]"
             >
               <WhatsAppIcon className="w-5 h-5 mr-2" />
-              Enviar e Falar no WhatsApp
+              Chamar no WhatsApp
             </Button>
           </form>
 

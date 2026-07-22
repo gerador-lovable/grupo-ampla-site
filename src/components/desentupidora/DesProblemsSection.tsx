@@ -13,12 +13,12 @@ import colunaImg from "@/assets/problems/coluna-coletora.jpg";
 const WHATSAPP_REDIRECT = buildRedirectUrl({ servico: "desentupimento" });
 
 const problems = [
-  { image: piaImg, name: "Pia Entupida", description: "Desentupimento de pias de cozinha e banheiro com equipamento profissional." },
-  { image: vasoImg, name: "Vaso Sanitário", description: "Desobstrução de vasos sanitários sem quebrar pisos ou paredes." },
-  { image: raloImg, name: "Ralo Entupido", description: "Limpeza e desobstrução de ralos de chão, box e área de serviço." },
-  { image: gorduraImg, name: "Caixa de Gordura", description: "Limpeza e manutenção preventiva de caixas de gordura residenciais e comerciais." },
-  { image: esgotoImg, name: "Esgoto Entupido", description: "Desentupimento de redes de esgoto com hidrojateamento de alta pressão." },
-  { image: colunaImg, name: "Coluna Coletora", description: "Desobstrução de colunas coletoras de prédios e condomínios." },
+  { image: piaImg, name: "Pia não escoa", description: "Cozinha ou banheiro — gordura, cabelo e restos. Resolvido em 30 minutos." },
+  { image: vasoImg, name: "Vaso transbordando", description: "Desobstrução imediata, sem quebrar piso nem parede." },
+  { image: raloImg, name: "Ralo com água parada", description: "Box, área de serviço e cozinha — acaba com poça e mau cheiro." },
+  { image: gorduraImg, name: "Caixa de gordura fedendo", description: "Limpeza, retirada de resíduo e destinação correta." },
+  { image: esgotoImg, name: "Esgoto voltando pela pia", description: "Rede externa entupida — hidrojato resolve sem escavação." },
+  { image: colunaImg, name: "Prédio com coluna entupida", description: "Prumada e coluna coletora do condomínio. Contrato com síndico." },
 ];
 
 const DesProblemsSection = () => {
@@ -26,10 +26,10 @@ const DesProblemsSection = () => {
     <section className="py-16 md:py-20 bg-background">
       <div className="container px-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-4">
-          Problemas que Resolvemos
+          Qual é o seu problema agora?
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Nossa equipe está preparada para resolver qualquer tipo de entupimento com rapidez
+          Chama no WhatsApp com uma foto — o técnico já sai com o equipamento certo.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto mb-10">
@@ -57,7 +57,7 @@ const DesProblemsSection = () => {
           <Button asChild size="lg" className="bg-[#075E54] hover:bg-[#075E54]/90 text-white font-bold text-lg px-10 min-h-[52px] transition-transform duration-200 hover:scale-105">
             <Link to={WHATSAPP_REDIRECT}>
               <WhatsAppIcon className="w-6 h-6 mr-2" />
-              Solicitar Orçamento Grátis
+              Chamar desentupidor agora
             </Link>
           </Button>
         </div>

@@ -1,10 +1,10 @@
 import { Shield, BadgeCheck, ThumbsUp, Baby } from "lucide-react";
 
 const seals = [
-  { icon: Shield, title: "6 meses de garantia", description: "Em todos os serviços contratados" },
-  { icon: BadgeCheck, title: "Produtos ANVISA", description: "Certificados e rastreados" },
-  { icon: ThumbsUp, title: "Satisfação garantida", description: "Ou refazemos sem custo" },
-  { icon: Baby, title: "Seguro para família", description: "Crianças e pets protegidos" },
+  { icon: Shield, title: "6 meses de garantia", description: "Voltou barata? Voltamos sem cobrar" },
+  { icon: BadgeCheck, title: "Produto rastreado ANVISA", description: "Nota fiscal do lote no laudo" },
+  { icon: ThumbsUp, title: "Se não resolver, refazemos", description: "Sem custo, sem letra miúda" },
+  { icon: Baby, title: "Volta pra casa no mesmo dia", description: "Sem cheiro forte, seguro para pet" },
 ];
 
 const GuaranteeSection = () => {
@@ -16,11 +16,14 @@ const GuaranteeSection = () => {
       <div className="container px-4 relative">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-accent mb-4">
-            Compromisso Ampla
+            Nossa promessa
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-semibold leading-[1.05] text-balance">
-            Sua segurança, garantida por escrito.
+            Voltou praga em 6 meses? Voltamos sem cobrar.
           </h2>
+          <p className="text-primary-foreground/70 text-base md:text-lg mt-5 max-w-xl mx-auto">
+            A garantia vem escrita no laudo, com data e assinatura. Se algo reaparecer no prazo, você chama e a gente resolve — sem discussão.
+          </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
           {seals.map((s) => (

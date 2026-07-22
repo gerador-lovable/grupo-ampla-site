@@ -1,14 +1,14 @@
 import { Award, Zap, Shield, Wrench, CreditCard, FileText, Clock, HardHat } from "lucide-react";
 
 const differentials = [
-  { icon: Award, title: "35 Anos de Experiência", description: "Tradição e know-how acumulado desde 1989" },
-  { icon: Zap, title: "Atendimento em 1 Hora", description: "Chegamos rapidamente na sua região" },
-  { icon: Shield, title: "Garantia de 90 Dias", description: "Garantia em todos os serviços realizados" },
-  { icon: Wrench, title: "Sem Quebrar", description: "Técnicas modernas que preservam sua estrutura" },
-  { icon: CreditCard, title: "Parcelamento", description: "Até 12x no cartão de crédito" },
-  { icon: FileText, title: "Orçamento Grátis", description: "Avaliação sem compromisso antes de executar" },
-  { icon: Clock, title: "24 Horas", description: "Atendimento emergencial a qualquer hora" },
-  { icon: HardHat, title: "Equipe Especializada", description: "Técnicos treinados e equipados" },
+  { icon: Award, title: "35 anos desentupindo Curitiba", description: "Empresa familiar fundada em 1989. Você fala com quem executa." },
+  { icon: Zap, title: "1h no seu endereço", description: "Equipe de plantão em Colombo, Curitiba e RMC." },
+  { icon: Shield, title: "Entupiu de novo? Voltamos", description: "90 dias de garantia por escrito, sem cobrar retorno." },
+  { icon: Wrench, title: "Sem quebrar piso", description: "Máquina rotativa e hidrojato pelo próprio ralo." },
+  { icon: CreditCard, title: "Paga em 12x", description: "PIX, dinheiro, débito ou crédito na hora." },
+  { icon: FileText, title: "Preço antes do serviço", description: "Orçamento fechado no WhatsApp — sem surpresa na conta." },
+  { icon: Clock, title: "24h, incluindo feriado", description: "Madrugada e domingo pelo mesmo preço." },
+  { icon: HardHat, title: "Uniformizado e identificado", description: "Técnico com crachá, EPI e caminhão da empresa." },
 ];
 
 const DesDifferentialsSection = () => {
@@ -16,10 +16,10 @@ const DesDifferentialsSection = () => {
     <section className="py-16 md:py-20 bg-background">
       <div className="container px-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center text-foreground mb-4">
-          Por que Escolher a Ampla?
+          Por que chamar a Ampla
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Diferenciais que fazem da Ampla referência em desentupimento em Curitiba
+          Quem chama uma vez, chama de novo — e indica pro vizinho.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">

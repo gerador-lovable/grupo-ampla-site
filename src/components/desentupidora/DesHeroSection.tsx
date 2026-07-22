@@ -45,14 +45,14 @@ const DesHeroSection = () => {
             </div>
 
             <h1 className="font-display text-[40px] sm:text-5xl lg:text-[64px] xl:text-[72px] leading-[1.02] tracking-[-0.03em] font-semibold mb-6 animate-fade-up text-balance">
-              Desentupimos em <span className="relative inline-block text-accent">1 hora
+              Pia ou esgoto entupido?
+              <span className="block mt-1"><span className="relative inline-block text-accent">Chegamos em 1h
                 <span aria-hidden className="absolute left-0 -bottom-1 h-[3px] w-full bg-gradient-accent rounded-full" />
-              </span>,
-              <span className="block mt-1">sem quebrar nada.</span>
+              </span>, sem quebrar piso.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-primary-foreground/75 max-w-xl mb-9 leading-relaxed animate-fade-up" style={{ animationDelay: "0.15s" }}>
-              Hidrojateamento de alta pressão, câmera de inspeção e equipes disponíveis 24 horas por dia — inclusive fins de semana e feriados.
+              Hidrojateamento de alta pressão e câmera de inspeção. Atendemos 24 horas — inclusive madrugada, fim de semana e feriado — em Curitiba e região.
             </p>
 
             <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-10 max-w-lg animate-fade-up" style={{ animationDelay: "0.25s" }}>
@@ -87,7 +87,7 @@ const DesHeroSection = () => {
               >
                 <Link to={WHATSAPP_REDIRECT}>
                   <WhatsAppIcon className="w-5 h-5 mr-2" />
-                  Orçamento grátis
+                  Chamar agora no WhatsApp
                 </Link>
               </Button>
             </div>
