@@ -5,6 +5,7 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import heroTechnician from "@/assets/desentupidora-hero.webp";
 import { buildRedirectUrl } from "@/lib/whatsapp";
 import AnosBadge from "@/components/AnosBadge";
+import LazyImage from "@/components/LazyImage";
 
 const WHATSAPP_REDIRECT = buildRedirectUrl({ servico: "desentupimento" });
 
