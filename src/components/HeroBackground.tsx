@@ -15,22 +15,22 @@ interface Props {
  */
 const HeroBackground = ({ src, alt = "", tone = "blue" }: Props) => {
   const overlayColor = tone === "red" ? "#4a0a0a" : "#0a1a4a";
-  const maskImage =
-    "linear-gradient(to right, transparent 0%, transparent 25%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.85) 70%, black 100%)";
   return (
     <>
-      <img
-        src={src}
-        alt={alt}
+      <div
         aria-hidden={alt ? undefined : true}
-        loading="lazy"
-        decoding="async"
-        // @ts-expect-error fetchpriority is a valid HTML attr
-        fetchpriority="low"
-        className="absolute inset-0 w-full h-full object-cover object-right pointer-events-none"
+        role={alt ? "img" : undefined}
+        aria-label={alt || undefined}
+        className="absolute inset-0 pointer-events-none"
         style={{
-          maskImage,
-          WebkitMaskImage: maskImage,
+          backgroundImage: `url(${src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "right center",
+          backgroundRepeat: "no-repeat",
+          maskImage:
+            "linear-gradient(to right, transparent 0%, transparent 25%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.85) 70%, black 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent 0%, transparent 25%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.85) 70%, black 100%)",
           opacity: 0.9,
         }}
       />

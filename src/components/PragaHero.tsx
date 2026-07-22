@@ -19,16 +19,14 @@ const PragaHero = ({ praga, whatsapp }: Props) => {
    {/* Imagem de fundo da praga, mais forte na direita */}
    {bg && (
     <>
-     <img
-      src={bg}
-      alt=""
+     <div
       aria-hidden
-      loading="lazy"
-      decoding="async"
-      // @ts-expect-error fetchpriority is a valid HTML attr
-      fetchpriority="low"
-      className="absolute inset-0 w-full h-full object-cover object-right pointer-events-none"
+      className="absolute inset-0 pointer-events-none"
       style={{
+       backgroundImage: `url(${bg})`,
+       backgroundSize: "cover",
+       backgroundPosition: "right center",
+       backgroundRepeat: "no-repeat",
        maskImage:
         "linear-gradient(to right, transparent 0%, transparent 25%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.85) 70%, black 100%)",
        WebkitMaskImage:

@@ -11,7 +11,7 @@ const FooterSection = () => {
       <div className="container px-4 relative">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-6xl mx-auto">
           <div className="md:col-span-1">
-            <img src={logo} alt="Grupo Ampla" loading="lazy" decoding="async" width={128} height={128} className="h-16 w-auto mb-4" />
+            <img src={logo} alt="Grupo Ampla" className="h-16 w-auto mb-4" />
             <p className="text-primary-foreground/60 text-sm leading-relaxed mb-5">
               Há 35 anos protegendo lares e empresas em Curitiba e Região Metropolitana.
             </p>

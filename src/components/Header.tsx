@@ -40,14 +40,15 @@ const Header = () => {
             scrolled ? "h-[36px] md:h-[56px]" : "h-[44px] md:h-[74px]"
           }`}
         >
-          <span className="inline-flex items-center justify-center overflow-visible transition-all duration-500 h-full">
+          <span
+            className={`inline-flex items-center justify-center overflow-visible transition-all duration-500 h-full ${
+              scrolled ? "rounded-full" : ""
+            }`}
+          >
             <img
               src={logo}
               alt="Grupo Ampla - Dedetizadora"
-              width={220}
-              height={140}
-              decoding="async"
-              className={`transition-all duration-500 w-auto ${
+              className={`rounded-full transition-all duration-500 ${
                 scrolled
                   ? "h-[56px] md:h-[92px] translate-y-[10px] md:translate-y-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.35)]"
                   : "h-[48px] md:h-[80px]"
