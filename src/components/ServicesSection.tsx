@@ -22,41 +22,41 @@ type ServiceCard = {
 const services: ServiceCard[] = [
   {
     image: serviceResidential,
-    title: "Dedetização Residencial",
-    description: "Proteção completa para sua casa e família. Eliminamos baratas, formigas, aranhas e outros insetos com produtos seguros para crianças e pets.",
+    title: "Praga em casa ou apartamento",
+    description: "Eliminamos baratas, formigas, aranhas e mosquitos com produto sem cheiro forte. Você volta pra casa no mesmo dia. Seguro para crianças e pets.",
   },
   {
     image: serviceCommercial,
-    title: "Dedetização Comercial",
-    description: "Soluções empresariais para escritórios, lojas, restaurantes e indústrias. Laudo técnico incluso para conformidade com vigilância sanitária.",
+    title: "Vigilância sanitária no pé",
+    description: "Dedetização para restaurante, loja, escritório e indústria com laudo técnico entregue no mesmo dia. Zero risco de multa ou interdição.",
     href: "/servicos/dedetizacao-comercial",
   },
   {
     image: serviceCondominium,
-    title: "Dedetização Condominial",
-    description: "Atendimento especializado para condomínios residenciais e comerciais. Áreas comuns, apartamentos e garagens com preços especiais.",
+    title: "Condomínio com queixa de morador",
+    description: "Tratamos áreas comuns, garagem e apartamentos no mesmo cronograma. Contrato com síndico, preço fechado por unidade e nota fiscal.",
   },
   {
     image: servicePreventive,
-    title: "Dedetização Preventiva",
-    description: "Evite infestações antes que comecem. Tratamentos periódicos que mantêm seu ambiente protegido o ano todo com custo reduzido.",
+    title: "Antes que a praga volte",
+    description: "Plano trimestral com visitas programadas. Custa menos que uma dedetização emergencial e mantém o imóvel protegido o ano inteiro.",
   },
   {
     Icon: Droplet,
-    title: "Limpeza de Caixa d'Água",
-    description: "Higienização técnica com hipoclorito, certificado válido por 6 meses aceito pela vigilância sanitária e por síndicos.",
+    title: "Caixa d'água limpa em 2h",
+    description: "Higienização com hipoclorito e certificado válido por 6 meses. Aceito pela vigilância sanitária e por síndicos, sem interromper o abastecimento.",
     href: "/servicos/limpeza-caixa-dagua",
   },
   {
     Icon: Rat,
-    title: "Controle de Roedores",
-    description: "Desratização com iscas em porta-iscas lacrados, laudo técnico e monitoramento periódico para residências, condomínios e empresas.",
+    title: "Rato no forro ou na cozinha",
+    description: "Porta-iscas lacrados, laudo técnico e monitoramento mensal. Padrão exigido por auditoria sanitária de restaurante, condomínio e indústria.",
     href: "/servicos/controle-roedores",
   },
   {
     Icon: Bird,
-    title: "Pombos e Morcegos",
-    description: "Afastamento humanitário com espículas, telas e barreiras físicas. Limpeza e descontaminação de fezes acumuladas com EPI completo.",
+    title: "Pombo sujando a fachada",
+    description: "Afastamento humanitário com espículas, telas e barreiras físicas. Limpeza e descontaminação das fezes acumuladas com EPI completo.",
     href: "/servicos/pombos-e-morcegos",
   },
 ];
@@ -67,13 +67,13 @@ const ServicesSection = () => {
       <div className="container px-4">
         <div className="max-w-2xl mb-14">
           <span className="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-primary mb-4">
-            Serviços
+            O que resolvemos
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground leading-[1.05] text-balance">
-            Um portfólio técnico para cada ambiente<span className="text-accent">.</span>
+            Diga qual é o problema<span className="text-accent">.</span>
           </h2>
           <p className="text-muted-foreground text-lg mt-5">
-            Do apartamento ao restaurante industrial — mesmo padrão, mesma garantia.
+            Do apartamento ao restaurante industrial — mesmo técnico, mesma garantia, mesmo laudo.
           </p>
         </div>
 
@@ -113,7 +113,7 @@ const ServicesSection = () => {
                   <Button asChild className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground min-h-[44px] font-semibold transition-transform duration-200 hover:scale-105">
                     <Link to={WHATSAPP_REDIRECT}>
                       <WhatsAppIcon className="w-5 h-5 mr-2" />
-                      Orçamento
+                      Pedir orçamento
                     </Link>
                   </Button>
                 </div>
