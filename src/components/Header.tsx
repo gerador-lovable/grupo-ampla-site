@@ -37,9 +37,7 @@ const Header = () => {
         >
           <span
             className={`inline-flex items-center justify-center overflow-visible transition-all duration-500 h-full ${
-              scrolled
-                ? "bg-[#050f24] p-[2px] rounded-full shadow-lg"
-                : ""
+              scrolled ? "rounded-full" : ""
             }`}
           >
             <img
@@ -47,7 +45,7 @@ const Header = () => {
               alt="Grupo Ampla - Dedetizadora"
               className={`rounded-full transition-all duration-500 ${
                 scrolled
-                  ? "h-[56px] md:h-[92px] translate-y-[10px] md:translate-y-[14px]"
+                  ? "h-[56px] md:h-[92px] translate-y-[10px] md:translate-y-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.35)]"
                   : "h-[48px] md:h-[80px]"
               }`}
             />
